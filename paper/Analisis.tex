@@ -47,48 +47,28 @@
  
 \begin{document}
 
-\section*{Models}
-
-We propose several models which include differents rotational
-velocities and optical depths. We also take into account the dust
-within the gas and two differents initial distributions of the
-photons, central and homogeneous. At the end we study 48 models, those
-are resumed in Table[1]\\ 
-\\
-\begin{table}[H]
-\begin{center}
-\begin{tabular}{|c|c|}
-\hline
-Velocity(km/s) & 50, 100, 200, 300\\
-\hline
-Optical Depth & $\tau = 10^{5},10^{6},10^{7}$\\
-\hline
-Photons Distributions & Central, Homogeneous\\
-\hline
-\end{tabular}
-\caption{Models, If we take into account all these possibles
-  combinations we get 24 models with dust and 24 without dust for a
-  total of 48 models.} 
-\end{center}
-\end{table}
-
-We later study this models taking into account the posititon of the
-observer respect to the axis of rotation of the cloud. 
-
-\subsection*{Rotational Effect}
+\section{Introduction}
 
 Due to the resonant nature of the lyman alpha line, gas kinematics
 play an important role in the shape of this line. In particular we
 study the case in which this gas is spherically symmetric and its
 rotating.
 
-In cartesian coordinates the rotational velocity around de the z-axys
-is defined by:
+
+\section{Implementation of Rotation in CLARA}
+
+We implement into CLARA the simplest model whereby a sphere rotates
+with homogeneous angular velocity. We define a cartesian coordinate
+system with its origin at the center of the sphere and the rotation
+axis to be the $z$-axis, the velocity field in the gas can be written as
+
+%In cartesian coordinates the rotational velocity around de the z-axys
+%is defined by:
 
 \begin{subequations}
 \begin{align}
-    v_{x}=-\dfrac{y}{R}v \label{subeq1}\\
-    v_{y}=\dfrac{x}{R}v \label{subeq2}
+    v_{x}=-\dfrac{y}{R}V_{\max} \label{subeq1}\\
+    v_{y}=\dfrac{x}{R}V_{\max} \label{subeq2}
 \end{align}
 \end{subequations}
 
@@ -101,6 +81,54 @@ In Figure[1] the effect that rotation have in the spectra is shown,
 for both distributions central (Left) and homogeneous (right). This is
 a general case in the sense that is independent of the position of an
 external observer.  
+
+
+\section{Simulated Models in CLARA}
+\label{sec:models}
+
+%We propose several models which include differents rotational
+%velocities and optical depths. We also take into account the dust
+%within the gas and two differents initial distributions of the
+%photons, central and homogeneous. At the end we study 48 models, those
+%are resumed in Table[1]\\ 
+
+We compute the emergent Lyman-$\alpha$ line for several models with
+differents values for the maximal rotational velocity, hydrogend optical
+depth, dust optical depth and initial distributions of the photons
+with respect to the gas. There are in total 60 models with the input
+parameters summarized in Table  \ref{table:models}. 
+
+% JF: digo que son 60 modelos porque estoy incluyendo los de velocidad cero.
+
+%We later study this models taking into account the posititon of the
+%observer respect to the axis of rotation of the cloud. 
+
+Additionaly in the postprocessing process we will take into account
+different observer positions with respecto the cloud rotation
+axis.
+
+
+\begin{table}
+\begin{center}
+\begin{tabular}{ccc}\hline
+Velocity (km s$^{-1}$) & $V_{\rm max}$&$0,\ 50,\ 100,\ 200,\ 300$\\
+Hydrogen Optical Depth & $\tau_{H} $ & $10^{5},\ 10^{6},\ 10^{7}$\\
+Dust Optical Depth & $\tau_{A}$ & XXX \\
+Photons Distributions & & Central, Homogeneous\\
+\hline
+\end{tabular}
+\caption{
+Values for the varying input parameters in CLARA. Taking into account
+all the possible combinations for these models
+%odels, If we take into account all these possibles
+% combinations we get 24 models with dust and 24 without dust for a
+% total of 48 models 
+} 
+\label{table:models}
+\end{center}
+\end{table}
+
+
 
 \begin{figure}[H]
 
