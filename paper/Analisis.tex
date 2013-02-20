@@ -1,51 +1,86 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% Template for a LaTex article in English.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[usenatbib]{mn2e} 
+\usepackage{amsmath} 
+\usepackage{amssymb} 
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{epsfig}  
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+\def\ba{\begin{eqnarray}}
+\def\ea{\end{eqnarray}}
 
-\documentclass{article}
+% To highlight comments 
+\usepackage{color}
+\definecolor{red}{rgb}{1,0.0,0.0}
+\newcommand{\red}{\color{red}}
+\definecolor{blue}{rgb}{0.1,0.3,0.9}
+\newcommand{\blue}{\color{blue}}
 
-%\usepackage[latin1]{inputenc}
+\usepackage[normalem]{ulem}
+\definecolor{darkgreen}{rgb}{0.0,0.5,0.0}
+\newcommand{\SRK}[1]{\textcolor{darkgreen}{\bf SRK: \textit{#1}}}
+\newcommand{\SRKED}[1]{\textcolor{darkgreen}{\bf #1}}
 
-\usepackage[english]{babel}
-% AMS packages:
-\usepackage{amsmath, amsthm, amsfonts, graphicx, float, caption, subfigure}
+\newcommand{\LCDM}{$\Lambda$CDM~}
+\newcommand{\beq}{\begin{eqnarray}}  
+\newcommand{\eeq}{\end{eqnarray}}  
+\newcommand{\zz}{$z\sim 3$} 
+\newcommand{\apj}{ApJ}  
+\newcommand{\apjs}{ApJS}  
+\newcommand{\apjl}{ApJL}  
+\newcommand{\aj}{AJ}  
+\newcommand{\mnras}{MNRAS}  
+\newcommand{\mnrassub}{MNRAS accepted}  
+\newcommand{\aap}{A\&A}  
+\newcommand{\aaps}{A\&AS}  
+\newcommand{\araa}{ARA\&A}  
+\newcommand{\nat}{Nature}  
+\newcommand{\physrep}{PhR}
+\newcommand{\pasp}{PASP}    
+\newcommand{\pasj}{PASJ}    
+\newcommand{\avg}[1]{\langle{#1}\rangle}  
+\newcommand{\ly}{{\ifmmode{{\rm Ly}\alpha}\else{Ly$\alpha$}\fi}}
+\newcommand{\hMpc}{{\ifmmode{h^{-1}{\rm Mpc}}\else{$h^{-1}$Mpc }\fi}}  
+\newcommand{\hGpc}{{\ifmmode{h^{-1}{\rm Gpc}}\else{$h^{-1}$Gpc }\fi}}  
+\newcommand{\hmpc}{{\ifmmode{h^{-1}{\rm Mpc}}\else{$h^{-1}$Mpc }\fi}}  
+\newcommand{\hkpc}{{\ifmmode{h^{-1}{\rm kpc}}\else{$h^{-1}$kpc }\fi}}  
+\newcommand{\hMsun}{{\ifmmode{h^{-1}{\rm {M_{\odot}}}}\else{$h^{-1}{\rm{M_{\odot}}}$}\fi}}  
+\newcommand{\hmsun}{{\ifmmode{h^{-1}{\rm {M_{\odot}}}}\else{$h^{-1}{\rm{M_{\odot}}}$}\fi}}  
+\newcommand{\Msun}{{\ifmmode{{\rm {M_{\odot}}}}\else{${\rm{M_{\odot}}}$}\fi}}  
+\newcommand{\msun}{{\ifmmode{{\rm {M_{\odot}}}}\else{${\rm{M_{\odot}}}$}\fi}}  
+\newcommand{\lya}{{Lyman$\alpha$~}}
+\newcommand{\clara}{{\texttt{CLARA}}~}
+\newcommand{\rand}{{\ifmmode{{\mathcal{R}}}\else{${\mathcal{R}}$ }\fi}}  
+\newcommand{\hs}{{\hspace{1mm}}}  
 
-% Theorems
-%-----------------------------------------------------------------
-\newtheorem{thm}{Theorem}[section]
-\newtheorem{cor}[thm]{Corollary}
-\newtheorem{lem}[thm]{Lemma}
-\newtheorem{prop}[thm]{Proposition}
-\theoremstyle{definition}
-\newtheorem{defn}[thm]{Definition}
-\theoremstyle{remark}
-\newtheorem{rem}[thm]{Remark}
+% definition to produce a "less than or similar to" symbol
+\def\lsim{~\rlap{$<$}{\lower 1.0ex\hbox{$\sim$}}}
 
-% Shortcuts.
-% One can define new commands to shorten frequently used
-% constructions. As an example, this defines the R and Z used
-% for the real and integer numbers.
-%-----------------------------------------------------------------
-\def\RR{\mathbb{R}}
-\def\ZZ{\mathbb{Z}}
+% definition to produce a "greater than or similar to" symbol
+\def\gsim{~\rlap{$>$}{\lower 1.0ex\hbox{$\sim$}}}
 
-% Similarly, one can define commands that take arguments. In this
-% example we define a command for the absolute value.
-% -----------------------------------------------------------------
-\newcommand{\abs}[1]{\left\vert#1\right\vert}
-
-% Operators
-% New operators must defined as such to have them typeset
-% correctly. As an example we define the Jacobian:
-% -----------------------------------------------------------------
-\DeclareMathOperator{\Jac}{Jac}
-
-%---------------------------------------------------------------
-
- 
 \begin{document}
+
+\title[Rotation in the Lyman-$\alpha$ line]{Effects of bulk gas rotation on
+  the emergent Lyman-$\alpha$ line in distant galaxies}
+\author[N. Garavito and J.E. Forero-Romero]{
+\parbox[t]{\textwidth}{\raggedright 
+  Nicolas Garavito.$^{1}$ 
+  Jaime E. Forero-Romero$^{2}$ 
+}
+\vspace*{6pt}\\
+$^{1}$Uni A
+$^{2}$Uni B
+}
+\maketitle
+
+\begin{abstract}
+
+\end{abstract}
+\begin{keywords}
+galaxies: high-redshift - galaxies: star formation - line: formation
+\end{keywords}
+
 
 \section{Introduction}
 
@@ -55,35 +90,37 @@ study the case in which this gas is spherically symmetric and its
 rotating.
 
 
-\section{Implementation of Rotation in CLARA}
+\section{Implementation of Bulk Gas Rotation}
 
 We implement into CLARA the simplest model whereby a sphere rotates
 with homogeneous angular velocity. We define a cartesian coordinate
 system with its origin at the center of the sphere and the rotation
-axis to be the $z$-axis, the velocity field in the gas can be written as
-
+axis to be the $z$-axis, the components in the bulk velocity field, $\vec{v}
+= v_{x}\hat{i} + v_{y}\hat{j} + v_{z}\hat{z}$. in the gas can be written as 
+ 
 %In cartesian coordinates the rotational velocity around de the z-axys
 %is defined by:
 
 \begin{subequations}
 \begin{align}
-    v_{x}=-\dfrac{y}{R}V_{\max} \label{subeq1}\\
-    v_{y}=\dfrac{x}{R}V_{\max} \label{subeq2}
+    v_{x}=-\dfrac{y}{R}V_{\rm max}, \label{subeq1}\\
+    v_{y}=\dfrac{x}{R}V_{\rm max}, \label{subeq2}\\
+    v_{z}=0, \label{subeq3}
 \end{align}
 \end{subequations}
 
-Where $x$ and $y$ define de position of the gas atoms and dust
-particles. The minus sign in the x-component of the velocity is due to
-the direction of rotation, in this case we assume that as seeing from
-the top,the rotation is anticlockwise.
+%Where $x$ and $y$ define de position of the gas atoms and dust
+%particles. 
+%The minus sign in the x-component of the velocity is due to
+%the direction of rotation, in this case we assume that as seeing from
+%the top,the rotation is anticlockwise.
+where $R$ is the radius of the sphere and $V_{\rm max}$ is the linear
+velocity at the sphere's surface. The minus sign in the x-component of the velocity is due to
+the direction of rotation, in this case we assume that the angular
+velocity vector goes in the $\hat{k}$ direction.
 
-In Figure[1] the effect that rotation have in the spectra is shown,
-for both distributions central (Left) and homogeneous (right). This is
-a general case in the sense that is independent of the position of an
-external observer.  
 
-
-\section{Simulated Models in CLARA}
+\section{Grid of Simulated Models}
 \label{sec:models}
 
 %We propose several models which include differents rotational
@@ -130,21 +167,16 @@ all the possible combinations for these models
 
 
 
-\begin{figure}[H]
-
-  \centering
-
-  \label{HOMandCentral}\caption{Shape of the lyman alpha line for
+\begin{figure*}
+  \includegraphics[width=0.45\textwidth]{7tDifSpeedsZ.png}
+  \includegraphics[width=0.45\textwidth]{7tHOMDifSpeeds1.png}
+  \label{fig:HOMandCentral}\caption{Shape of the lyman alpha line for
     differents velocities. The left panel show the central
     distribution while the right panel show the homogeneous
-    distribution. } 
+    distribution.}
+\end{figure*}
 
-  \begin{tabular}{cc}    
-    \includegraphics[width=60mm]{7tDifSpeedsZ.png}&
-    \includegraphics[width=60mm]{7tHOMDifSpeeds1.png}\\
-  \end{tabular}
 
-\end{figure}
 Now if we take into account the position of the observer and compute
 this for differents angles of observation $\theta$ the outcoming
 spectra is modified as is shown in figure[2]. The main feature here is
@@ -153,7 +185,7 @@ observer in the poles will observe a higher double peak than a
 observer in the ecuator. We will understand this in more details when
 we present the resaults of the scape fraction in section[].      
 
-\begin{figure}[H]
+\begin{figure}
 \begin{center}
 \includegraphics[scale=0.45]{Observers.png}
 \end{center}
@@ -167,10 +199,11 @@ we present the resaults of the scape fraction in section[].
 
 
 
-\section*{Resaults and Discussion}
-\label{sec:Results_ly_Rotation}
+\section{Results}
+\label{sec:Results}
 
 %Ver correo de Jaime y tratar de explicar a que se deben estos efectos.
+
 
 In the previous section we describe the models that we study the
 effect of rotation in the Lyman alpha line and see the effect of
@@ -179,25 +212,18 @@ obtain, in particual we pay spetial attention to the position of the
 maximums, the width of the line and the escape fraction in function of
 the rotational velocity and the angle of observation $\theta$.  
 
-\subsection*{Maximums Position}
+In Figure[1] the effect that rotation have in the spectra is shown,
+for both distributions central (Left) and homogeneous (right). This is
+a general case in the sense that is independent of the position of an
+external observer.  
 
-\begin{figure}[H]
+\subsection{Maximums Position}
 
-  \centering
-
-  \label{figur}\caption{Width of the lyman-alpha line for all the models. }
-
-  \begin{tabular}{cc}
-
-    
-    \includegraphics[width=40mm]{0maximum7t.png}&
-
-    \includegraphics[width=40mm]{0maximum6t.png}
-
-    \includegraphics[width=40mm]{0maximum5t.png}
-
-   \end{tabular}
-
+\begin{figure}
+    \includegraphics[width=0.45\textwidth]{0maximum7t.png}
+    \includegraphics[width=0.45\textwidth]{0maximum6t.png}
+    \includegraphics[width=0.45\textwidth]{0maximum5t.png}
+  \label{figure:maxima}\caption{Width of the lyman-alpha line for all the models. }
 \end{figure}
 (comparar con la grafica del apendice de clara con el eje x el optical
 depth y en el eje-y los maximos) 
@@ -209,7 +235,7 @@ larger than the initial which is $1216$ {\AA}.
 As we can see in Fig.[3] the position of the maximums does not change
 with rotational velocity. But it change from homogeneous and central.  
 
-\subsection*{Line Width}
+\subsection{Line Width}
 
 %el ancho sirve para saber el rango de scattering que tienen los fotones.
 Another effect that the rotation of the gas produce is in the  width
@@ -221,30 +247,15 @@ found that as the rotational velocity increase as the line width
 increase this is show in Fig.[4].\\ 
  
 
-\begin{figure}[H]
-
-  \centering
-
-  \label{figur}\caption{Width of the lyman-alpha line for all the models. }
-
-  \begin{tabular}{cc}
-
-    
-    \includegraphics[width=60mm]{WidthCentral.png}&
-
-    \includegraphics[width=60mm]{WidthHomogeneous.png}\\
-
-    \includegraphics[width=60mm]{Width6.png}&
-
-    \includegraphics[width=60mm]{Width6HOM.png}\\
-
-    \includegraphics[width=60mm]{Width5.png}&
-
-    \includegraphics[width=60mm]{Width5HOM.png}\\
-
-  \end{tabular}
-
-\end{figure}
+\begin{figure*}
+    \includegraphics[width=0.45\textwidth]{WidthCentral.png}
+    \includegraphics[width=0.45\textwidth]{WidthHomogeneous.png}
+    \includegraphics[width=0.45\textwidth]{Width6.png}
+    \includegraphics[width=0.45\textwidth]{Width6HOM.png}
+    \includegraphics[width=0.45\textwidth]{Width5.png}
+    \includegraphics[width=0.45\textwidth]{Width5HOM.png}
+  \label{figure:width}\caption{Width of the lyman-alpha line for all the models. }
+\end{figure*}
 
 We also found that the width for a particular model is not the same
 for differents angles of observation in particular as the angle
@@ -252,9 +263,9 @@ increase the width also increase, it means that as the angle increase
 the number of scatterings of the photons increasse for this reason we
 see a broader line. Fig.[5]\\ 
 
-\begin{figure}[H]
+\begin{figure}
 \begin{center}
-\includegraphics[scale=0.45]{WidthvsTheta.png}
+\includegraphics[width=0.45\textwidth]{WidthvsTheta.png}
 \caption{Width variation in function of theta}
 \end{center}
 \end{figure}
@@ -262,7 +273,7 @@ see a broader line. Fig.[5]\\
 
 
 
-\subsection*{Escape Fraction}
+\subsection{Escape Fraction}
 
 The fraction of photons that escape from de cloud of gas and dust is
 defined as:\\ 
@@ -275,32 +286,17 @@ Where NI is the initial number of photons and NF is the final. This
 escape fraction is computed for all the models which resaults are
 shown in Fig.[6]\\ 
  
-\begin{figure}[H]
-
-  \centering
-
-  \label{figur}\caption{Escape fraction for all the models. Left
+\begin{figure*}
+  \includegraphics[width=0.45\textwidth]{FECentral5.png}
+  \includegraphics[width=0.45\textwidth]{FEHOM5.png}
+  \includegraphics[width=0.45\textwidth]{FECentral6.png}
+  \includegraphics[width=0.45\textwidth]{FEHOM6.png}
+  \includegraphics[width=0.45\textwidth]{FECentral7.png}
+  \includegraphics[width=0.45\textwidth]{FEHOM7.png}
+  \label{figure:escape}\caption{Escape fraction for all the models. Left
     panels show the central distribution, while right panels show the
     homogeneous distribution} 
-
-  \begin{tabular}{cc}
-
-    
-    \includegraphics[width=60mm]{FECentral5.png}&
-
-    \includegraphics[width=60mm]{FEHOM5.png}\\
-
-    \includegraphics[width=60mm]{FECentral6.png}&
-
-    \includegraphics[width=60mm]{FEHOM6.png}\\
-
-    \includegraphics[width=60mm]{FECentral7.png}&
-
-    \includegraphics[width=60mm]{FEHOM7.png}\\
-
-  \end{tabular}
-
-\end{figure}
+\end{figure*}
 
 When the distribution is homogeneous the effect of velocity in the
 escape fraction is clear while in the central model the effect is not
@@ -308,65 +304,53 @@ noterous.
 The main effect is that the escape fraction increase as the velocity
 increase.  
 
-\section*{Observational effect.}
+
+\section{Discussion}
+\label{sec:discussion}
+
+\section{Observational implications}
 
 
-\section*{Tables}
+\section{Conclusions}
 
-Maximos\\
+\section*{Acknowledgements}
 
-\begin{table}[H]
+\section*{Appendix A: Tables}
+
+\begin{table}
 \begin{center}
-\begin{tabular}{|c|c|c|}
-\hline          
-Velocity (Km/s) & Maximum 1 position & Maximum 2 position \\ 
-\hline 
+\begin{tabular}{ccc}\hline          
+Velocity (Km/s) & Maximum 1 position & Maximum 2 position \\ \hline
 50 & -16.2695 & 16.23705 \\ 
-\hline 
 100 & -15.66496 & 15.33504 \\ 
-\hline 
 200 & -16.93149 & 14.56851 \\ 
-\hline 
-300 & -13.40048 & 16.09952 \\ 
-\hline 
+300 & -13.40048 & 16.09952 \\ \hline 
 \end{tabular} 
 \caption{Optical Depth $\tau= 10^{7}$, Central Distribution}
 \end{center}
 \end{table}
 
-\begin{table}[H]
+\begin{table}
 \begin{center}
-\begin{tabular}{|c|c|c|}
-\hline 
-Velocity (Km/s) & Maximum 1 position & Maximum 2 position\\ 
-\hline 
+\begin{tabular}{ccc}\hline 
+Velocity (km/s) & Maximum 1 position & Maximum 2 position\\ \hline
 50 & -7.46286 & 6.53714 \\ 
-\hline 
 100 & -7.53357 & 6.96643 \\ 
-\hline 
 200 & -8.17453 & 7.32547 \\ 
-\hline 
-300 & -6.81487 & 6.18513 \\ 
-\hline 
+300 & -6.81487 & 6.18513 \\ \hline 
 \end{tabular} 
 \end{center}
 \caption{Optical Depth $\tau = 10^{6}$, Central Distribution}
 \end{table}
 
-\begin{table}[H]
+\begin{table}
 \begin{center}
-\begin{tabular}{|c|c|c|}
-\hline 
-Velocity(Km/s) & Maximum 1 position & Maximum 2 position\\ 
-\hline 
+\begin{tabular}{ccc}\hline 
+Velocity(Km/s) & Maximum 1 position & Maximum 2 position\\ \hline
 50 & -4.33708 & 3.66292 \\ 
-\hline 
 100 & -4.27326 & 3.72674 \\ 
-\hline 
 200 & -3.7737 & 3.7263   \\ 
-\hline 
-300 & -3.84903 & 4.15097 \\ 
-\hline 
+300 & -3.84903 & 4.15097 \\ \hline 
 \end{tabular}
 \caption{Optical Depth $\tau=10^{5}$, Central distribution} 
 \end{center}
@@ -374,110 +358,68 @@ Velocity(Km/s) & Maximum 1 position & Maximum 2 position\\
 
 Line width\\
 
-\begin{table}[H]
+\begin{table}
 \begin{center}
-\begin{tabular}{|c|c|c|}
-\hline 
-Velocity(Km/s) & FWHM & $\theta$\\ 
-\hline 
+\begin{tabular}{ccc}\hline 
+Velocity(Km/s) & FWHM & $\theta$\\ \hline 
 50 & 12.62 & $0^{o}$ \\ 
-\hline 
 50 & 12.72 & $45^{o}$ \\ 
-\hline 
 50 & 12.93 & $90^{o}$ \\ 
-\hline 
 100 & 14.07 & $0^{o}$ \\ 
-\hline
 100 & 14.48 & $45^{o}$ \\ 
-\hline 
 100 & 15.00 & $90^{o}$ \\ 
-\hline 
 200 & 16.90 & $0^{o}$  \\ 
-\hline 
 200 & 18.51 & $45^{o}$ \\ 
-\hline 
 200 & 21.24 & $90^{o}$ \\ 
-\hline 
 300 & $24.69^{*}$ & $0^{o}$ \\ 
-\hline 
 300 & $25.79^{*}$ & $45^{o}$  \\ 
-\hline  
-300 & $27.73^{*}$ & $90^{o}$ \\ 
-\hline  
+300 & $27.73^{*}$ & $90^{o}$ \\ \hline
 \end{tabular}
 \caption{Lines Widhts for a Central Distribution and $\tau=10^{7}$} 
 \end{center}
 \end{table}
 
 
-Scape fracton\\
+Escape fraction\\
 
 \begin{table}[H]
 \begin{center}
-\begin{tabular}{|c|c|c|c|c|}
-\hline 
-Model & Velocity (km/s) & $\theta$ & Dust $\sum (s)$& $\sum (s)$\\ 
-\hline 
+\begin{tabular}{ccccc}\hline 
+Model & Velocity (km/s) & $\theta$ & Dust $\sum (s)$& $\sum (s)$\\ \hline 
 Homogeneous & 50 & $0^{o}$& 13293.06 &49939.53\\ 
-\hline 
 Homogeneous & 50 & $45^{o}$& 13291.04 &50001.59\\ 
-\hline 
 Homogeneous & 50 & $90^{o}$ & 13348.76 &49922.73\\ 
-\hline 
 Homogeneous & 100 & $0^{o}$ & 15527.69 &50114.11\\ 
-\hline
 Homogeneous & 100 & $45^{o}$ & 15511.56 &49967.17\\ 
-\hline
 Homogeneous & 100 & $90^{o}$ & 15401.71 & 49833.65\\ 
-\hline 
 Homogeneous & 200 & $0^{o}$  & 17830.85 & 50078.69\\ 
-\hline 
 Homogeneous & 200 & $45^{o}$ & 17932.87 & 50064.42\\ 
-\hline 
 Homogeneous & 200 & $90^{o}$ & 17830.85  & 49931.748\\ 
-\hline
 Homogeneous & 300 & $ 0^{o}$ & 18687.33 & 50048.33 \\ 
-\hline 
 Homogeneous & 300 & $45^{o}$ & 18572.12& 49922.67\\ 
-\hline  
-Homogeneous & 300 & $90^{o}$ & 18421.79 & 49979.37\\ 
-\hline  
+Homogeneous & 300 & $90^{o}$ & 18421.79 & 49979.37\\ \hline
 \end{tabular}
 \caption{Escape fraction for a Homogeneous Distribution and optical depth $10^{5}$.} 
 \end{center}
 \end{table}
 
 
-\begin{table}[H]
+\begin{table}
 \begin{center}
-\begin{tabular}{|c|c|c|c|c|}
-\hline 
-Model & Velocity (km/s) & $\theta$ & Dust $\sum (s)$& $\sum (s)$ \\ 
-\hline 
+\begin{tabular}{ccccc} \hline 
+Model & Velocity (km/s) & $\theta$ & Dust $\sum (s)$& $\sum (s)$ \\  \hline 
 Central & 50 & $0^{o}$ & 4809.881 & 49917.069 \\ 
-\hline 
 Central & 50 & $45^{o}$ & 4829.21 & 49811.79 \\ 
-\hline 
 Central & 50 & $90^{o}$ & 4845.108 & 49853.039\\ 
-\hline 
 Central & 100 & $0^{o}$ & 4809.665 & 49921.30 \\  
-\hline
 Central & 100 & $45^{o}$ & 4828.65 & 49820.13 \\ 
-\hline
 Central & 100 & $90^{o}$ & 4846.45 & 49854.0 \\ 
-\hline 
 Central & 200 & $0^{o}$  & 4809.63 & 49917.64 \\ 
-\hline 
 Central & 200 & $45^{o}$ & 4829.25 & 49818.49 \\ 
-\hline 
 Central & 200 & $90^{o}$ & 4844.89 & 49856.66 \\ 
-\hline 
 Central & 300 & $ 0^{o}$ & 4810.56 & 49922.98\\ 
-\hline 
 Central & 300 & $45^{o}$ & 4831.16 & 49823.33\\ 
-\hline  
-Central & 300 & $90^{o}$ & 4845.33 & 49858.48\\ 
-\hline  
+Central & 300 & $90^{o}$ & 4845.33 & 49858.48\\ \hline
 \end{tabular}
 \caption{Escape fraction for the central Distribution and optical depth $10^{5}$.} 
 \end{center}
