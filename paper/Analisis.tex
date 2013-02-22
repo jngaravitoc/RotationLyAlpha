@@ -53,6 +53,7 @@
 \newcommand{\clara}{{\texttt{CLARA}}~}
 \newcommand{\rand}{{\ifmmode{{\mathcal{R}}}\else{${\mathcal{R}}$ }\fi}}  
 \newcommand{\hs}{{\hspace{1mm}}}  
+\newcommand{\kms}{\,km~s$^{-1}$}
 
 % definition to produce a "less than or similar to" symbol
 \def\lsim{~\rlap{$<$}{\lower 1.0ex\hbox{$\sim$}}}
@@ -62,8 +63,8 @@
 
 \begin{document}
 
-\title[Rotation in the Lyman-$\alpha$ line]{Effects of bulk gas rotation on
-  the emergent Lyman-$\alpha$ line in distant galaxies}
+\title[Rotation in the Lyman-$\alpha$ line]{Effects of rotation on the
+  Lyman-$\alpha$ line morphology in distant galaxies}
 \author[N. Garavito and J.E. Forero-Romero]{
 \parbox[t]{\textwidth}{\raggedright 
   Nicolas Garavito-Camargo.$^{1}$ 
@@ -87,9 +88,17 @@ galaxies: high-redshift - galaxies: star formation - line: formation
 \label{sec:intro}
 
 Due to the resonant nature of the lyman alpha line, gas kinematics
-play an important role in the shape of this line. In particular we
-study the case in which this gas is spherically symmetric and its
-rotating.
+play an important role shaping its morphology. In the literature there
+has been extensive studies of outflow/inflow configurations. 
+
+In this paper we study for the first time the impact of rotation on
+the morphology of the Lyman $\alpha$ line. To isolate the effects of
+rotation we focus on a simple system: the gas distribution is
+spherical, with homogenous density and the gas rotates as a solid
+body.
+
+This paper is paper is structured as follows.
+
 
 
 \section{Implementation of Bulk Gas Rotation}
@@ -101,9 +110,6 @@ system with its origin at the center of the sphere and the rotation
 axis to be the $z$-axis, the components in the bulk velocity field, $\vec{v}
 = v_{x}\hat{i} + v_{y}\hat{j} + v_{z}\hat{k}$. in the gas can be written as 
  
-%In cartesian coordinates the rotational velocity around de the z-axys
-%is defined by:
-
 \begin{subequations}
 \begin{align}
     v_{x}=-\dfrac{y}{R}V_{\rm max}, \label{subeq1}\\
@@ -112,25 +118,24 @@ axis to be the $z$-axis, the components in the bulk velocity field, $\vec{v}
 \end{align}
 \end{subequations}
 
-%Where $x$ and $y$ define de position of the gas atoms and dust
-%particles. 
-%The minus sign in the x-component of the velocity is due to
-%the direction of rotation, in this case we assume that as seeing from
-%the top,the rotation is anticlockwise.
 where $R$ is the radius of the sphere and $V_{\rm max}$ is the linear
-velocity at the sphere's surface. The minus sign in the x-component of the velocity is due to
-the direction of rotation, in this case we assume that the angular
-velocity vector goes in the $\hat{k}$ direction.
+velocity at the sphere's surface. The minus sign in the x-component of
+the velocity indicates the direction of rotation, in this case we
+assume that the angular velocity vector goes in the $\hat{k}$
+direction.  The linear dependence of the velocity on the radial
+distance describes the case of constant angular velocity
+$\omega=V_{\rm max}/R$.  
+
+We take the polar angle $\theta$ that a unitary vector makes with the
+rotation axis as defined by the dot product $\cos\theta =
+{\hat{u}\cdot\hat{k}}$. In the Section \ref{sec:results} we will
+present in detail how the line differs at different observing angles
+$\theta$. 
+
 
 
 \section{Grid of Simulated Models}
 \label{sec:models}
-
-%We propose several models which include differents rotational
-%velocities and optical depths. We also take into account the dust
-%within the gas and two differents initial distributions of the
-%photons, central and homogeneous. At the end we study 48 models, those
-%are resumed in Table[1]\\ 
 
 We compute the emergent Lyman-$\alpha$ line for several models with
 differents values for the maximal rotational velocity, hydrogend optical
@@ -138,20 +143,10 @@ depth, dust optical depth and initial distributions of the photons
 with respect to the gas. There are in total 60 models with the input
 parameters summarized in Table  \ref{table:models}. 
 
-% JF: digo que son 60 modelos porque estoy incluyendo los de velocidad cero.
-
-%We later study this models taking into account the posititon of the
-%observer respect to the axis of rotation of the cloud. 
-
-Additionaly in the postprocessing process we will take into account
-different observer positions with respect to the cloud rotation
-axis.
-
-
 \begin{table}
 \begin{center}
 \begin{tabular}{ccc}\hline
-Velocity (km s$^{-1}$) & $V_{\rm max}$&$0,\ 50,\ 100,\ 200,\ 300$\\
+Velocity (\kms) & $V_{\rm max}$&$0,\ 50,\ 100,\ 200,\ 300$\\
 Hydrogen Optical Depth & $\tau_{H} $ & $10^{5},\ 10^{6},\ 10^{7}$\\
 Dust Optical Depth & $\tau_{A}$ & XXX \\
 Photons Distributions & & Central, Homogeneous\\
@@ -167,53 +162,52 @@ all the possible combinations for these models
 
 
 
-\begin{figure*}
-  \includegraphics[width=0.45\textwidth]{7tDifSpeedsZ.png}
-  \includegraphics[width=0.45\textwidth]{7tHOMDifSpeeds1.png}
-  \label{fig:HOMandCentral}\caption{Shape of the lyman alpha line for
-    differents velocities. The left panel show the central
-    distribution while the right panel show the homogeneous
-    distribution.}
-\end{figure*}
 
-
-Now if we take into account the position of the observer and compute
-this for differents angles of observation $\theta$ the outcoming
-spectra is modified as is shown in Figure~\ref{DifferentObservers}. The main feature here is that as the angle increases the line height decreases. It means that a observer in the poles will observe a higher double peak than a
-observer in the ecuator. We will understand this in more detail when
-we present the results of the scape fraction in section~\ref{sec:EF}.      
-
-\begin{figure}
-\begin{center}
-\includegraphics[scale=0.45]{Observers.png}
-\end{center}
-\caption{Spectra for different observers. Model:$V=300km/s$, Optical
-  Depth $\tau=10^{7}$ and Central Distribution without dust.} 
-  \label{DifferentObservers}
-\end{figure}
-
-%describir los modelos, poner las ecuaciones de la velocidad de
-%rotacion, %poner las graficas para un modelo dado poner el efecto de
+%poner las graficas para un modelo dado poner el efecto de
 %la rotación (poner %uno con velocidad cero) y del observador. 
 
 
 
 \section{Results}
-\label{sec:Results}
+\label{sec:results}
 
-%Ver correo de Jaime y tratar de explicar a que se deben estos efectos.
+The central result of this paper is summarized in Figure
+\ref{fig:HOMandCentral} where we show that rotation as a considerable
+effect on the morphology of the emergent Lyman-alpha line both in the
+case where the photons are emitted at the sphere's center and when
+they are initialized with an homogeneous distribution all over the
+gas volume. 
+
+The results for this outgoing spectra are integrated over the whole
+sphere, meaning that all the escaping photons were taking into account
+regardless of the direction of the outgoing photons. Figure
+\ref{fig:Different Observers} shows how if one gives a weight to each outgoing
+photon according to its direction when escaping the gas distribution
+it is posible to detect notable differences in the spectrum for
+different viewing angles.
 
 
-In the previous section we describe the models that we use to study the
-effect of rotation in the Lyman alpha line for this we saw the outcoming specrtums including rotation. Now we show the main results that we
-obtain, in particual we pay spetial attention to the position of the
-maximums, the width of the line and the escape fraction in function of
-the rotational velocity and the angle of observation $\theta$.  
 
-In Figure~\ref{fig:HOMandCentral} the effect that rotation have in the spectra is shown,
-for both distributions central (Left) and homogeneous (right). This is
-a general case in the sense that is independent of the position of an
-external observer.  
+\begin{figure*}
+  \includegraphics[width=0.45\textwidth]{7tDifSpeedsZ.png}
+  \includegraphics[width=0.45\textwidth]{7tHOMDifSpeeds1.png}
+  \label{fig:HOMandCentral}\caption{Shape of the lyman alpha line for
+    differents velocities. The left (right) panel shows the central
+    (homogeneous) photon distribution.}
+\end{figure*}
+
+
+
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.45]{Observers.png}
+\end{center}
+\caption{Spectra for different observers. Model:$V=300$\kms, Optical
+  Depth $\tau=10^{7}$ and Central Distribution without dust.} 
+  \label{fig:DifferentObservers}
+\end{figure}
+
 
 \subsection{Maxima Positions}
 \label{sec:MP}
@@ -235,7 +229,15 @@ The maximums position gives information about the wave lenght of the
 mayority of the outcoming photons after they interact with the gas, in
 addition as a photon have more scatterings its wave lenght would be
 larger than the initial which is $1216$ {\AA}. 
-As we can see in Figure ~\ref{figure:maximumsvsvelocities} the position of the maximums does not change with rotational velocity for the central dsitribution. On the other hand for the homogeneous distriution the maxima position $X_{m}$ change for $Log_{10}\tau=5$, this is because at higher rotational velocities photons escape with less scatterings, for $v=100\dfrac{km}{s}$ the majority of the photons still escape with scatterings but for $v=200\dfrac{km}{s}$ the number of photons that escape with a few or any scatterings is higher, this is why the maxima change to the center of the spectra.\\
+As we can see in Figure ~\ref{figure:maximumsvsvelocities} the
+position of the maxima does not change with rotational velocity for
+the central dsitribution. On the other hand for the homogeneous
+distriution the maxima position $X_{m}$ change for $Log_{10}\tau=5$,
+this is because at higher rotational velocities photons escape with
+less scatterings, for $v=100$\kms the majority of the photons
+still escape with scatterings but for $v=200$\kms the number
+of photons that escape with a few or any scatterings is higher, this
+is why the maxima change to the center of the spectra.\\ 
 
 If we now study the effect of the optical depth $\tau$ in the maxima position $X_{m}$ Figure~\ref{figure:maximavsOD}, we found that as the optical depth increase (include reference of previous articles) the maxima position increase and this is a well known result, but when rotation is included the dependence is not linear.
 %(think a lit bit more on this, maybe make a regression)
@@ -276,22 +278,22 @@ Following the convention of Verhamme et al 2012 we define $\mu=cos(\theta)$, we 
 \end{figure*}
 
 % fix this table is too big
-\begin{table}
+\begin{table*}
 \begin{center}
 \begin{tabular}{cc}\hline
 Model & Fit\\
-Central, $\tau=10^5, V=200\dfrac{km}{s}$ &$EW(\mu)=-59-1677\mu-17864\mu^{2}+84509\mu^{3}-149877\mu^{4}$\\
-Central, $\tau=10^6, V=200\dfrac{km}{s}$ &$EW(\mu)=-1+53.8\mu-1080\mu^{2}+9644\mu^{3}-32264\mu^{4}$\\
-Central, $\tau=10^7, V=200\dfrac{km}{s}$ & $EW(\mu)=0.011+0.9\mu-27\mu^{2}+359\mu^{3}-1791\mu^{4}$\\
-Hom, $\tau=10^5, V=200\dfrac{km}{s}$ & $EW(\mu)=11.66-187.22\mu-54.58\mu^{2}+12932.5\mu^{3}-51882.9\mu^{4}$ \\
-Hom, $\tau=10^6, V=200\dfrac{km}{s}$ & $EW(\mu)=-361.64+17158.92\mu-305268.4\mu^{2}+2413478\mu^{3}-7154649\mu^{4}$ \\
-Hom, $\tau=10^7, V=200\dfrac{km}{s}$ & $EW(\mu)=-0.28+23.29\mu-721\mu^{2}+9912\mu^{3}-51074\mu^{4}$ \\
+Central, $\tau=10^5, V=200$\kms &$EW(\mu)=-59-1677\mu-17864\mu^{2}+84509\mu^{3}-149877\mu^{4}$\\
+Central, $\tau=10^6, V=200$\kms &$EW(\mu)=-1+53.8\mu-1080\mu^{2}+9644\mu^{3}-32264\mu^{4}$\\
+Central, $\tau=10^7, V=200$\kms & $EW(\mu)=0.011+0.9\mu-27\mu^{2}+359\mu^{3}-1791\mu^{4}$\\
+Hom, $\tau=10^5, V=200$\kms & $EW(\mu)=11.66-187.22\mu-54.58\mu^{2}+12932.5\mu^{3}-51882.9\mu^{4}$ \\
+Hom, $\tau=10^6, V=200$\kms & $EW(\mu)=-361.64+17158.92\mu-305268.4\mu^{2}+2413478\mu^{3}-7154649\mu^{4}$ \\
+Hom, $\tau=10^7, V=200$\kms & $EW(\mu)=-0.28+23.29\mu-721\mu^{2}+9912\mu^{3}-51074\mu^{4}$ \\
 \hline
 \end{tabular}
 \caption{Fits for EW models} 
 \label{table:fits}
 \end{center}
-\end{table}
+\end{table*}
 
 
 
@@ -334,6 +336,9 @@ increase.
 
 \section{Observational implications}
 % taking into account equivalent widths results with narrow band filters we can make a criterium in order to select wich galaxie could be seen in actual observations.
+
+... The results derived in this paper have consequences on the
+interpreation of galaxy observations in the Lyman alpha line.
 
 \section{Conclusions}
 
