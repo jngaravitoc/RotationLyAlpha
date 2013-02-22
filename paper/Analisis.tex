@@ -3,7 +3,8 @@
 \usepackage{amssymb} 
 \usepackage{graphics}
 \usepackage{graphicx}
-\usepackage{epsfig}  
+\usepackage{epsfig} 
+\usepackage{float} 
 \def\be{\begin{equation}}
 \def\ee{\end{equation}}
 \def\ba{\begin{eqnarray}}
@@ -65,7 +66,7 @@
   the emergent Lyman-$\alpha$ line in distant galaxies}
 \author[N. Garavito and J.E. Forero-Romero]{
 \parbox[t]{\textwidth}{\raggedright 
-  Nicolas Garavito.$^{1}$ 
+  Nicolas Garavito-Camargo.$^{1}$ 
   Jaime E. Forero-Romero$^{2}$ 
 }
 \vspace*{6pt}\\
@@ -83,6 +84,7 @@ galaxies: high-redshift - galaxies: star formation - line: formation
 
 
 \section{Introduction}
+\label{sec:intro}
 
 Due to the resonant nature of the lyman alpha line, gas kinematics
 play an important role in the shape of this line. In particular we
@@ -91,12 +93,13 @@ rotating.
 
 
 \section{Implementation of Bulk Gas Rotation}
+\label{sec:implementation}
 
 We implement into CLARA the simplest model whereby a sphere rotates
 with homogeneous angular velocity. We define a cartesian coordinate
 system with its origin at the center of the sphere and the rotation
 axis to be the $z$-axis, the components in the bulk velocity field, $\vec{v}
-= v_{x}\hat{i} + v_{y}\hat{j} + v_{z}\hat{z}$. in the gas can be written as 
+= v_{x}\hat{i} + v_{y}\hat{j} + v_{z}\hat{k}$. in the gas can be written as 
  
 %In cartesian coordinates the rotational velocity around de the z-axys
 %is defined by:
@@ -141,7 +144,7 @@ parameters summarized in Table  \ref{table:models}.
 %observer respect to the axis of rotation of the cloud. 
 
 Additionaly in the postprocessing process we will take into account
-different observer positions with respecto the cloud rotation
+different observer positions with respect to the cloud rotation
 axis.
 
 
@@ -157,9 +160,6 @@ Photons Distributions & & Central, Homogeneous\\
 \caption{
 Values for the varying input parameters in CLARA. Taking into account
 all the possible combinations for these models
-%odels, If we take into account all these possibles
-% combinations we get 24 models with dust and 24 without dust for a
-% total of 48 models 
 } 
 \label{table:models}
 \end{center}
@@ -179,11 +179,9 @@ all the possible combinations for these models
 
 Now if we take into account the position of the observer and compute
 this for differents angles of observation $\theta$ the outcoming
-spectra is modified as is shown in figure[2]. The main feature here is
-that as the angle increases the line high decreases. It means that a
-observer in the poles will observe a higher double peak than a
-observer in the ecuator. We will understand this in more details when
-we present the resaults of the scape fraction in section[].      
+spectra is modified as is shown in Figure~\ref{DifferentObservers}. The main feature here is that as the angle increases the line height decreases. It means that a observer in the poles will observe a higher double peak than a
+observer in the ecuator. We will understand this in more detail when
+we present the results of the scape fraction in section~\ref{sec:EF}.      
 
 \begin{figure}
 \begin{center}
@@ -191,6 +189,7 @@ we present the resaults of the scape fraction in section[].
 \end{center}
 \caption{Spectra for different observers. Model:$V=300km/s$, Optical
   Depth $\tau=10^{7}$ and Central Distribution without dust.} 
+  \label{DifferentObservers}
 \end{figure}
 
 %describir los modelos, poner las ecuaciones de la velocidad de
@@ -205,51 +204,58 @@ we present the resaults of the scape fraction in section[].
 %Ver correo de Jaime y tratar de explicar a que se deben estos efectos.
 
 
-In the previous section we describe the models that we study the
-effect of rotation in the Lyman alpha line and see the effect of
-rotation in the specrtums. Now we show the main resaults that we
+In the previous section we describe the models that we use to study the
+effect of rotation in the Lyman alpha line for this we saw the outcoming specrtums including rotation. Now we show the main results that we
 obtain, in particual we pay spetial attention to the position of the
 maximums, the width of the line and the escape fraction in function of
 the rotational velocity and the angle of observation $\theta$.  
 
-In Figure[1] the effect that rotation have in the spectra is shown,
+In Figure~\ref{fig:HOMandCentral} the effect that rotation have in the spectra is shown,
 for both distributions central (Left) and homogeneous (right). This is
 a general case in the sense that is independent of the position of an
 external observer.  
 
-\subsection{Maximums Position}
+\subsection{Maxima Positions}
+\label{sec:MP}
 
 \begin{figure}
-    \includegraphics[width=0.45\textwidth]{0maximum7t.png}
-    \includegraphics[width=0.45\textwidth]{0maximum6t.png}
-    \includegraphics[width=0.45\textwidth]{0maximum5t.png}
-  \label{figure:maxima}\caption{Width of the lyman-alpha line for all the models. }
+    \includegraphics[width=0.45\textwidth]{maximumvsODDifSpeedsCentral.png}
+    \includegraphics[width=0.45\textwidth]{maximumvsODDifSpeedsHOM.png}
+  \label{figure:maximavsOD}\caption{Position of the maxima in the outgoing spectra for differents Optical Depths, (up)Central Distriution, (Down) Homogeneous Distribution.}
 \end{figure}
-(comparar con la grafica del apendice de clara con el eje x el optical
-depth y en el eje-y los maximos) 
 
-The maximus position gives information about the wave lenght of the
+
+\begin{figure}
+    \includegraphics[width=0.45\textwidth]{maximumvsvelocitiesDifODCentral.png}
+    \includegraphics[width=0.45\textwidth]{maximumvsvelocitiesDifODHOM.png}
+  \label{figure:maximumsvsvelocities}\caption{Position of the maxima in the outgoing spectra for differents Rotational velocities, (up)Central Distriution, (Down) Homogeneous Distribution.}
+\end{figure}
+
+The maximums position gives information about the wave lenght of the
 mayority of the outcoming photons after they interact with the gas, in
 addition as a photon have more scatterings its wave lenght would be
 larger than the initial which is $1216$ {\AA}. 
-As we can see in Fig.[3] the position of the maximums does not change
-with rotational velocity. But it change from homogeneous and central.  
+As we can see in Figure ~\ref{figure:maximumsvsvelocities} the position of the maximums does not change with rotational velocity for the central dsitribution. On the other hand for the homogeneous distriution the maxima position $X_{m}$ change for $Log_{10}\tau=5$, this is because at higher rotational velocities photons escape with less scatterings, for $v=100\dfrac{km}{s}$ the majority of the photons still escape with scatterings but for $v=200\dfrac{km}{s}$ the number of photons that escape with a few or any scatterings is higher, this is why the maxima change to the center of the spectra.\\
+
+If we now study the effect of the optical depth $\tau$ in the maxima position $X_{m}$ Figure~\ref{figure:maximavsOD}, we found that as the optical depth increase (include reference of previous articles) the maxima position increase and this is a well known result, but when rotation is included the dependence is not linear.
+%(think a lit bit more on this, maybe make a regression)
+%explain the method to find the maxima position
 
 \subsection{Line Width}
+\label{sec:LW}
 
-%el ancho sirve para saber el rango de scattering que tienen los fotones.
 Another effect that the rotation of the gas produce is in the  width
 of the lyman alpha line. The width of the line provide information of
-the the how many phtons scape with a particular wave lenght, in the
+how many photons scape with a particular wave lenght, in the
 ideal case in which all the photons scape with the same wave lenght
-the outcoming spectrum would be narrow. For all the models we study we
-found that as the rotational velocity increase as the line width
+the outcoming spectrum would be narrower. For all the models we study we
+found that as the rotational velocity increase the line width
 increase this is show in Fig.[4].\\ 
  
 
 \begin{figure*}
-    \includegraphics[width=0.45\textwidth]{WidthCentral.png}
-    \includegraphics[width=0.45\textwidth]{WidthHomogeneous.png}
+    \includegraphics[width=0.45\textwidth]{Width7Central.png}
+    \includegraphics[width=0.45\textwidth]{Width7Homogeneous.png}
     \includegraphics[width=0.45\textwidth]{Width6.png}
     \includegraphics[width=0.45\textwidth]{Width6HOM.png}
     \includegraphics[width=0.45\textwidth]{Width5.png}
@@ -274,8 +280,9 @@ see a broader line. Fig.[5]\\
 
 
 \subsection{Escape Fraction}
+\label{sec:EF}
 
-The fraction of photons that escape from de cloud of gas and dust is
+The fraction of photons that escape from the cloud of gas and dust is
 defined as:\\ 
 
 \begin{equation}
@@ -283,7 +290,7 @@ F_{e}=\dfrac{\Sigma_{NI} \vec{k}\cdot \vec{o}}{\Sigma_{NF}\vec{k}\cdot \vec{o}}
 \end{equation}
 
 Where NI is the initial number of photons and NF is the final. This
-escape fraction is computed for all the models which resaults are
+escape fraction is computed for all the models which results are
 shown in Fig.[6]\\ 
  
 \begin{figure*}
@@ -300,7 +307,7 @@ shown in Fig.[6]\\
 
 When the distribution is homogeneous the effect of velocity in the
 escape fraction is clear while in the central model the effect is not
-noterous. 
+notorious. 
 The main effect is that the escape fraction increase as the velocity
 increase.  
 
