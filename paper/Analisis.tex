@@ -198,9 +198,6 @@ different viewing angles.
   \label{fig:differentvelocities}}
 \end{figure*}
 
-
-
-
 \begin{figure*}
 \includegraphics[width=0.45\textwidth]{Observers7t.png}
 \includegraphics[width=0.45\textwidth]{Observers7tHOM.png}
@@ -222,10 +219,12 @@ respect to the rotation angle, $\mu = \cos{\theta}$. All the results
 in this section will be expressed in terms of frequencies expressed in
 velocities. 
 
-
-Next, we  quantify the line by its full width at half maximum
-(FWHM) and the peak positions. In the next subsection we take a look
-at the escape fraction. We conclude the section by estimating the
+First we quantify the line by its full width at half maximum
+(FWHM) and the peak positions. In order to interpret these results we
+measure how the rotation affects the average number of scatterings
+for each Lyman-alpha photon in the simulation. This help us to
+introduce the next subsection on the escape fraction in our models
+including dust. We conclude the section by estimating the
 expected line flux for top hat filters at a fixed center and varying
 width. 
 
@@ -318,6 +317,14 @@ the same weight regardless of the relative observer position.
 \end{figure*}
 
 
+%\begin{figure}
+%    \includegraphics[width=0.45\textwidth]{maximumvsODDifSpeedsCentral.png}
+%    \includegraphics[width=0.45\textwidth]{maximumvsODDifSpeedsHOM.png}
+%  \label{fig:maximavsOD}\caption{Position of the maxima in the
+%    outgoing spectra for differents Optical Depths, (up)Central
+%    Distriution, (Down) Homogeneous Distribution.} 
+%\end{figure}
+
 The second feature in the line that we use to quantify the effect of
 rotation is the position of the line maxima. These provide information
 on the wavelength of the majority of the outgoing photons after
@@ -331,7 +338,7 @@ understand the dependence of the peak maxima as a function of the
 hydrogen optical depth in the cloud [citation needed].
 
 
-In Figure ~\ref{figure:maximumsvsvelocities} we present the position
+In Figure ~\ref{fig:maximavsvelocity} we present the position
 of the maxima as a function of $V_{\rm max}$. For the photons emitted
 in the line center we do not find any variation in the position of the
 maxima in the range of explored parameter space. However in the
@@ -347,28 +354,26 @@ $\tau_{H}\sim 1$ which allows them to escape within one
 scatter. Increasing the rotational velocity makes it easier for the
 photons in this photosphere region to escape.
 
+In Figure ~\ref{fig:maximavsangle} we present the position of the
+maxima as a function of the viewing angle $\mu$ for all the optical
+depths and rotational velocities and the two different photon
+distributions [FALTA LA GRAFICA]. 
+
+
+%Finally when we take into account the viewing angle Fig
+%~\ref{fig:DifferentObservers} we found that $X_{m}$ does not depend on
+%it, but again there is a threshold for the homogeneous distribution in
+%which  the double peaked merged into a single peak but this time it is
+%just the angle of viewing effect. 
+
 %rotational velocities photons escape with
 %less scatterings (fig:ref), for $v=100$\kms the majority of the photons
 %still escape with scatterings (double-peaked line) but for $v=200$\kms
 %the number of photons that escape with a few or any scatterings is higher
 %(single-peaked line), this is one of the main effects of rotation. \\ 
 
-If we now study the effect of the optical depth $\tau$ in the maxima
-position $X_{m}$ Figure~\ref{figure:maximavsOD}, we found that as the
-optical depth increase the maximum position increase and this is a
-well-known result (include references), we found that this result is
-not modified by rotation.\\ 
-
-Finally when we take into account the viewing angle Fig
-~\ref{fig:DifferentObservers} we found that $X_{m}$ does not depend on
-it, but again there is a threshold for the homogeneous distribution in
-which  the double peaked merged into a single peak but this time it is
-just the angle of viewing effect. 
-
 % try a Nscatt plot as a function of theta
 %explain the method
-\subsection{Full Width at Half Maximum of the Lyman alpha line}
-\label{sec:LW}
 
 % explicar como se mide el ancho para algunos casos
 % I dont understand this at all, hope Nscatts plot helps 
@@ -376,15 +381,88 @@ just the angle of viewing effect.
 
 
 
+Finally we also report on the effect of the neutral Hydrogen
+optical depth $\tau_{H}$ on the maxima position $x_{m}$
+Figure~\ref{figure:maximavsOD}. We find that, at fixed
+rotation velocity, the position of the maxima increases with optical
+depth as expected from basic theoretical consideraions. We compare
+our results with the expected theoretical escaling for an infinnite
+slab. 
 
 
-%\begin{figure}
-%    \includegraphics[width=0.45\textwidth]{maximumvsODDifSpeedsCentral.png}
-%    \includegraphics[width=0.45\textwidth]{maximumvsODDifSpeedsHOM.png}
-%  \label{fig:maximavsOD}\caption{Position of the maxima in the
-%    outgoing spectra for differents Optical Depths, (up)Central
-%    Distriution, (Down) Homogeneous Distribution.} 
-%\end{figure}
+
+
+\subsection{Average Number of Scatterings}
+
+
+
+
+
+
+
+\subsection{Escape Fraction}
+\label{sec:EF}
+
+We have seen in the previous section that rotation affects the number
+of scatterings that 
+
+The fraction of photons that escape from the cloud of gas and dust is
+defined as:\\ 
+
+\begin{equation}
+F_{e}=\dfrac{\Sigma_{NI} \vec{k}\cdot \vec{o}}{\Sigma_{NF}\vec{k}\cdot \vec{o}}
+\end{equation}
+
+Where NI is the initial number of photons and NF is the final,
+$\vec{k}$ is the rotation axis direction and $\vec{o}$ the observer
+direction. With this definition we compute the escape fraction for all
+of our models, the results are shown in Fig ~\ref{figure:escape}\\  
+ 
+\begin{figure*}
+  \includegraphics[width=0.45\textwidth]{FECentral5.png}
+  \includegraphics[width=0.45\textwidth]{FEHOM5.png}
+  \includegraphics[width=0.45\textwidth]{FECentral6.png}
+  \includegraphics[width=0.45\textwidth]{FEHOM6.png}
+  \includegraphics[width=0.45\textwidth]{FECentral7.png}
+  \includegraphics[width=0.45\textwidth]{FEHOM7.png}
+  \label{figure:escape}\caption{Escape fraction for all the models. Left
+    panels show the central distribution, while right panels show the
+    homogeneous distribution} 
+\end{figure*}
+
+We found that for the central distribution the escape fraction does
+not depend in velocity neither in the angle of observation, while it
+does in the optical depth, this result was already known from previous
+works (references). On the other hand for the homogeneous distribution
+we found that for higher velocities photons escape easily. The
+difference between this two results is due to the fact that in the
+homogeneous distribution photons are emitted closer to the escape
+surface and this makes this configuration more sensitive to
+rotation. This last argument also explain the fact that in the
+homogeneous distribution the optical depth does not affects the escape
+fraction . 
+
+\subsection{Integrated flux}
+
+
+\section{Discussion}
+\label{sec:discussion}
+
+\section{Observational implications}
+% taking into account equivalent widths results with narrow band filters we can make a criterium in order to select wich galaxie could be seen in actual observations.
+
+... The results derived in this paper have consequences on the
+interpreation of galaxy observations in the Lyman alpha line.
+
+\section{Conclusions}
+
+\section*{Acknowledgements}
+
+\section*{Appendix A: Tables}
+
+
+\end{document}
+
 
 
 
@@ -406,51 +484,6 @@ just the angle of viewing effect.
 %\end{center}
 %\end{table*}
 
-
-
-
-\subsection{Escape Fraction}
-\label{sec:EF}
-
-The fraction of photons that escape from the cloud of gas and dust is
-defined as:\\ 
-
-\begin{equation}
-F_{e}=\dfrac{\Sigma_{NI} \vec{k}\cdot \vec{o}}{\Sigma_{NF}\vec{k}\cdot \vec{o}}
-\end{equation}
-
-Where NI is the initial number of photons and NF is the final, $\vec{k}$ is the rotation axis direction and $\vec{o}$ the observer direction. With this definition we compute the escape fraction for all of our models, the results are shown in Fig ~\ref{figure:escape}\\ 
- 
-\begin{figure*}
-  \includegraphics[width=0.45\textwidth]{FECentral5.png}
-  \includegraphics[width=0.45\textwidth]{FEHOM5.png}
-  \includegraphics[width=0.45\textwidth]{FECentral6.png}
-  \includegraphics[width=0.45\textwidth]{FEHOM6.png}
-  \includegraphics[width=0.45\textwidth]{FECentral7.png}
-  \includegraphics[width=0.45\textwidth]{FEHOM7.png}
-  \label{figure:escape}\caption{Escape fraction for all the models. Left
-    panels show the central distribution, while right panels show the
-    homogeneous distribution} 
-\end{figure*}
-
-We found that for the central distribution the escape fraction does not depend in velocity neither in the angle of observation, while it does in the optical depth, this result was already known from previous works (references). On the other hand for the homogeneous distribution we found that for higher velocities photons escape easily. The difference between this two results is due to the fact that in the homogeneous distribution photons are emitted closer to the escape surface and this makes this configuration more sensitive to rotation. This last argument also explain the fact that in the homogeneous distribution the optical depth does not affects the escape fraction .
-
-
-
-\section{Discussion}
-\label{sec:discussion}
-
-\section{Observational implications}
-% taking into account equivalent widths results with narrow band filters we can make a criterium in order to select wich galaxie could be seen in actual observations.
-
-... The results derived in this paper have consequences on the
-interpreation of galaxy observations in the Lyman alpha line.
-
-\section{Conclusions}
-
-\section*{Acknowledgements}
-
-\section*{Appendix A: Tables}
 
 \begin{table}
 \begin{center}
@@ -569,4 +602,3 @@ Central & 300 & $90^{o}$ & 4845.33 & 49858.48\\ \hline
 
 %\end{thebibliography}
 
-\end{document}
