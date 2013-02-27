@@ -172,7 +172,7 @@ all the possible combinations for these models
 \label{sec:results}
 
 The central result of this paper is summarized in Figure
-\ref{fig:HOMandCentral} where we show that rotation as a considerable
+~\ref{fig:HOMandCentral} where we show that rotation as a considerable
 effect on the morphology of the emergent Lyman-alpha line both in the
 case where the photons are emitted at the sphere's center and when
 they are initialized with an homogeneous distribution all over the
@@ -181,7 +181,7 @@ gas volume.
 The results for this outgoing spectra are integrated over the whole
 sphere, meaning that all the escaping photons were taking into account
 regardless of the direction of the outgoing photons. Figure
-\ref{fig:Different Observers} shows how if one gives a weight to each outgoing
+\ref{fig:DifferentObservers} shows how if one gives a weight to each outgoing
 photon according to its direction when escaping the gas distribution
 it is posible to detect notable differences in the spectrum for
 different viewing angles.
@@ -199,17 +199,16 @@ different viewing angles.
 
 
 
-\begin{figure}
-\begin{center}
-\includegraphics[scale=0.45]{Observers.png}
-\end{center}
+\begin{figure*}
+\includegraphics[scale=0.45]{Observers7t.png}
+\includegraphics[scale=0.45]{Observers7tHOM.png}
 \caption{Spectra for different observers. Model:$V=300$\kms, Optical
   Depth $\tau=10^{7}$ and Central Distribution without dust.} 
   \label{fig:DifferentObservers}
-\end{figure}
+\end{figure*}
 
 
-\subsection{Maxima Positions}
+\subsection{Maximums Position}
 \label{sec:MP}
 
 \begin{figure}
@@ -225,35 +224,38 @@ different viewing angles.
   \label{figure:maximumsvsvelocities}\caption{Position of the maxima in the outgoing spectra for differents Rotational velocities, (up)Central Distriution, (Down) Homogeneous Distribution.}
 \end{figure}
 
-The maximums position gives information about the wave lenght of the
-mayority of the outcoming photons after they interact with the gas, in
-addition as a photon have more scatterings its wave lenght would be
-larger than the initial which is $1216$ {\AA}. 
+Maximums position provides information about the wave length of the
+majority of the outgoing photons after they interact with the gas cloud, as a photon escapes with more scatterings its wave length would be
+farthest than the initial which is $1216$ {\AA}. 
 As we can see in Figure ~\ref{figure:maximumsvsvelocities} the
 position of the maxima does not change with rotational velocity for
-the central dsitribution. On the other hand for the homogeneous
-distriution the maxima position $X_{m}$ change for $Log_{10}\tau=5$,
+the central distribution while for the homogeneous
+distriution there is a variation in the maxima position $X_{m}$ for an optical depth $Log_{10}\tau=5$,
 this is because at higher rotational velocities photons escape with
-less scatterings, for $v=100$\kms the majority of the photons
-still escape with scatterings but for $v=200$\kms the number
-of photons that escape with a few or any scatterings is higher, this
-is why the maxima change to the center of the spectra.\\ 
+less scatterings (fig:ref), for $v=100$\kms the majority of the photons
+still escape with scatterings (double-peaked line) but for $v=200$\kms the number
+of photons that escape with a few or any scatterings is higher (single-peaked line), this
+is one of the main effects of rotation. \\ 
 
-If we now study the effect of the optical depth $\tau$ in the maxima position $X_{m}$ Figure~\ref{figure:maximavsOD}, we found that as the optical depth increase (include reference of previous articles) the maxima position increase and this is a well known result, but when rotation is included the dependence is not linear.
-%(think a lit bit more on this, maybe make a regression)
-%explain the method to find the maxima position
-% Nscatt plots should give a hint about central maxima.
-\subsection{Line Equivalent Width}
+If we now study the effect of the optical depth $\tau$ in the maxima position $X_{m}$ Figure~\ref{figure:maximavsOD}, we found that as the optical depth increase the maximum position increase and this is a well-known result (include references), we found that this result is not modified by rotation.\\
+
+Finally when we take into account the viewing angle Fig ~\ref{fig:DifferentObservers} we found that $X_{m}$ does not depend on it, but again there is a threshold for the homogeneous distribution in which  the double peaked merged into a single peak but this time it is just the angle of viewing effect.
+
+% try a Nscatt plot as a function of theta
+%explain the method
+\subsection{Full Width at Half Maximum of the Lyman alpha line}
 \label{sec:LW}
 
-The width of the line provide information of
-how many photons scape with a particular wave lenght, in the
-ideal case in which all the photons scape with the same wave lenght
-the outcoming spectrum would be narrower. \\
-We found a dependency of the equivalent width with the rotation of the gas cloud for all the models we study, this is shown in Figure ~\ref{figure:width}. As velocity increase also the equivalent width increase, it means that some photons escape with fewer scatterings than the static case but at the same time some photons escape with more scatterings.\\
+The width of the line provide information about the range of the wave lengths of the outgoing photons, in the ideal case in which all the photons escape with the same wave length the outgoing spectrum would be the narrower, therefore as the number of scatterings increase the width increases too (reference).	\\
 
+
+We use the full width at half maximum (FWHM) in order to study the width of the line for all the models that we propose. We found a dependency of the width with the rotation velocity of the gas cloud, this results are summarize in Figure ~\ref{figure:width}. As velocity increase also the equivalent width increase (for both homogeneous and central distribution), it means that some photons escape with fewer scatterings than the static case but at the same time a few photons escape with more scatterings, this can be seen clearly in Figure. (Nscatt)\\
+
+We also found a dependency with the viewing angles, in particular as the angle increase the width also increase Figure ~\ref{fig:withvstheta}, this was also found in Verhemme et al. 2012 for a rotating disk but the pure effect of rotation can not been study as it is in our case. Following the convention of Verhamme et al 2012 we define $\mu=cos(\theta)$, and we can make a polynomial fit for the $FWHM(\mu)$ for our models, this is resumed in Table ~\ref{table:fits}
+% explicar como se mide el ancho para algunos casos
 % I dont understand this at all, hope Nscatts plot helps 
- 
+ %make comparison with Verhamme et al 
+
 
 \begin{figure*}
     \includegraphics[width=0.45\textwidth]{Width7Central.png}
@@ -265,9 +267,7 @@ We found a dependency of the equivalent width with the rotation of the gas cloud
   \label{figure:width}\caption{Width of the lyman-alpha line for all the models. }
 \end{figure*}
 
-We also found that the equivalent width is not the same for differents angles of observation in particular as the angle increase the width also increase Figure ~\ref{fig:withvstheta}, this is related with the fact that photons escape easily (with less scatterings) in the $\hat{k}$ direction\\ 
-Following the convention of Verhamme et al 2012 we define $\mu=cos(\theta)$, we can make a polynomial fit the $EW(\mu)$ for our models, this is resumed in Table ~\ref{table:fits}
-%make comparison with Verhamme et al 
+
 
 \begin{figure*}
     \includegraphics[width=0.45\textwidth]{WidthvsThetaDifODHOM.png}
@@ -282,12 +282,12 @@ Following the convention of Verhamme et al 2012 we define $\mu=cos(\theta)$, we 
 \begin{center}
 \begin{tabular}{cc}\hline
 Model & Fit\\
-Central, $\tau=10^5, V=200$\kms &$EW(\mu)=-59-1677\mu-17864\mu^{2}+84509\mu^{3}-149877\mu^{4}$\\
-Central, $\tau=10^6, V=200$\kms &$EW(\mu)=-1+53.8\mu-1080\mu^{2}+9644\mu^{3}-32264\mu^{4}$\\
-Central, $\tau=10^7, V=200$\kms & $EW(\mu)=0.011+0.9\mu-27\mu^{2}+359\mu^{3}-1791\mu^{4}$\\
-Hom, $\tau=10^5, V=200$\kms & $EW(\mu)=11.66-187.22\mu-54.58\mu^{2}+12932.5\mu^{3}-51882.9\mu^{4}$ \\
-Hom, $\tau=10^6, V=200$\kms & $EW(\mu)=-361.64+17158.92\mu-305268.4\mu^{2}+2413478\mu^{3}-7154649\mu^{4}$ \\
-Hom, $\tau=10^7, V=200$\kms & $EW(\mu)=-0.28+23.29\mu-721\mu^{2}+9912\mu^{3}-51074\mu^{4}$ \\
+Central, $\tau=10^5, V=200$\kms &$FWHM(\mu)=-149877+84509\mu-17864\mu^{2}-1677\mu^{3}-59\mu^{4}$\\
+Central, $\tau=10^6, V=200$\kms &$FWHM(\mu)=-32264+9644\mu-1080\mu^{2}+53.8\mu^{3}-\mu^{4}$\\
+Central, $\tau=10^7, V=200$\kms & $FWHM(\mu)=-1791+359\mu-27\mu^{2}+0.9\mu^{3}+0.011\mu^{4}$\\
+Hom, $\tau=10^5, V=200$\kms & $FWHM(\mu)=-51882.9+12932.5\mu-54.58\mu^{2}-187.22\mu^{3}+11.66\mu^{4}$ \\
+Hom, $\tau=10^6, V=200$\kms & $FWHM(\mu)=-7154649+2413478\mu-305268.4\mu^{2}+17158.92\mu^{3}-361.64\mu^{4}$ \\
+Hom, $\tau=10^7, V=200$\kms & $FWHM(\mu)=-51074+9912\mu-721\mu^{2}+23.29\mu^{3}-0.28\mu^{4}$ \\
 \hline
 \end{tabular}
 \caption{Fits for EW models} 
@@ -308,9 +308,7 @@ defined as:\\
 F_{e}=\dfrac{\Sigma_{NI} \vec{k}\cdot \vec{o}}{\Sigma_{NF}\vec{k}\cdot \vec{o}}
 \end{equation}
 
-Where NI is the initial number of photons and NF is the final. This
-escape fraction is computed for all the models which results are
-shown in Fig.[6]\\ 
+Where NI is the initial number of photons and NF is the final, $\vec{k}$ is the rotation axis direction and $\vec{o}$ the observer direction. With this definition we compute the escape fraction for all of our models, the results are shown in Fig ~\ref{figure:escape}\\ 
  
 \begin{figure*}
   \includegraphics[width=0.45\textwidth]{FECentral5.png}
@@ -324,11 +322,8 @@ shown in Fig.[6]\\
     homogeneous distribution} 
 \end{figure*}
 
-When the distribution is homogeneous the effect of velocity in the
-escape fraction is clear while in the central model the effect is not
-notorious. 
-The main effect is that the escape fraction increase as the velocity
-increase.  
+We found that for the central distribution the escape fraction does not depend in velocity neither in the angle of observation, while it does in the optical depth, this result was already known from previous works (references). On the other hand for the homogeneous distribution we found that for higher velocities photons escape easily. The difference between this two results is due to the fact that in the homogeneous distribution photons are emitted closer to the escape surface and this makes this configuration more sensitive to rotation. This last argument also explain the fact that in the homogeneous distribution the optical depth does not affects the escape fraction .
+
 
 
 \section{Discussion}
