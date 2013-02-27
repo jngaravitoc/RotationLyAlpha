@@ -148,7 +148,7 @@ parameters summarized in Table  \ref{table:models}.
 \begin{tabular}{ccc}\hline
 Velocity (\kms) & $V_{\rm max}$&$0,\ 50,\ 100,\ 200,\ 300$\\
 Hydrogen Optical Depth & $\tau_{H} $ & $10^{5},\ 10^{6},\ 10^{7}$\\
-Dust Optical Depth & $\tau_{A}$ & XXX \\
+Dust Optical Depth & $\tau_{A}$ & $0$,$1$\\
 Photons Distributions & & Central, Homogeneous\\
 \hline
 \end{tabular}
@@ -171,14 +171,14 @@ all the possible combinations for these models
 \section{Results}
 \label{sec:results}
 
-The central result of this paper is summarized in Figure
-~\ref{fig:HOMandCentral} where we show that rotation as a considerable
-effect on the morphology of the emergent Lyman-alpha line both in the
-case where the photons are emitted at the sphere's center and when
-they are initialized with an homogeneous distribution all over the
-gas volume. 
+The central result of this paper is summarized in
+Fig.~\ref{fig:DifferentVelocities} where we show that rotation has a
+considerable effect on the morphology of the emergent Lyman-alpha line
+both in the case where the photons are emitted at the sphere's center
+and when they are initialized with an homogeneous distribution all
+over the gas volume.
 
-The results for this outgoing spectra are integrated over the whole
+The results for these outgoing spectra are integrated over the whole
 sphere, meaning that all the escaping photons were taking into account
 regardless of the direction of the outgoing photons. Figure
 \ref{fig:DifferentObservers} shows how if one gives a weight to each outgoing
@@ -191,70 +191,46 @@ different viewing angles.
 \begin{figure*}
   \includegraphics[width=0.45\textwidth]{7tDifSpeedsZ.png}
   \includegraphics[width=0.45\textwidth]{7tHOMDifSpeeds1.png}
-  \label{fig:HOMandCentral}\caption{Shape of the lyman alpha line for
+\caption{Shape of the lyman alpha line for
     differents velocities. The left (right) panel shows the central
-    (homogeneous) photon distribution.}
+    (homogeneous) photon distribution. All photons were taken into
+    account regardless of their outgoing direction of propagation.
+  \label{fig:differentvelocities}}
 \end{figure*}
 
 
 
 
 \begin{figure*}
-\includegraphics[scale=0.45]{Observers7t.png}
-\includegraphics[scale=0.45]{Observers7tHOM.png}
-\caption{Spectra for different observers. Model:$V=300$\kms, Optical
-  Depth $\tau=10^{7}$ and Central Distribution without dust.} 
-  \label{fig:DifferentObservers}
+\includegraphics[width=0.45\textwidth]{Observers7t.png}
+\includegraphics[width=0.45\textwidth]{Observers7tHOM.png}
+\caption{Same as Figure \ref{fig:differentvelocities} but this time
+  the differen lines show the line morphology for different polar angles
+  $\theta$ with respect to the rotation axis. In this case each photon
+  has a weight dependent on their outgoing direction. All spectra correspond
+  to the same $V_{\rm max}=300$\kms, Optical   Depth $\tau=10^{7}$ and
+  Central Distribution without dust.}  
+  \label{fig:differentobservers}
 \end{figure*}
 
 
-\subsection{Maximums Position}
-\label{sec:MP}
-
-\begin{figure}
-    \includegraphics[width=0.45\textwidth]{maximumvsODDifSpeedsCentral.png}
-    \includegraphics[width=0.45\textwidth]{maximumvsODDifSpeedsHOM.png}
-  \label{figure:maximavsOD}\caption{Position of the maxima in the outgoing spectra for differents Optical Depths, (up)Central Distriution, (Down) Homogeneous Distribution.}
-\end{figure}
-
-
-\begin{figure}
-    \includegraphics[width=0.45\textwidth]{maximumvsvelocitiesDifODCentral.png}
-    \includegraphics[width=0.45\textwidth]{maximumvsvelocitiesDifODHOM.png}
-  \label{figure:maximumsvsvelocities}\caption{Position of the maxima in the outgoing spectra for differents Rotational velocities, (up)Central Distriution, (Down) Homogeneous Distribution.}
-\end{figure}
-
-Maximums position provides information about the wave length of the
-majority of the outgoing photons after they interact with the gas cloud, as a photon escapes with more scatterings its wave length would be
-farthest than the initial which is $1216$ {\AA}. 
-As we can see in Figure ~\ref{figure:maximumsvsvelocities} the
-position of the maxima does not change with rotational velocity for
-the central distribution while for the homogeneous
-distriution there is a variation in the maxima position $X_{m}$ for an optical depth $Log_{10}\tau=5$,
-this is because at higher rotational velocities photons escape with
-less scatterings (fig:ref), for $v=100$\kms the majority of the photons
-still escape with scatterings (double-peaked line) but for $v=200$\kms the number
-of photons that escape with a few or any scatterings is higher (single-peaked line), this
-is one of the main effects of rotation. \\ 
-
-If we now study the effect of the optical depth $\tau$ in the maxima position $X_{m}$ Figure~\ref{figure:maximavsOD}, we found that as the optical depth increase the maximum position increase and this is a well-known result (include references), we found that this result is not modified by rotation.\\
-
-Finally when we take into account the viewing angle Fig ~\ref{fig:DifferentObservers} we found that $X_{m}$ does not depend on it, but again there is a threshold for the homogeneous distribution in which  the double peaked merged into a single peak but this time it is just the angle of viewing effect.
-
-% try a Nscatt plot as a function of theta
-%explain the method
-\subsection{Full Width at Half Maximum of the Lyman alpha line}
-\label{sec:LW}
-
-The width of the line provide information about the range of the wave lengths of the outgoing photons, in the ideal case in which all the photons escape with the same wave length the outgoing spectrum would be the narrower, therefore as the number of scatterings increase the width increases too (reference).	\\
+In the following subsections we quantify the trends observed in
+Fig. \ref{fig:differentvelocities} and
+Fig. \ref{fig:differentobservers} as a function of the maximum
+rotation velocity $V_{\rm max}$ and the position of the observer with
+respect to the rotation angle, $\mu = \cos{\theta}$. All the results
+in this section will be expressed in terms of frequencies expressed in
+velocities. 
 
 
-We use the full width at half maximum (FWHM) in order to study the width of the line for all the models that we propose. We found a dependency of the width with the rotation velocity of the gas cloud, this results are summarize in Figure ~\ref{figure:width}. As velocity increase also the equivalent width increase (for both homogeneous and central distribution), it means that some photons escape with fewer scatterings than the static case but at the same time a few photons escape with more scatterings, this can be seen clearly in Figure. (Nscatt)\\
+Next, we  quantify the line by its full width at half maximum
+(FWHM) and the peak positions. In the next subsection we take a look
+at the escape fraction. We conclude the section by estimating the
+expected line flux for top hat filters at a fixed center and varying
+width. 
 
-We also found a dependency with the viewing angles, in particular as the angle increase the width also increase Figure ~\ref{fig:withvstheta}, this was also found in Verhemme et al. 2012 for a rotating disk but the pure effect of rotation can not been study as it is in our case. Following the convention of Verhamme et al 2012 we define $\mu=cos(\theta)$, and we can make a polynomial fit for the $FWHM(\mu)$ for our models, this is resumed in Table ~\ref{table:fits}
-% explicar como se mide el ancho para algunos casos
-% I dont understand this at all, hope Nscatts plot helps 
- %make comparison with Verhamme et al 
+\subsection{Line width and peak maxima}
+\label{sec:widthpeak}
 
 
 \begin{figure*}
@@ -264,9 +240,8 @@ We also found a dependency with the viewing angles, in particular as the angle i
     \includegraphics[width=0.45\textwidth]{Width6HOM.png}
     \includegraphics[width=0.45\textwidth]{Width5.png}
     \includegraphics[width=0.45\textwidth]{Width5HOM.png}
-  \label{figure:width}\caption{Width of the lyman-alpha line for all the models. }
+\caption{Width of the lyman-alpha line for all the models.   \label{fig:widthvsvelocity}}
 \end{figure*}
-
 
 
 \begin{figure*}
@@ -274,26 +249,162 @@ We also found a dependency with the viewing angles, in particular as the angle i
     \includegraphics[width=0.45\textwidth]{WidthvsThetaDifOD.png}
     \includegraphics[width=0.45\textwidth]{WidthvsThetaDifSpeedsHOM.png}
     \includegraphics[width=0.45\textwidth]{WidthvsThetaDifSpeeds.png}
-  \label{figure:widthvstheta}\caption{Width of the lyman-alpha line for all the models. }
+\caption{Width of the lyman-alpha line for all the models. 
+  \label{figure:widthvstheta}
+}
 \end{figure*}
 
+The first quantitative conclusion of the effect of rotation in the
+Lyman alpha line is that the double peaks in the line tend to broaden
+until they reach a single broad emission peak. This is most evident in
+the case of Lyman-alpha sources homogeneously distributed in the gas
+distributions (Fig. \ref{differentvelocities} right panel).
+
+To quantify the line broadening we measure a modified version of the full
+width at half maximum (FWHM) for half of the line, $W_{1/2}$. It means that in
+the case of double peaked emission, $W_{1/2}$ corresponds to the with
+one of thepeaks, while in the extreme case when the line is converted
+into a single peak, $W_{1/2}$ corresponds to half of the full width. 
+
+This definition allows us to quantify the line width both in the cases
+of double and single peak emission. Furthermore it has the advantage
+that this line width should have a direct observational correspondence
+to the observed line feature once the Inter-Galactic Medium (IGM)
+effects are taken into account, which have the central effect of
+strongly reducing the intensity of the blue peak of the line.
+
+Figure~\ref{fig:widthvsvelocity} summarizes our findings for $W_{1/2}$
+as a function of $V_{\rm max}$. The line width increases with the
+rotational velocity of the gas cloud. This increase can be of a factor
+of $2-3$ with respect to the width with respect to the static
+case. This trend is conserved at all optical depths regardless of the
+initial source distribution. 
+
+This result includes all the outgoing photons, regardless of the
+position of the observer. In Figure~\ref{fig:widthvstheta} we
+take into account the different positions of the observer in the
+measurement of the half-width $W_{1/2}$. From this we conclude
+that observers with a line of sight perpendicular to the axis of
+rotation (i.e. edge-on in the case of spiral galaxy) tend to meaure
+larger line widths than observers aligned with the rotation axis
+(i.e. face-on). The influence of the observer position on the line
+width, amounting always less than $15\%$ of a difference with respect
+to the result that takes into account all the outgoing photons with
+the same weight regardless of the relative observer position.
+
+%Both for central and homogeneous distribution of sources, We found a
+%dependency of the width with the rotation velocity of the gas cloud,
+%this results are summarize in Figure ~\ref{figure:width}. As velocity
+%increase also the equivalent width increase (for both homogeneous and
+%central distribution), it means that some photons escape with fewer
+%scatterings than the static case but at the same time a few photons escape with% more scatterings, this can be seen clearly in
+%Figure. (Nscatt)\\ 
+
+%We also found a dependency with the viewing angles, in particular as
+%the angle increase the width also increase Figure
+%~\ref{fig:withvstheta}, this was also found in Verhemme et al. 2012
+%for a rotating disk but the pure effect of rotation can not been study
+%as it is in our case. Following the convention of Verhamme et al 2012
+%we define $\mu=cos(\theta)$, and we can make a polynomial fit for the
+%$FWHM(\mu)$ for our models, this is resumed in Table ~\ref{table:fits} 
+
+
+\begin{figure*}
+    \includegraphics[width=0.45\textwidth]{maximumvsvelocitiesDifODCentral.png}
+    \includegraphics[width=0.45\textwidth]{maximumvsvelocitiesDifODHOM.png}
+\caption{Position of the maxima
+    in the outgoing spectra for differents Rotational velocities,
+    (up)Central Distriution, (Down) Homogeneous Distribution.\label{fig:maximumsvsvelocity}} 
+\end{figure*}
+
+
+The second feature in the line that we use to quantify the effect of
+rotation is the position of the line maxima. These provide information
+on the wavelength of the majority of the outgoing photons after
+they interact with the neutral hydrogen atoms in the gas cloud. If
+most of the photon escapes with a low number of scattering, its
+outgoing frequency will be close to its initial frequency, that is in
+the center of the line. On the contrary if the number of scatterings
+is large for the average photon, its outgoing frequency will be far
+from the line center. Such reasoning can be made more quantitative to
+understand the dependence of the peak maxima as a function of the
+hydrogen optical depth in the cloud [citation needed].
+
+
+In Figure ~\ref{figure:maximumsvsvelocities} we present the position
+of the maxima as a function of $V_{\rm max}$. For the photons emitted
+in the line center we do not find any variation in the position of the
+maxima in the range of explored parameter space. However in the
+homogeneous case we can see how the maxima goes to $x_{m}=0$, meaning
+that the double peak is converted into a single peak.
+
+This transition to a single peak line occurs for the systems where it
+becomes easiear for a bulk of the photons to escape with the lowest
+number of scatterings possible. This can explain how the single peak
+stage can be achieved in the homogeneous source distribution where
+there is fraction of the photons inside a photosphere region with
+$\tau_{H}\sim 1$ which allows them to escape within one
+scatter. Increasing the rotational velocity makes it easier for the
+photons in this photosphere region to escape.
+
+%rotational velocities photons escape with
+%less scatterings (fig:ref), for $v=100$\kms the majority of the photons
+%still escape with scatterings (double-peaked line) but for $v=200$\kms
+%the number of photons that escape with a few or any scatterings is higher
+%(single-peaked line), this is one of the main effects of rotation. \\ 
+
+If we now study the effect of the optical depth $\tau$ in the maxima
+position $X_{m}$ Figure~\ref{figure:maximavsOD}, we found that as the
+optical depth increase the maximum position increase and this is a
+well-known result (include references), we found that this result is
+not modified by rotation.\\ 
+
+Finally when we take into account the viewing angle Fig
+~\ref{fig:DifferentObservers} we found that $X_{m}$ does not depend on
+it, but again there is a threshold for the homogeneous distribution in
+which  the double peaked merged into a single peak but this time it is
+just the angle of viewing effect. 
+
+% try a Nscatt plot as a function of theta
+%explain the method
+\subsection{Full Width at Half Maximum of the Lyman alpha line}
+\label{sec:LW}
+
+% explicar como se mide el ancho para algunos casos
+% I dont understand this at all, hope Nscatts plot helps 
+ %make comparison with Verhamme et al 
+
+
+
+
+
+%\begin{figure}
+%    \includegraphics[width=0.45\textwidth]{maximumvsODDifSpeedsCentral.png}
+%    \includegraphics[width=0.45\textwidth]{maximumvsODDifSpeedsHOM.png}
+%  \label{fig:maximavsOD}\caption{Position of the maxima in the
+%    outgoing spectra for differents Optical Depths, (up)Central
+%    Distriution, (Down) Homogeneous Distribution.} 
+%\end{figure}
+
+
+
 % fix this table is too big
-\begin{table*}
-\begin{center}
-\begin{tabular}{cc}\hline
-Model & Fit\\
-Central, $\tau=10^5, V=200$\kms &$FWHM(\mu)=-149877+84509\mu-17864\mu^{2}-1677\mu^{3}-59\mu^{4}$\\
-Central, $\tau=10^6, V=200$\kms &$FWHM(\mu)=-32264+9644\mu-1080\mu^{2}+53.8\mu^{3}-\mu^{4}$\\
-Central, $\tau=10^7, V=200$\kms & $FWHM(\mu)=-1791+359\mu-27\mu^{2}+0.9\mu^{3}+0.011\mu^{4}$\\
-Hom, $\tau=10^5, V=200$\kms & $FWHM(\mu)=-51882.9+12932.5\mu-54.58\mu^{2}-187.22\mu^{3}+11.66\mu^{4}$ \\
-Hom, $\tau=10^6, V=200$\kms & $FWHM(\mu)=-7154649+2413478\mu-305268.4\mu^{2}+17158.92\mu^{3}-361.64\mu^{4}$ \\
-Hom, $\tau=10^7, V=200$\kms & $FWHM(\mu)=-51074+9912\mu-721\mu^{2}+23.29\mu^{3}-0.28\mu^{4}$ \\
-\hline
-\end{tabular}
-\caption{Fits for EW models} 
-\label{table:fits}
-\end{center}
-\end{table*}
+%\begin{table*}
+%\begin{center}
+%\begin{tabular}{cc}\hline
+%Model & Fit\\
+%Central, $\tau=10^5, V=200$\kms &$FWHM(\mu)=-149877+84509\mu-17864\mu^{2}-1677\mu^{3}-59\mu^{4}$\\
+%Central, $\tau=10^6, V=200$\kms &$FWHM(\mu)=-32264+9644\mu-1080\mu^{2}+53.8\mu^{3}-\mu^{4}$\\
+%Central, $\tau=10^7, V=200$\kms & $FWHM(\mu)=-1791+359\mu-27\mu^{2}+0.9\mu^{3}+0.011\mu^{4}$\\
+%Hom, $\tau=10^5, V=200$\kms & $FWHM(\mu)=-51882.9+12932.5\mu-54.58\mu^{2}-187.22\mu^{3}+11.66\mu^{4}$ \\
+%Hom, $\tau=10^6, V=200$\kms & $FWHM(\mu)=-7154649+2413478\mu-305268.4\mu^{2}+17158.92\mu^{3}-361.64\mu^{4}$ \\
+%Hom, $\tau=10^7, V=200$\kms & $FWHM(\mu)=-51074+9912\mu-721\mu^{2}+23.29\mu^{3}-0.28\mu^{4}$ \\
+%\hline
+%\end{tabular}
+%\caption{Fits for EW models} 
+%\label{table:fits}
+%\end{center}
+%\end{table*}
 
 
 
