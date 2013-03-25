@@ -396,7 +396,10 @@ slab.
 
 \subsection{Average Number of Scatterings}
 
-\begin{figure*}
+as we think Nscatt is related with the double peacked line and maxima positions 
+
+
+\begin{figure*}[ht]
     \includegraphics[width=0.45\textwidth]{NscattCentral.png}
     \includegraphics[width=0.45\textwidth]{NscattHOM.png}
 \caption{Nscatt\label{fig:Nscatt}} 
@@ -410,12 +413,13 @@ slab.
 \label{sec:EF}
 
 We have seen in the previous section that rotation affects the number
-of scatterings that 
+of scatterings that ..\\
 
-We now study the same models 
+Of particular interest is to compute the escape fraction of Lyman $\alpha$ photons coming from the most distant galaxies, due to the fact that with the observed intensity of the lyman alpha line quantities as the LF and SFR can be derived (put some references). \\
 
-The fraction of photons that escape from the cloud of gas and dust is
-defined as:\\ 
+Previous studies have shown the correlation of the Escape fraction with galctic mass (Lauren 2009 et al, Dayal et al 2010) abundacies and the kinematics of dust. In order to study pure rotational effects in the escape fraction we fixed the dust abundance $\tau_{A}=0.01$ and the galaxy mass. We compute the escape fraction for the models described in Table \ref{table:models}.\\
+
+For a realistic model we also take into account the viewing angle, first we fixed the viewing angle at $\theta = 0$  Fig. and then we fixed the velocity in order to see the escape fraction correlation with the viewing angle. Therefore we define the escape fraction as:\\ 
 
 \begin{equation}
 F_{e}=\dfrac{\Sigma_{NI} \vec{k}\cdot \vec{o}}{\Sigma_{NF}\vec{k}\cdot \vec{o}}
@@ -424,27 +428,28 @@ F_{e}=\dfrac{\Sigma_{NI} \vec{k}\cdot \vec{o}}{\Sigma_{NF}\vec{k}\cdot \vec{o}}
 Where NI is the initial number of photons and NF is the final,
 $\vec{k}$ is the rotation axis direction and $\vec{o}$ the observer
 direction. With this definition we compute the escape fraction for all
-of our models, the results are shown in Fig ~\ref{figure:escape}\\  
+of our models, the results are shown in Fig \ref{figure:escape}\\  
  
 \begin{figure*}
   \includegraphics[width=0.45\textwidth]{FECENTRAL.png}
   \includegraphics[width=0.45\textwidth]{FEHOMOGENEOUS.png}
-   \label{figure:escape}\caption{Escape fraction for all the models. Left
+   \label{figure:efvsv}\caption{Escape fraction for all the models. Left
     panels show the central distribution, while right panels show the
     homogeneous distribution} 
 \end{figure*}
 
-We found that for the central distribution the escape fraction does
-not depend in velocity neither in the angle of observation, while it
-does in the optical depth, this result was already known from previous
-works (references). On the other hand for the homogeneous distribution
+In Figure \ref{figure:efvsv} we found that in the central distribution the escape fraction does not change with velocity while it
+does in the optical depth. On the other hand for the homogeneous distribution
 we found that for higher velocities photons escape easily. The
-difference between this two results is due to the fact that in the
+difference between this two results relly in the fact that in the
 homogeneous distribution photons are emitted closer to the escape
 surface and this makes this configuration more sensitive to
-rotation. This last argument also explain the fact that in the
-homogeneous distribution the optical depth does not affects the escape
-fraction . 
+rotation while in the central configuration the escape fraction depends mainly in the amount of gas rather than in rotation.    
+
+\begin{figure*}
+  \includegraphics[width=0.45\textwidth]{FEHomogeneousvsThetaL.png}
+ \label{figure:efvstheta}\caption{Escape fraction dependency with the viewing angle in the homogeneous configuration.} 
+\end{figure*}
 
 \subsection{Integrated flux}
 
