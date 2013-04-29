@@ -9,7 +9,7 @@
 \def\ee{\end{equation}}
 \def\ba{\begin{eqnarray}}
 \def\ea{\end{eqnarray}}
-
+\bibliographystyle{mn2e}
 % To highlight comments 
 \usepackage{color}
 \definecolor{red}{rgb}{1,0.0,0.0}
@@ -63,16 +63,16 @@
 
 \begin{document}
 
-\title[Rotation in the Lyman-$\alpha$ line]{Effects of rotation on the
+\title[Rotation in the Lyman-$\alpha$ line]{Rotation effects on the
   Lyman-$\alpha$ line morphology in distant galaxies}
 \author[N. Garavito and J.E. Forero-Romero]{
 \parbox[t]{\textwidth}{\raggedright 
-  Nicolas Garavito-Camargo.$^{1}$ 
-  Jaime E. Forero-Romero$^{2}$ 
+  Nicolas Garavito-Camargo$^{1}$,
+  Jaime E. Forero-Romero$^{1}$ 
 }
 \vspace*{6pt}\\
-$^{1}$Universidad de los Andes
-$^{2}$Uni B
+$^{1}$Departamento de F\'{i}sica, Universidad de los Andes, Cra. 1
+No. 18A-10, Edificio Ip, Bogot\'a, Colombia 
 }
 \maketitle
 
@@ -120,7 +120,8 @@ In this paper we study for the first time the impact of rotation on
 the morphology of the Lyman $\alpha$ line. To isolate the effects of
 rotation we focus on a simple system: the gas distribution is
 spherical, with homogenous density and the gas rotates as a solid
-body.
+body. We base our work on the Monte Carlo base radiative transfer code
+CLARA \citep{CLARA}. 
 
 This paper is paper is structured as follows.
 
@@ -473,36 +474,55 @@ of our models, the results are shown in Fig \ref{figure:escape}\\
     homogeneous distribution} 
 \end{figure*}
 
-In Figure \ref{figure:efvsv} we found that in the central distribution the escape fraction does not change with velocity while it
-does in the optical depth. On the other hand for the homogeneous distribution
-we found that for higher velocities photons escape easily. The
-difference between this two results relly in the fact that in the
-homogeneous distribution photons are emitted closer to the escape
-surface and this makes this configuration more sensitive to
-rotation while in the central configuration the escape fraction depends mainly in the amount of gas rather than in rotation. \\
+In Figure \ref{figure:efvsv} we found that in the central distribution
+the escape fraction does not change with velocity while it does in the
+optical depth. On the other hand for the homogeneous distribution we
+found that for higher velocities photons escape easily. The difference
+between this two results relly in the fact that in the homogeneous
+distribution photons are emitted closer to the escape surface and this
+makes this configuration more sensitive to rotation while in the
+central configuration the escape fraction depends mainly in the amount
+of gas rather than in rotation. 
 
-Of great importance is to notest that for the homogeneous distribution the optical depth of $\tau_{H}=10^5$ does not follow the trend known for the others. In order to study this FIG.(CLARA plot) \\
+Of great importance is to notest that for the homogeneous distribution the optical depth of $\tau_{H}=10^5$ does not follow the trend known for the others. In order to study this FIG.(CLARA plot) 
 
 \begin{figure*}
   \includegraphics[width=0.45\textwidth]{FEHomogeneousvsThetaL.png}
  \label{figure:efvstheta}\caption{Escape fraction dependency with the viewing angle in the homogeneous configuration.} 
 \end{figure*}
 
-\subsection{Integrated flux}
+\subsection{Integrated flux in a narrow band filter}
 
 
 \section{Discussion}
 \label{sec:discussion}
 
-\section{Observational implications}
-% taking into account equivalent widths results with narrow band filters we can make a criterium in order to select wich galaxie could be seen in actual observations.
+... Comparison with Verhamme et al. results on the rotation
 
 ... The results derived in this paper have consequences on the
 interpreation of galaxy observations in the Lyman alpha line.
+% taking into account equivalent widths results with narrow band
+% filters we can make a criterium in order to select wich galaxie
+% could be seen in actual observations.  
+
+
 
 \section{Conclusions}
+In this paper we have estimated the effects of gas bulk rotation on
+the emission  of the Lyman $\alpha$ line. We based the study on the
+study of a simplified configuration of an homogeneous sphere rotating
+as a solid body. We explored  a range of models by varying the
+rotation speed, hydrogen optical depth, dust optical depth and initial
+distribution of Lyman$\alpha$ photons with respect to the gas
+density. This was implemented in CLARA, a Monte-Carlo
+radiative transfer code already used to study the Lyman $\alpha$
+line. 
+
 
 \section*{Acknowledgements}
+
+
+\bibliography{references} 
 
 \section*{Appendix A: Tables}
 
@@ -642,13 +662,4 @@ Central & 300 & $90^{o}$ & 4845.33 & 49858.48\\ \hline
 
 %ideas:
 Keep in mind making a follow up paper on the results of Yamada et atl http://adsabs.harvard.edu/abs/2012ApJ...751...29Y on the line morphology at z=3.1. How many of these laes can be considered to have rotation features? In principle, all of then should have them. How to make the case convincing in the statistical sense?
-
-
-% Bibliography
-%-----------------------------------------------------------------
-%\begin{thebibliography}{99}
-
-%\bibitem{Cd94} Author, \emph{Title}, Journal/Editor, (year)
-
-%\end{thebibliography}
 
