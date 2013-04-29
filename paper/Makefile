@@ -3,11 +3,10 @@ MAIN  = Analisis
 
 main: 	$(MAIN).tex  
 	$(LATEX) $(MAIN).tex 
-#	bibtex $(MAIN)
-#	$(LATEX) $(MAIN).tex 
-#	$(LATEX) $(MAIN).tex 
-#	dvips $(MAIN).dvi -o $(MAIN).ps
-#	ps2pdf $(MAIN).ps 
+	bibtex $(MAIN)
+	$(LATEX) $(MAIN).tex 
+	$(LATEX) $(MAIN).tex 
+
 
 
 clean:
