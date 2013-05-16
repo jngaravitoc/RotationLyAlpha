@@ -1,0 +1,61 @@
+LABs
+1. Steidel el al. 2000
+2. Dijkstra 2005b
+
+-Historical evolucion of LAEs
+1. Partridge & Peebles (1967) Suggest LyALpha emission from young high-redshift galaxies
+2. Djorgovski & Thompson (1992) First LAEs found untill that time.
+
+- Physical efects may distroy simple expected correlations, Ly-a intensity and metallicity Ly-a intensity and UV continuum flux
+
+1. Meier & Terlevich (1981)
+2. Hartman et al (1988)
+3. Neufeld (1990)
+4. Charlot & Fall (1993)
+5. Valls-Gabud (1993)
+6. Kunth et al (1998)
+7. Tenorio-Tagle et al (1999)
+8. Mas-Hesse et al (2003)
+
+-Oberved LAEs
+1. Hu et al 1998, 2004
+2. Kudritzki et al (2000)
+3. Rhoads et al (2000)
+4. Ouchi et al (2004)
+5. Taniguchi et al (2005)
+
+-Analytic Solutions of the Ly-a radiation tranfer
+1. Neufeld (1990), Static plane parallel. (Present a different Optical depth \tau_{0})
+2. Dijstra et al. (2005a), Uniform Sphere
+3. Loeb & Rybicky (1999), Rybicky & Loeb (1999), Ly-a scattering in a hubble flow.
+4. Gray (1992), fitting formula for Hjerting function
+
+-Galactic grouth through gas accretion
+1. Birnboin & Dekel (2003), Analytic
+2. Fardal et al (2001), Numerical
+3. Keres et al (2005), (2009), Numerical
+4. Dekel et al (2009), Numerical
+
+- IGM abosption
+1. Dijkstra el al (2007)
+2. Zheng et al (2010)
+3. Laursen et al (2011)
+
+- Infalling Gas
+1. verhamme et al (2006)
+2. Dijkstra et al (2006)
+
+
+- Numerical Algorithms 
+1. Spaans (1996) --> Clumpy Inhomogeneous Media
+2. Ahn et al (2001, 2002, 2003) --> 1D geometry
+3. Ahn (2004) 
+4. Zheng & Miranda-Escudé (2002)
+5. Richiling et al 2001 --> Low column densities
+6. Richiling (2003)  --> Low column densities / Clumpy inhomogeneous media 
+7. Kobayashi & Kamaya (2004) --> Hubble flows
+8. Contalupo et el (2005) --> Cosmological simulations
+9. Dijkstra et al (2005 a,b)--> Spherical Symmetric configurations
+10. Hansen & Oh (2006)--> Clumpy Inhomogeneous Media
+11. Tasitsiomi (2006) --> Cosmological Simulations
+12. Verhamme et al (2006) --> 3D geometry
