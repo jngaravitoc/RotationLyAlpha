@@ -25,16 +25,16 @@ LABs
 5. Taniguchi et al (2005)
 
 -Analytic Solutions of the Ly-a radiation tranfer
-1. Neufeld (1990), Static plane parallel. (Present a different Optical depth \tau_{0})
-2. Dijstra et al. (2005a), Uniform Sphere
+1. Neufeld (1990)*, Static plane parallel. (Present a different Optical depth \tau_{0})
+2. Dijstra et al. (2005a)*, Uniform Sphere
 3. Loeb & Rybicky (1999), Rybicky & Loeb (1999), Ly-a scattering in a hubble flow.
 4. Gray (1992), fitting formula for Hjerting function
 
 -Galactic grouth through gas accretion
-1. Birnboin & Dekel (2003), Analytic
+1. Birnboin & Dekel (2003), Analytic, accretion from IGM cold gas
 2. Fardal et al (2001), Numerical
-3. Keres et al (2005), (2009), Numerical
-4. Dekel et al (2009), Numerical
+3. Keres et al (2005), (2009), Numerical, accretion from IGM cold gas
+4. Dekel et al (2009), Numerical, accretion from IGM cold gas
 
 - IGM abosption
 1. Dijkstra el al (2007)
@@ -42,9 +42,20 @@ LABs
 3. Laursen et al (2011)
 
 - Infalling Gas
-1. verhamme et al (2006)
-2. Dijkstra et al (2006)
+1. Verhamme et al (2006)*
+2. Dijkstra et al (2006)*
 
+-feedback evidence
+
+1. Pettini et al (2001)
+2. Shapley et al (2003
+3. Steidel et al (2010)
+
+-Comprasinos theory vs Observations
+
+1.Yang et al (2011)
+2. McLinden et al (2011)
+3. Kulas et al (2012)*
 
 - Numerical Algorithms 
 1. Spaans (1996) --> Clumpy Inhomogeneous Media
@@ -55,7 +66,10 @@ LABs
 6. Richiling (2003)  --> Low column densities / Clumpy inhomogeneous media 
 7. Kobayashi & Kamaya (2004) --> Hubble flows
 8. Contalupo et el (2005) --> Cosmological simulations
-9. Dijkstra et al (2005 a,b)--> Spherical Symmetric configurations
+9. Dijkstra et al (2005 a,b)*--> Spherical Symmetric configurations
 10. Hansen & Oh (2006)--> Clumpy Inhomogeneous Media
 11. Tasitsiomi (2006) --> Cosmological Simulations
-12. Verhamme et al (2006) --> 3D geometry
+12. Verhamme et al (2006)* --> 3D geometry
+13. Laursen et al (2009a, 2009b)*
+14. Barnes et al (2011)
+15. Forero-Romero, J.E et al (2011)* --> CLARA, Expanding, contracting, Speherical, Slab
