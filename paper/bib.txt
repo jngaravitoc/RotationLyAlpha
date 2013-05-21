@@ -30,6 +30,12 @@ LABs
 3. Loeb & Rybicky (1999), Rybicky & Loeb (1999), Ly-a scattering in a hubble flow.
 4. Gray (1992), fitting formula for Hjerting function
 
+- Ly-alpha resonance
+
+1. Spitzer (1978)
+2. Meier & Terlevich (1981)
+3. Charlot and Fall (1993)
+
 -Galactic grouth through gas accretion
 1. Birnboin & Dekel (2003), Analytic, accretion from IGM cold gas
 2. Fardal et al (2001), Numerical
