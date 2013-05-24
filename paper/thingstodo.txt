@@ -1,4 +1,3 @@
-1. Finish Integrated flux analysis taking into account the two others NBF, also normalize the Number of photons inside the NBF *
 2. Finish writting section 4.4 *
 3. Reread Section 4.3, 4.2 *
 4. In section 4.3 EF talk about fig of EF vd Costheta in order to compare with Verhamme et al 2012, just discuss the figure dont put it in the paper.
@@ -11,5 +10,5 @@
 11. Ver a que redshift entra todo el filtro*
 12. Writte conclusions.*
 13. Think how to calculate the flux for different observers
- 
+14. Fix flux function in ipynb  
 
