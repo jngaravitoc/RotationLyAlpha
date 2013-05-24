@@ -1,14 +1,13 @@
-Number of phtons inside SSA22 filter, v=0km/s , tau=10^5 =  99968
-Number of phtons inside SSA22 filter, v=100km/s, tau=10^5  =  99445
-Number of phtons inside SSA22filter, v=200km/s, tau=10^5  =  91439
-Number of phtons inside SSA22filter, v=300km/s, tau=10^5 =  83116
-Number of phtons inside SSA22 filter, v=0km/s , tau=10^6 =  99798
-Number of phtons inside SSA22 filter, v=100km/s, tau=10^6  =  98579
-Number of phtons inside SSA22filter, v=200km/s, tau=10^6  =  90723
-Number of phtons inside SSA22filter, v=300km/s, tau=10^6  =  82630
-Number of phtons inside SSA22 filter, v=0km/s, tau=10^7  =  93132
-Number of phtons inside SSA22 filter, v=100km/s, tau=10^7  =  91208
-Number of phtons inside SSA22filter, v=200km/s, tau=10^7  =  86134
-Number of phtons inside SSA22filter, v=300km/s, tau=10^7 =  79943
-
+Number of phtons inside SSA22 filter, v=0km/s , tau=10^5 =  99945
+Number of phtons inside SSA22 filter, v=100km/s, tau=10^5  =  96365
+Number of phtons inside SSA22filter, v=200km/s, tau=10^5  =  77307
+Number of phtons inside SSA22filter, v=300km/s, tau=10^5 =  61550
+Number of phtons inside SSA22 filter, v=0km/s , tau=10^6 =  97827
+Number of phtons inside SSA22 filter, v=100km/s, tau=10^6  =  92438
+Number of phtons inside SSA22filter, v=200km/s, tau=10^6  =  75007
+Number of phtons inside SSA22filter, v=300km/s, tau=10^6  =  60492
+Number of phtons inside SSA22 filter, v=0km/s, tau=10^7  =  78316
+Number of phtons inside SSA22 filter, v=100km/s, tau=10^7  =  74338
+Number of phtons inside SSA22filter, v=200km/s, tau=10^7  =  64894
+Number of phtons inside SSA22filter, v=300km/s, tau=10^7 =  55008
 We find no observer dependency in the dusty model
