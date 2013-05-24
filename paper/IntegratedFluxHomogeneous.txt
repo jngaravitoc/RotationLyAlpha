@@ -18,3 +18,46 @@ Number of phtons inside SSA22 filter, v=0km/s, tau=10^7  =  46697
 Number of phtons inside SSA22 filter, v=100km/s, tau=10^7  =  45319
 Number of phtons inside SSA22filter, v=200km/s, tau=10^7  =  41260
 Number of phtons inside SSA22filter, v=300km/s, tau=10^7 =  37237
+
+
+#Results for NBF HS1549
+Number of phtons inside HS1549 filter, v=0km/s , tau=10^5 =  99949
+Number of phtons inside HS1549filter, v=100km/s, tau=10^5  =  98145
+Number of phtons inside HS1549filter, v=200km/s, tau=10^5  =  81532
+Number of phtons inside HS1549filter, v=300km/s, tau=10^5 =  66121
+Number of phtons inside HS1549 filter, v=0km/s , tau=10^6 =  96501
+Number of phtons inside HS1549 filter, v=100km/s, tau=10^6  =  90553
+Number of phtons inside HS1549 filter, v=200km/s, tau=10^6  =  81532
+Number of phtons inside HS1549 filter, v=300km/s, tau=10^6  =  66121
+Number of phtons inside HS1549 filter, v=0km/s, tau=10^7  =  52356
+Number of phtons inside HS1549 filter, v=100km/s, tau=10^7  =  51169
+Number of phtons inside HS1549 2filter, v=200km/s, tau=10^7  =  48812
+Number of phtons inside HS1549 filter, v=300km/s, tau=10^7 =  45794
+
+#Results for tau=10**7 with z=2.8 we do this in order to make the line fit in the NBF
+Number of phtons inside HS1549 filter, v=0km/s, tau=10^7  =  48832
+Number of phtons inside HS1549 filter, v=100km/s, tau=10^7  =  48015
+Number of phtons inside HS1549 2filter, v=200km/s, tau=10^7  =  45276
+Number of phtons inside HS1549 filter, v=300km/s, tau=10^7 =  41799
+
+
+#results for the NBF HS1700
+Number of phtons inside HS1700 filter, v=0km/s , tau=10^5 =  99968
+Number of phtons inside HS1700 filter, v=100km/s, tau=10^5  =  99565
+Number of phtons inside HS1700 filter, v=200km/s, tau=10^5  =  87977
+Number of phtons inside HS1700 filter, v=300km/s, tau=10^5 =  73574
+Number of phtons inside HS1700 filter, v=0km/s , tau=10^6 =  99113
+Number of phtons inside HS1700 filter, v=100km/s, tau=10^6  =  96275
+Number of phtons inside HS1700 filter, v=200km/s, tau=10^6  =  87977
+Number of phtons inside HS1700 filter, v=300km/s, tau=10^6  =  73574
+Number of phtons inside HS1700 filter, v=0km/s, tau=10^7  =  66250
+Number of phtons inside HS1700 filter, v=100km/s, tau=10^7  =  64038
+Number of phtons inside HS1700 2filter, v=200km/s, tau=10^7  =  59059
+Number of phtons inside HS1700 filter, v=300km/s, tau=10^7 =  54278
+
+#Results for tau=10**7 with z=2.275 we do this in order to make the line fit in the NBF
+
+Number of phtons inside HS1700 filter, v=0km/s, tau=10^7  =  50331
+Number of phtons inside HS1700 filter, v=100km/s, tau=10^7  =  52193
+Number of phtons inside HS1700 2filter, v=200km/s, tau=10^7  =  52178
+Number of phtons inside HS1700 filter, v=300km/s, tau=10^7 =  49436
