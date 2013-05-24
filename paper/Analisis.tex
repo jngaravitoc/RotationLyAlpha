@@ -494,27 +494,27 @@ As a final test we compare our results with the analytical solution of the slab 
 \end{figure}
 
 
-\subsection{Integrated flux in a narrow band filter}
+\subsection{Integrated flux in a narrowband filter}
 
-Untill now we have shown the main effects of gas and dust rotation in the Ly$\alpha$ line morphology such as the escape fraction, the FWHM the maxima position and the effect of the position of an observer. It is important to see if rotational effects are detectable in observational methods involving the Ly$\alpha$ line. By far this is not and extensive study, it is just and ....
+Untill now we have shown the main effects of gas and dust rotation in the Ly$\alpha$ line morphology such as the escape fraction, the FWHM the maxima position, also we see that shape the outgoing spectra depends in the position of an esternl observer. It is important to see if rotational effects are detectable in observational methods involving the Ly$\alpha$ line. By far this is not and extensive study, it is just and ....
 
-One of the most used methods to detect high redshift galaxies using the Ly$\alpha$ line is using a narrowband selection, this implies..(explain a lit of bit the method)
+One of the most used methods to detect high redshift galaxies using the Ly$\alpha$ line is using a narrowband selection, for this reason we focus this analysis with the 
 
 We make this analysis based in the results obtained by Steidel (2011) in this work (EXPLAIN a lit of bit more about their work) they used tree narrowband filters for tree different redshifts resumed in Table~\ref{table:NBfilters}, We want to know how much the integrated flux change due to rotational effects in this NB filters, for the models we simulated with CLARA.
 
 \begin{table*}
 \begin{center}
 \begin{tabular}{cccc}\hline
-Model & SSA22a 4980/80  & HS1700 4018/90 & HS1549 4667/80\\
+Model & SSA22a 4980/80   & HS1549 4667/80 & HS1700 4018/90\\
 \hline
-V0HOM & 99965 / 98658 / & &\\
-V100HOM & 99221 / 95517 / 75058 & &\\
-V200HOM & 90630 / 90630 / 73938 & &\\
-V300HOM & 82180 / 82180 / 71953 & &\\
-V0HOMDust & 99968 / 99798 / 93132 & &\\
-V100HOMDust & 99445 / 98579 / 91208 & &\\
-V200HOMDust & 91439 / 90723 / 86134 & &\\
-V300HOMDust & 83116 / 82630 / 79943 & &\\
+V0HOM & 0.997 / 0.906 / 0.405 & 0.999 / 0.965 / 0.523 & 0.999 / 0.991 / 0.662 \\
+V100HOM & 0.948 / 0.819 / 0.404 & 0.981 / 0.905 / 0.511 & 0.995 / 0.962 / 0.64 \\
+V200HOM & 0.748 / 0.748 / 0.403 & 0.815 / 0.815 / 0.488 & 0.879 / 0.879 / 0.59 \\
+V300HOM & 0.597 / 0.597 / 0.391 & 0.661 / 0.661 / 0.457 & 0.735 / 0.735 / 0.542 \\
+V0HOMDust & 0.999 / 0.997 / 0.931 & 0.999 / 0.993 / 0.863 & 0.999 / 0.998 / 0.927\\
+V100HOMDust & 0.994 / 0.985 / 0.912 & 0.986 / 0.967 / 0.863 & 0.996 / 0.989 / 0.9\\
+V200HOMDust & 0.914 / 0.907 / 0.861 & 0.833 / 0.815 / 0.728 & 0.889 / 0.879 / 0.81\\
+V300HOMDust & 0.831 / 0.826 / 0.799 & 0.676 / 0.668 / 0.618 & 0.749 / 0.744 / 0.702\\
 \hline
 \end{tabular}
 \caption{
@@ -524,8 +524,9 @@ Values of fluxes for tree different NB and the our models simulated with CLARA
 \end{center}
 \end{table*}
 
-As a first approach we may see that 
-
+In table \ref{table:NBfilters} we present the results of the flux in every narrowband filter for the homogenous model at different velocity and hydrogen optical depth $\tau_{0}$. As is well known an increase in the optical depth makes the line peacks separation bigger. In fact for some cases the line width is larger than the NB filer width fig.(put ref fig) for those cases we modify the redshift in order to make the peak maxima match the NB filter center. For all cases we found that as velocity increase the flux is less. \\
+In the case of the dusty model we found the same trend of the flux with the velocity but in this cases the effect is no that strong. 
+We also found some dependency ith the viewing angle.
 
 \section{Discussion}
 \label{sec:discussion}
@@ -551,7 +552,13 @@ rotation speed, hydrogen optical depth, dust optical depth and initial
 distribution of Lyman$\alpha$ photons with respect to the gas
 density. This was implemented in CLARA, a Monte-Carlo
 radiative transfer code already used to study the Lyman $\alpha$
-line. 
+line. \\
+
+1. Width and maxima effects
+
+2. Avg N of scatterings
+
+3. Integrated flux.
 
 
 \section*{Acknowledgements}
