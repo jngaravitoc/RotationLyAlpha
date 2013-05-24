@@ -10,5 +10,6 @@
 10. Poner una grafica de NB para explicar por que se corrio el filtro y explicar mejor que no caba etc..*
 11. Ver a que redshift entra todo el filtro*
 12. Writte conclusions.*
+13. Think how to calculate the flux for different observers
  
 
