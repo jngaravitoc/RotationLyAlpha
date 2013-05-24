@@ -1,13 +1,14 @@
-1. Finish Integrated flux analysis taking into account the two others NBF
-2. Finish writting section 4.4
-3. Reread Section 4.3, 4.2
-4. In section 4.3 EF talk about fig of EF vd Costheta in order to compare with Verhamme et al 2012
-5. Fix plots sizes, and summarize plots. Merge plots of Homogeneous and Central Models
-6. EF homogenous model t=10^5 think about that!! whats going on there
-7. Quitar y describir lo que pasa en la figura 4
+1. Finish Integrated flux analysis taking into account the two others NBF, also normalize the Number of photons inside the NBF *
+2. Finish writting section 4.4 *
+3. Reread Section 4.3, 4.2 *
+4. In section 4.3 EF talk about fig of EF vd Costheta in order to compare with Verhamme et al 2012, just discuss the figure dont put it in the paper.
+5. Fix plots sizes
+6. EF homogenous model t=10^5 think about that!! whats going on there, look other works in order to see what happen in the regimen outside the aproximaton
+7. Quitar y describir lo que pasa en la figura 4*
 8. poner los label adentro del caption de las graficas.
 9. Labels de la de EF vs athto...
-10. fusionar la grafica de losN vs V(km/s)
-11. Poner uan grafica de NB para explicar por que se corrio el filtro y explicar mejor que no caba etc..
-12. Ver a que redshift entra todo el filtro 
-13. juntar la grafica 9 de EF ..
+10. Poner una grafica de NB para explicar por que se corrio el filtro y explicar mejor que no caba etc..*
+11. Ver a que redshift entra todo el filtro*
+12. Writte conclusions.*
+ 
+
