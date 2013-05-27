@@ -1,3 +1,4 @@
+1. Fig 11. hacer la grafica de la funcion analitica para valores continuos.
 2. Finish writting section 4.4 *
 3. Reread Section 4.3, 4.2 *
 4. In section 4.3 EF talk about fig of EF vd Costheta in order to compare with Verhamme et al 2012, just discuss the figure dont put it in the paper.
@@ -12,4 +13,4 @@
 13. Think how to calculate the flux for different observers
 14. Fix flux function in ipynb  
 15. think if redshift affect NBf width
-
+16. Mirar la intensidad de los espectros de Mark comparados con los nuestros
