@@ -1,3 +1,16 @@
-Sabado -> Plots de la escape fraction (CLARA's papper)
-Miercoles -> Integrated Flux (full section)
-Viernes -> Conclusions
+
+Semana del 27 de Mayo al 1 de Junio
+====================================
+Lunes -> (N) Conclusiones
+Martes -> (N) Discusion
+Miercoles -> (N) Off-Center spectra
+Jueves -> (N) Repaso de todo el texto
+          (J) Revisar graficas (Figure 7 - )
+Viernes -> (J) Repaso de todo el texto
+
+
+Semana del 20 al 26 de Mayo
+============================
+Sabado -> Plots de la escape fraction (CLARA's papper) -> Done
+Miercoles -> Integrated Flux (full section) -> Done
+Viernes -> Conclusions -> Semi-done
