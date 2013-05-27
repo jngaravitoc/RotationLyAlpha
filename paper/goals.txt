@@ -1,11 +1,10 @@
-
 Semana del 27 de Mayo al 1 de Junio
 ====================================
 Lunes -> (N) Conclusiones
 Martes -> (N) Discusion
 Miercoles -> (N) Off-Center spectra
 Jueves -> (N) Repaso de todo el texto
-          (J) Revisar graficas (Figure 7 - )
+          (J) Revisar graficas (Figure 7 - TempHistogram_Nscatt.ipynb)
 Viernes -> (J) Repaso de todo el texto
 
 
