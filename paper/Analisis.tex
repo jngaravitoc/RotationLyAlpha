@@ -82,7 +82,7 @@ highest redshifts. In this paper we present for the first time
 radiative transfer calculations that show the impact of rotation on
 the morphology of the Lyman $\alpha$ line. To this end we construct
 simplified models where a galaxy is modeled as an homogeneous sphere
-composed as an homogenous mixture of dust and hydrogen at a constant
+composed as an homogeneous mixture of dust and hydrogen at a constant
 temperature. These spheres have a solid-body rotation with linear
 velocities at the surface in the range $0-300$ \kms. We consider
 radiation sources both in the center of the rotating cloud and also
@@ -97,11 +97,9 @@ homogeneously distributed. Concerning the escape fraction we find that
 rotation does not have any effect, provided that all the sources are
 centrally emitted. However in the case of homogeneously emitted
 sources we measure an increase of about a factor of $2$ in the escape
-fraction for higher rotational velocity vealues.
-
-
+fraction for higher rotational velocity values. 
 Our work shows clearly that gas rotation has a non
-negligeable impact on the shape of the Lyman $\alpha$ line.
+negligible impact on the shape of the Lyman $\alpha$ line.
 
 \end{abstract}
 \begin{keywords}
@@ -112,14 +110,14 @@ galaxies: high-redshift - galaxies: star formation - line: formation
 \section{Introduction}
 \label{sec:intro}
 
-Due to the resonant nature of the lyman alpha line, gas kinematics
+Due to the resonant nature of the Lyman alpha line, gas kinematics
 play an important role shaping its morphology. In the literature there
 has been extensive studies of outflow/inflow configurations. 
 
 In this paper we study for the first time the impact of rotation on
 the morphology of the Lyman $\alpha$ line. To isolate the effects of
 rotation we focus on a simple system: the gas distribution is
-spherical, with homogenous density and the gas rotates as a solid
+spherical, with homogeneous density and the gas rotates as a solid
 body. We base our work on the Monte Carlo base radiative transfer code
 CLARA \citep{CLARA}. 
 
@@ -198,7 +196,7 @@ all the possible combinations for these models
 \label{sec:results}
 
 The central result of this paper is summarized in
-Fig.~\ref{fig:DifferentVelocities} where we show that rotation has a
+Fig.~\ref{fig:differentvelocities} where we show that rotation has a
 considerable effect on the morphology of the emergent Lyman-alpha line
 both in the case where the photons are emitted at the sphere's center
 and when they are initialized with an homogeneous distribution all
@@ -207,9 +205,9 @@ over the gas volume.
 The results for these outgoing spectra are integrated over the whole
 sphere, meaning that all the escaping photons were taking into account
 regardless of the direction of the outgoing photons. Figure
-\ref{fig:DifferentObservers} shows how if one gives a weight to each outgoing
+\ref{fig:differentobservers} shows how if one gives a weight to each outgoing
 photon according to its direction when escaping the gas distribution
-it is posible to detect notable differences in the spectrum for
+it is possible to detect notable differences in the spectrum for
 different viewing angles.
 
 
@@ -218,7 +216,7 @@ different viewing angles.
   \includegraphics[width=0.45\textwidth]{7tDifSpeedsZ.png}
   \includegraphics[width=0.45\textwidth]{7tHOMDifSpeeds1.png}
 \caption{Shape of the lyman alpha line for
-    differents velocities. The left (right) panel shows the central
+    different velocities. The left (right) panel shows the central
     (homogeneous) photon distribution. All photons were taken into
     account regardless of their outgoing direction of propagation.
   \label{fig:differentvelocities}}
@@ -228,7 +226,7 @@ different viewing angles.
 \includegraphics[width=0.45\textwidth]{Observers7t.png}
 \includegraphics[width=0.45\textwidth]{Observers7tHOM.png}
 \caption{Same as Figure \ref{fig:differentvelocities} but this time
-  the differen lines show the line morphology for different polar angles
+  the different lines show the line morphology for different polar angles
   $\theta$ with respect to the rotation axis. In this case each photon
   has a weight dependent on their outgoing direction. All spectra correspond
   to the same $V_{\rm max}=300$\kms, Optical   Depth $\tau=10^{7}$ and
@@ -243,7 +241,7 @@ Fig. \ref{fig:differentvelocities} and
 Fig. \ref{fig:differentobservers} as a function of the maximum
 rotation velocity $V_{\rm max}$ and the position of the observer with
 respect to the rotation angle, $\mu = \cos{\theta}$. All the results
-in this section will be expressed in terms of resframe wavelength.
+in this section will be expressed in terms of rest frame wavelength.
 
 First we quantify the line by its full width at half maximum
 (FWHM) and the peak positions. In order to interpret these results we
@@ -256,27 +254,27 @@ width.
 
 \subsection{Line width and peak maxima}
 \label{sec:widthpeak}
-
+\label{fig:differentvelocities}
 
 \begin{figure}
     \includegraphics[width=0.45\textwidth]{WidthvsVmax.png}
-\caption{Width of the lyman-alpha line for all the models.   \label{fig:widthvsvelocity}}
+\caption{Width of the lyman-alpha line for all the models.\label{fig:widthvsvelocity}}
 \end{figure}
 
 
-\begin{figure*}%QUITARLA Y COMENTARLA
-    \includegraphics[width=0.45\textwidth]{WidthvsThetaCentral.png}
-    \includegraphics[width=0.45\textwidth]{WidthvsTheta.png}
-    \caption{Width of the lyman-alpha line for all the models. 
-  \label{figure:widthvstheta}
-}
-\end{figure*}
+%\begin{figure*}%QUITARLA Y COMENTARLA
+  %  \includegraphics[width=0.45\textwidth]{WidthvsThetaCentral.png}
+   % \includegraphics[width=0.45\textwidth]{WidthvsTheta.png}
+    %\caption{Width of the lyman-alpha line for all the models. 
+ % \label{figure:widthvstheta}
+%}
+%\end{figure*}
 
 The first quantitative conclusion of the effect of rotation in the
 Lyman alpha line is that the double peaks in the line tend to broaden
 until they reach a single broad emission peak. This is most evident in
 the case of Lyman-alpha sources homogeneously distributed in the gas
-distributions (Fig. \ref{differentvelocities} right panel).
+distributions (Fig.~\ref{fig:differentvelocities} Right panel).
 
 To quantify the line broadening we measure a modified version of the full
 width at half maximum (FWHM) for half of the line, $W_{1/2}$. It means that in
@@ -298,12 +296,13 @@ of $2-3$ with respect to the width with respect to the static
 case. This trend is conserved at all optical depths regardless of the
 initial source distribution. 
 
+%Im not sure about this anymore
 This result includes all the outgoing photons, regardless of the
 position of the observer. In Figure~\ref{fig:widthvstheta} we
 take into account the different positions of the observer in the
 measurement of the half-width $W_{1/2}$. From this we conclude
 that observers with a line of sight perpendicular to the axis of
-rotation (i.e. edge-on in the case of spiral galaxy) tend to meaure
+rotation (i.e. edge-on in the case of spiral galaxy) tend to measure
 larger line widths than observers aligned with the rotation axis
 (i.e. face-on). The influence of the observer position on the line
 width, amounting always less than $15\%$ of a difference with respect
@@ -314,12 +313,12 @@ the same weight regardless of the relative observer position.
 %dependency of the width with the rotation velocity of the gas cloud,
 %this results are summarize in Figure ~\ref{figure:width}. As velocity
 %increase also the equivalent width increase (for both homogeneous and
-%central distribution), it means that some photons escape with fewer
+%central distribSi Limonution), it means that some photons escape with fewer
 %scatterings than the static case but at the same time a few photons escape with% more scatterings, this can be seen clearly in
 %Figure. (Nscatt)\\ 
 
 %We also found a dependency with the viewing angles, in particular as
-%the angle increase the width also increase Figure
+%the angle incre ase the width also increase Figure
 %~\ref{fig:withvstheta}, this was also found in Verhemme et al. 2012
 %for a rotating disk but the pure effect of rotation can not been study
 %as it is in our case. Following the convention of Verhamme et al 2012
@@ -363,15 +362,15 @@ understand the dependence of the peak maxima as a function of the
 hydrogen optical depth in the cloud [citation needed].
 
 
-In Figure ~\ref{fig:maximavsvelocity} we present the position
+In Figure~\ref{fig:maximumsvsvelocity} we present the position
 of the maxima as a function of $V_{\rm max}$. For the photons emitted
 in the line center we do not find any variation in the position of the
-maxima in the range of explored parameter space. However in the
+maxima in the range of explored parameter space (dash lines). However in the
 homogeneous case we can see how the maxima goes to $x_{m}=0$, meaning
 that the double peak is converted into a single peak.
 
 This transition to a single peak line occurs for the systems where it
-becomes easiear for a bulk of the photons to escape with the lowest
+becomes easier for a bulk of the photons to escape with the lowest
 number of scatterings possible. This can explain how the single peak
 stage can be achieved in the homogeneous source distribution where
 there is fraction of the photons inside a photosphere region with
@@ -379,10 +378,15 @@ $\tau_{H}\sim 1$ which allows them to escape within one
 scatter. Increasing the rotational velocity makes it easier for the
 photons in this photosphere region to escape.
 
-In Figure ~\ref{fig:maximavsangle} we present the position of the
-maxima as a function of the viewing angle $\mu$ for all the optical
-depths and rotational velocities and the two different photon
-distributions [FALTA LA GRAFICA]. 
+We also take into account the viewing angle $\mu$ for all the optical 
+depths and rotational velocities and the two different photon distribution.
+But we don't find any dependency meaning that the peaks would be placed in
+the same place no matter the position of an external observer.	
+
+%In Figure ~\ref{fig:maximavsangle} we present the position of the
+%maxima as a function of the viewing angle $\mu$ for all the optical
+%depths and rotational velocities and the two different photon
+%distributions [FALTA LA GRAFICA]. 
 
 
 %Finally when we take into account the viewing angle Fig
@@ -408,10 +412,10 @@ distributions [FALTA LA GRAFICA].
 
 Finally we also report on the effect of the neutral Hydrogen
 optical depth $\tau_{H}$ on the maxima position $x_{m}$
-Figure~\ref{figure:maximavsOD}. We find that, at fixed
+Figure~\ref{fig:maximumsvsvelocity}. We find that, at fixed
 rotation velocity, the position of the maxima increases with optical
-depth as expected from basic theoretical consideraions. We compare
-our results with the expected theoretical escaling for an infinnite
+depth as expected from basic theoretical considerations. We compare
+our results with the expected theoretical scaling for an infinite
 slab. 
 
 
@@ -419,18 +423,18 @@ slab.
 
 \subsection{Average Number of Scatterings}
 
-Untill know we have focus in how rotation affect the morphology of the lyman alpha line, now we turn to study deeply the posible causes of this effects. As recombination is the main cause of the lyman alpha, it is important to study the relationship between the number of times that a photon is absorbed and re emitted hereafter scatterings with it's shift in the wavelenght. \\
+Until know we have focus in how rotation affect the morphology of the Lyman alpha line, now we turn to study deeply the possible causes of this effects. As recombination is the main cause of the emission of the Lyman alpha line, it is important to study the relationship between the number of times that a photon is absorbed and re emitted hereafter scatterings with it's shift in the wavelength. 
 
-As a first approach we study the number of scatterings of all the photons at different velocites and for both distributions Figure~\ref{fig:Nscatt}. For the central distribution we found that the average number of scattering does not have a relevant change (put the exact value) with $V_{max}$, For the Homogeneous distribution we found that as $V_{max}$ increase the average number of scatterings decrease, it means that rotation make photons to escape easier from the cloud, and the reason why this is not observed in the central distribution. it is because the amount of gas that every photon has to break through is so large an so the average number of scatterings, making the effect of rotation unobservable.\\
+As a first approach we study the number of scatterings of all the photons at different velocities and for both photon distributions Figure~\ref{fig:Nscatt}. For the central distribution we found that the average number of scattering does not have a relevant change ($\sim 0.5\%$) with $V_{max}$, For the Homogeneous distribution we found that as $V_{max}$ increase the average number of scatterings decrease in a$\sim 39\%$, it means that rotation makes photons to escape easier from the cloud. The reason why this is not observed in the central distribution is because the amount of gas that every photon has to break through is so large that the average number of scatterings is large too, making the effect of rotation unobservable.
 
-In order to understand the effects of rotation in the morphology of the line we make histograms of $<N_{scatt}>$  in function of $X_{m}$ for both the central Fig. ~\ref{fig:NscattHisto} and the  homogeneous distribution Fig.~\ref{fig:NscattHistoHOM}. For the central distribution and for lower velocities we found that for some value (put the value) of $N_{scatt}$ the mayority of photons have a defined value of $X_{m}$. While for higher velocities photons tend spread out in $X_{m}$(Make position analysis of this photons).\\
+In order to understand the effects of rotation in the morphology of the line we make histograms of $<N_{scatt}>$  in function of $X_{m}$ for both the central Fig.~\ref{fig:NscattHisto} and the  homogeneous distribution Fig.~\ref{fig:NscattHistoHOM}. For the central distribution and for lower velocities we found that for some value (put the value) of $N_{scatt}$ the mayority of photons have a defined value of $X_{m}$. While for higher velocities photons tend spread out in $X_{m}$(Make position analysis of this photons).\\
 
-For the homogenepus distribution we found the same effect but also, for highest velocities the mayority of the photons near the surface escape with much less scatterings that in the static case. This analysis let us conclude that rotation make photons escape with less scatterings and it spread out the wavelenght of the of the outgoing photons represented by $X_{m}$.
+For the homogeneous distribution we found the same effect but also, for highest velocities the mayority of the photons near the surface escape with much less scatterings that in the static case. This analysis let us conclude that rotation make photons escape with less scatterings and it spread out the wavelenght of the of the outgoing photons represented by $X_{m}$.
 
 
 \begin{figure}
     \includegraphics[width=0.45\textwidth]{NscattvsVmax.png}
-\caption{Nscatt\label{fig:Nscatt}} 
+\caption{Log of the Average number of scatterings of the outgoing photons as function of the velocity. \label{fig:Nscatt}} 
 \end{figure}
 
 \begin{figure}
@@ -447,40 +451,47 @@ For the homogenepus distribution we found the same effect but also, for highest 
 \subsection{Escape Fraction}
 \label{sec:EF}
 
-We have seen in the previous section that rotation affects the number
-of scatterings that ..\\
+Until now we have studied models in absence of dust, but is known (REFERENCE) that there is presence of dust in high redshift galaxies. Our models with dust are treated as is explained in detail in  the appendix of (Forero et al 2011).  
 
-Of particular interest is to compute the escape fraction of Lyman $\alpha$ photons coming from the most distant galaxies, due to the fact that with the observed intensity of the lyman alpha line quantities as the LF and SFR can be derived (put some references). \\
+Of particular interest is to compute the escape fraction of Lyman $\alpha$ photons coming from the most distant galaxies, due to the fact that with the observed intensity of the Lyman alpha line quantities as the LF and SFR can be derived (put some references).
 
-Previous studies have shown the correlation of the Escape fraction with galactic mass (Lauren 2009 et al, Dayal et al 2010) abundacies and the kinematics of dust. In order to study pure rotational effects in the escape fraction we fixed the dust abundance $\tau_{A}=0.01$ and the galaxy mass. We compute the escape fraction for the models described in Table \ref{table:models}.\\
+Previous studies have shown the correlation of the Escape fraction with galactic mass (Laursen et al 2009, Dayal et al 2010) abundances and the kinematics of dust. In order to study pure rotational effects in the escape fraction we fixed the dust abundance $\tau_{A}=0.01$ and the galaxy mass. We compute the escape fraction for the models described in Table \ref{table:models}.
 
-For a realistic model we also take into account the viewing angle, first we fixed the viewing angle at $\theta = 0$  Fig. and then we fixed the velocity in order to see the escape fraction correlation with the viewing angle. Therefore we define the escape fraction as:\\ 
+For a realistic model we also take into account the viewing angle, first we fixed the viewing angle at $\theta = 0$  Fig.~\ref{figure:efvsv} and then we fixed the velocity in order to see the escape fraction correlation with the viewing angle. Therefore we define the escape fraction as:\\ 
 
 \begin{equation}
 F_{e}=\dfrac{\Sigma_{NI} \vec{k}\cdot \vec{o}}{\Sigma_{NF}\vec{k}\cdot \vec{o}}
 \end{equation}
 
 Where NI is the initial number of photons and NF is the final,
-$\vec{k}$ is the rotation axis direction and $\vec{o}$ the observer
+$\vec{k}$ is the rotation axis direction and ${o}$ the observer
 direction. With this definition we compute the escape fraction for all
-of our models, the results are shown in Fig \ref{figure:escape}\\  
+of our models, the results are presented in Fig \ref{figure:efvsv}\\  
  
 \begin{figure}
   \includegraphics[width=0.45\textwidth]{EscapeFraction.png}
-    \label{figure:efvsv}\caption{Escape fraction for all the models. Left panels show the central distribution, while right panels show the homogeneous distribution} 
+   \caption{Escape fraction for all the models. continious lines represent the homogenous models, while dashed lines represent the central models}\label{figure:efvsv}
 \end{figure}
 
 In Figure \ref{figure:efvsv} we found that in the central distribution
 the escape fraction does not change with velocity while it does in the
-optical depth (See Verhamme 2006, an argument about this). On the other hand for the homogeneous distribution we
+optical depth (See Verhamme 2006, an argument about this). On the other
+hand for the homogeneous distribution we
 found that for higher velocities photons escape easily. The difference
-between this two results relly in the fact that in the homogeneous
+between this two results rely in the fact that in the homogeneous
 distribution photons are emitted closer to the escape surface and this
 makes this configuration more sensitive to rotation while in the
 central configuration the escape fraction depends mainly in the amount
 of gas rather than in rotation. 
 
-As a final test we compare our results with the analytical solution of the slab developed by (Neufeld 1990) Fig. ~\ref{figure:efvsNeufeld}, as the geometry we use is different from the one described for Neufeld, we dont expect the same results, in fact we found that for the homogenous sphere the escape fraction is higer than the slab (see ref, mark). Also we notest that for $\tau<10^{6}$ the escape fraction does not increase as it will be expected, This is due to the fact that the condition $a\tau_{h}>>\tau_{d}$ in not valid anymore.
+As a final test we compare our results with the analytical solution of 
+the slab developed by (Neufeld 1990) Fig. ~\ref{figure:efvsNeufeld}, as 
+the geometry we use is different from the one described for Neufeld, we 
+dont expect the same results, in fact we found that for the homogenous 
+sphere the escape fraction is higer than the slab (see ref, mark). Also 
+we notest that for $\tau<10^{6}$ the escape fraction does not increase 
+as it will be expected, This is due to the fact that the condition 
+$a\tau_{h}>>\tau_{d}$ in not valid any more.
 
 
 \begin{figure}%QUITARLA Y COMENTARLA
@@ -493,10 +504,13 @@ As a final test we compare our results with the analytical solution of the slab 
  \label{figure:efvsNeufeld}\caption{Escape fraction of this work compared with Neufeld analytical solution} 
 \end{figure}
 
+\subsection{Inhomogeneous model}
+
+Now we set up a test model when the photons are placed in an inhomogeneous model, 
 
 \subsection{Integrated flux in a narrowband filter}
 
-Untill now we have shown the main effects of gas and dust rotation in the Ly$\alpha$ line morphology such as the escape fraction, the FWHM the maxima position, also we see that shape of the outgoing spectra depends on the position of the observer. It is important to see if rotational effects are detectable in observational methods involving the Ly$\alpha$ line. 
+Until now we have shown the main effects of gas and dust rotation in the Ly$\alpha$ line morphology such as the escape fraction, the FWHM, the maxima position, also we see that shape of the outgoing spectra depends on the position of the observer. It is important to see if rotational effects are detectable in observational methods involving the Ly$\alpha$ line. 
 
 One of the most used methods to detect high redshift galaxies using the Ly$\alpha$ line is using a narrowband selection, we make this analysis based on the results obtained by Steidel (2011) in this work (EXPLAIN a lit of bit more about their work) they used tree narrowband filters for tree different redshifts resumed in Table~\ref{table:NBfilters}, We want to know how much the integrated flux change due to rotational effects in this NB filters, for the models we simulated with CLARA.
 
@@ -505,14 +519,14 @@ One of the most used methods to detect high redshift galaxies using the Ly$\alph
 \begin{tabular}{cccc}\hline
 Model & SSA22a 4980/80   & HS1549 4667/80 & HS1700 4018/90\\
 \hline
-V0HOM & 0.997 / 0.906 / 0.405 & 0.999 / 0.965 / 0.523 & 0.999 / 0.991 / 0.662 \\
-V100HOM & 0.948 / 0.819 / 0.404 & 0.981 / 0.905 / 0.511 & 0.995 / 0.962 / 0.64 \\
-V200HOM & 0.748 / 0.748 / 0.403 & 0.815 / 0.815 / 0.488 & 0.879 / 0.879 / 0.59 \\
-V300HOM & 0.597 / 0.597 / 0.391 & 0.661 / 0.661 / 0.457 & 0.735 / 0.735 / 0.542 \\
-V0HOMDust & 0.999 / 0.997 / 0.931 & 0.999 / 0.993 / 0.863 & 0.999 / 0.998 / 0.927\\
-V100HOMDust & 0.994 / 0.985 / 0.912 & 0.986 / 0.967 / 0.863 & 0.996 / 0.989 / 0.9\\
-V200HOMDust & 0.914 / 0.907 / 0.861 & 0.833 / 0.815 / 0.728 & 0.889 / 0.879 / 0.81\\
-V300HOMDust & 0.831 / 0.826 / 0.799 & 0.676 / 0.668 / 0.618 & 0.749 / 0.744 / 0.702\\
+V0HOM & 0.99 / 0.90 / 0.40 & 1.0 / 0.96 / 0.52 & 1.0 / 0.99 / 0.66 \\
+V100HOM & 0.94 / 0.81 / 0.40 & 0.98 / 0.90 / 0.51 & 0.99 / 0.96 / 0.64 \\
+V200HOM & 0.74 / 0.74 / 0.40 & 0.81 / 0.81 / 0.48 & 0.87 / 0.87 / 0.59 \\
+V300HOM & 0.59 / 0.59 / 0.39 & 0.66 / 0.66 / 0.45 & 0.73 / 0.73 / 0.54 \\
+V0HOMDust & 0.99 / 0.99 / 0.93 & 0.99 / 0.99 / 0.86 & 0.99 / 0.99 / 0.92\\
+V100HOMDust & 0.99 / 0.98 / 0.91 & 0.98 / 0.96 / 0.86 & 0.99 / 0.98 / 0.9\\
+V200HOMDust & 0.91 / 0.90 / 0.86 & 0.83 / 0.81 / 0.72 & 0.88 / 0.87 / 0.81\\
+V300HOMDust & 0.83 / 0.82 / 0.79 & 0.67 / 0.66 / 0.61 & 0.74 / 0.74 / 0.70\\
 \hline
 \end{tabular}
 \caption{
@@ -522,9 +536,22 @@ Values of fluxes for tree different NB and the our models simulated with CLARA
 \end{center}
 \end{table*}
 
-In table \ref{table:NBfilters} we present the results of the flux in every narrowband filter for the homogenous model at different velocities and hydrogen optical depth $\tau_{0}$. As is well known an increase in the optical depth makes the line peacks separation bigger. In fact for some cases the line width is larger than the NB filer width fig.(put ref fig) for those cases we modify the redshift in order to make the peak maxima match the NB filter center. For all cases we found that as velocity increase the flux is less. \\
-In the case of the dusty model we found the same trend of the flux with the velocity but in this cases the effect is no that strong. 
+In table \ref{table:NBfilters} we present the results of the flux in every 
+narrowband filter for the homogeneous model at different velocities and hydrogen 
+optical depth $\tau_{0}$. As is well known an increase in the optical depth makes 
+the line peaks separation bigger. In fact for some cases the line width is larger 
+than the NB filer width fig.(put ref fig) for those cases we modify the redshift 
+in the available range in order to make the peak maxima match the NB filter center. 
+For all cases we found that as velocity increase the flux is less. 
+
+In the case of the dusty model we found the same trend of the flux with the velocity 
+but in this cases the effect is no that strong. 
 We also found some dependency with the viewing angle.
+
+\begin{figure}
+  \includegraphics[width=0.45\textwidth]{NB7tDifVHOM.png}
+ \label{figure:efvsNeufeld}\caption{NB filter located at the center of the maxima, with different redshift} 
+\end{figure}
 
 \section{Discussion}
 \label{sec:discussion}
@@ -533,7 +560,7 @@ We also found some dependency with the viewing angle.
 ... Compare with Kulas et al (Figure 3), Rotation on the lyman alpha line convert double peak profiles into a single one. comments about rotation with inflows and outflows. 
 
 ... The results derived in this paper have consequences on the
-interpreation of galaxy observations in the Lyman alpha line.
+interpretation of galaxy observations in the Lyman alpha line.
 ..compare steidel et al (2011)
 % taking into account equivalent widths results with narrow band
 % filters we can make a criterium in order to select wich galaxie
@@ -547,19 +574,52 @@ the emission  of the Lyman $\alpha$ line. We based the study on the
 study of a simplified configuration of an homogeneous sphere rotating
 as a solid body. We explored  a range of models by varying the
 rotation speed, hydrogen optical depth, dust optical depth and initial
-distribution of Lyman$\alpha$ photons with respect to the gas
+distribution of Ly$\alpha$ photons with respect to the gas
 density. This was implemented in CLARA, a Monte-Carlo
 radiative transfer code already used to study the Lyman $\alpha$
-line. \\
+line. 
 
-As first we see how the width of the line changes using a modified FWHM explained in section \ref{sec:widthpeak}, and we found that as gas bulk rotation incrase also the width increase in a factor of $2-3$ in comparison with the static case. we also take into account the influence of the observer position is and we found that for observers with a line of sight perpendicular to the axis of rotation measure a larger ($15\%$) line width than those aligned with the rotation axis.\\
+As first we see how the width of the line changes using a modified FWHM
+explained in section \ref{sec:widthpeak}, and we found that as gas bulk 
+rotation increase also the width increase in a factor of $2-3$ in comparison 
+with the static case. We also take into account the influence of the observer 
+viewing angle, we found that observers with a line of sight perpendicular  
+to the axis of rotation measure a $15\%$ larger line width than those 
+aligned with the rotation axis.
 
-As many observational Ly$\alpha$ (Kulas et al) spectra are double peaked  and those provide important information about the inflows/outflows of gas content, we study the effect of rotation in the position of this peaks and we find that the position of the maxima does not change with rotation.\\
+As many observational spectra Ly$\alpha$ emission line (Kulas et al) is double 
+peaked, these peaks provide important information concerning gas kinematics and geometry, 
+which can be partially explained with inflows/outflows of gas content. 
+We study the effect of rotation in the position of this peaks, and we find 
+that the position of the maxima does change with rotation for the homogeneous 
+models when the double peak merged into a single peak as velocity increase. 
+This effect is not seen for the central distribution when the double peak 
+remains constant as the velocity increase. We also find that there is no 
+dependency in the observer viewing angle with the maxima position.
 
+Concerning the escape fraction under rotational effects on the Ly$\alpha$ 
+emission line, we found that the escape fraction increase in about $20\%-30\%$
+for the homogeneous sphere model. While rotational effects are negligible for
+the central models and the escape fraction remains constant. Also the observer
+viewing angle have no effect in the escape fraction neither for the homogeneous
+and central models. Complementing this analysis we study the average number of 
+scatterings $<N_{scatt}>$ that photons perform before escaping of the cloud
+taking into account rotational effects. The main result here is for the homogeneous
+models for which as velocity increase photons escape with about $\sim 39\%$ 
+less scatterings than in the static case.
 
-One of the key features in the study of the Ly$\alpha$ line is the escape fraction, when rotational effects are taking into account we found that the escape fraction increase in about $20\%-30\%$ for the homogenous sphere model. (Nscatt)
+As an application of these results we compute the integrated flux taking 
+into account the narrow band filters used by (Steidel et al 2011), for 
+our models we found an important decrease up to $~40\%$ for the homogeneous models, 
+and up to $22\%$ for the dusty homogeneous models in the flux as velocity increase. 
+Also we calculate at what redshift should the filter be in order to get the maximum 
+flux, and for the tree filters we get values that rely in the filter redshift range.
+This effects would have a relevant implication at the time to find high redshift 
+galaxies.
 
-4. Integrated flux.
+This paper illustrates for the first time the main effects of rotation in  
+the morphology of the Ly$\alpha$ emission line, we estimate the range of this effects
+for simplified models.
 
 
 \section*{Acknowledgements}
