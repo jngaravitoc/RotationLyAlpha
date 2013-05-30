@@ -1,0 +1,2 @@
+datos.ascii---> offcenter(3e+13, 7e+13, 3e+13, 7e+13, 3e+13, 7e+13)
+
