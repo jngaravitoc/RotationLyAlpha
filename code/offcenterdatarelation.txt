@@ -1,2 +1,4 @@
-datos.ascii---> offcenter(3e+13, 7e+13, 3e+13, 7e+13, 3e+13, 7e+13)
+datos.ascii---> offcenter(3e+13, 7e+13, 3e+13, 7e+13, 3e+13, 7e+13), bins=3.0
+datos2.ascii --->offcenter(2e+13, 1e+14, 2e+13, 1e+14, 2e+13, 1e+14), bins = 2.0
+datos3.asci--->offcenter(2e+12, 1e+14, 2e+12, 1e+14, 2e+12, 1e+14), 
 
