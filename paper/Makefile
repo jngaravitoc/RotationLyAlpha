@@ -10,7 +10,12 @@ main: 	$(MAIN).tex
 
 
 clean:
-	rm -f $(MAIN).{aux,bbl,ps,pdf,div,blg,log}
+	rm -f $(MAIN).aux
+	rm -f $(MAIN).bbl
+	rm -f $(MAIN).ps
+	rm -f $(MAIN).pdf
+	rm -f $(MAIN).blg
+	rm -f $(MAIN).log
 
 view: 
 	open $(MAIN).pdf &
