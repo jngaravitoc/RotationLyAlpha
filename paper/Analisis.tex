@@ -462,16 +462,27 @@ spread out the wavelenght of the of the outgoing photons represented by $X_{m}$.
 \caption{Log of the Average number of scatterings of the outgoing photons as function of the velocity. \label{fig:Nscatt}} 
 \end{figure}
 
-\begin{figure}
-    \includegraphics[width=0.54\textwidth]{test4.png}%this is the central}
-\caption{Histogram of $N_{scatt}$ vs $X_{m}$ for the central distribution, The upper plot is for $V_{max}=50km/s $, the bottom plot is for $V_{max}=300km/s$ \label{fig:NscattHisto}} 
-\end{figure}
+%\begin{figure}
+ %   \includegraphics[width=0.54\textwidth]{test4.png}
+  %  \includegraphics[width=0.54\textwidth]{test4.png}%this is the central}
 
-\begin{figure}
-     \includegraphics[width=0.54\textwidth]{test3.png}%this is the homogeneous
-     
-    \caption{Histogram of $N_{scatt}$ vs $X_{m}$ for the homogeneous distribution, The upper plot is for $V_{max}=50km/s $, the bottom plot is for $V_{max}=300km/s$ \label{fig:NscattHistoHOM}} 
-\end{figure}
+%\caption{Histogram of $N_{scatt}$ vs $X_{m}$ for the central distribution, The upper plot is for $V_{max}=50km/s $, the bottom plot is for $V_{max}=300km/s$ \label{fig:NscattHisto}} 
+%\end{figure}
+
+\begin{figure*}
+     \includegraphics[width=0.40\textwidth]{2dHistogram0t5HOM.png}
+     \includegraphics[width=0.40\textwidth]{2dHistogram300t5HOM.png}
+    
+    \caption{Histogram of $N_{scatt}$ vs $x$ for the homogeneous distribution, left for $V_{max}=0km/s $, right for $V_{max}=300km/s$ \label{fig:NscattHistoHOM}} 
+\end{figure*}
+
+\begin{figure*}
+     \includegraphics[width=0.40\textwidth]{2dHistogram50t5.png}
+     \includegraphics[width=0.40\textwidth]{2dHistogram300t5.png}
+    
+    \caption{Histogram of $N_{scatt}$ vs $x$ for the Central distribution, left for $V_{max}=50km/s $, right for $V_{max}=300km/s$ \label{fig:NscattHistoHOM}} 
+\end{figure*}
+
 
 \subsection{Escape Fraction}
 \label{sec:EF}
@@ -531,10 +542,10 @@ as it will be expected, This is due to the fact that the condition
 $a\tau_{h}>>\tau_{d}$ in not valid any more.
 
 
-\begin{figure}%QUITARLA Y COMENTARLA
-  \includegraphics[width=0.45\textwidth]{FEHomogeneousvsThetaL.png}
- \label{figure:efvstheta}\caption{Escape fraction dependency with the viewing angle in the homogeneous configuration.} 
-\end{figure}
+%\begin{figure}%QUITARLA Y COMENTARLA
+ % \includegraphics[width=0.45\textwidth]{FEHomogeneousvsThetaL.png}
+ %\label{figure:efvstheta}\caption{Escape fraction dependency with the viewing angle in the %homogeneous configuration.} 
+%\end{figure}
 
 \begin{figure}
   \includegraphics[width=0.45\textwidth]{Neufeld.png}
@@ -545,30 +556,36 @@ $a\tau_{h}>>\tau_{d}$ in not valid any more.
 
 As we know there is unlikely to find galaxies with radiation sources 
 distributed homogeneously. Most of them are in a clumpy distribution 
-(Larsen et al 2013*) which affected the resulting spectra. In order 
+(Laursen et al 2013*) which affected the resulting spectra. In order 
 to study an inhomogeneous distribution we set up a model in which we 
 select certain photons that are placed in a specific place but that 
-are not symmetrically Fig.~\ref{figure:distributions}. 
+are not symmetrically distributed Fig.~\ref{figure:distributions} shows
+the distributions we set up. 
 
-\begin{figure*}
-  \includegraphics[width=0.45\textwidth]{Distribution1.png}
-  \includegraphics[width=0.45\textwidth]{Distribution2.png}
- \caption{Inhomogeneous distributions of 
- photons, red area are the selected photons, the arrow points to the 
- observer position, left panel Distribution 1, right panel Distribution 2\label{figure:distributions}} 
-\end{figure*}
+\begin{figure}
+  \includegraphics[width=0.40\textwidth]{Distribution.png}
+  \caption{Inhomogeneous distributions of 
+ photons, Blue area represents the photons in distribution 1 while red area are the selected photons for distribution 2. The arrow points to the observer position\label{figure:distributions}} 
+\end{figure}
 
 In Fig.~\ref{figure:inhomogeneous} we show the resulting spectra of 
-distribution 1 and 2, the most important result is to see the 
-asymmetry  of the line in particular the photons selected in 
-distribution 1 present a blueshift while photons selected in 
-distribution 2 present a redshift. Is also important to see that
-as velocity increases this shifts became stronger.
+distribution 1 and 2, the first effect we see is the asymmetry of the
+double peak, in the homogeneous and central distribution we see double
+peaks with the same height, while in this case one peak is higher than 
+the other. For $\tau=10^{5}$ we found that in distribution 1 the blueshifted
+peak is higher than the redshifted, and for distribution 2 the redshifted
+peak is the highest.
 
+An other important fact here is the asymmetry of the spectra with respect 
+to the line center, in particular photons selected in distribution 1 
+present a blueshift in their spectra while photons selected in distribution 
+2 present a redshift. This effect becomes stronger as velocity increase 
+~\ref{figure:inhomogeneous}
+ 
 \begin{figure*}
   \includegraphics[width=0.45\textwidth]{InomogeneousModelt5.png}
   \includegraphics[width=0.45\textwidth]{InomogeneousModelt6.png}
- \caption{Inhomogeneous model for velocities $50km/s$ and $300km/s$ , left panel with $\tau=10^5$, right panel with $\tau=10^5$\label{figure:inhomogeneous}} 
+ \caption{Inhomogeneous model for velocities $50km/s$ and $300km/s$ , (left) with $\tau=10^5$, (right) with $\tau=10^6$\label{figure:inhomogeneous}} 
 \end{figure*}
  
 
