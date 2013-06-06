@@ -1,0 +1,73 @@
+ipython notebooks content:
+
+Paper's plots:
+
+Number                         Notebook
+Fig. 1                       Direccional
+Fig. 2                       Direccional
+Fig. 3                       With_Analysis        
+Fig. 4                       
+Fig. 5
+Fig. 6
+Fig. 7
+Fig. 8
+Fig. 9
+Fig. 10
+Fig. 11
+Fig. 12
+
+
+1. Direccional:
+
+In this notebook the observer viewing angles analysis is made.
+In cell 6 plots are made, this plots are Fig. 1 and Fig. 2 of the paper.
+In the last cell (Cell 8) que Escape Fraction is calculated.
+This notebook 
+
+2. Off-Center Sphere:
+
+In this notebook all the analysis of the Off center model is made.
+Cell 6 of this notebook makes Fig. 11 of the paper. (Figures of the spectra for the off center model)
+
+3. Integrated Flux.:
+
+This notebook makes the analysis for section 3.5 and the figure of this section, Fig 12
+with the Narrow Band Filter.
+
+4. Integrated Flux Dusty:
+
+This notebook makes the same thing as Integrated Flux but for dusty models. 
+
+5. Maximums Position:
+
+In this notebook is made the plots of the maxima position vs V_{max} (Fig. 4)
+In cell 2 the plot is made.
+The data used in this notebook has been obtained by eye inspection.
+
+6. Nscatt:
+
+In this notebook the plot of Nscatt vs Vmax is made, Fig. 5 of the paper.
+The data comes from the original data column [:,7] Python notation.
+
+7. TempHistogram_Nscatt:
+
+In this notebook the 2D histograms Of Nscatt vs V are made Fig. 6 and Fig. 7.
+
+
+8. Width_Analysis
+
+In this notebook the plot W1/2 vs V_{max} is made in cell 2. This plot 
+corresponds to Fig. 3 of the paper.
+
+9. escpae_fraction:
+
+In this notebook the escape fraction in ploted:
+In cell 7 fesc Vs V_{max} Fig. 8 of the paper
+In cell 9 the comparison with the Neufeld Analytical Solution. Fig. 9 of the paper
+
+data used in this paper comes from the last cell of the direccional notebook. 
+
+
+
+
+
