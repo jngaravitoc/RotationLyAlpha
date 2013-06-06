@@ -40,7 +40,7 @@
 \newcommand{\pasp}{PASP}    
 \newcommand{\pasj}{PASJ}    
 \newcommand{\avg}[1]{\langle{#1}\rangle}  
-\newcommand{\ly}{{\ifmmode{{\rm Ly}\alpha}\else{Ly$\alpha$}\fi}}
+\newcommand{\ly}{{\ifmmode{{\rm Ly}\alpha~}\else{Ly$\alpha$~}\fi}}
 \newcommand{\hMpc}{{\ifmmode{h^{-1}{\rm Mpc}}\else{$h^{-1}$Mpc }\fi}}  
 \newcommand{\hGpc}{{\ifmmode{h^{-1}{\rm Gpc}}\else{$h^{-1}$Gpc }\fi}}  
 \newcommand{\hmpc}{{\ifmmode{h^{-1}{\rm Mpc}}\else{$h^{-1}$Mpc }\fi}}  
@@ -65,7 +65,7 @@
 
 \title[Rotation in the Lyman-$\alpha$ line]{Rotation effects on the
   Lyman-$\alpha$ line morphology in distant galaxies}
-\author[N. Garavito and J.E. Forero-Romero]{
+\author[Garavito-Camargo, Forero-Romero \& Dijkstra]{
 \parbox[t]{\textwidth}{\raggedright 
   Nicolas Garavito-Camargo$^{1}$,
   Jaime E. Forero-Romero$^{1}$ and 
@@ -100,8 +100,8 @@ rotation does not have any effect, provided that all the sources are
 centrally emitted. However in the case of homogeneously emitted
 sources we measure an increase of about a factor of $2$ in the escape
 fraction for higher rotational velocity values. 
-Our work shows clearly that gas rotation has a non
-negligible impact on the shape of the Lyman $\alpha$ line.
+Our work shows clearly that gas rotation has a non negligible impact
+on the shape of the Lyman $\alpha$ line. 
 \end{abstract}
 \begin{keywords}
 galaxies: high-redshift - galaxies: star formation - line: formation
@@ -112,12 +112,13 @@ galaxies: high-redshift - galaxies: star formation - line: formation
 \label{sec:intro}
 
 
+
 Due to the resonant nature of the Lyman alpha line, gas kinematics
-play an important role shaping its morphology. 
+play an important role shaping its morphology...
 
 There is an extensive literature studying the influence of
 outflow/inflow configurations in the shape of the outgoing Lyman-alpha
-line. 
+line...
 
 In this paper we study for the first time the impact of rotation on
 the morphology of the Lyman $\alpha$ line. To isolate the effects of
@@ -127,9 +128,9 @@ body. We base our work on two independent Monte Carlo based radiative
 transfer codes CLARA \citep{CLARA} and XX \citep{DijkstraKramer}.
 
  
-This paper is paper is structured as follows.
+This paper is paper is structured as follows...
 
-In this paper we experess a photon's frequency in terms of the
+In this paper we express a photon's frequency in terms of the
 dimensionless variable $x\equiv (\nu -\nu_a)/\Delta\nu_\alpha$, where
 $\nu_{\alpha}=2.46\times 10^{15}$ Hz is the Ly$\alpha$ resonance
 frequency,  $\Delta_{\alpha} \equiv
@@ -168,12 +169,15 @@ sphere that rotates as a solid body with constant angular
 velocity. This simple model will contain only one parameter: the
 linear velocity at the sphere's surface, $V_{\rm max}$.
 
-\subsection{The implementation}
- We define a cartesian coordinate
-system with its origin at the center of the sphere and the rotation
-axis to be the $z$-axis, the components in the bulk velocity field, $\vec{v}
-= v_{x}\hat{i} + v_{y}\hat{j} + v_{z}\hat{k}$. in the gas can be written as 
- 
+\subsection{Detailed Implementation of Rotation}
+
+ In the MonteCarlo code we define a cartesian coordinate system to
+ define the position of each photon. The origin of this system
+ coincides withthe center of the sphere and the rotation axis is defined
+ to be $z$-axis. With this choice, the components of the gas bulk velocity
+ field, $\vec{v} = v_{x}\hat{i} + v_{y}\hat{j} + v_{z}\hat{k}$, can be
+ written as  
+  
 \begin{subequations}
 \begin{align}
     v_{x}=-\dfrac{y}{R}V_{\rm max}, \label{subeq1}\\
@@ -181,45 +185,48 @@ axis to be the $z$-axis, the components in the bulk velocity field, $\vec{v}
     v_{z}=0, \label{subeq3}
 \end{align}
 \end{subequations}
-
+%
 where $R$ is the radius of the sphere and $V_{\rm max}$ is the linear
-velocity at the sphere's surface. The minus sign in the x-component of
-the velocity indicates the direction of rotation, in this case we
-assume that the angular velocity vector goes in the $\hat{k}$
-direction.  The linear dependence of the velocity on the radial
-distance describes the case of constant angular velocity
-$\omega=V_{\rm max}/R$.  
+velocity at the sphere's surface. The minus/plus sign in the
+$x$/$y$-component of the velocity indicates the direction of
+rotation. In this case we take the angular velocity in the same
+direction as the $\hat{k}$ unit vector. With these definitions we can
+write the angular velocity as $\omega=V_{\rm max}/R$.  
 
-We take the polar angle $\theta$ that a unitary vector makes with the
-rotation axis as defined by the dot product $\cos\theta =
-{\hat{u}\cdot\hat{k}}$. In the Section \ref{sec:results} we will
-present in detail how the line differs at different observing angles
-$\theta$. 
+In contrast with spherically symmetric models (static, outflow,
+inflow) the rotation now defines a preferred direction in the
+problem. In Section \ref{sec:results} we quantify this differences by
+varying the line of sight of a mock observer with respect to the
+rotation axis. The results are parameterized by the polar angle
+$\theta$ as defined by the dot product $\cos\theta =
+{\hat{u}\cdot\hat{k}}$. 
 
-
-
-\subsection{Grid of Simulated Models}
+\subsection{Grid of Simulated Galaxies}
 \label{sec:models}
 
-We compute the emergent Lyman-$\alpha$ line for several models with
-differents values for the maximal rotational velocity, hydrogend optical
-depth, dust optical depth and initial distributions of the photons
+In the Monte Carlo calculations we follow the propagation of $N_{\gamma}=10^5$
+numerical photons through different spherical galaxies, each one
+varying in at least one of the following parameters: the maximum
+rotational velocity $V_{\rm max}$, hydrogen optical depth $\tau_{H}$,
+dust optical depth $\tau_{a}$ and the initial disitrbution of photons
 with respect to the gas. There are in total 60 models with the input
-parameters summarized in Table  \ref{table:models}. 
+parameters summarized in Table \ref{table:models}.  
 
 \begin{table}
 \begin{center}
-\begin{tabular}{ccc}\hline
+\begin{tabular}{llc}\hline\hline
+Physical Parameter (units) & Symbol & Values\\\hline
 Velocity (\kms) & $V_{\rm max}$&$0,\ 50,\ 100,\ 200,\ 300$\\
 Hydrogen Optical Depth & $\tau_{H} $ & $10^{5},\ 10^{6},\ 10^{7}$\\
-Dust Optical Depth & $\tau_{A}$ & $0$,$1$\\
-Photons Distributions & & Central, Homogeneous\\
-\hline
+Dust Optical Depth & $\tau_{a}$ & $0$,$1$\\
+Photons Distributions & & Central, Homogeneous\\\hline\hline
 \end{tabular}
 \caption{
-Values for the varying input parameters in CLARA. Taking into account
-all the possible combinations for these models
-} 
+List of the physical parameters that define the spherical models we
+have simulated using Monte Carlo calculations. For each parameter we
+vary the values in the range listed in the last column. Takig into
+account all the possible combinations we end up with $60$ different
+models. } 
 \label{table:models}
 \end{center}
 \end{table}
@@ -229,19 +236,18 @@ all the possible combinations for these models
 \label{sec:results}
 
 The central result of this paper is summarized in
-Fig.~\ref{fig:differentvelocities} where we show that rotation has a
-considerable effect on the morphology of the emergent Lyman-alpha line
-both in the case where the photons are emitted at the sphere's center
-and when they are initialized with an homogeneous distribution all
-over the gas volume.
+Fig.~\ref{fig:differentvelocities} that shows clearly the considerable
+impact of rotation on the morphology of the emergent \ly line. Both
+panels in the Figure focus on the results for $\tau_{H}=10^{7}$,
+showing that the influence of rotation is present both when the
+photons are either homogeneusly or centrally initialized over the gas
+volume. 
 
-The results for these outgoing spectra are integrated over the whole
-sphere, meaning that all the escaping photons were taking into account
-regardless of the direction of the outgoing photons. Fig.~\ref{fig:differentobservers}
-shows how if one gives a weight to each outgoing
-photon according to its direction when escaping the gas distribution
-it is possible to detect notable differences in the spectrum for
-different viewing angles.
+These results for these outgoing spectra are constructed by taking into
+account all outgoing photons regardless of the direction of
+propagation. In subsection \ref{subsec:direction} we report different
+statistics aiming at quantifying the changes in the observed spectra
+for observers with different viewing angles.
 
 
 
@@ -255,26 +261,13 @@ different viewing angles.
   \label{fig:differentvelocities}}
 \end{figure*}
 
-\begin{figure*}
-\includegraphics[width=0.45\textwidth]{Observers7t.png}
-\includegraphics[width=0.45\textwidth]{Observers7tHOM.png}
-\caption{Same as Figure \ref{fig:differentvelocities} but this time
-  the different lines show the line morphology for different polar angles
-  $\theta$ with respect to the rotation axis. In this case each photon
-  has a weight dependent on their outgoing direction. All spectra correspond
-  to the same $V_{\rm max}=300$\kms, Optical   Depth $\tau=10^{7}$ and
-  Central Distribution without dust.
-  \label{fig:differentobservers}}  
-
-\end{figure*}
-
-
 In the following subsections we quantify the trends observed in
 Fig. \ref{fig:differentvelocities} and
 Fig. \ref{fig:differentobservers} as a function of the maximum
 rotation velocity $V_{\rm max}$ and the position of the observer with
 respect to the rotation angle, $\mu = \cos{\theta}$. All the results
-in this section will be expressed in terms of rest frame wavelength.
+in this section will be expressed in terms of the adimensional
+frequency $x$.
 
 First we quantify the line by its full width at half maximum
 (FWHM) and the peak positions. In order to interpret these results we
@@ -440,22 +433,25 @@ spread out the wavelenght of the of the outgoing photons represented by $X_{m}$.
 
 \begin{figure}
     \includegraphics[width=0.45\textwidth]{NscattvsVmax.png}
-\caption{Log of the Average number of scatterings of the outgoing photons as function of the velocity. \label{fig:Nscatt}} 
+\caption{Log of the Average number of scatterings of the outgoing
+  photons as function of the velocity. \label{fig:Nscatt}}  
 \end{figure}
 
 
 \begin{figure*}
      \includegraphics[width=0.40\textwidth]{2dHistogram0t5HOM.png}
-     \includegraphics[width=0.40\textwidth]{2dHistogram300t5HOM.png}
-    
-    \caption{Histogram of $N_{scatt}$ vs $x$ for the homogeneous distribution, left for $V_{max}=0km/s $, right for $V_{max}=300km/s$ \label{fig:NscattHistoHOM}} 
+     \includegraphics[width=0.40\textwidth]{2dHistogram300t5HOM.png}    
+    \caption{Histogram of $N_{scatt}$ vs $x$ for the homogeneous
+      distribution, left for $V_{max}=0km/s $, right for
+      $V_{max}=300km/s$ \label{fig:NscattHistoHOM}}  
 \end{figure*}
 
 \begin{figure*}
      \includegraphics[width=0.40\textwidth]{2dHistogram50t5.png}
-     \includegraphics[width=0.40\textwidth]{2dHistogram300t5.png}
-    
-    \caption{Histogram of $N_{scatt}$ vs $x$ for the Central distribution, left for $V_{max}=50km/s $, right for $V_{max}=300km/s$ \label{fig:NscattHistoHOM}} 
+     \includegraphics[width=0.40\textwidth]{2dHistogram300t5.png}    
+    \caption{Histogram of $N_{scatt}$ vs $x$ for the Central
+      distribution, left for $V_{max}=50km/s $, right for
+      $V_{max}=300km/s$ \label{fig:NscattHistoHOM}}  
 \end{figure*}
 
 
