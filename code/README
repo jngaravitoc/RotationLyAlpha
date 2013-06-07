@@ -2,10 +2,9 @@ ipython notebooks content:
 
 Paper's plots:
 
-Number                         Notebook
-Fig. 1                       Direccional
-Fig. 2                       Direccional
-Fig. 3                       With_Analysis        
+Number                         Notebook                      Name
+Fig. 1                       Spectra               SpectraDifVelocitiesCentral.png / SpectraDifVelocitiesHOM.png
+Fig. 2                       With_Analysis        
 Fig. 4                       
 Fig. 5
 Fig. 6
@@ -17,12 +16,9 @@ Fig. 11
 Fig. 12
 
 
-1. Direccional:
+1. Spectra:
 
-In this notebook the observer viewing angles analysis is made.
-In cell 6 plots are made, this plots are Fig. 1 and Fig. 2 of the paper.
-In the last cell (Cell 8) que Escape Fraction is calculated.
-This notebook 
+In this notebook the histograms are ploted.
 
 2. Off-Center Sphere:
 

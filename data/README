@@ -1,0 +1,74 @@
+# * Missing data
+Resume of Data:
+=====================================================================================
+Central--> Just how data came out from simulations for the Central Models
+=====================================================================================
+Rotating0Sphere5t.ascii
+Rotating0Sphere6t.ascii
+Rotating0Sphere7t.ascii
+Rotating0Sphere5tDust.ascii*
+Rotating0Sphere6tDust.ascii*
+Rotating0Sphere7tDust.ascii*
+Rotating50Sphere5t.ascii
+Rotating50Sphere6t.ascii
+Rotating50Sphere7t.ascii
+Rotating50Sphere5tDust.ascii
+Rotating50Sphere6tDust.ascii
+Rotating50Sphere7tDust.ascii
+Rotating100Sphere5t.ascii
+Rotating100Sphere6t.ascii
+Rotating100Sphere7t.ascii
+Rotating100Sphere5tDust.ascii
+Rotating100Sphere6tDust.ascii
+Rotating100Sphere7tDust.ascii
+Rotating200Sphere5t.ascii
+Rotating200Sphere6t.ascii
+Rotating200Sphere7t.ascii ° check ----------------------------
+Rotating200Sphere5tDust.ascii
+Rotating200Sphere6tDust.ascii
+Rotating200Sphere7tDust.ascii
+Rotating300Sphere5t.ascii
+Rotating300Sphere6t.ascii
+Rotating300Sphere7t.ascii
+Rotating300Sphere5tDust.ascii
+Rotating300Sphere6tDust.ascii
+Rotating300Sphere7tDust.ascii
+======================================================================================
+Homogeneous --> Just how data came out from simulations for the homogeneous Models
+======================================================================================
+Rotating0Sphere5tHOM.ascii
+Rotating0Sphere6tHOM.ascii
+Rotating0Sphere7tHOM.ascii
+Rotating0Sphere5tHOMDust.ascii*
+Rotating0Sphere6tHOMDust.ascii*
+Rotating0Sphere7tHOMDust.ascii*
+Rotating50Sphere5tHOM.ascii
+Rotating50Sphere6tHOM.ascii
+Rotating50Sphere7tHOM.ascii
+Rotating50Sphere5tHOMDust.ascii
+Rotating50Sphere6tHOMDust.ascii
+Rotating50Sphere7tHOMDust.ascii
+Rotating100Sphere5tHOM.ascii
+Rotating100Sphere6tHOM.ascii
+Rotating100Sphere7tHOM.ascii
+Rotating100Sphere5tDustHOM.ascii
+Rotating100Sphere6tDustHOM.ascii
+Rotating100Sphere7tDustHOM.ascii
+Rotating200Sphere5tHOM.ascii
+Rotating200Sphere6tHOM.ascii
+Rotating200Sphere7tHOM.ascii* 
+Rotating200Sphere5tHOMDust.ascii
+Rotating200Sphere6tHOMDust.ascii
+Rotating200Sphere7tHOMDust.ascii
+Rotating300Sphere5tHOM.ascii
+Rotating300Sphere6tHOM.ascii
+Rotating300Sphere7tHOM.ascii
+Rotating300Sphere5tHOMDust.ascii
+Rotating300Sphere6tHOMDust.ascii
+Rotating300Sphere7tHOMDust.ascii
+======================================================================================
+Central_Histograms --> Histograms data for all the Central models
+======================================================================================
+======================================================================================
+Homogeneous_Histograms --> Histograms data for all the Homogeneous models
+======================================================================================
