@@ -1,4 +1,0 @@
-Velocity   Peak Maxima    
-0          -6 / 8
-100        -6 / 8
-300        -12 / 11
