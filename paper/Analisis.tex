@@ -53,7 +53,7 @@
 \newcommand{\clara}{{\texttt{CLARA}}~}
 \newcommand{\rand}{{\ifmmode{{\mathcal{R}}}\else{${\mathcal{R}}$ }\fi}}  
 \newcommand{\hs}{{\hspace{1mm}}}  
-\newcommand{\kms}{\,km~s$^{-1}$}
+\newcommand{\kms}{{\ifmmode{{\mathrm{\,km\ s}^{-1}}}\else{\,km~s$^{-1}$}\fi}}
 
 % definition to produce a "less than or similar to" symbol
 \def\lsim{~\rlap{$<$}{\lower 1.0ex\hbox{$\sim$}}}
@@ -235,6 +235,17 @@ models. }
 \section{Results}
 \label{sec:results}
 
+\begin{figure*}
+  \includegraphics[width=0.45\textwidth]{SpectraDifVelocitiesCentral.png}
+  \includegraphics[width=0.45\textwidth]{SpectraDifVelocitiesHOM.png}
+\caption{Shape of the \ly line for
+    different velocities rotational velocities for spherical
+    distributions with $\tau_{H}=10^{7}$. The left (right) panel shows the central
+    (homogeneous) photon distribution. All photons were taken into
+    account regardless of their propagation direction.
+  \label{fig:differentvelocities}}
+\end{figure*}
+
 The central result of this paper is summarized in
 Fig.~\ref{fig:differentvelocities} that shows clearly the considerable
 impact of rotation on the morphology of the emergent \ly line. Both
@@ -243,156 +254,101 @@ showing that the influence of rotation is present both when the
 photons are either homogeneusly or centrally initialized over the gas
 volume. 
 
-These results for these outgoing spectra are constructed by taking into
+In the following subsections we characterize the line morphology by
+the half-width at half intensity and the peak maxima. In order to
+intepret the morphological changes in the line we also report the
+median number of scatter for each \ly photon in the
+simulation. Finally we measure the bulk escape fraction as a function
+of rotational velocity in the presence of dust.
+
+
+All the results in this section are constructed by taking into
 account all outgoing photons regardless of the direction of
-propagation. In subsection \ref{subsec:direction} we report different
-statistics aiming at quantifying the changes in the observed spectra
-for observers with different viewing angles.
-
-
-
-\begin{figure*}
-  \includegraphics[width=0.45\textwidth]{SpectraDifVelocitiesCentral.png}
-  \includegraphics[width=0.45\textwidth]{SpectraDifVelocitiesHOM.png}
-\caption{Shape of the lyman alpha line for
-    different velocities. The left (right) panel shows the central
-    (homogeneous) photon distribution. All photons were taken into
-    account regardless of their outgoing direction of propagation.
-  \label{fig:differentvelocities}}
-\end{figure*}
-
-In the following subsections we quantify the trends observed in
-Fig. \ref{fig:differentvelocities} and
-Fig. \ref{fig:differentobservers} as a function of the maximum
-rotation velocity $V_{\rm max}$ and the position of the observer with
-respect to the rotation angle, $\mu = \cos{\theta}$. All the results
-in this section will be expressed in terms of the adimensional
-frequency $x$.
-
-First we quantify the line by its full width at half maximum
-(FWHM) and the peak positions. In order to interpret these results we
-measure how the rotation affects the average number of scatterings
-for each Lyman-alpha photon in the simulation. This help us to
-introduce the next subsection on the escape fraction in our models
-including dust. We conclude the section by estimating the
-expected line flux for top hat filters at a fixed center and varying
-width. 
+propagation. In the next section \ref{subsec:direction} we quantify 
+the changes in the observed spectra for observers with different
+viewing angles. 
 
 \subsection{Line width and peak maxima}
 \label{sec:widthpeak}
 \label{fig:differentvelocities}
 
-\begin{figure}
-    \includegraphics[width=0.45\textwidth]{WidthvsVmax.png}
-\caption{Width of the lyman-alpha line for all the models.\label{fig:widthvsvelocity}}
-\end{figure}
-
-
 The first quantitative conclusion of the effect of rotation in the
-Lyman alpha line is that the double peaks in the line tend to broaden
-until they reach a single broad emission peak. This is most evident in
-the case of Lyman-alpha sources homogeneously distributed in the gas
-distributions (Fig.~\ref{fig:differentvelocities} Right panel).
+\ly line is that double peaks broaden and reduce their intensity,
+while the line center rises. This procudes the impresion that, as the
+rotational velocity increases, the double peaks are merged into a
+single broad emission peak. This is msot evident in the highest
+rotational velocities for the homogeneously distributed sources
+(right panel in Fig.~\ref{fig:differentvelocities}). 
 
 To quantify the line broadening we measure a modified version of the full
-width at half maximum (FWHM) for half of the line, $W_{1/2}$. It means that in
-the case of double peaked emission, $W_{1/2}$ corresponds to the with
-one of the peaks, while in the extreme case when the line is converted
-into a single peak, $W_{1/2}$ corresponds to half of the full width. 
+width at half maximum (FWHM). Instead we measure it only for half of
+the line, $W_{1/2}$. This definition allows us to quantify the line
+width both in the cases of double and single peak emission.  In the
+case of double peaked emission $W_{1/2}$ corresponds to the width of a
+single peak, while in the extreme case of high rotational velocities,
+when the double peak is erased, it simply correspond to half FWHM.  
 
-This definition allows us to quantify the line width both in the cases
-of double and single peak emission. Furthermore it has the advantage
-that this line width should have a direct observational correspondence
-to the observed line feature once the Inter-Galactic Medium (IGM)
-effects are taken into account, which have the central effect of
-strongly reducing the intensity of the blue peak of the line.
+Figure \ref{fig:widthvsvelocity} shows how $W_{1/2}$ increases with
+rotational velocity. Continous (dashed) lines connect the results for
+homogeneous (central) source distribution. The line width increases
+with rotational velocity up to factors of $\sim 2$ at $300$\kms with
+respect to the static case. For the temperature $T=10^4$K used in our
+radiative transfer calculations calculations the thermal velocity is
+$v_{th}=12.8$\kms. For a model with $\tau_{H}$ it means that the
+half-width can increase up to $350$\kms (at $V_{\rm max}=300$\kms)
+compared to a half-width of $150$\kms in the static case.  
 
-Fig.~\ref{fig:widthvsvelocity} summarizes our findings for $W_{1/2}$
-as a function of $V_{\rm max}$. The line width increases with the
-rotational velocity of the gas cloud. This increase can be of a factor
-of $2-3$ with respect to the width with respect to the static
-case. This trend is conserved at all optical depths regardless of the
-initial source distribution. 
-
-%Im not sure about this anymore---TALK to Jaime about this!
-This result includes all the outgoing photons, regardless of the
-position of the observer. In Figure~\ref{fig:widthvstheta} we
-take into account the different positions of the observer in the
-measurement of the half-width $W_{1/2}$. From this we conclude
-that observers with a line of sight perpendicular to the axis of
-rotation (i.e. edge-on in the case of spiral galaxy) tend to measure
-larger line widths than observers aligned with the rotation axis
-(i.e. face-on). The influence of the observer position on the line
-width, amounting always less than $15\%$ of a difference with respect
-to the result that takes into account all the outgoing photons with
-the same weight regardless of the relative observer position.
-
-%Both for central and homogeneous distribution of sources, We found a
-%dependency of the width with the rotation velocity of the gas cloud,
-%this results are summarize in Figure ~\ref{figure:width}. As velocity
-%increase also the equivalent width increase (for both homogeneous and
-%central distribSi Limonution), it means that some photons escape with fewer
-%scatterings than the static case but at the same time a few photons escape with% more scatterings, this can be seen clearly in
-%Figure. (Nscatt)\\ 
-
-%We also found a dependency with the viewing angles, in particular as
-%the angle incre ase the width also increase Figure
-%~\ref{fig:withvstheta}, this was also found in Verhemme et al. 2012
-%for a rotating disk but the pure effect of rotation can not been study
-%as it is in our case. Following the convention of Verhamme et al 2012
-%we define $\mu=cos(\theta)$, and we can make a polynomial fit for the
-%$FWHM(\mu)$ for our models, this is resumed in Table ~\ref{table:fits} 
+\begin{figure}
+    \includegraphics[width=0.45\textwidth]{WidthvsVmax.png}
+    \caption{Half-width for the non-dusty models as a function of
+      rotational velocity $V_{\rm max}$. Continous (dashed) lines
+      correspond to homogeneous (central) source
+      distributions. \label{fig:widthvsvelocity}} 
+\end{figure}
 
 
 \begin{figure}
     \includegraphics[width=0.45\textwidth]{maximumvsVmax.png}
-\caption{Position of the maxima
-    in the outgoing spectra for differents Rotational velocities,
-    (up)Central Distriution, (Down) Homogeneous Distribution.\label{fig:maximumsvsvelocity}} 
+\caption{Position of the peak maxima as a function of rotational
+  velocity $V_{\rm max}$. Continous (dashed) lines correspond to
+  homogeneous (central) source distributions. A value of $x_{\rm
+    max}=0$ indicates that line becomes single
+  peaked. \label{fig:maximumsvsvelocity}}  
 \end{figure}
 
-The second feature in the line that we use to quantify the effect of
-rotation is the position of the line maxima. These provide information
-on the wavelength of the majority of the outgoing photons after
-they interact with the neutral hydrogen atoms in the gas cloud. If
-most of the photon escapes with a low number of scattering, its
-outgoing frequency will be close to its initial frequency, that is in
-the center of the line. On the contrary if the number of scatterings
-is large for the average photon, its outgoing frequency will be far
-from the line center. Such reasoning can be made more quantitative to
-understand the dependence of the peak maxima as a function of the
-hydrogen optical depth in the cloud [citation needed].
 
+Figure \ref{fig:maximumsvsvelocity} shows the position for the peak
+maxima as a function of the rotational velocity $V_{\rm max}$. This
+figure shows us clearly that in the case of central distributed
+sources there is barely any change with rotational velocity, at least
+in the range of explirea parameters. However, in the case of
+homogeneously emitted sources the maxima position remain close to
+constant until beyond some velocity threshold the line becomes single
+peaked with $x_{\rm max}=0$. 
 
-In Fig.~\ref{fig:maximumsvsvelocity} we present the position
-of the maxima as a function of $V_{\rm max}$. For the photons emitted
-in the line center we do not find any variation in the position of the
-maxima in the range of explored parameter space (dash lines). However in the
-homogeneous case we can see how the maxima goes to $x_{m}=0$, meaning
-that the double peak is converted into a single peak.
+The transition to a single peak line most probably occurs for systems
+where it  becomes easier for the bulk of the photons to escape with the lowest
+number of scatterings possible, allowing them not to move very far
+from the center of the line. This hypothesis can also help to explain how the
+single peak stage is easily achieved in the homogeneous source
+distribution compared to the central distribution. In the homogeneous
+case there is a fraction of the photons that are inside a photosphere region with
+$\tau_{H,r}\ll \tau_{H}$ where $\tau_{H,r}$ is the optical depth from
+the radius of emission to the sphere's surface. This conditions allows
+the photons to escape with much less scatterings compared to the
+photons emitted at the very center of the sphere. In turn, it gives
+the photons less scatterings to be placed far from the line
+center. Increasing the rotational velocity $V_{\rm max}$ reduces the
+optical depth making the  photosphere region effectively larger,
+increasing the number of photons escaping close to the lines's center.
 
-This transition to a single peak line occurs for the systems where it
-becomes easier for a bulk of the photons to escape with the lowest
-number of scatterings possible. This can explain how the single peak
-stage can be achieved in the homogeneous source distribution where
-there is fraction of the photons inside a photosphere region with
-$\tau_{H}\sim 1$ which allows them to escape within one
-scatter. Increasing the rotational velocity makes it easier for the
-photons in this photosphere region to escape.
-
-We also take into account the viewing angle $\mu$ for all the optical 
-depths and rotational velocities and the two different photon distribution.
-But we don't find any dependency meaning that the peaks would be placed in
-the same place no matter the position of an external observer.	
-
-Finally we also report on the effect of the neutral Hydrogen
-optical depth $\tau_{H}$ on the maxima position $x_{m}$
-Fig.~\ref{fig:maximumsvsvelocity}. We find that, at fixed
-rotation velocity, the position of the maxima increases with optical
-depth as expected from basic theoretical considerations. We compare
-our results with the expected theoretical scaling for an infinite
-slab. 
-
+For larger values of $\tau_{H}$ the transitional velocity $V_{\rm
+  trans}$ is also larger. In our models we find the following
+correspondance between the optical depth $\tau_{\rm H}=\{10^5, 10^6,
+10^7\}$ and the transitional velocities $V_{\rm
+  trans}=\{50-100\kms, 100-200\kms, 200-300\kms\}$ which can only be
+constrained to be in the range of velocities in the models that gave a $x_{\rm
+  max}\neq 0$ and $x_{\rm max}=0$.  
 
 
 \subsection{Average Number of Scatterings}
