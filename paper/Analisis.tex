@@ -40,6 +40,7 @@
 \newcommand{\pasp}{PASP}    
 \newcommand{\pasj}{PASJ}    
 \newcommand{\avg}[1]{\langle{#1}\rangle}  
+\newcommand{\nscatt}{\langle N_{\rm  scatt}\rangle}
 \newcommand{\ly}{{\ifmmode{{\rm Ly}\alpha~}\else{Ly$\alpha$~}\fi}}
 \newcommand{\hMpc}{{\ifmmode{h^{-1}{\rm Mpc}}\else{$h^{-1}$Mpc }\fi}}  
 \newcommand{\hGpc}{{\ifmmode{h^{-1}{\rm Gpc}}\else{$h^{-1}$Gpc }\fi}}  
@@ -320,27 +321,29 @@ compared to a half-width of $150$\kms in the static case.
 Figure \ref{fig:maximumsvsvelocity} shows the position for the peak
 maxima as a function of the rotational velocity $V_{\rm max}$. This
 figure shows us clearly that in the case of central distributed
-sources there is barely any change with rotational velocity, at least
-in the range of explirea parameters. However, in the case of
+sources there is barely any change with rotational velocity in the
+range of explored parameters. However, in the case of
 homogeneously emitted sources the maxima position remain close to
 constant until beyond some velocity threshold the line becomes single
 peaked with $x_{\rm max}=0$. 
 
-The transition to a single peak line most probably occurs for systems
+It is probable that the transition to a single peak line occurs for systems
 where it  becomes easier for the bulk of the photons to escape with the lowest
 number of scatterings possible, allowing them not to move very far
-from the center of the line. This hypothesis can also help to explain how the
+from the center of the line. This hypothesis can help to explain how the
 single peak stage is easily achieved in the homogeneous source
-distribution compared to the central distribution. In the homogeneous
-case there is a fraction of the photons that are inside a photosphere region with
-$\tau_{H,r}\ll \tau_{H}$ where $\tau_{H,r}$ is the optical depth from
-the radius of emission to the sphere's surface. This conditions allows
-the photons to escape with much less scatterings compared to the
-photons emitted at the very center of the sphere. In turn, it gives
-the photons less scatterings to be placed far from the line
-center. Increasing the rotational velocity $V_{\rm max}$ reduces the
-optical depth making the  photosphere region effectively larger,
-increasing the number of photons escaping close to the lines's center.
+distribution. In this case there is a fraction of the photons that are
+inside a photosphere region with $\tau_{H,r}\ll \tau_{H}$ where
+$\tau_{H,r}$ is the optical depth from the radius of emission to the
+sphere's surface. This conditions allows the photons to escape with
+much less scatterings compared to the photons emitted at the very
+center of the sphere. In turn, it gives the photons less scatterings
+to be placed far from the line center. Increasing the rotational
+velocity $V_{\rm max}$ reduces the optical depth making the
+photosphere region effectively larger, increasing the number of
+photons escaping close to the lines's center. For the central case the
+photosphere is not present, and other mechanisms must be at play in
+the steady reduction of the double peak. 
 
 For larger values of $\tau_{H}$ the transitional velocity $V_{\rm
   trans}$ is also larger. In our models we find the following
@@ -348,28 +351,52 @@ correspondance between the optical depth $\tau_{\rm H}=\{10^5, 10^6,
 10^7\}$ and the transitional velocities $V_{\rm
   trans}=\{50-100\kms, 100-200\kms, 200-300\kms\}$ which can only be
 constrained to be in the range of velocities in the models that gave a $x_{\rm
-  max}\neq 0$ and $x_{\rm max}=0$.  
+  max}\neq 0$ and $x_{\rm max}=0$.   In the next section explore the
+origin of this trends and consider to what extent the hypothesis of a low
+number of scatterings is correlated with the emergence of a single
+peak. 
+
 
 
 \subsection{Average Number of Scatterings}
 
-Until know we have focus in how rotation affect the morphology of the 
-Lyman alpha line, now we turn to study deeply the possible causes of 
-this effects. As recombination is the main cause of the emission of the 
-Lyman alpha line, it is important to study the relationship between the 
-number of times that a photon is absorbed and re emitted that we simply 
-take as scatterings with it's shift in the wavelength. 
+The number of times that a \ly photon is absorbed and re-emmited is
+connected to the final frequency that it can have after escaping the
+galaxy. In the case of static gas geometries, a large value of the
+optical depth is immediatly followed by a high number of
+scatterings. In turn a large optical depth increases the probability
+that a \lya photon will be found far from the center of the line. The
+peak maxima shifting away form the line center as the amount of
+neutral hydrogen increases.
 
-As a first approach we study the number of scatterings of all the photons 
-at different velocities and for both photon distributions Figure~\ref{fig:Nscatt}. 
-For the central distribution we found that the average number of scattering 
-does not have a relevant change ($\sim 0.5\%$) with $V_{max}$, For the 
-Homogeneous distribution we found that as $V_{max}$ increase the average 
-number of scatterings decrease in a$\sim 39\%$, it means that rotation 
-makes photons to escape easier from the cloud. The reason why this is not 
-observed in the central distribution is because the amount of gas that every 
-photon has to break through is so large that the average number of scatterings 
-is large too, making the effect of rotation unobservable.
+
+In Figure \ref{fig:Nscatt} we see the average number of scatterings
+$\langle N_{\rm scatt}\rangle$ as a function of the rotational velocity
+$V_{\rm max}$. For the central distributions we find that there is not
+a significante change for increasing rotational
+velocities, $\langle N_{\rm scatt}\rangle$ changes less than $0.5\%$
+for different velocities. In this case we also find that the average
+number of scatterings is proportional to the optical depth, as
+expected in analogy from the analytic result for the homogeneous
+infinite-slab $\langle N_{\rm  scatt}\rangle=1.612\tau_{\rm   H}$
+\citep{Adams72,Harrington73}. In our experiments we find  $\langle N_{\rm
+  scatt}\rangle= XXX\tau_{\rm   H}$. 
+
+
+However, for the homogeneous distribution there is a clear decrease of
+$\langle N_{\rm  scatt}\rangle$ as the  $V_{\rm max}$ increases. This
+effect more pronounced for the lower values of the optical depth. For
+$\tau_{\rm H}=10^5$ the average number of scatterings decreases by
+$XX\%$ at $V_{\rm max}=300\kms$ in comparison to the static case.
+
+
+The analytic expectation for the slab with homogeneously emitted
+sources is $\langle N_{\rm  scatt}\rangle=1.16\tau_{\rm   H}$
+\citep{Harrington73}, a factor of $0.72$ lower than the case of the
+centrally emitted photons. In our case we find that for the static
+spheres this factor is $XXX$.
+
+%%%%%
 
 In order to understand the effects of rotation in the morphology of the line
  we make histograms of $<N_{scatt}>$  in function of $X_{m}$ for both the 
