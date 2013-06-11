@@ -21,7 +21,6 @@
 \definecolor{darkgreen}{rgb}{0.0,0.5,0.0}
 \newcommand{\SRK}[1]{\textcolor{darkgreen}{\bf SRK: \textit{#1}}}
 \newcommand{\SRKED}[1]{\textcolor{darkgreen}{\bf #1}}
-
 \newcommand{\LCDM}{$\Lambda$CDM~}
 \newcommand{\beq}{\begin{eqnarray}}  
 \newcommand{\eeq}{\end{eqnarray}}  
@@ -241,11 +240,12 @@ models. }
   \includegraphics[width=0.45\textwidth]{SpectraDifVelocitiesHOM.png}
 \caption{Shape of the \ly line for
     different velocities rotational velocities for spherical
-    distributions with $\tau_{H}=10^{7}$. The left (right) panel shows the central
-    (homogeneous) photon distribution. All photons were taken into
-    account regardless of their propagation direction.
-  \label{fig:differentvelocities}}
+    distributions with $\tau_{H}=10^{7}$. The left (right) panel shows
+    the central    (homogeneous) photon distribution. All photons were
+    taken into     account regardless of their propagation
+    direction.    \label{fig:differentvelocities}}  
 \end{figure*}
+
 
 The central result of this paper is summarized in
 Fig.~\ref{fig:differentvelocities} that shows clearly the considerable
@@ -271,7 +271,25 @@ viewing angles.
 
 \subsection{Line width and peak maxima}
 \label{sec:widthpeak}
-\label{fig:differentvelocities}
+
+
+\begin{figure}
+    \includegraphics[width=0.45\textwidth]{WidthvsVmax.png}
+    \caption{Half-width for the non-dusty models as a function of
+      rotational velocity $V_{\rm max}$. Continous (dashed) lines
+      correspond to homogeneous (central) source
+      distributions. \label{fig:widthvsvelocity}} 
+\end{figure}
+
+
+\begin{figure}
+    \includegraphics[width=0.45\textwidth]{maximumvsVmax.png}
+\caption{Position of the peak maxima as a function of rotational
+  velocity $V_{\rm max}$. Continous (dashed) lines correspond to
+  homogeneous (central) source distributions. A value of $x_{\rm
+    max}=0$ indicates that line becomes single
+  peaked. \label{fig:maximumsvsvelocity}}  
+\end{figure}
 
 The first quantitative conclusion of the effect of rotation in the
 \ly line is that double peaks broaden and reduce their intensity,
@@ -299,23 +317,7 @@ $v_{th}=12.8$\kms. For a model with $\tau_{H}$ it means that the
 half-width can increase up to $350$\kms (at $V_{\rm max}=300$\kms)
 compared to a half-width of $150$\kms in the static case.  
 
-\begin{figure}
-    \includegraphics[width=0.45\textwidth]{WidthvsVmax.png}
-    \caption{Half-width for the non-dusty models as a function of
-      rotational velocity $V_{\rm max}$. Continous (dashed) lines
-      correspond to homogeneous (central) source
-      distributions. \label{fig:widthvsvelocity}} 
-\end{figure}
 
-
-\begin{figure}
-    \includegraphics[width=0.45\textwidth]{maximumvsVmax.png}
-\caption{Position of the peak maxima as a function of rotational
-  velocity $V_{\rm max}$. Continous (dashed) lines correspond to
-  homogeneous (central) source distributions. A value of $x_{\rm
-    max}=0$ indicates that line becomes single
-  peaked. \label{fig:maximumsvsvelocity}}  
-\end{figure}
 
 
 Figure \ref{fig:maximumsvsvelocity} shows the position for the peak
@@ -360,6 +362,28 @@ peak.
 
 \subsection{Average Number of Scatterings}
 
+
+\begin{figure}
+    \includegraphics[width=0.45\textwidth]{NscattvsVmax.png}
+\caption{Logarithm of the average number of scatterings as function of
+  the velocity. \label{fig:Nscatt}}   
+\end{figure}
+
+
+\begin{figure*}
+     \includegraphics[width=0.45\textwidth]{2dHistogram0t5HOM.png}
+     \includegraphics[width=0.45\textwidth]{2dHistogram300t5HOM.png}    \\
+     \includegraphics[width=0.45\textwidth]{2dHistogram0t5.png}
+     \includegraphics[width=0.45\textwidth]{2dHistogram300t5.png}    
+
+    \caption{2D histogram of $N_{scatt}$ vs $x$. The upper (lower) pannels
+      show the homogeneous (central) source distribution. Left
+      corresponds to the static case and the right
+      $V_{max}=300km/s$. The colour scale is locarithmic\label{fig:Nscatt2D}}  
+\end{figure*}
+
+
+
 The number of times that a \ly photon is absorbed and re-emmited is
 connected to the final frequency that it can have after escaping the
 galaxy. In the case of static gas geometries, a large value of the
@@ -394,11 +418,11 @@ The analytic expectation for the slab with homogeneously emitted
 sources is $\langle N_{\rm  scatt}\rangle=1.16\tau_{\rm   H}$
 \citep{Harrington73}, a factor of $0.72$ lower than the case of the
 centrally emitted photons. In our case we find that for the static
-spheres this factor is $XXX$.
+spheres this factor is $xxxx$.
 
-%%%%%
 
-In order to gain a deeper understading of these results we 2D
+
+In order to gain a deeper understanding of these results we 2D
 histograms for the number of scaterrings as a function of the outgoing
 dimensionless frequency $x$. In Figure \ref{fig:Nscatt2D} we show
 the results of such histogram in the case $\tau{\rm H}=10^5$ for the
@@ -415,193 +439,171 @@ order of the optical depth, but the two peaks do get closer to each
 other. In this situation each scattering leaves the photon closer to
 the center of the line than the static case.
 
-\begin{figure}
-    \includegraphics[width=0.45\textwidth]{NscattvsVmax.png}
-\caption{Log of the Average number of scatterings of the outgoing
-  photons as function of the velocity. \label{fig:Nscatt}}  
-\end{figure}
+\subsection{Dusty Clouds: Escape Fraction}
+\label{sec:escapefraction}
 
 
-\begin{figure*}
-     \includegraphics[width=0.45\textwidth]{2dHistogram0t5HOM.png}
-     \includegraphics[width=0.45\textwidth]{2dHistogram300t5HOM.png}    \\
-     \includegraphics[width=0.45\textwidth]{2dHistogram0t5.png}
-     \includegraphics[width=0.45\textwidth]{2dHistogram300t5.png}    
-
-    \caption{2D histogram of $N_{scatt}$ vs $x$. The upper (lower) pannels
-      show the homogeneous (central) source distribution. Left
-      corresponds to the static case and the right
-      $V_{max}=300km/s$. The colour scale is locarithmic\label{fig:Nscatt2D}}  
-\end{figure*}
-
-%%%%
-\subsection{Escape Fraction}
-\label{sec:EF}
-
-Until now we have studied models in absence of dust, but is known (REFERENCE) 
-that there is presence of dust in high redshift galaxies. Our models with 
-dust are treated as is explained in detail in  the appendix of (Forero et al 2011).  
-
-Of particular interest is to compute the escape fraction of Lyman $\alpha$ 
-photons coming from the most distant galaxies, due to the fact that with the 
-observed intensity of the Lyman alpha line quantities as the LF and SFR can 
-be derived (put some references).
-
-Previous studies have shown the correlation of the Escape fraction with galactic 
-mass (Laursen et al 2009, Dayal et al 2010) abundances and the kinematics of dust. 
-In order to study pure rotational effects in the escape fraction we fixed the dust 
-abundance $\tau_{A}=0.01$ and the galaxy mass. We compute the escape fraction for 
-the models described in Table \ref{table:models}.
-
-For a realistic model we also take into account the viewing angle, first we fixed 
-the viewing angle at $\theta = 0$  Fig.~\ref{figure:efvsv} and then we fixed the 
-velocity in order to see the escape fraction correlation with the viewing angle. 
-Therefore we define the escape fraction as:\\ 
-
-\begin{equation}
-F_{e}=\dfrac{\Sigma_{NI} \vec{k}\cdot \vec{o}}{\Sigma_{NF}\vec{k}\cdot \vec{o}}
-\end{equation}
-
-Where NI is the initial number of photons and NF is the final,
-$\vec{k}$ is the rotation axis direction and ${o}$ the observer
-direction. With this definition we compute the escape fraction for all
-of our models, the results are presented in Fig \ref{figure:efvsv}\\  
- 
 \begin{figure}
   \includegraphics[width=0.45\textwidth]{EscapeFraction.png}
-   \caption{Escape fraction for all the models. continious lines represent the homogenous models, while dashed lines represent the central models}\label{figure:efvsv}
+   \caption{Escape fraction as a function of rotational velcity. The
+     continous (dashed) lines correspond to homogeneous (central)
+     models.
+     \label{fig:efvsv}}
 \end{figure}
-
-In Figure \ref{figure:efvsv} we found that in the central distribution
-the escape fraction does not change with velocity while it does in the
-optical depth (See Verhamme 2006, an argument about this). On the other
-hand for the homogeneous distribution we
-found that for higher velocities photons escape easily. The difference
-between this two results rely in the fact that in the homogeneous
-distribution photons are emitted closer to the escape surface and this
-makes this configuration more sensitive to rotation while in the
-central configuration the escape fraction depends mainly in the amount
-of gas rather than in rotation. 
-
-As a final test we compare our results with the analytical solution of 
-the slab developed by (Neufeld 1990) Fig. ~\ref{figure:efvsNeufeld}, as 
-the geometry we use is different from the one described for Neufeld, we 
-dont expect the same results, in fact we found that for the homogenous 
-sphere the escape fraction is higer than the slab (see ref, mark). Also 
-we notest that for $\tau<10^{6}$ the escape fraction does not increase 
-as it will be expected, This is due to the fact that the condition 
-$a\tau_{h}>>\tau_{d}$ in not valid any more.
 
 
 \begin{figure}
   \includegraphics[width=0.45\textwidth]{Neufeld.png}
- \label{figure:efvsNeufeld}\caption{Escape fraction of this work
-   compared with Neufeld analytical solution}  
+ \label{fig:efvsNeufeld}\caption{Escape fraction as a function of the
+   product $(a\tau_{\rm H})^{1/3}\tau_{a}$. The analytic solution for
+   the infinite is slab shown as a continous line. Different dashed
+   lines correspond to different rotational velocities.}   
 \end{figure}
 
-\subsection{The Case of Asymmetric Emission}
 
-As we know there is unlikely to find galaxies with radiation sources 
-distributed homogeneously. Most of them are in a clumpy distribution 
-(Laursen et al 2013*) which affected the resulting spectra. In order 
-to study an inhomogeneous distribution we set up a model in which we 
-select certain photons that are placed in a specific place but that 
-are not symmetrically distributed Fig.~\ref{figure:distributions} shows
-the distributions we set up. 
+If there is a change in the number of scatterings with rotational
+velocity, there must be a change in the probability of being absorbed
+if dust is present. We study how rotation impacts the escape fraction
+of \ly photons. 
 
-\begin{figure}
-  \includegraphics[width=0.40\textwidth]{Distribution.png}
-  \caption{Inhomogeneous distributions of 
- photons, Blue area represents the photons in distribution 1 while red
- area are the selected photons for distribution 2. The arrow points to
- the observer position\label{figure:distributions}}  
-\end{figure}
+Taking into account the results in the previous section, we do not expect any
+change in the case of central distributions given that the average
+number of scatterings remain constant. On the other hand, in the
+homogeneous distribution there is a considerable drop in the number of
+scatterings as $V_{\rm max}$ increases, this preconditions the escape
+fraction to increase as well.
 
-In Fig.~\ref{figure:inhomogeneous} we show the resulting spectra of 
-distribution 1 and 2, the first effect we see is the asymmetry of the
-double peak, in the homogeneous and central distribution we see double
-peaks with the same height, while in this case one peak is higher than 
-the other. For $\tau=10^{5}$ we found that in distribution 1 the blueshifted
-peak is higher than the redshifted, and for distribution 2 the redshifted
-peak is the highest.
+Figure \ref{fig:efvsv} shows the dependence of the escape fraction as
+a function of rotational velocity. This Figure illustrates how our
+reasoning in the previous paragraph is correct. The escape fraction
+barely changes for the central source distribution, while it rises
+as the velocity $V_{\rm max}$ increases for the homogeneous case. The
+velocity has a higher relative impact in the models with low optical
+depth $\tau_{\rm H}=10^5$,$10^{6}$, where it can raise from $xxx$ in
+the static case up to $xxx$ at $V_{\rm rot}=300$\kms.
 
-An other important fact here is the asymmetry of the spectra with respect 
-to the line center, in particular photons selected in distribution 1 
-present a blueshift in their spectra while photons selected in distribution 
-2 present a redshift. This effect becomes stronger as velocity increase 
-~\ref{figure:inhomogeneous}
+In Figure \ref{fig:efvsNeufeld} we put these results in the context of
+the analytical solution for the infinite slab \citep{Neufeld90} shown
+by the continous line. In this setup the analytic solution depends
+solely on the product $(a\tau_{\rm   H})^{1/3}\tau_{a}$. This valid
+only in the limits $a\tau_{\rm   H}\gg 1$. The dashed lines in Figure
+\ref{fig:efvsNeufeld} corespond to the cases of different
+velocities. We observe that in all cases the escape fraction is higher
+than in the slab configuration. We also note that for $\tau_{\rm H}=10^{5}$
+the escape fraction does not increase as expected, This is
+due to the fact that the condition $a\tau_{h}\gg 1$ does not hold. 
+
+
+\subsection{Different line of sights}
+
+\subsection{Off-Centered emission}
+
+%As we know there is unlikely to find galaxies with radiation sources 
+%distributed homogeneously. Most of them are in a clumpy distribution 
+%(Laursen et al 2013*) which affected the resulting spectra. In order 
+%to study an inhomogeneous distribution we set up a model in which we 
+%select certain photons that are placed in a specific place but that 
+%are not symmetrically distributed Fig.~\ref{figure:distributions} shows
+%the distributions we set up. 
+
+%\begin{figure}
+%  \includegraphics[width=0.40\textwidth]{Distribution.png}
+%  \caption{Inhomogeneous distributions of 
+% photons, Blue area represents the photons in distribution 1 while red
+% area are the selected photons for distribution 2. The arrow points to
+% the observer position\label{figure:distributions}}  
+%\end{figure}
+
+%In Fig.~\ref{figure:inhomogeneous} we show the resulting spectra of 
+%distribution 1 and 2, the first effect we see is the asymmetry of the
+%double peak, in the homogeneous and central distribution we see double
+%peaks with the same height, while in this case one peak is higher than 
+%the other. For $\tau=10^{5}$ we found that in distribution 1 the blueshifted
+%peak is higher than the redshifted, and for distribution 2 the redshifted
+%peak is the highest.
+
+%An other important fact here is the asymmetry of the spectra with respect 
+%to the line center, in particular photons selected in distribution 1 
+%present a blueshift in their spectra while photons selected in distribution 
+%2 present a redshift. This effect becomes stronger as velocity increase 
+%~\ref{figure:inhomogeneous}
  
-\begin{figure*}
-  \includegraphics[width=0.45\textwidth]{InomogeneousModelt5.png}
-  \includegraphics[width=0.45\textwidth]{InomogeneousModelt6.png}
- \caption{Inhomogeneous model for velocities $50km/s$ and $300km/s$ ,
-   (left) with $\tau=10^5$, (right) with
-   $\tau=10^6$\label{figure:inhomogeneous}}  
-\end{figure*}
+%\begin{figure*}
+%  \includegraphics[width=0.45\textwidth]{InomogeneousModelt5.png}
+%  \includegraphics[width=0.45\textwidth]{InomogeneousModelt6.png}
+% \caption{Inhomogeneous model for velocities $50km/s$ and $300km/s$ ,
+%   (left) with $\tau=10^5$, (right) with
+%   $\tau=10^6$\label{figure:inhomogeneous}}  
+%\end{figure*}
  
 
-\subsection{Integrated flux in a narrowband filter}
+%\subsection{Integrated flux in a narrowband filter}
 
-Until now we have shown the main effects of gas and dust rotation in
-the Ly$\alpha$ line morphology such as the escape fraction, the FWHM,
-the maxima position, also we see that shape of the outgoing spectra
-depends on the position of the observer. It is important to see if
-rotational effects are detectable in observational methods involving
-the Ly$\alpha$ line.  
+%Until now we have shown the main effects of gas and dust rotation in
+%the Ly$\alpha$ line morphology such as the escape fraction, the FWHM,
+%the maxima position, also we see that shape of the outgoing spectra
+%depends on the position of the observer. It is important to see if
+%rotational effects are detectable in observational methods involving
+%the Ly$\alpha$ line.  
 
-One of the most used methods to detect high redshift galaxies using
-the Ly$\alpha$ line is using a narrowband selection, we make this
-analysis based on the results obtained by Steidel (2011) in this work
-(EXPLAIN a lit of bit more about their work) they used tree narrowband
-filters for tree different redshifts resumed in
-Table~\ref{table:NBfilters}, We want to know how much the integrated
-flux change due to rotational effects in this NB filters, for the
-models we simulated with CLARA. 
+%One of the most used methods to detect high redshift galaxies using
+%the Ly$\alpha$ line is using a narrowband selection, we make this
+%analysis based on the results obtained by Steidel (2011) in this work
+%(EXPLAIN a lit of bit more about their work) they used tree narrowband
+%filters for tree different redshifts resumed in
+%Table~\ref{table:NBfilters}, We want to know how much the integrated
+%flux change due to rotational effects in this NB filters, for the
+%models we simulated with CLARA. 
 
-\begin{table*}
-\begin{center}
-\begin{tabular}{cccc}\hline
-Model & SSA22a 4980/80   & HS1549 4667/80 & HS1700 4018/90\\
-\hline
-\end{tabular}
-\caption{
-Fluxes for tree different narrow band filters.
-} 
-\label{table:NBfilters}
-\end{center}
-\end{table*}
+%\begin{table*}
+%\begin{center}
+%\begin{tabular}{cccc}\hline
+%Model & SSA22a 4980/80   & HS1549 4667/80 & HS1700 4018/90\\
+%\hline
+%\end{tabular}
+%\caption{
+%Fluxes for tree different narrow band filters.
+%} 
+%\label{table:NBfilters}
+%\end{center}
+%\end{table*}
 
-In table \ref{table:NBfilters} we present the results of the flux in
-every  narrowband filter for the homogeneous model at different
-velocities and hydrogen  optical depth $\tau_{0}$. As is well known an
-increase in the optical depth makes  the line peaks separation
-bigger. In fact for some cases the line width is larger  than the NB
-filer width fig.(put ref fig) for those cases we modify the redshift
-in the available range in order to make the peak maxima match the NB
-filter center.  For all cases we found that as velocity increase the
-flux is less.  
+%In table \ref{table:NBfilters} we present the results of the flux in
+%every  narrowband filter for the homogeneous model at different
+%velocities and hydrogen  optical depth $\tau_{0}$. As is well known an
+%increase in the optical depth makes  the line peaks separation
+%bigger. In fact for some cases the line width is larger  than the NB
+%filer width fig.(put ref fig) for those cases we modify the redshift
+%in the available range in order to make the peak maxima match the NB
+%filter center.  For all cases we found that as velocity increase the
+%flux is less.  
 
-In the case of the dusty model we found the same trend of the flux
-with the velocity  but in this cases the effect is no that strong.  We
-also found some dependency with the viewing angle. 
+%In the case of the dusty model we found the same trend of the flux
+%with the velocity  but in this cases the effect is no that strong.  We
+%also found some dependency with the viewing angle. 
 
-\begin{figure}
-  \includegraphics[width=0.45\textwidth]{NB7tDifVHOM.png}
- \label{figure:efvsNeufeld}\caption{NB filter located at the center of
-   the maxima, with different redshift}  
-\end{figure}
+%\begin{figure}
+%  \includegraphics[width=0.45\textwidth]{NB7tDifVHOM.png}
+% \label{figure:efvsNeufeld}\caption{NB filter located at the center of
+%   the maxima, with different redshift}  
+%\end{figure}
 
 \section{Discussion}
 \label{sec:discussion}
 
 ... Comparison with Verhamme et al. results on the rotation
+
+
 ... Compare with Kulas et al (Figure 3), Rotation on the lyman alpha
 line convert double peak profiles into a single one. comments about
-rotation with inflows and outflows.  
+rotation with inflows and outflows.   
 
 ... The results derived in this paper have consequences on the
 interpretation of galaxy observations in the Lyman alpha line.
-..compare steidel et al (2011)
+
+..compare steidel et al (2011) 
+
+
 % taking into account equivalent widths results with narrow band
 % filters we can make a criterium in order to select wich galaxie
 % could be seen in actual observations.  
