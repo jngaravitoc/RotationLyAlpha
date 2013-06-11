@@ -398,21 +398,22 @@ spheres this factor is $XXX$.
 
 %%%%%
 
-In order to understand the effects of rotation in the morphology of the line
- we make histograms of $<N_{scatt}>$  in function of $X_{m}$ for both the 
- central Fig.~\ref{fig:NscattHisto} and the  homogeneous distribution 
- Fig.~\ref{fig:NscattHistoHOM}. For the central distribution and for lower 
- velocities we found that for some value (put the value) of $N_{scatt}$ the 
- mayority of photons have a defined value of $X_{m}$. While for higher 
- velocities photons tend spread out in $X_{m}$(Make position analysis of 
- this photons).
-
-For the homogeneous distribution we found the same effect but also, for 
-highest velocities the mayority of the photons near the surface escape 
-with much less scatterings that in the static case. This analysis let us 
-conclude that rotation make photons escape with less scatterings and it 
-spread out the wavelenght of the of the outgoing photons represented by $X_{m}$.
-
+In order to gain a deeper understading of these results we 2D
+histograms for the number of scaterrings as a function of the outgoing
+dimensionless frequency $x$. In Figure \ref{fig:Nscatt2D} we show
+the results of such histogram in the case $\tau{\rm H}=10^5$ for the
+static case and $V_{\rm max}=300$\kms. The upper (lower) panels show the
+results for the homogeneous (central) source distribution. The color
+scale is logarithmic in the number of photons at a certain value
+$x-N_{\rm scatt}$. This Figure clearly support our hypothesis about
+the photosphere in the homogeneous distribution, in this case most of
+the photons that left with $x\sim 0$ have escaped with less than $10$
+scatterings, clearly explaining the origin of a single central
+peak. However, for a central distribution the situation is
+different. In this case the number of scatterings remains high, on the
+order of the optical depth, but the two peaks do get closer to each
+other. In this situation each scattering leaves the photon closer to
+the center of the line than the static case.
 
 \begin{figure}
     \includegraphics[width=0.45\textwidth]{NscattvsVmax.png}
@@ -422,22 +423,17 @@ spread out the wavelenght of the of the outgoing photons represented by $X_{m}$.
 
 
 \begin{figure*}
-     \includegraphics[width=0.40\textwidth]{2dHistogram0t5HOM.png}
-     \includegraphics[width=0.40\textwidth]{2dHistogram300t5HOM.png}    
-    \caption{Histogram of $N_{scatt}$ vs $x$ for the homogeneous
-      distribution, left for $V_{max}=0km/s $, right for
-      $V_{max}=300km/s$ \label{fig:NscattHistoHOM}}  
+     \includegraphics[width=0.45\textwidth]{2dHistogram0t5HOM.png}
+     \includegraphics[width=0.45\textwidth]{2dHistogram300t5HOM.png}    \\
+     \includegraphics[width=0.45\textwidth]{2dHistogram0t5.png}
+     \includegraphics[width=0.45\textwidth]{2dHistogram300t5.png}    
+    \caption{2D histogram of $N_{scatt}$ vs $x$. The upper (lower) pannels
+      show the homogeneous (central) source distribution. Left
+      corresponds to the static case and the right
+      $V_{max}=300km/s$. The colour scale is locarithmic\label{fig:Nscatt2D}}  
 \end{figure*}
 
-\begin{figure*}
-     \includegraphics[width=0.40\textwidth]{2dHistogram0t5.png}
-     \includegraphics[width=0.40\textwidth]{2dHistogram300t5.png}    
-    \caption{Histogram of $N_{scatt}$ vs $x$ for the Central
-      distribution, left for $V_{max}=50km/s $, right for
-      $V_{max}=300km/s$ \label{fig:NscattHistoHOM}}  
-\end{figure*}
-
-
+%%%%
 \subsection{Escape Fraction}
 \label{sec:EF}
 
