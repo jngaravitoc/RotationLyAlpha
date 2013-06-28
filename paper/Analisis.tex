@@ -41,12 +41,14 @@
 \newcommand{\avg}[1]{\langle{#1}\rangle}  
 \newcommand{\nscatt}{\langle N_{\rm  scatt}\rangle}
 \newcommand{\ly}{{\ifmmode{{\rm Ly}\alpha~}\else{Ly$\alpha$~}\fi}}
-\newcommand{\hMpc}{{\ifmmode{h^{-1}{\rm Mpc}}\else{$h^{-1}$Mpc }\fi}}  
-\newcommand{\hGpc}{{\ifmmode{h^{-1}{\rm Gpc}}\else{$h^{-1}$Gpc }\fi}}  
+\newcommand{\hMpc}{{\ifmmode{h^{-1}{\rm Mpc}}\else{$h^{-1}$Mpc }\fi}}   
+\newcommand{\hGpc}{{\ifmmode{h^{-1}{\rm Gpc}}\else{$h^{-1}$Gpc }\fi}}   
 \newcommand{\hmpc}{{\ifmmode{h^{-1}{\rm Mpc}}\else{$h^{-1}$Mpc }\fi}}  
 \newcommand{\hkpc}{{\ifmmode{h^{-1}{\rm kpc}}\else{$h^{-1}$kpc }\fi}}  
-\newcommand{\hMsun}{{\ifmmode{h^{-1}{\rm {M_{\odot}}}}\else{$h^{-1}{\rm{M_{\odot}}}$}\fi}}  
-\newcommand{\hmsun}{{\ifmmode{h^{-1}{\rm {M_{\odot}}}}\else{$h^{-1}{\rm{M_{\odot}}}$}\fi}}  
+\newcommand{\hMsun}{{\ifmmode{h^{-1}{\rm
+        {M_{\odot}}}}\else{$h^{-1}{\rm{M_{\odot}}}$}\fi}}   
+\newcommand{\hmsun}{{\ifmmode{h^{-1}{\rm
+        {M_{\odot}}}}\else{$h^{-1}{\rm{M_{\odot}}}$}\fi}}   
 \newcommand{\Msun}{{\ifmmode{{\rm {M_{\odot}}}}\else{${\rm{M_{\odot}}}$}\fi}}  
 \newcommand{\msun}{{\ifmmode{{\rm {M_{\odot}}}}\else{${\rm{M_{\odot}}}$}\fi}}  
 \newcommand{\lya}{{Lyman$\alpha$~}}
@@ -292,8 +294,8 @@ viewing angles.
 \end{figure}
 
 The first quantitative conclusion of the effect of rotation in the
-\ly line is that double peaks broaden and reduce their intensity,
-while the line center rises. This procudes the impresion that, as the
+\ly line is that double peaks broaden and reduce their intensity
+while the line center rises. This produces the impresion that, as the
 rotational velocity increases, the double peaks are merged into a
 single broad emission peak. This is msot evident in the highest
 rotational velocities for the homogeneously distributed sources
@@ -372,7 +374,7 @@ peak.
 
 \begin{figure*}
      \includegraphics[width=0.45\textwidth]{2dHistogram0t5HOM.png}
-     \includegraphics[width=0.45\textwidth]{2dHistogram300t5HOM.png}    \\
+     \includegraphics[width=0.45\textwidth]{2dHistogram300t5HOM.png} 
      \includegraphics[width=0.45\textwidth]{2dHistogram0t5.png}
      \includegraphics[width=0.45\textwidth]{2dHistogram300t5.png}    
 
@@ -420,9 +422,7 @@ sources is $\langle N_{\rm  scatt}\rangle=1.16\tau_{\rm   H}$
 centrally emitted photons. In our case we find that for the static
 spheres this factor is $xxxx$.
 
-
-
-In order to gain a deeper understanding of these results we 2D
+In order to gain a deeper understanding of these results we prepare 2D
 histograms for the number of scaterrings as a function of the outgoing
 dimensionless frequency $x$. In Figure \ref{fig:Nscatt2D} we show
 the results of such histogram in the case $\tau{\rm H}=10^5$ for the
@@ -460,27 +460,45 @@ the center of the line than the static case.
    lines correspond to different rotational velocities.}   
 \end{figure}
 
+We also study a dusty cloud configuration to measure the effect of
+rotation on the escape fraction. We expect that the modified number of
+scatterings to be reflected in this amount of photons aborbed by
+dust. Following this line of thought,  we do not expect any change in
+for a dusty cloud with central source of radiation given that the
+number of scatterings remains close to constant. On the other hand, in
+the case of an homogenous radiation source the number of scatterings
+drops as $V_{\rm max}$ increases, which might be reflected as an
+increasing escape farction.
 
-If there is a change in the number of scatterings with rotational
-velocity, there must be a change in the probability of being absorbed
-if dust is present. We study how rotation impacts the escape fraction
-of \ly photons. 
+%If there is a change in the number of scatterings with rotational
+%velocity, there must be a change in the probability of being absorbed
+%if dust is present. We study how rotation impacts the escape fraction
+%of \ly photons. 
 
-Taking into account the results in the previous section, we do not expect any
-change in the case of central distributions given that the average
-number of scatterings remain constant. On the other hand, in the
-homogeneous distribution there is a considerable drop in the number of
-scatterings as $V_{\rm max}$ increases, this preconditions the escape
-fraction to increase as well.
+%Taking into account the results in the previous section, we do not expect any
+%change in the case of central distributions given that the average
+%number of scatterings remain constant. On the other hand, in the
+%homogeneous distribution there is a considerable drop in the number of
+%scatterings as $V_{\rm max}$ increases, this preconditions the escape
+%fraction to increase as well.
 
 Figure \ref{fig:efvsv} shows the dependence of the escape fraction as
-a function of rotational velocity. This Figure illustrates how our
-reasoning in the previous paragraph is correct. The escape fraction
-barely changes for the central source distribution, while it rises
-as the velocity $V_{\rm max}$ increases for the homogeneous case. The
-velocity has a higher relative impact in the models with low optical
-depth $\tau_{\rm H}=10^5$,$10^{6}$, where it can raise from $xxx$ in
-the static case up to $xxx$ at $V_{\rm rot}=300$\kms.
+a function of the maximum rotational velocity, confirming that our
+intuitions in this respect is correct. For the central source
+distribution the escape fraction barely shows any change, while for
+the homogeneous case there is a clear rise in the escape fraction for
+high rotational velocities.  Rotation has a higher relative impact in
+the models with low optical depth $\tau_{\rm H}=10^5$,$10^{6}$, where
+it can raise from $xxx$ in the static case up to $xxx$ at $V_{\rm
+  rot}=300$\kms. 
+
+
+%This Figure illustrates how our
+%reasoning in the previous paragraph is correct. 
+%The escape fraction
+%barely changes for the central source distribution, while it rises
+%as the velocity $V_{\rm max}$ increases for the homogeneous case. 
+
 
 In Figure \ref{fig:efvsNeufeld} we put these results in the context of
 the analytical solution for the infinite slab \citep{Neufeld90} shown
