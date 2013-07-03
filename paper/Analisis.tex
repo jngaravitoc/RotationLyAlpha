@@ -158,14 +158,14 @@ is still missing.
 
 
 An ab-initio description of realistic rotation curves in simulations
-depends on having access to the dynamic evoluction the mass components
+depends on having access to the dynamic evolution the mass components
 in the galaxy: stars, gas and dark matter. Such level of realism is
-extremely complex to achive, specially of one wants to get a
+extremely complex to achieve, specially of one wants to get a
 systematic description based on statistics of simulated objects.
 
 
 Following the tradition of studies of Lyman$\alpha$ emitting systems,
-we implement a model with a simplified geoemtry and gas
+we implement a model with a simplified geometry and gas
 distribution. We assume that the gas is homogeneously distributed in a
 sphere that rotates as a solid body with constant angular
 velocity. This simple model will contain only one parameter: the
@@ -175,7 +175,7 @@ linear velocity at the sphere's surface, $V_{\rm max}$.
 
  In the MonteCarlo code we define a cartesian coordinate system to
  define the position of each photon. The origin of this system
- coincides withthe center of the sphere and the rotation axis is defined
+ coincides with the center of the sphere and the rotation axis is defined
  to be $z$-axis. With this choice, the components of the gas bulk velocity
  field, $\vec{v} = v_{x}\hat{i} + v_{y}\hat{j} + v_{z}\hat{k}$, can be
  written as  
@@ -199,7 +199,7 @@ In contrast with spherically symmetric models (static, outflow,
 inflow) the rotation now defines a preferred direction in the
 problem. In Section \ref{sec:results} we quantify this differences by
 varying the line of sight of a mock observer with respect to the
-rotation axis. The results are parameterized by the polar angle
+rotation axis. The results are parametrized by the polar angle
 $\theta$ as defined by the dot product $\cos\theta =
 {\hat{u}\cdot\hat{k}}$. 
 
@@ -210,7 +210,7 @@ In the Monte Carlo calculations we follow the propagation of $N_{\gamma}=10^5$
 numerical photons through different spherical galaxies, each one
 varying in at least one of the following parameters: the maximum
 rotational velocity $V_{\rm max}$, hydrogen optical depth $\tau_{H}$,
-dust optical depth $\tau_{a}$ and the initial disitrbution of photons
+dust optical depth $\tau_{a}$ and the initial distribution of photons
 with respect to the gas. There are in total 60 models with the input
 parameters summarized in Table \ref{table:models}.  
 
@@ -254,12 +254,12 @@ Fig.~\ref{fig:differentvelocities} that shows clearly the considerable
 impact of rotation on the morphology of the emergent \ly line. Both
 panels in the Figure focus on the results for $\tau_{H}=10^{7}$,
 showing that the influence of rotation is present both when the
-photons are either homogeneusly or centrally initialized over the gas
+photons are either homogeneously or centrally initialized over the gas
 volume. 
 
 In the following subsections we characterize the line morphology by
 the half-width at half intensity and the peak maxima. In order to
-intepret the morphological changes in the line we also report the
+interpret the morphological changes in the line we also report the
 median number of scatter for each \ly photon in the
 simulation. Finally we measure the bulk escape fraction as a function
 of rotational velocity in the presence of dust.
@@ -278,7 +278,7 @@ viewing angles.
 \begin{figure}
     \includegraphics[width=0.45\textwidth]{WidthvsVmax.png}
     \caption{Half-width for the non-dusty models as a function of
-      rotational velocity $V_{\rm max}$. Continous (dashed) lines
+      rotational velocity $V_{\rm max}$. Continuous (dashed) lines
       correspond to homogeneous (central) source
       distributions. \label{fig:widthvsvelocity}} 
 \end{figure}
@@ -287,7 +287,7 @@ viewing angles.
 \begin{figure}
     \includegraphics[width=0.45\textwidth]{maximumvsVmax.png}
 \caption{Position of the peak maxima as a function of rotational
-  velocity $V_{\rm max}$. Continous (dashed) lines correspond to
+  velocity $V_{\rm max}$. Continuous (dashed) lines correspond to
   homogeneous (central) source distributions. A value of $x_{\rm
     max}=0$ indicates that line becomes single
   peaked. \label{fig:maximumsvsvelocity}}  
@@ -295,9 +295,9 @@ viewing angles.
 
 The first quantitative conclusion of the effect of rotation in the
 \ly line is that double peaks broaden and reduce their intensity
-while the line center rises. This produces the impresion that, as the
+while the line center rises. This produces the impression that, as the
 rotational velocity increases, the double peaks are merged into a
-single broad emission peak. This is msot evident in the highest
+single broad emission peak. This is most evident in the highest
 rotational velocities for the homogeneously distributed sources
 (right panel in Fig.~\ref{fig:differentvelocities}). 
 
@@ -310,7 +310,7 @@ single peak, while in the extreme case of high rotational velocities,
 when the double peak is erased, it simply correspond to half FWHM.  
 
 Figure \ref{fig:widthvsvelocity} shows how $W_{1/2}$ increases with
-rotational velocity. Continous (dashed) lines connect the results for
+rotational velocity. Continuous (dashed) lines connect the results for
 homogeneous (central) source distribution. The line width increases
 with rotational velocity up to factors of $\sim 2$ at $300$\kms with
 respect to the static case. For the temperature $T=10^4$K used in our
@@ -351,7 +351,7 @@ the steady reduction of the double peak.
 
 For larger values of $\tau_{H}$ the transitional velocity $V_{\rm
   trans}$ is also larger. In our models we find the following
-correspondance between the optical depth $\tau_{\rm H}=\{10^5, 10^6,
+correspondence between the optical depth $\tau_{\rm H}=\{10^5, 10^6,
 10^7\}$ and the transitional velocities $V_{\rm
   trans}=\{50-100\kms, 100-200\kms, 200-300\kms\}$ which can only be
 constrained to be in the range of velocities in the models that gave a $x_{\rm
@@ -386,10 +386,10 @@ peak.
 
 
 
-The number of times that a \ly photon is absorbed and re-emmited is
+The number of times that a \ly photon is absorbed and re-emitted is
 connected to the final frequency that it can have after escaping the
 galaxy. In the case of static gas geometries, a large value of the
-optical depth is immediatly followed by a high number of
+optical depth is immediately followed by a high number of
 scatterings. In turn a large optical depth increases the probability
 that a \lya photon will be found far from the center of the line. The
 peak maxima shifting away form the line center as the amount of
@@ -399,7 +399,7 @@ neutral hydrogen increases.
 In Figure \ref{fig:Nscatt} we see the average number of scatterings
 $\langle N_{\rm scatt}\rangle$ as a function of the rotational velocity
 $V_{\rm max}$. For the central distributions we find that there is not
-a significante change for increasing rotational
+a significant change for increasing rotational
 velocities, $\langle N_{\rm scatt}\rangle$ changes less than $0.5\%$
 for different velocities. In this case we also find that the average
 number of scatterings is proportional to the optical depth, as
@@ -423,7 +423,7 @@ centrally emitted photons. In our case we find that for the static
 spheres this factor is $xxxx$.
 
 In order to gain a deeper understanding of these results we prepare 2D
-histograms for the number of scaterrings as a function of the outgoing
+histograms for the number of scatterings as a function of the outgoing
 dimensionless frequency $x$. In Figure \ref{fig:Nscatt2D} we show
 the results of such histogram in the case $\tau{\rm H}=10^5$ for the
 static case and $V_{\rm max}=300$\kms. The upper (lower) panels show the
@@ -445,8 +445,8 @@ the center of the line than the static case.
 
 \begin{figure}
   \includegraphics[width=0.45\textwidth]{escapefraction.png}
-   \caption{Escape fraction as a function of rotational velcity. The
-     continous (dashed) lines correspond to homogeneous (central)
+   \caption{Escape fraction as a function of rotational velocity. The
+     continuous (dashed) lines correspond to homogeneous (central)
      models.
      \label{fig:efvsv}}
 \end{figure}
@@ -456,19 +456,19 @@ the center of the line than the static case.
   \includegraphics[width=0.45\textwidth]{Neufeld.png}
  \label{fig:efvsNeufeld}\caption{Escape fraction as a function of the
    product $(a\tau_{\rm H})^{1/3}\tau_{a}$. The analytic solution for
-   the infinite is slab shown as a continous line. Different dashed
+   the infinite is slab shown as a continuous line. Different dashed
    lines correspond to different rotational velocities.}   
 \end{figure}
 
 We also study a dusty cloud configuration to measure the effect of
 rotation on the escape fraction. We expect that the modified number of
-scatterings to be reflected in this amount of photons aborbed by
+scatterings to be reflected in this amount of photons absorbed by
 dust. Following this line of thought,  we do not expect any change in
 for a dusty cloud with central source of radiation given that the
 number of scatterings remains close to constant. On the other hand, in
-the case of an homogenous radiation source the number of scatterings
+the case of an homogeneous radiation source the number of scatterings
 drops as $V_{\rm max}$ increases, which might be reflected as an
-increasing escape farction.
+increasing escape fraction.
 
 %If there is a change in the number of scatterings with rotational
 %velocity, there must be a change in the probability of being absorbed
@@ -505,7 +505,7 @@ the analytical solution for the infinite slab \citep{Neufeld90}. In
 Neufeld's setup the analytic solution depends solely on the product
 $(a\tau_{\rm   H})^{1/3}\tau_{a}$, an approximation that is valid only
 in the limits $a\tau_{\rm   H}\gg 1$. The dashed lines in Figure
-\ref{fig:efvsNeufeld} corespond to the cases of different
+\ref{fig:efvsNeufeld} correspond to the cases of different
 velocities. We observe that the escape fraction is higher
 by factors of $2-10$  than the expected values for the slab
 configuration. We also see that for the lower value $\tau_{\rm
