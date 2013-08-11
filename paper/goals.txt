@@ -13,3 +13,12 @@ Semana del 20 al 26 de Mayo
 Sabado -> Plots de la escape fraction (CLARA's papper) -> Done
 Miercoles -> Integrated Flux (full section) -> Done
 Viernes -> Conclusions -> Semi-done
+
+
+Semana del 11 al 17 de Agosto
+==============================
+
+Make intro and results minor calculatins --> (N)
+Make Peak maxima plot in (km/s) --> (N)
+Make sistematic Z peak --> (N)
+Make Off Center analysis --> (N)
