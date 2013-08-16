@@ -65,8 +65,8 @@
 
 \begin{document}
 
-\title[Rotation in the Lyman-$\alpha$ line]{Rotation effects on the
-  Lyman-$\alpha$ line morphology in distant galaxies}
+\title[Rotation in the Lyman-$\alpha$ line]{The impact of gas bulk
+  rotation on the Lyman-$\alpha$ line} 
 \author[Garavito-Camargo, Forero-Romero \& Dijkstra]{
 \parbox[t]{\textwidth}{\raggedright 
   Nicolas Garavito-Camargo$^{1}$,
@@ -83,27 +83,28 @@ $^2$
 \begin{abstract}
 Rotation is present in the gas kinematics of galaxies up to the
 highest redshifts. In this paper we present for the first time
-radiative transfer calculations that show the impact of rotation on
-the morphology of the Lyman $\alpha$ line. To this end we construct
-simplified models where a galaxy is modeled as an homogeneous sphere
-composed as an homogeneous mixture of dust and hydrogen at a constant
-temperature. These spheres have a solid-body rotation with linear
-velocities at the surface in the range $0-300$ \kms. We consider
-radiation sources both in the center of the rotating cloud and also
-homogeneously distributed around the sphere. We find that higher
-rotational velocities increase the width of each peak in the outgoing
-line profile while it also increases the amount of Lyman alpha photons
-escaping in the line center. This trends makes that for high
-rotational velocities and large Hydrogen optical depths the double
-peak of the line tends to be erased an be replaced by a single peak the
-lines center. This is more pronounced for radiation sources
-homogeneously distributed. Concerning the escape fraction we find that
-rotation does not have any effect, provided that all the sources are
-centrally emitted. However in the case of homogeneously emitted
-sources we measure an increase of about a factor of $2$ in the escape
-fraction for higher rotational velocity values. 
-Our work shows clearly that gas rotation has a non negligible impact
-on the shape of the Lyman $\alpha$ line. 
+radiative transfer calculations that show the impact of gas bulk rotation on
+the morphology of the Lyman $\alpha$ line. To this end we model a
+galaxy as an homogeneous sphere composed as an homogeneous mixture of
+dust and hydrogen at a constant temperature. These spheres have a
+solid-body rotation with linear velocities at the surface in the range
+$0-300$ \kms and neutral hydrogen optical depths in the range
+$\tau_{\rm H}=10^{5}-10^{7}$. We consider radiation sources both in
+the center of the rotating cloud and also homogeneously distributed in
+the volume. We find that higher rotational velocities increase the
+width of each peak in the outgoing line profile while it also
+increases the amount of Lyman alpha photons escaping in the line
+center. This trends makes that for high rotational velocities and
+large Hydrogen optical depths the double peak of the line tends to be
+erased an be replaced by a single peak a the line center. This trend
+is more pronounced for radiation sources homogeneously
+distributed. Concerning the escape fraction we find that rotation does
+not have any effect, provided that all the sources are centrally
+emitted. However, in the case of homogeneously emittedsources we
+measure an increase of about a factor of $2$ in the escape  fraction
+for higher rotational velocity values. This work shows that gas bulk
+rotation has a non negligible impact on the shape of the Lyman
+$\alpha$ line.   
 \end{abstract}
 \begin{keywords}
 galaxies: high-redshift - galaxies: star formation - line: formation
@@ -115,12 +116,16 @@ galaxies: high-redshift - galaxies: star formation - line: formation
 
 
 
-Due to the resonant nature of the Lyman alpha line, gas kinematics
-play an important role shaping its morphology...
+[Due to the resonant nature of the Lyman alpha line, gas kinematics
+play an important role shaping its morphology.]
 
-There is an extensive literature studying the influence of
+[Line morphology is being measured observationally.]
+
+[There is an extensive literature studying the influence of
 outflow/inflow configurations in the shape of the outgoing Lyman-alpha
-line...
+line.]
+
+[Rotation is present in high redshift galaxies.]
 
 In this paper we study for the first time the impact of rotation on
 the morphology of the Lyman $\alpha$ line. To isolate the effects of
@@ -139,30 +144,28 @@ frequency,  $\Delta\nu_{\alpha} \equiv
 \nu_{\alpha}\sqrt{2kT/m_pc^2}\equiv \nu_av_{\rm th} $ is the doppler
 broadening of the line which depends on the neutral gas temperature
 $T$ scattering the radiation or equivalently the thermal velocity
-$v_{\rm th}$ of the atoms.
+$v_{\rm th}$ of the atoms. 
 
 
 \section{Modeling Bulk Gas Rotation}
 \label{sec:implementation}
 
 Describing the kinematics of gas rotation in all generality is a
-complex task. There is great variation in the shape of the rotation
-curve as observed in HI emission as a function of the distance to the
-galaxy center. However there are two features that are observed very
-often. First, in the central region the velocity increases
-proportional to the radius following the behaviour in a body with
-solid rotation. Second, beyond a certain radius the rotation curve
-tends to flatten. Furthermore, a thorough observational account of gas
-rotation in the redshifts of interest for the study of LAEs ($z>1.0$)
-is still missing. 
-
+complex task, specially at high redshifts where there is still missing
+a thorough observational account of rotation in galaxies beyond
+$z>1.0$. Furthermore, at low redshifts it has been observed a great
+variation in the shape of the rotation curve as observed in HI
+emission as a function of the distance to the galaxy center. However
+there are two features that are observed very often. First, in the
+central region the velocity increases proportional to the radius,
+following the behaviour in a body with solid rotation. Second, beyond
+a certain radius the rotation curve tends to flatten. 
 
 An ab-initio description of realistic rotation curves in simulations
-depends on having access to the dynamic evolution the mass components
+depends on having access to the dynamic evolution of all mass components
 in the galaxy: stars, gas and dark matter. Such level of realism is
 extremely complex to achieve, specially if one wants to get a
 systematic description based on statistics of simulated objects.
-
 
 Following the tradition of studies of Lyman$\alpha$ emitting systems,
 we implement a model with a simplified geometry and gas
@@ -207,12 +210,18 @@ $\theta$ as defined by the dot product $\cos\theta =
 \label{sec:models}
 
 In the Monte Carlo calculations we follow the propagation of $N_{\gamma}=10^5$
-numerical photons through different spherical galaxies, each one
-varying in at least one of the following parameters: the maximum
-rotational velocity $V_{\rm max}$, hydrogen optical depth $\tau_{H}$,
-dust optical depth $\tau_{a}$ and the initial distribution of photons
-with respect to the gas. There are in total 60 models with the input
-parameters summarized in Table \ref{table:models}.  
+numerical photons through different spherical galaxies. Each galaxy
+model varies at least one of the following parameters: the maximum
+rotational velocity $V_{\rm max}$, the hydrogen optical depth $\tau_{H}$,
+the dust optical depth $\tau_{a}$ and the initial distribution of photons
+with respect to the gas. There are in total 60 models combining all
+the input parameters summarized in Table \ref{table:models}. 
+
+
+We have used two independently developed Monte Carlo codes
+\citep{CLARA,DijkstraKramer} to perform the calculations of the
+non-dusty models. The results we report here are robust in the sense
+that they are obtained by both codes.
 
 \begin{table}
 \begin{center}
@@ -224,11 +233,11 @@ Dust Optical Depth & $\tau_{a}$ & $0$,$1$\\
 Photons Distributions & & Central, Homogeneous\\\hline\hline
 \end{tabular}
 \caption{
-List of the physical parameters that define the spherical models we
-have simulated using Monte Carlo calculations. For each parameter we
-vary the values in the range listed in the last column. Takig into
-account all the possible combinations we end up with $60$ different
-models. } 
+  List of the physical parameters that define the spherical models 
+  imulated using Monte Carlo calculations. For each parameter we
+  vary the values in the range listed in the last column. Takig into
+  account all the possible combinations we end up with $60$ different
+  models. } 
 \label{table:models}
 \end{center}
 \end{table}
