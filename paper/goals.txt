@@ -18,7 +18,13 @@ Viernes -> Conclusions -> Semi-done
 Semana del 11 al 17 de Agosto
 ==============================
 
-Make intro and results minor calculatins --> (N)
-Make Peak maxima plot in (km/s) --> (N)
-Make sistematic Z peak --> (N)
-Make Off Center analysis --> (N)
+Make intro and results minor calculatins --> (N) Semi Done
+Make Peak maxima plot in (km/s) --> (N) Fail
+Make sistematic Z peak --> (N) Fail
+Make Off Center analysis --> (N) Fail
+
+Semana del 18 al 24
+
+Send Jaime new models to run with dust hom & v = 0 --> (N)
+Make Peak maxima plot in (km/s) --> (N) 
+Make sistematic Z peak --> (N) 
