@@ -26,5 +26,6 @@ Make Off Center analysis --> (N) Fail
 Semana del 18 al 24
 
 Send Jaime new models to run with dust hom & v = 0 --> (N)
-Make Peak maxima plot in (km/s) --> (N) 
-Make sistematic Z peak --> (N) 
+Make Peak maxima plot in (km/s) --> (N) Done
+Make off centers models --> (N)
+Make sistematic Z --> (N)
