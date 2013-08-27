@@ -24,8 +24,17 @@ Make sistematic Z peak --> (N) Fail
 Make Off Center analysis --> (N) Fail
 
 Semana del 18 al 24
+============================
 
-Send Jaime new models to run with dust hom & v = 0 --> (N)
+Send Jaime new models to run with dust hom & v = 0 --> (N) Fail, I have all the models
 Make Peak maxima plot in (km/s) --> (N) Done
-Make off centers models --> (N)
-Make sistematic Z --> (N)
+Make off centers models --> (N) Semi Done
+Make sistematic Z --> (N) Fail
+
+Semana del 25 al 31
+=============================
+Finish Off-center model (N)
+Finish computing Escape fraction (N)
+Make sistematic Z (N)
+Decide about directional approach (N) & (J)
+
