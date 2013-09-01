@@ -33,8 +33,10 @@ Make sistematic Z --> (N) Fail
 
 Semana del 25 al 31
 =============================
-Finish Off-center model (N)
-Finish computing Escape fraction (N)
-Make sistematic Z (N)
-Decide about directional approach (N) & (J)
+Finish Off-center model (N) --> Failed
+Finish computing Escape fraction (N) --> Cancelled
+Make sistematic Z (N) --> Failed
+Decide about directional approach (N) & (J) --> Done
 
+Semana del 1 al 7
+=============================
