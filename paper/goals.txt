@@ -40,3 +40,6 @@ Decide about directional approach (N) & (J) --> Done
 
 Semana del 1 al 7
 =============================
+Finish Off-Center model
+Escape fraction computation central sources at v=0
+Make sistematic Z 
