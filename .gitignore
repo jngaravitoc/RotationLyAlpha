@@ -4,3 +4,4 @@
 *.dvi
 *.ps
 *.blg
+*.ipynb_checkpoints*
