@@ -40,3 +40,7 @@ Decide about directional approach (N) & (J) --> Done
 
 Semana del 1 al 7
 =============================
+Finish Off-Center model taking into account the directional approach--> (N) 
+Escape fraction computation central sources at v=0 --> (N)
+Make sistematic Z --> (N)
+Directional approach --> (N)
