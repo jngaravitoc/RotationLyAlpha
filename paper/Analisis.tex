@@ -165,22 +165,35 @@ physically correspond to the circumgalactic and intergalactic medium
 different anisotropic models of hydrogen clouds  varying the density
 and wind characteristics \citep{Zheng2013}.
 
-However, in all these systematics efforts the effect of rotation, which is an ubiquitous
-feature in galaxies, has not been systematically studied. The
-processing of the \ly photons in a rotating interstellar medium (ISM)
-must have an impact in the line morphology. It is necessary to investigate to
-what extent bulk gas rotation has an measurable impact in the \ly
-alpha line. 
+However, in all these systematics efforts the effect of rotation,
+which is an ubiquitous feature in galaxies, has not been
+systematically studied. The processing of the \ly photons in a
+rotating interstellar medium (ISM) must have an impact in the line
+morphology. It is necessary to investigate to what extent bulk gas
+rotation has an measurable impact in the \ly alpha line. 
 
-Performing that study is the main goal of this paper. We study for the
+Performing that study is the main goal of this paper. We investigate for the
 first time the impact of rotation on the morphology of the Lyman
-$\alpha$ line. We focus on a simplified system, a spherical gas claud
-with homogeneous density and solid body rotation. We base our work on two independent Monte
-Carlo based radiative transfer codes CLARA \citep{CLARA} and XX
-\citep{DijkstraKramer} .  
+$\alpha$ line. We focus on a simplified system, a spherical gas cloud
+with homogeneous density and solid body rotation. We focus our study
+on the line morphology, anisotropic integrated emission and the escape
+fraction in the presence of dust. We base our work on two independent
+Monte Carlo based radiative transfer codes CLARA \citep{CLARA} and XX
+\citep{DijkstraKramer} .   
   
  
-This paper is paper is structured as follows...
+This paper is paper is structured as follows. In \S
+\ref{sec:implementation} we present the implementation of bulk
+rotation into the Monte Carlo codes, paying special attention to coordinate
+definitions. There we also list the different physical parementers in
+the simulated grid of models. In the next section we present the
+results of the simulations, with special detail to quantities in the
+line that show a clear evolution as a function of the cloud's
+rotational velocity. In \S \ref{sec:dicussion} we discuss the
+implications of our results in the interpretation of LAEs
+observations and further refinements that can be implemented in the
+theoretical modelling of the \ly line. In the last section we preset
+our conclusiones.  
 
 In this paper we express a photon's frequency in terms of the
 dimensionless variable $x\equiv (\nu -\nu_a)/\Delta\nu_\alpha$, where
@@ -710,6 +723,7 @@ interpretation of galaxy observations in the Lyman alpha line.
 
 
 \section{Conclusions}
+\label{sec:conclusions}
 In this paper we have estimated the effects of gas bulk rotation on
 the emission  of the Lyman $\alpha$ line. We based the study on the
 study of a simplified configuration of an homogeneous sphere rotating
