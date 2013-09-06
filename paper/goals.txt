@@ -42,5 +42,13 @@ Semana del 1 al 7
 =============================
 Finish Off-Center model taking into account the directional approach--> (N) Done
 Escape fraction computation central sources at v=0 --> (N) Done
-Make sistematic Z --> (N)
+Make sistematic Z --> (N) Cancelled
 Directional approach --> (J) Done 
+
+Semana del 8 al 15
+=============================
+Make histogram of mu (N)
+Make histogram of mu Off-center (N)
+Make spectra of the off-center for all Homogeneous Models (N)
+Writte a off center paragraph (N)
+
