@@ -82,7 +82,7 @@ $^2$
 
 \begin{abstract}
 Rotation is present in the gas kinematics of galaxies up to the
-highest redshifts. In this paper we present for the first time
+highest redshifts. In this paper we present for the first time 
 radiative transfer calculations that show the impact of gas bulk rotation on
 the morphology of the Lyman $\alpha$ line. To this end we model a
 galaxy as an homogeneous sphere composed as an homogeneous mixture of
@@ -205,7 +205,7 @@ $T$ scattering the radiation or equivalently the thermal velocity
 $v_{\rm th}$ of the atoms. 
 
 
-\section{Modeling Bulk Gas Rotation}
+\section{Models of bulk gas rotation}
 \label{sec:implementation}
 
 Describing the kinematics of gas rotation in all generality is a
@@ -235,7 +235,7 @@ linear velocity at the sphere's surface, $V_{\rm max}$.
 \subsection{Detailed Implementation of Rotation}
 
  In the MonteCarlo code we define a cartesian coordinate system to
- define the position of each photon. The origin of this system
+ describe the position of each photon. The origin of this system
  coincides with the center of the sphere and the rotation axis is defined
  to be $z$-axis. With this choice, the components of the gas bulk velocity
  field, $\vec{v} = v_{x}\hat{i} + v_{y}\hat{j} + v_{z}\hat{k}$, can be
@@ -256,30 +256,36 @@ rotation. In this case we take the angular velocity in the same
 direction as the $\hat{k}$ unit vector. With these definitions we can
 write the angular velocity as $\omega=V_{\rm max}/R$.  
 
-In contrast with spherically symmetric models (static, outflow,
-inflow) the rotation now defines a preferred direction in the
-problem. In Section \ref{sec:results} we quantify this differences by
-varying the line of sight of a mock observer with respect to the
-rotation axis. The results are parametrized by the polar angle
-$\theta$ as defined by the dot product $\cos\theta =
-{\hat{u}\cdot\hat{k}}$. 
+
+For each photon in the simulation we have its initial position inside
+the sphere, direction of propagation $\hat{k}_{in}$ and reduced
+frequency $x_{in}$. The photon's propagation stops once they cross the
+surface of the sphere. At this point we store the position, the outgoing direction
+of propagation $\hat{k}_{out}$ and the reduced frequency $x_{out}$. We
+define the angle $\Theta$ by $\cos\Theta = \hat{k}\cdot
+\hat{k}_{out}$, that is the polar angle of the outgoing photon with
+respect to the $z$ axis. Following \cite{Zheng2013} we make the study
+of the anisotropic emission in terms of this angle $\Theta$.
+
+
 
 \subsection{Grid of Simulated Galaxies}
 \label{sec:models}
 
 In the Monte Carlo calculations we follow the propagation of $N_{\gamma}=10^5$
-numerical photons through different spherical galaxies. Each galaxy
-model varies at least one of the following parameters: the maximum
+numerical photons through different spherical galaxies. For each galaxy
+we vary at least one of the following parameters: the maximum
 rotational velocity $V_{\rm max}$, the hydrogen optical depth $\tau_{H}$,
 the dust optical depth $\tau_{a}$ and the initial distribution of photons
-with respect to the gas. There are in total 60 models combining all
-the input parameters summarized in Table \ref{table:models}. 
+with respect to the gas. There are in total $60$ models combining all
+the input parameters. Table \ref{table:models} presents a summary of
+all the models.
 
 
-We have used two independently developed Monte Carlo codes
-\citep{CLARA,DijkstraKramer} to perform the calculations of the
+Additionally, we have used two independently developed Monte Carlo
+codes \citep{CLARA,DijkstraKramer} to perform the calculations of the
 non-dusty models. The results we report here are robust in the sense
-that they are obtained by both codes.
+that they are obtained by both codes. 
 
 \begin{table}
 \begin{center}
@@ -292,10 +298,10 @@ Photons Distributions & & Central, Homogeneous\\\hline\hline
 \end{tabular}
 \caption{
   List of the physical parameters that define the spherical models 
-  imulated using Monte Carlo calculations. For each parameter we
+  simulated in our Monte Carlo calculations. For each parameter we
   vary the values in the range listed in the last column. Takig into
   account all the possible combinations we end up with $60$ different
-  models. } 
+  models.} 
 \label{table:models}
 \end{center}
 \end{table}
