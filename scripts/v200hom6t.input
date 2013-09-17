@@ -1,9 +1,9 @@
 % input files and formats*/
-InputDir         /home/garavito/clarita/test/
+InputDir          ./
 CubeName          grid_object_100
 
 % output files
-OutputDir         /oasis/scratch/garavito/temp_project/MODEL0/
+OutputDir         /lustre/jhome2/hpo08/hpo089/WORK/DATA/LymapUngrid/SphereDustHomo/
 OutputFile        RotatingV200Sphere6tHOM
 
 
