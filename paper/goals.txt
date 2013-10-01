@@ -55,6 +55,12 @@ Writte a off center paragraph (N) --> Done
 Semana del 16 al 20
 ==============================
 
-Finish spectra for the off center section (N)
-Writte Off-Center section (N)
-Wirtte Discussion & Conclutions corresponding to Off-Center section (N)
+Finish spectra for the off center section (N) --> Done
+Writte Off-Center section (N) --> Semi-Done
+Wirtte Discussion & Conclutions corresponding to Off-Center section (N) --> Fail
+
+Semana del 30 al 5 oct
+==============================
+write discusions (N)
+Run models with N = 10^6 (J) (N)
+
