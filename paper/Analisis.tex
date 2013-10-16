@@ -1,43 +1,52 @@
-\documentclass[usenatbib]{mn2e} 
-\usepackage{amsmath} 
-\usepackage{amssymb} 
+\documentclass{emulateapj}
+\submitted{{\it Submitted for publication in ApJ}}
+\usepackage{multirow,color,wrapfig,ulem}
+\usepackage {graphicx}
+%\bibliographystyle{apj}
 \usepackage{graphics}
-\usepackage{graphicx}
-\usepackage{epsfig} 
-\usepackage{float} 
-\def\be{\begin{equation}}
-\def\ee{\end{equation}}
-\def\ba{\begin{eqnarray}}
-\def\ea{\end{eqnarray}}
-\bibliographystyle{mn2e}
-% To highlight comments 
-\usepackage{color}
-\definecolor{red}{rgb}{1,0.0,0.0}
-\newcommand{\red}{\color{red}}
-\definecolor{blue}{rgb}{0.1,0.3,0.9}
-\newcommand{\blue}{\color{blue}}
+\usepackage[dvips]{epsfig}
 
-\usepackage[normalem]{ulem}
-\definecolor{darkgreen}{rgb}{0.0,0.5,0.0}
-\newcommand{\SRK}[1]{\textcolor{darkgreen}{\bf SRK: \textit{#1}}}
-\newcommand{\SRKED}[1]{\textcolor{darkgreen}{\bf #1}}
-\newcommand{\LCDM}{$\Lambda$CDM~}
-\newcommand{\beq}{\begin{eqnarray}}  
-\newcommand{\eeq}{\end{eqnarray}}  
-\newcommand{\zz}{$z\sim 3$} 
-\newcommand{\apj}{ApJ}  
-\newcommand{\apjs}{ApJS}  
-\newcommand{\apjl}{ApJL}  
-\newcommand{\aj}{AJ}  
-\newcommand{\mnras}{MNRAS}  
-\newcommand{\mnrassub}{MNRAS accepted}  
-\newcommand{\aap}{A\&A}  
-\newcommand{\aaps}{A\&AS}  
-\newcommand{\araa}{ARA\&A}  
-\newcommand{\nat}{Nature}  
-\newcommand{\physrep}{PhR}
-\newcommand{\pasp}{PASP}    
-\newcommand{\pasj}{PASJ}    
+%\documentclass[usenatbib]{mn2e} 
+%\usepackage{amsmath} 
+%\usepackage{amssymb} 
+%\usepackage{graphics}
+%\usepackage{graphicx}
+%\usepackage{epsfig} 
+%\usepackage{float} 
+%\def\be{\begin{equation}}
+%\def\ee{\end{equation}}
+%\def\ba{\begin{eqnarray}}
+%\def\ea{\end{eqnarray}}
+%\bibliographystyle{mn2e}
+% To highlight comments 
+%\usepackage{color}
+%\definecolor{red}{rgb}{1,0.0,0.0}
+%\newcommand{\red}{\color{red}}
+%\definecolor{blue}{rgb}{0.1,0.3,0.9}
+%\newcommand{\blue}{\color{blue}}
+
+%\usepackage[normalem]{ulem}
+%\definecolor{darkgreen}{rgb}{0.0,0.5,0.0}
+%\newcommand{\SRK}[1]{\textcolor{darkgreen}{\bf SRK: \textit{#1}}}
+%\newcommand{\SRKED}[1]{\textcolor{darkgreen}{\bf #1}}
+%\newcommand{\LCDM}{$\Lambda$CDM~}
+%\newcommand{\beq}{\begin{eqnarray}}  
+%\newcommand{\eeq}{\end{eqnarray}}  
+
+%\newcommand{\zz}{$z\sim 3$} 
+%\newcommand{\apj}{ApJ}  
+%\newcommand{\apjs}{ApJS}  
+%\newcommand{\apjl}{ApJL}  
+%\newcommand{\aj}{AJ}  
+%\newcommand{\mnras}{MNRAS}  
+%\newcommand{\mnrassub}{MNRAS accepted}  
+%\newcommand{\aap}{A\&A}  
+%\newcommand{\aaps}{A\&AS}  
+%\newcommand{\araa}{ARA\&A}  
+%\newcommand{\nat}{Nature}  
+%\newcommand{\physrep}{PhR}
+%\newcommand{\pasp}{PASP}    
+%\newcommand{\pasj}{PASJ}    
 \newcommand{\avg}[1]{\langle{#1}\rangle}  
 \newcommand{\nscatt}{\langle N_{\rm  scatt}\rangle}
 \newcommand{\ly}{{\ifmmode{{\rm Ly}\alpha~}\else{Ly$\alpha$~}\fi}}
@@ -65,20 +74,16 @@
 
 \begin{document}
 
-\title[Rotation in the Lyman-$\alpha$ line]{The impact of gas bulk
-  rotation on the Lyman-$\alpha$ line} 
-\author[Garavito-Camargo, Forero-Romero \& Dijkstra]{
-\parbox[t]{\textwidth}{\raggedright 
-  Nicolas Garavito-Camargo$^{1}$,
-  Jaime E. Forero-Romero$^{1}$ and 
-  Mark Dijkstra$^2$
+\title{The impact of gas bulk rotation on the Lyman-$\alpha$ line} 
+\author{
+  Nicolas Garavito-Camargo\altaffilmark{1},
+  Jaime E. Forero-Romero\altaffilmark{1},
+  Mark Dijkstra\altaffilmark{2}
 }
-\vspace*{6pt}\\
-$^{1}$Departamento de F\'{i}sica, Universidad de los Andes, Cra. 1
-No. 18A-10, Edificio Ip, Bogot\'a, Colombia \\
-$^2$
-}
-\maketitle
+
+\altaffiltext{1}{Departamento de F\'{i}sica, Universidad de los Andes, Cra. 1
+No. 18A-10, Edificio Ip, Bogot\'a, Colombia}
+\altaffiltext{2}{--}
 
 \begin{abstract}
 Rotation is present in the gas kinematics of galaxies up to the
@@ -106,8 +111,9 @@ for higher rotational velocity values. This work shows that gas bulk
 rotation has a non negligible impact on the shape of the Lyman
 $\alpha$ line.   
 \end{abstract}
+
 \begin{keywords}
-galaxies: high-redshift - galaxies: star formation - line: formation
+{galaxies: high-redshift,galaxies: star formation, line: formation}
 \end{keywords}
 
 
@@ -241,13 +247,15 @@ linear velocity at the sphere's surface, $V_{\rm max}$.
  field, $\vec{v} = v_{x}\hat{i} + v_{y}\hat{j} + v_{z}\hat{k}$, can be
  written as  
   
-\begin{subequations}
-\begin{align}
-    v_{x}=-\dfrac{y}{R}V_{\rm max}, \label{subeq1}\\
-    v_{y}=\dfrac{x}{R}V_{\rm max}, \label{subeq2}\\
+\begin{equation}
+    v_{x}=-\frac{y}{R}V_{\rm max}, \label{subeq1}
+\end{equation}
+\begin{equation}
+    v_{y}=\frac{x}{R}V_{\rm max}, \label{subeq2}
+\end{equation}
+\begin{equation}
     v_{z}=0, \label{subeq3}
-\end{align}
-\end{subequations}
+\end{equation}
 %
 where $R$ is the radius of the sphere and $V_{\rm max}$ is the linear
 velocity at the sphere's surface. The minus/plus sign in the
@@ -861,7 +869,7 @@ range of this effects for simplified models.
 
 \section*{Acknowledgements}
 
-
+\bibliographystyle{apj}
 \bibliography{references} 
 
 \section*{Appendix A: Tables}
