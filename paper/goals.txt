@@ -64,3 +64,13 @@ Semana del 30 al 5 oct
 write discusions (N)
 Run models with N = 10^6 (J) (N)
 
+Semana del 14 al 19
+==============================
+All plots with double axys (X and V)
+Merge section 3.4 and 3.5 --> Done
+Check Fig. 10 --> Done
+Put Off-center plot with all the profies for all models.
+Finish discussion section.
+
+
+
