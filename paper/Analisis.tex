@@ -45,30 +45,30 @@ No. 18A-10, Edificio Ip, Bogot\'a, Colombia}
 \altaffiltext{2}{--}
 
 \begin{abstract}
-Rotation is present in the gas kinematics of galaxies up to the
-highest redshifts. In this paper we present for the first time 
-radiative transfer calculations that show the impact of gas bulk rotation on
-the morphology of the Lyman $\alpha$ line. To this end we model a
-galaxy as an homogeneous sphere composed as an homogeneous mixture of
-dust and hydrogen at a constant temperature. These spheres have a
-solid-body rotation with linear velocities at the surface in the range
-$0-300$ \kms and neutral hydrogen optical depths in the range
-$\tau_{\rm H}=10^{5}-10^{7}$. We consider radiation sources both in
-the center of the rotating cloud and also homogeneously distributed in
-the volume. We find that higher rotational velocities increase the
-width of each peak in the outgoing line profile while it also
-increases the amount of Lyman alpha photons escaping in the line
-center. This trends makes that for high rotational velocities and
-large Hydrogen optical depths the double peak of the line tends to be
-erased an be replaced by a single peak a the line center. This trend
-is more pronounced for radiation sources homogeneously
-distributed. Concerning the escape fraction we find that rotation does
-not have any effect, provided that all the sources are centrally
-emitted. However, in the case of homogeneously emittedsources we
-measure an increase of about a factor of $2$ in the escape  fraction
-for higher rotational velocity values. This work shows that gas bulk
-rotation has a non negligible impact on the shape of the Lyman
-$\alpha$ line.   
+We present novel results of radiative transfer calculations to measure
+the impact of gas bulk rotation on the morphology of the Lyman
+$\alpha$ line in galaxies. We model a galaxy as as sphere with an
+homogeneous mixture of dust and hydrogen at a constant
+temperature. These spheres have a solid-body rotation with
+maximum velocities in the range $0-300$ \kms. The neutral
+hydrogen optical depths are in the range $\tau_{\rm
+H}=10^{5}-10^{7}$. We also consider two kinds of spatial
+distribution for the radiation sources with respect to the sphere:
+central and homogeneous. We find that the line width and the amount of
+Lyman alpha photons ecapine in the line center increase with
+rotational velocity. higher rotational velocities increase the width
+of each peak in the outgoing line profile while it also increases the
+amount of Lyman alpha photons escaping in the line. For large
+rotational velocities and high Hydrogen optical depths the outgoing
+line presents single peak a the line center. This trend is more
+pronounced for radiation sources homogeneously distributed in the
+sphere. Rotation increses by a factor of $2$ the escape fraction for
+systems with homogeneously distributed sources. For radiation sources
+located off-center, the line morphology presents a range of single,
+double and triple peak lines. This work demonstrates that gas bulk
+rotation has a non negligible impact on the morphology of the Lyman
+$\alpha$ line. 
+
 \end{abstract}
 
 \begin{keywords}
@@ -413,7 +413,6 @@ to what extent this is related to the emergence of single peak.
      \includegraphics[width=0.45\textwidth]{2dHistogram300t5HOM.png} 
      \includegraphics[width=0.45\textwidth]{2dHistogram0t5.png}
      \includegraphics[width=0.45\textwidth]{2dHistogram300t5.png}    
-
     \caption{2D histogram of $N_{\rm scatt}$ vs $x$. The upper (lower) pannels
       show the homogeneous (central) source distribution. Left
       corresponds to the static case and the right
@@ -514,18 +513,6 @@ the case of an homogeneous radiation source the number of scatterings
 drops as $V_{\rm max}$ increases, which might be reflected as an
 increasing escape fraction.
 
-%If there is a change in the number of scatterings with rotational
-%velocity, there must be a change in the probability of being absorbed
-%if dust is present. We study how rotation impacts the escape fraction
-%of \ly photons. 
-
-%Taking into account the results in the previous section, we do not expect any
-%change in the case of central distributions given that the average
-%number of scatterings remain constant. On the other hand, in the
-%homogeneous distribution there is a considerable drop in the number of
-%scatterings as $V_{\rm max}$ increases, this preconditions the escape
-%fraction to increase as well.
-
 Figure \ref{fig:efvsv} shows the dependence of the escape fraction as
 a function of the maximum rotational velocity, confirming that our
 intuitions in this respect is correct. For the central source
@@ -535,14 +522,6 @@ high rotational velocities.  Rotation has a higher relative impact in
 the models with low optical depth $\tau_{\rm H}=10^5$,$10^{6}$, where
 it can raise from $(0.26, 0.28)$ respectively in the static case up to $(0.37, 0.39)$ at $V_{\rm
   rot}=300$\kms. 
-
-
-%This Figure illustrates how our
-%reasoning in the previous paragraph is correct. 
-%The escape fraction
-%barely changes for the central source distribution, while it rises
-%as the velocity $V_{\rm max}$ increases for the homogeneous case. 
-
 
 In Figure \ref{fig:efvsNeufeld} we put these results in the context of
 the analytical solution for the infinite slab \citep{Neufeld90}. In
@@ -644,7 +623,7 @@ This can be appreciated for both set of spheres at $0.25 R$ and $0.5 R$,
  but the effect shows a stronger asymmetry for spheres located at $0.25 R$
  this due to the fact that photons escaping from this spheres goes through 
  a larger hydrogen medium than photons located in the spheres at $0.5 R$.
-%poner valores de velocidad y optical depth porcentaje de asimetria 
+
 
 Also for all the off-center models we found that the $Ly\alpha$ line 
 width ...
@@ -656,88 +635,6 @@ to gain a better interpretation of this three peaks trend we run this models
  with $N_{\gamma} = 10^6$.
  
 
-
-%\begin{figure}
-%  \includegraphics[width=0.40\textwidth]{Distribution.png}
-%  \caption{Inhomogeneous distributions of 
-% photons, Blue area represents the photons in distribution 1 while red
-% area are the selected photons for distribution 2. The arrow points to
-% the observer position\label{figure:distributions}}  
-%\end{figure}
-
-%In Fig.~\ref{figure:inhomogeneous} we show the resulting spectra of 
-%distribution 1 and 2, the first effect we see is the asymmetry of the
-%double peak, in the homogeneous and central distribution we see double
-%peaks with the same height, while in this case one peak is higher than 
-%the other. For $\tau=10^{5}$ we found that in distribution 1 the blueshifted
-%peak is higher than the reds~\ref{figure:distributionshifted, and for distribution 2 the redshifted
-%peak is the highest.
-
-%An other important fact here is the asymmetry of the spectra with respect 
-%to the line center, in particular photons selected in distribution 1 
-%present a blueshift in their spectra while photons selected in distribution 
-%2 present a redshift. This effect becomes stronger as velocity increase 
-%~\ref{figure:inhomogeneous}
- 
-%\begin{figure*}
-%  \includegraphics[width=0.45\textwidth]{InomogeneousModelt5.png}
-%  \includegraphics[width=0.45\textwidth]{InomogeneousModelt6.png}
-% \caption{Inhomogeneous model for velocities $50km/s$ and $300km/s$ ,
-%   (left) with $\tau=10^5$, (right) with
-%   $\tau=10^6$\label{figure:inhomogeneous}}  
-%\end{figure*}
- 
-
-%\subsection{Integrated flux in a narrowband filter}
-
-%Until now we have shown the main effects of gas and dust rotation in
-%the Ly$\alpha$ line morphology such as the escape fraction, the FWHM,
-%the maxima position, also we see that shape of the outgoing spectra
-%depends on the position of the observer. It is important to see if
-%rotational effects are detectable in observational methods involving
-%the Ly$\alpha$ line.  
-
-%One of the most used methods to detect high redshift galaxies using
-%the Ly$\alpha$ line is using a narrowband selection, we make this
-%analysis based on the results obtained by Steidel (2011) in this work
-%(EXPLAIN a lit of bit more about their work) they used tree narrowband
-%filters for tree different redshifts resumed in
-%Table~\ref{table:NBfilters}, We want to know how much the integrated
-%flux change due to rotational effects in this NB filters, for the
-%models we simulated with CLARA. 
-
-%\begin{table*}
-%\begin{center}
-%\begin{tabular}{cccc}\hline
-%Model & SSA22a 4980/80   & HS1549 4667/80 & HS1700 4018/90\\
-%\hline
-%\end{tabular}
-%\caption{
-%Fluxes for tree different narrow band filters.
-%} 
-%\label{table:NBfilters}
-%\end{center}
-%\end{table*}
-
-%In table \ref{table:NBfilters} we present the results of the flux in
-%every  narrowband filter for the homogeneous model at different
-%velocities and hydrogen  optical depth $\tau_{0}$. As is well known an
-%increase in the optical depth makes  the line peaks separation
-%bigger. In fact for some cases the line width is larger  than the NB
-%filer width fig.(put ref fig) for those cases we modify the redshift
-%in the available range in order to make the peak maxima match the NB
-%filter center.  For all cases we found that as velocity increase the
-%flux is less.  
-
-%In the case of the dusty model we found the same trend of the flux
-%with the velocity  but in this cases the effect is no that strong.  We
-%also found some dependency with the viewing angle. 
-
-%\begin{figure}
-%  \includegraphics[width=0.45\textwidth]{NB7tDifVHOM.png}
-% \label{figure:efvsNeufeld}\caption{NB filter located at the center of
-%   the maxima, with different redshift}  
-%\end{figure}
 
 \section{Discussion}
 \label{sec:discussion}
@@ -794,15 +691,6 @@ a detailed study involving inflows/outflows and rotation kinematics would
 give as better understanding of the $\mathrm{Ly} \alpha$ profiles we 
 measured.
 
-% BUSCAR asimetrias enhttps://pod51044.outlook.com/owa/#path=/mail
-% observaciones, Kulas, YAMADA  off-center emission 
-% See steidel et al (2011) findings.
-
-% taking into account equivalent widths results with narrow band
-% filters we can make a criterium in order to select wich galaxie
-% could be seen in actual observations.  
-
-
 
 \section{Conclusions}
 \label{sec:conclusions}
@@ -849,16 +737,6 @@ for the homogeneous models for which as velocity increase photons
 escape with about $\sim 39\%$  less scatterings than in the static
 case. 
 
-%As an application of these results we compute the integrated flux
-%taking into account the narrow band filters used by (Steidel et al
-%2011), for our models we found an important decrease up to $~40\%$ for
-%the homogeneous models, and up to $22\%$ for the dusty homogeneous
-%models in the flux as velocity increase.  Also we calculate at what
-%redshift should the filter be in order to get the maximum  flux, and
-%for the tree filters we get values that rely in the filter redshift
-%range. This effects would have a relevant implication at the time to
-%find high redshift galaxies.
-
 This paper illustrates for the first time the main effects of rotation
 in the morphology of the Ly$\alpha$ emission line, we estimate the
 range of this effects for simplified models.
@@ -872,12 +750,4 @@ range of this effects for simplified models.
 
 \end{document}
 
-
-
-%ideas:
-Keep in mind making a follow up paper on the results of Yamada et al
-http://adsabs.harvard.edu/abs/2012ApJ...751...29Y on the line
-morphology at z=3.1. How many of these laes can be considered to have
-rotation features? In principle, all of then should have them. How to
-make the case convincing in the statistical sense? 
 
