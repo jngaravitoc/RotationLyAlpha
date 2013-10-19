@@ -66,13 +66,13 @@ Run models with N = 10^6 (J) (N)
 
 Semana del 14 al 19
 ==============================
-All plots with double axys (X and V) 
+All plots with double axys (X and V) --> Done
 Merge section 3.4 and 3.5 --> Done
 Check Fig. 10 --> Done
 Put Off-center plot with all the profies for all models. --> Done
-Finish discussion section.
+Finish discussion section. --> done
 Velocties axes in off-center plot
-rewritte Off-center section with new results
+rewritte Off-center section with new results --> Done
 Read all the paper! 
 
 
