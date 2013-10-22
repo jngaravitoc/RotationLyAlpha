@@ -77,7 +77,7 @@ Read all the paper! --> Done
 
 Semana del 20 al 26
 ===============================
-Check veocities axes
+Check veocities axes --> done
 Check 10**6 photons for make \mu histogram
 
 
