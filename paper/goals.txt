@@ -78,8 +78,13 @@ Read all the paper! --> Done
 Semana del 20 al 26
 ===============================
 Check veocities axes --> done
-Check 10**6 photons for make \mu histogram
-Organize repository
+Check 10**6 photons for make \mu histogram --> Done
+Organize repository --> Fail
+
+Semana del 27 del 2
+===============================
+arreglar ejes de off-center panel con 10**6 fotones
+Escribir sobr elas nuevas graficas
 
 
 
