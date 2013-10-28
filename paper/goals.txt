@@ -83,8 +83,8 @@ Organize repository --> Fail
 
 Semana del 27 del 2
 ===============================
-arreglar ejes de off-center panel con 10**6 fotones
-Escribir sobr elas nuevas graficas
+arreglar ejes de off-center panel con 10**6 fotones --> Done
+Escribir sobr elas nuevas graficas --> Done
 
 
 
