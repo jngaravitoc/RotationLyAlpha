@@ -54,12 +54,11 @@ maximum velocities in the range $0-300$ \kms and neutral
 hydrogen optical depths in the range $\tau_{\rm
 H}=10^{5}-10^{7}$. We also consider two kinds of spatial
 distribution for the radiation sources with respect to the sphere:
-central and homogeneous. We find that the line width and the amount of
-Lyman $\alpha$ photons escaping in the line center increase with
-the rotational velocity. In the case of homogeneously distributed
+central and homogeneous. We find that the line width and the intensity
+at the line's center increase with rotational velocity. In the case of homogeneously distributed
 sources, for large rotational velocities the line transforms from a
 double peak to a single peak a the line center. Under the same
-conditions the escape fraction increases by a factor of $\sim 2$. For
+conditions the escape fraction increases $\sim 30\%$. For
 radiation sources located off-center, the line morphology presents a
 range of single, double and triple peaked lines. We show how these results are
 useful to interpret recent spectroscopic results of distant $z\sim 2-3$ star
@@ -282,18 +281,17 @@ Photons Distributions & & Central, Homogeneous\\\hline\hline
 \end{figure*}
 
 The central result of this paper is summarized in Figure
-\ref{fig:differentvelocities}. It shows the considerable
+\ref{fig:differentvelocities}. It shows the evident
 impact of rotation on the morphology of the emergent \ly line. Both
-panels in the Figure focus on the results for $\tau_{H}=10^{7}$,
-showing that the influence of rotation is present both when the
-photons are either homogeneously or centrally initialized over the gas
-volume. 
+panels focus on the results for $\tau_{H}=10^{7}$, showing that the
+influence of rotation is present both when the photons are either
+homogeneously or centrally initialized over the gas volume.  
 
-In the following subsections we characterize the line morphology by
+In the next subsections we characterize the line morphology by
 the half-width at half intensity and the peak maxima. In order to
 interpret the morphological changes in the line we also report the
 median number of scatter for each \ly photon in the
-simulation. For the models where dust is included we measure the bulk
+simulation. For the models where dust is included we measure the 
 escape fraction as a function of rotational velocity. Finally, we make
 an estimate of the anisotriopic emission of the models in comparison
 with static spheres.
@@ -329,22 +327,14 @@ single broad emission peak. This is most evident at the highest
 rotational velocities for the homogeneously distributed sources
 (right panel in Figure \ref{fig:differentvelocities}). 
 
-To quantify the line broadening we use a modified version of the full
-width at half maximum (FWHM). We measure it only for half of
-the line, $W_{1/2}$. This definition allows us to quantify the line
-width and see the transition from double to single peak emission.  In the
-case of double peaked emission $W_{1/2}$ corresponds to the width of a
-single peak, while in the extreme case of high rotational velocities,
-when the double peak is erased, it simply correspond to half FWHM.  
-
-Figure \ref{fig:widthvsvelocity} shows how $W_{1/2}$ increases with
-rotational velocity. Continuous (dashed) lines connect the results for
-homogeneous (central) source distribution. For the temperature
-$T=10^4$K used in our radiative transfer calculations the thermal
-velocity is $v_{th}=12.8$\kms. For a model with $\tau_{H}$ it means
-that the half-width can increase up to $350$\kms (at $V_{\rm
-  max}=300$\kms) compared to a half-width of $150$\kms in the static
-case.   
+To quantify the line broadening we use the width at half maximum
+(FWHM), $W$. Figure \ref{fig:widthvsvelocity} shows how $W$ increases
+with rotational velocity. Continuous (dashed) lines connect the
+results for homogeneous (central) source distribution. For the
+temperature $T=10^4$K used in our radiative transfer calculations the
+thermal velocity is $v_{th}=12.8$\kms. For a model with $\tau_{H}$ it
+means that the FWHM increase up to $350$\kms (at $V_{\rm
+  max}=300$\kms) compared to $150$\kms in the static case.   
 
 Figure \ref{fig:maximumsvsvelocity} shows the position for the peak
 maxima as a function of the rotational velocity $V_{\rm max}$. This
@@ -353,10 +343,10 @@ sources there is barely any change with rotational velocity in the
 range of explored parameters. However, in the case of
 homogeneously emitted sources the maxima position remain close to
 constant until beyond some velocity threshold the line becomes single
-peaked with $x_{\rm max}=0$ \kms. 
+peaked with $x_{\rm m}=0$ \kms. 
 
-The transition to a single peak line seems to occur for systems
-where it becomes easier for the bulk of the photons to escape with the lowest
+The transition to a single peaked line seems to occur in systems
+where it is easier for the bulk of the photons to escape with the lowest
 number of scatterings possible, allowing them not to move very far
 from the center of the line. This might explain how the single peak stage
 is easily achieved in the homogeneous source distribution. In this
@@ -377,18 +367,17 @@ velocities $V_{\rm   trans}=\{50-100\kms, 100-200\kms, 200-300\kms\}$
 which can only be constrained to be in the range of velocities in the
 models that gave a $x_{\rm max}\neq 0$ and $x_{\rm max}=0$.  
 
-
 For the central emission the transition to a single peak is never
-completed in the range of parameters explored here. The non appearance
+completed in the range of explored parameters. The non appearance
 of a single peak phase can be in part explained to the absence of a
 photosphere, as is the case in the homogeneous
 distribution. Nevertheless, there is a rise in the intensity at the
 line center as the rotational velocity increases. This hints that the
-encounters with a non static medium are inefficient in changing a
-photons' frequency outside the line center.
+encounters with a non static medium are inefficient in pushing photons
+outside the line's center.
 
-In the next section we quantify the number of scatterings and explore
-to what extent this is related to the emergence of single peak. 
+In the next sub-section we quantify the number of scatterings and explore
+to what extent this is related to the emergence of single peaked emission. 
 
 \subsection{Average Number of Scatterings}
 
@@ -396,8 +385,8 @@ to what extent this is related to the emergence of single peak.
 \begin{figure}
     \includegraphics[width=0.45\textwidth]{NscattvsVmax.png}
 \caption{Logarithm of the average number of scatterings as function of
-  the velocity. Continuous/dashed lines represent an
-  homogeneous/central distribution of sources. \label{fig:Nscatt}}    
+  rotational velocity velocity. Continuous (dashed) lines represent an
+  homogeneous (central) distribution of sources. \label{fig:Nscatt}}    
 \end{figure}
 
 
@@ -408,7 +397,7 @@ to what extent this is related to the emergence of single peak.
   \includegraphics[width=0.45\textwidth]{2dHistogram0t5.png}
   \includegraphics[width=0.45\textwidth]{2dHistogram300t5.png}    
 \end{center}
-    \caption{2D histogram of $N_{\rm scatt}$ vs $x$. The upper (lower) pannels
+    \caption{2D histogram of $N_{\rm scatt}$ vs $x$. The upper (lower) panels
       show the homogeneous (central) source distribution. Left
       corresponds to the static case and the right
       $V_{max}=300km/s$. The colour scale is logarithmic on the
@@ -417,63 +406,64 @@ to what extent this is related to the emergence of single peak.
 \end{figure*}
 
 
-The number of times that a \ly photon is absorbed and re-emitted is
-affects the final frequency that it will have after escaping the
-galaxy. In the case of static gas geometries, a large value of the
-optical depth correlates with a high number of
-scatterings. This increases the probability of finding
-a \ly photon far from the center of the line. In summary, the peak
-maxima shift away form the line center as the amount of neutral
-hydrogen increases. 
+The number of \ly photon scatterings affects its final frequency after
+escaping the galaxy. In static gas geometries, a large value of the
+optical depth correlates with a high number of scatterings, increasing
+the probability of finding a \ly photon far from the center of the
+line. In these cases the peak maxima shift away form the line center as
+the amount of neutral hydrogen increases. 
 
 
 In Figure \ref{fig:Nscatt} we show the average number of scatterings
 $\langle N_{\rm scatt}\rangle$ as a function of the rotational velocity
 $V_{\rm max}$. For the central distributions the average number of
-scatterings has a modes change for increasing rotational
+scatterings has a modest change for increasing rotational
 velocities, $\langle N_{\rm scatt}\rangle$ changes less than $0.5\%$
 for different velocities. In the same setup the average
 number of scatterings is proportional to the optical depth, as
 expected in analogy from the analytic result for the homogeneous
 infinite-slab $\langle N_{\rm  scatt}\rangle=1.612\tau_{\rm   H}$
-\citep{Adams72,Harrington73}. In static spheres 
-with centrally distributed sources we find $\langle N_{\rm
+\citep{Adams72,Harrington73}. In the spheres with centrally
+distributed sources we find $\langle N_{\rm
   scatt}\rangle= (1.50, 1.00, 0.92)\tau_{\rm   H}$ for optical depths
 $\tau_{\rm H} = (10^{5}, 10^{6}, 10^{7})$
 
 
 Figure \ref{fig:Nscatt} shows that for the homogeneous distribution
 there is a clear decrease of $\langle N_{\rm  scatt}\rangle$ as the
-$V_{\rm max}$ increases. This effect more pronounced for the lower
+$V_{\rm max}$ increases. This effect is more pronounced for lower
 values of the optical depth. For $\tau_{\rm H}=10^5$ the average
 number of scatterings decreases by $61\%$ at $V_{\rm max}=300\kms$ in
 comparison to the static case. 
 
-The analytic expectation for the slab with homogeneously emitted
+The analytic expectation for the slab with homogeneously distributed
 sources is $\langle N_{\rm  scatt}\rangle=1.16\tau_{\rm   H}$
 \citep{Harrington73}, a factor of $0.72$ lower than the case of the
 centrally emitted photons. In our case we find that for the static
 , while for homogeneously distributed source $\langle N_{\rm
   scatt}\rangle= (0.99, 0.59, 0.51)\tau_{\rm   H}$, this represents 
-  a factor of $(0.66, 0.59, 0.51)$ lower than the centrally emitted photons.
+  factors of $(0.66, 0.59, 0.55)$ lower than the centrally emitted
+  photons. 
 
-In order to gain a deeper understanding of these results we prepare 2D
+In order to gain a deeper understanding of these results we make 2D
 histograms for the number of scatterings as a function of the outgoing
 dimensionless frequency $x$. In Figure \ref{fig:Nscatt2D} we show
-the results of such histogram in the case $\tau_{\rm H}=10^5$ for the
+such histogram in the case $\tau_{\rm H}=10^5$ for the
 static case and $V_{\rm max}=300$\kms. The upper (lower) panels show the
 results for the homogeneous (central) source distribution. The color
 scale is logarithmic in the number of photons at a certain value
-$x-N_{\rm scatt}$. This Figure clearly support our hypothesis about
-the photosphere in the homogeneous distribution, in this case most of
+$x-N_{\rm scatt}$. 
+
+Figure \ref{fig:Nscatt2D} supports our hypothesis about
+the photosphere in the homogeneous distribution. In that case most of
 the photons that left with $x\sim 0$ have escaped with less than $10$
-scatterings, explaining the origin of a single central
+scatterings. This explains the origin of a single central
 peak. However, for a central distribution the situation is
 different. In this case the number of scatterings remains high, on the
 order of the optical depth, but the two peaks do get closer to each
 other. In this case the physical picture is that each scattering, due
 to the bulk velocity of the gas, is inefficient in driving the photon
-outside the line center.
+outside the line center. 
 
 
 \subsection{Dusty Clouds: Escape Fraction}
@@ -498,25 +488,22 @@ outside the line center.
    \label{fig:efvsNeufeld}}   
 \end{figure}
 
-We also study a dusty cloud configuration to measure the effect of
-rotation on the escape fraction. We expect that the modified number of
-scatterings to be reflected in this amount of photons absorbed by
-dust. Following this line of thought,  we do not expect any change in
-for a dusty cloud with central source of radiation given that the
-number of scatterings remains close to constant. On the other hand, in
-the case of an homogeneous radiation source the number of scatterings
-drops as $V_{\rm max}$ increases, which might be reflected as an
-increasing escape fraction.
+The average number of scatterings is also reflected in the amount of
+photons absorbed by dust. Under this considerations we do not expect
+any change in the escape fraction for a dusty cloud with central
+source of radiation given that the number of scatterings remains close
+to constant. On the other hand, in the case of an homogeneous
+radiation source the number of scatterings drops as $V_{\rm max}$
+increases, which has to be reflected as an increasing escape fraction.
 
 Figure \ref{fig:efvsv} shows the dependence of the escape fraction as
-a function of the maximum rotational velocity, confirming that our
-intuitions in this respect is correct. For the central source
+a function of the maximum rotational velocity, confirming our expectations. For the central source
 distribution the escape fraction barely shows any change, while for
 the homogeneous case there is a clear rise in the escape fraction for
 high rotational velocities.  Rotation has a higher relative impact in
 the models with low optical depth $\tau_{\rm H}=10^5$,$10^{6}$, where
-it can raise from $(0.26, 0.28)$ respectively in the static case up to $(0.37, 0.39)$ at $V_{\rm
-  rot}=300$\kms. 
+it can rise from $(0.26, 0.28)$ ($V_{\rm}=0$\kms) up to $(0.37, 0.39)$ ($V_{\rm
+  rot}=300$ \kms). 
 
 In Figure \ref{fig:efvsNeufeld} we put these results in the context of
 the analytical solution for the infinite slab \citep{Neufeld90}. In
@@ -524,37 +511,44 @@ Neufeld's set-up the analytic solution depends solely on the product
 $(a\tau_{\rm   H})^{1/3}\tau_{a}$, an approximation that is valid only
 in the limits $a\tau_{\rm   H}\gg 1$. The dashed lines in Figure
 \ref{fig:efvsNeufeld} correspond to the cases of different
-velocities. We observe that the escape fraction is higher
-by factors of $2-10$  than the expected values for the slab
-configuration. We also see that for the lower value $\tau_{\rm
-  H}=10^{5}$ the escape fraction does not increase with respect to the
-solution for $\tau_{\rm H}=10^{6}$ as expected, however we not that we
-are in a regime where the condition for the analytic expectations 
-($a\tau_{h}\gg 1$) does not hold.
+velocities. First of all we note that the escape fraction does not
+increase from $\tau_{\rm H}=10^{5}$ to $\tau_{\rm H}=10^{6}$, this is
+explained because we are in a regime where the condition for the
+analytic expectations  ($a\tau_{h}\gg 1$) does not hold. This figure
+also shows that the escape fraction is higher by factors of $2-10$
+than the expectation for a slab with centrally distributed
+sources. Furthermore, the decrease of the escape fraction with
+increasing optical depth is also slower.
+
+
 
 
 
 \subsection{Off-Centered emission}
 
-As we know there is unlikely to find galaxies with radiation sources 
-distributed homogeneously. Most of them are in a clumpy distribution 
-(Laursen et al 2013*) which affected the resulting spectra. In order 
-to study an inhomogeneous distribution we set up a model in which we 
-select certain photons that are placed in a specific place but that 
-are not symmetrically distributed Fig. \ref{fig:OCspheres} shows the 
-distributions we set up, basically we take photons located in a sphere
- of $0.5 R$ where $R$ is the radii of the homogeneous sphere and 
-we choose two spheres in each side of the $\hat{\textbf{x}}$ axis,
-two at $\mp 0.25 R$ and the other two at $\mp 0.5 R$.
-
 \begin{figure}
-\includegraphics[scale=0.3]{OF_spheres.png}
-\caption{The two solid circles show up the photons we select in order to make the anisotropic emission
-		rotation is defined to be $\mathrm{z}$-axis. we also select photons in the negative side of 				        $\mathrm{x}$ (dashed circles) in order to see the complete effect of rotation. 
-   \label{fig:OCspheres}} 
+  \includegraphics[scale=0.3]{OF_spheres.png}
+  \caption{The two solid circles show the two different spherical off-centered emitting
+    regions. The angular velocity vector is defined to be along the
+    $\hat{\i}$ direction and the observer is along the $\hat{\j}$ direction (where
+    the reader is). 
+    \label{fig:OCspheres}} 
 \end{figure}
 
-We study the deviations of the received flux on the surface of the
+The model with homogeneous radiation sources allows to study the
+effect of radiation sources distributed with a different symmetry than
+the gas. We select photons emitted in spheres that are off-centered
+with respect to the gas distribution. 
+
+Figure \ref{fig:OCspheres} shows the 
+two spherical regions we define. Each has a radius of $0.5$R and can
+have to possible centers positions $C$ along the $\hat{\i}$ direction:
+$\pm C\hat{\i}$. We also place an observer along the $\hat{\j}$
+direction, such that the emitting sphere centered on $+C\hat{\i}$ moves away
+from the observer and the sphere centered on $+C\hat{\i}$ moves towards
+the observer. We consider two values for $C=(0.25,0.50)R$.
+
+We study first the deviations of the received flux on the surface of the
 sphere. We follow \cite{Zheng2013} to estimate the flux seen by an
 observer located at an angle $\Theta$ (distant observer angle)
 normalized to the isotropic flux:
@@ -568,24 +562,20 @@ $\Delta N$ is the number of photons in a angular bin $\Delta
 \Theta$. This definition satisfies the condition
 $\int_{-1}^{1}F(\mu)d\mu/2=1$. 
 
-For the central and homogeneous source distributions we find
-that for observers located at  $\theta = pi/2$ the
-angular dependency represented by $\mu$ doesn't show a considerable
-variation in particular the observer would infer luminosities 
-different from the isotropical value only at levels $< 3\%$. 
 
-In the case of the Off-center model with the set up showed in 
-Fig.\ref{fig:OCspheres} where the galaxy is rotating around the  
-$\hat{\textbf{z}}$ axis and the observer is also located at 
-$\mathrm{\theta = \pi/2}$, For the special purpose to get a
-better sample we used $\tau_{\gamma} = 10^{6}$. The first result 
-we get is that the angular dependency is almost the same for 
-all the models with different $\tau_{H}$ and $V_{max}$ for 
-$R = 0.25$. While for spheres located at and $R = 0.5$ show 
-variation in the flux in values $< 14 \%$ in particular at 
-$\mu = 0$ the flux in stronger. This results are shown 
-in Fig. \ref{fig:OCflux}.
+For the central and homogeneous source distributions we find that the
+level of isotropy angular dependency represented by $\mu$ doesn't show
+a considerable variation in particular the observer would infer
+luminosities  different from the isotropical value only at levels $<
+3\%$. This values were obtained for a run with $V_{\rm max}=XX$ and
+$\tau_{\rm H}=XXX$ and $N_{\gamma}=10^{6}$ photons.
 
+%%%%%%%
+
+The outgoing spectra for two different spheres located at $\pm 0.5R$ 
+are shown in Fig.\ref{fig:OC_profiles}, we have shown this positions because
+the resulting profiles show new interesting morphologies than are not
+found in the $\pm 0.25R$ case.
 
 \begin{figure}
 \includegraphics[scale=0.3]{mu_OC.png}
@@ -594,10 +584,7 @@ off-center positions.
    \label{fig:OCflux}} 
 \end{figure}
 
-The outgoing spectra for two different spheres located at $\pm 0.5R$ 
-are shown in Fig.\ref{fig:OC_profiles}, we have shown this positions because
-the resulting profiles show new interesting morphologies than are not
-found in the $\pm 0.25R$ case.
+
 
 The main effect we found in the off-center emission is that for 
 some models ($\tau = 10^6, V=100 km s^{-1}$ and $\tau = 10^7, V=200 km s^{-1}$)
