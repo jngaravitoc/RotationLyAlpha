@@ -35,7 +35,7 @@
 
 \title{The impact of gas bulk rotation on the Lyman-$\alpha$ line} 
 \author{
-  Nicolas Garavito-Camargo\altaffilmark{1},
+  Juan N. Garavito-Camargo\altaffilmark{1},
   Jaime E. Forero-Romero\altaffilmark{1},
   Mark Dijkstra\altaffilmark{2}
 }
@@ -45,7 +45,7 @@ No. 18A-10, Edificio Ip, Bogot\'a, Colombia}
 \altaffiltext{2}{Max Planck Institute for Astrophysics, Karl-Schwarzschild-Str. 1, 85741, Garching, Germany}
 
 \begin{abstract}
-We present novel results of radiative transfer calculations to measure
+We present results of radiative transfer calculations to measure
 the impact of gas bulk rotation on the morphology of the Lyman
 $\alpha$ line in galaxies. We model a galaxy as a sphere with an
 homogeneous mixture of dust and hydrogen at a constant
@@ -56,17 +56,14 @@ H}=10^{5}-10^{7}$. We also consider two kinds of spatial
 distribution for the radiation sources with respect to the sphere:
 central and homogeneous. We find that the line width and the amount of
 Lyman $\alpha$ photons escaping in the line center increase with
-the rotational velocity. For large
-rotational velocities and high Hydrogen optical depths the outgoing
-line presents single peak a the line center. This trend is more
-pronounced for radiation sources homogeneously distributed in the
-sphere. Rotation also increases by a factor of $2$ the escape fraction for
-systems with homogeneously distributed sources. For radiation sources
-located off-center, the line morphology presents a range of single,
-double and triple peaked lines. This work demonstrates that gas bulk
-rotation has a non negligible impact on the morphology of the Lyman
-$\alpha$ line. 
-
+the rotational velocity. In the case of homogeneously distributed
+sources, for large rotational velocities the line transforms from a
+double peak to a single peak a the line center. Under the same
+conditions the escape fraction increases by a factor of $\sim 2$. For
+radiation sources located off-center, the line morphology presents a
+range of single, double and triple peaked lines. We show how these results are
+useful to interpret recent spectroscopic results of distant $z\sim 2-3$ star
+forming galaxies.
 \end{abstract}
 
 \begin{keywords}
@@ -88,11 +85,11 @@ and the large scale structure of the Universe. Attempts to fully
 exploit the physical information included in the \ly line require an
 understanding of all the physical factors involved in shaping the
 line. Due to the resonant nature of this line, these physical factors
-include temperature, density and bulk velocity field of the neutral
+notably include temperature, density and bulk velocity field of the neutral
 Hydrogen in the emitting galaxy and its surroundings.
 
 
-A basic understanding for the quantitative behaviour of the \ly line
+A basic understanding of the quantitative behaviour of the \ly line
 has been reached through analytical studies in the case of a static
 configurations, such as uniform slabs
 \citep{Harrington73,Neufeld90} and  uniform spheres
@@ -100,11 +97,11 @@ configurations, such as uniform slabs
 some kind of bulk flow only include the case of a sphere with a Hubble
 like expansion flow \citep{LoebRybicki}. 
 
-A more detailed quantification of the \ly line has been reached using
+A quantitative description of the \ly line has been reached through
 Monte Carlo simulations \citep{Auer68,Avery68,Adams72}. In the last
-two decades these studies have become more popular due to the
+two decades these studies have become popular due to the
 availability of computing power. Early into the 21st century the first
-studies focused on on homogeneous and static media
+studies focused on homogeneous and static media
 \citep{Ahn00,Ahn01,Zheng02}. Later on the effects of clumpy media
 \citep{Hansen06} and expanding/contracting shell/spherical geometries started to
 be studied \citep{Verhamme06,Dijkstra06}. Similar codes have applied
@@ -112,51 +109,51 @@ these results to semi-analytical models of galaxy formation \citep{Orsi12} and
 results of large hydrodynamical simulations
 \citep{CLARA,Forero12,Behrens13}. Recently Monte Carlo codes have also
 been applied to the results of high resolution hydrodynamical
-simulations \citep{Laursen09,Barnes11,Verhamme12,Yajima12}. Recent developments have been
-focused on the study of clumpy outflows \citep{DijkstraKramer}and
-anisotropic velocity configurations \citep{Zheng2013}.
+simulations of individual
+galaxies\citep{Laursen09,Barnes11,Verhamme12,Yajima12}. While, recent
+developments have been focused on the systematic study of clumpy
+outflows \citep{DijkstraKramer}and anisotropic velocity configurations
+\citep{Zheng2013}. 
 
 The recent studies of galaxies in hydrodynamical simulations
 \citep{Laursen09,Barnes11,Verhamme12,Yajima12} have all shown
 systematic variations in the \ly line with the viewing angle. These
-variations are a complex superpositions of anisotropic density
+variations are a complex superposition of anisotropic density
 configurations (i.e. edge-on vs. face-on view of a galaxy), the
 inflows observed by gas cooling and the outflows included in the
 supernova feedback process of the simulation. These bulk flows
 physically correspond to the circumgalactic and intergalactic medium
-(CGM and IGM). These effects have been systematically studied
-different anisotropic models of hydrogen clouds  varying the density
-and wind characteristics \citep{Zheng2013}.
+(CGM and IGM). These effects are starting to be studied
+ in simplified configurations that vary the density and wind
+ characteristics \citep{Zheng2013}. 
 
-However, in all these systematics efforts the effect of rotation,
+However, in all these efforts the effect of rotation,
 which is an ubiquitous feature in galaxies, has not been
 systematically studied. The processing of the \ly photons in a
-rotating interstellar medium (ISM) must have an impact in the line
-morphology. It is necessary to investigate to what extent bulk gas
-rotation has an measurable impact in the \ly alpha line. 
+rotating interstellar medium (ISM) must have some kind of impact in
+the \ly line morphology. 
 
 Performing that study is the main goal of this paper. We investigate for the
 first time the impact of rotation on the morphology of the Lyman
 $\alpha$ line. We focus on a simplified system, a spherical gas cloud
-with homogeneous density and solid body rotation. We focus our study
-on the line morphology, anisotropic integrated emission and the escape
-fraction in the presence of dust. We base our work on two independent
-Monte Carlo based radiative transfer codes CLARA \citep{CLARA} and XX
-\citep{DijkstraKramer} .   
+with homogeneous density and solid body rotation, to study the line
+morphology and the escape  fraction in the presence of dust. We base
+our work on two independent Monte Carlo based radiative transfer codes
+CLARA \citep{CLARA} and XX \citep{DijkstraKramer} .   
   
  
 This paper is paper is structured as follows. In \S
 \ref{sec:implementation} we present the implementation of bulk
 rotation into the Monte Carlo codes, paying special attention to coordinate
-definitions. There we also list the different physical parameters in
-the simulated grid of models. In the next section we present the
+definitions. We also list the different physical parameters in
+the simulated grid of models. In the next \S \ref{sec:results} we present the
 results of the simulations, with special detail to quantities in the
-line that show a clear evolution as a function of the cloud's
+line that show a clear evolution as a function of the sphere
 rotational velocity. In \S \ref{sec:dicussion} we discuss the
 implications of our results in the interpretation of LAEs
 observations and further refinements that can be implemented in the
 theoretical modelling of the \ly line. In the last section we present
-our conclusions.  
+our conclusions. 
 
 In this paper we express a photon's frequency in terms of the
 dimensionless variable $x\equiv (\nu -\nu_a)/\Delta\nu_\alpha$, where
