@@ -149,7 +149,7 @@ definitions. We also list the different physical parameters in
 the simulated grid of models. In the next \S \ref{sec:results} we present the
 results of the simulations, with special detail to quantities in the
 line that show a clear evolution as a function of the sphere
-rotational velocity. In \S \ref{sec:dicussion} we discuss the
+rotational velocity. In \S \ref{sec:discussion} we discuss the
 implications of our results in the interpretation of LAEs
 observations and further refinements that can be implemented in the
 theoretical modelling of the \ly line. In the last section we present
@@ -159,7 +159,7 @@ In this paper we express a photon's frequency in terms of the
 dimensionless variable $x\equiv (\nu -\nu_a)/\Delta\nu_\alpha$, where
 $\nu_{\alpha}=2.46\times 10^{15}$ Hz is the Ly$\alpha$ resonance
 frequency,  $\Delta\nu_{\alpha} \equiv
-\nu_{\alpha}\sqrt{2kT/m_pc^2}\equiv \nu_av_{\rm th} $ is the doppler
+\nu_{\alpha}\sqrt{2kT/m_pc^2}\equiv \nu_av_{\rm th}/c $ is the doppler
 broadening of the line which depends on the neutral gas temperature
 $T$ scattering the radiation or equivalently the thermal velocity
 $v_{\rm th}$ of the atoms. 
@@ -171,13 +171,13 @@ $v_{\rm th}$ of the atoms.
 Describing the kinematics of gas rotation in all generality is a
 complex task, specially at high redshifts where there is still missing
 a thorough observational account of rotation in galaxies beyond
-$z>1.0$. Furthermore, at low redshifts it has been observed a great
+$z>1.0$. Event at low redshifts there is a great
 variation in the shape of the rotation curve as observed in HI
 emission as a function of the distance to the galaxy center. However
-there are two features that are observed very often. First, in the
-central region the velocity increases proportional to the radius,
-following the behaviour in a body with solid rotation. Second, beyond
-a certain radius the rotation curve tends to flatten. 
+there are two recurrent features. First, in the
+central galactic region the velocity increases proportional to the radius,
+following a solid rotation behaviour. Second, beyond a certain radius
+the rotation curve tends to flatten.  
 
 An ab-initio description of realistic rotation curves in simulations
 depends on having access to the dynamic evolution of all mass components
@@ -185,12 +185,12 @@ in the galaxy: stars, gas and dark matter. Such level of realism is
 extremely complex to achieve, specially if one wants to get a
 systematic description based on statistics of simulated objects.
 
-Following the tradition of studies of Lyman$\alpha$ emitting systems,
-we implement a model with a simplified geometry and gas
-distribution. We assume that the gas is homogeneously distributed in a
-sphere that rotates as a solid body with constant angular
-velocity. This simple model will contain only one parameter: the
-linear velocity at the sphere's surface, $V_{\rm max}$.
+Following the tradition of studies of \ly emitting systems,
+we implement a model with simplified geometry. We assume that the gas
+is homogeneously distributed in a sphere that rotates as a solid body
+with constant angular velocity. This simple model will contain only
+one free parameter: the linear velocity at the sphere's surface, $V_{\rm
+  max}$. 
 
 \subsection{Detailed Implementation of Rotation}
 
@@ -218,7 +218,6 @@ rotation. In this case we take the angular velocity in the same
 direction as the $\hat{k}$ unit vector. With these definitions we can
 write the angular velocity as $\omega=V_{\rm max}/R$.  
 
-
 For each photon in the simulation we have its initial position inside
 the sphere, direction of propagation $\hat{k}_{in}$ and reduced
 frequency $x_{in}$. The photon's propagation stops once they cross the
@@ -227,7 +226,7 @@ of propagation $\hat{k}_{out}$ and the reduced frequency $x_{out}$. We
 define the angle $\Theta$ by $\cos\Theta = \hat{k}\cdot
 \hat{k}_{out}$, that is the polar angle of the outgoing photon with
 respect to the $z$ axis. Following \cite{Zheng2013} we make the study
-of the anisotropic emission in terms of this angle $\Theta$.
+of the anisotropic emission in terms of this angle..
 
 
 
@@ -239,14 +238,13 @@ numerical photons through different spherical galaxies. For each galaxy
 we vary at least one of the following parameters: the maximum
 rotational velocity $V_{\rm max}$, the hydrogen optical depth $\tau_{H}$,
 the dust optical depth $\tau_{a}$ and the initial distribution of photons
-with respect to the gas. There are in total $60$ models combining all
-the input parameters. Table \ref{table:models} presents a summary of
-all the models.
-
+with respect to the gas. There are $60$ models intotal combining all
+variations of the input parameters. Table \ref{table:models}
+summarizes the models.
 
 Additionally, we have used two independently developed Monte Carlo
 codes \citep{CLARA,DijkstraKramer} to perform the calculations of the
-non-dusty models. The results we report here are robust in the sense
+non-dusty models. The results we report are robust in the sense
 that they are obtained by both codes. 
 
 \begin{table}
