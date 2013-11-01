@@ -1,5 +1,5 @@
 LATEX = pdflatex
-MAIN  = Analisis
+MAIN  = ms
 
 main: 	$(MAIN).tex
 	$(LATEX) $(MAIN).tex 
