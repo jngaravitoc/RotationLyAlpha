@@ -270,8 +270,10 @@ Photons Distributions & & Central, Homogeneous\\\hline\hline
 \label{sec:results}
 
 \begin{figure*}
+\begin{center}
   \includegraphics[width=0.45\textwidth]{SpectraDifVelocitiesCentral.png}
   \includegraphics[width=0.45\textwidth]{SpectraDifVelocitiesHOM.png}
+\end{center}
 \caption{Shape of the \ly line for
     different velocities rotational velocities for spherical
     distributions with $\tau_{H}=10^{7}$. The left (right) panel shows
@@ -529,104 +531,77 @@ increasing optical depth is also slower.
 \subsection{Off-Centred emission}
 
 \begin{figure}
-  \includegraphics[scale=0.3]{OF_spheres.png}
-  \caption{The two solid circles show the two different spherical off-centred emitting
-    regions. The angular velocity vector is defined to be along the
-    $\hat{\i}$ direction and the observer is along the $\hat{\j}$ direction (where
-    the reader is). 
+  \includegraphics[scale=0.35]{OF_spheres.png}
+  \caption{The two solid circles show the two different spherical
+    off-centred emitting  regions. The angular velocity vector is
+    defined to be along the $\hat{\i}$ direction and the observer is
+    along the $\hat{\j}$ direction (where the reader is). 
     \label{fig:OCspheres}} 
 \end{figure}
 
 The model with homogeneous radiation sources allows to study the
 effect of radiation sources distributed with a different symmetry than
-the gas. We select photons emitted in spheres that are off-centred
+the gas. We select photons emitted in off-centred spheres 
 with respect to the gas distribution. 
 
-Figure \ref{fig:OCspheres} shows the 
-two spherical regions we define. Each has a radius of $0.5$R and can
-have to possible centres positions $C$ along the $\hat{\i}$ direction:
-$\pm C\hat{\i}$. We also place an observer along the $\hat{\j}$
-direction, such that the emitting sphere centred on $+C\hat{\i}$ moves away
-from the observer and the sphere centred on $+C\hat{\i}$ moves towards
-the observer. We consider two values for $C=(0.25,0.50)R$.
+Figure \ref{fig:OCspheres} shows the two spherical regions we
+define. Each has a radius of $0.5$R and can have to possible centres
+positions $C$ along the $\hat{\i}$ direction: $\pm C\hat{\i}$. We also
+place an observer along the $\hat{\j}$ direction, such that the
+emitting sphere centred on $+C\hat{\i}$ moves away from the observer
+and the sphere centred on $+C\hat{\i}$ moves towards the observer. We
+consider two values for $C=(0.25,0.50)R$. 
 
-We study first the deviations of the received flux on the surface of the
-sphere. We follow \cite{Zheng2013} to estimate the flux seen by an
-observer located at an angle $\Theta$ (distant observer angle)
-normalized to the isotropic flux:
+We study first the angular deviations of the outgoing photons with respect
+to an isotropic flux. We follow \cite{Zheng2013} to estimate the flux
+as a function of the angle $\Theta$ formed by the outgoing photons and
+a fixed direction (the $\vec{k}$ direction in this case). This is
+expressed by 
+
 
 \begin{equation}
 F(\mu) = \frac{2\Delta N}{N\Delta \mu}, 
 \end{equation}
 %
-Where $\mu=\cos\Theta$, $N$ is the total number of outgoing photons,
+where $\mu=\cos\Theta$, $N$ is the total number of outgoing photons,
 $\Delta N$ is the number of photons in a angular bin $\Delta
 \Theta$. This definition satisfies the condition
-$\int_{-1}^{1}F(\mu)d\mu/2=1$. 
+$\int_{-1}^{1}F(\mu)d\mu/2=1$.  
 
+In the the off-center emission the variations  in the $\mu$ distribution
+$\mu$ increase with the rotational velocity. For $V_{\rm max}= 50$\kms
+ $\Delta \mu \leq 7\%$; $V_{\rm max}=100$\kms, $\Delta \mu\leq 12\%$
+and $V_{\rm max}=200$\kms, $\Delta\mu\leq 15\%$ (NOTE: regardless of
+$\tau$??). This implies a strong dependence of the observed flux on
+the relative position of an observer.  In contrast,the central and
+homogeneous source distributions only show a weak anisotropy at the level of
+$\Delta\mu\leq 3\%$.  
 
-For the central and homogeneous source distributions we find that the
-level of isotropy angular dependency represented by $\mu$ doesn't show
-a considerable variation in particular the observer would infer
-luminosities  different from the isotropical value only at levels $<
-3\%$. This values were obtained for a run with $V_{\rm max}=(50kms^{-1}, 
-100kms^{-1}, 200kms^{-1}, 300kms^{-1})$ and $\tau_{\rm H}=10^{5}, 10^{6}, 
-10^{7}$ and $N_{\gamma}=10^{5}$ photons.
+Figure \ref{fig:OC_profiles} show the spectra for the two off-centered
+spheres located at $C=\pm0.5R$.  The most interesting effect is that
+emission is that in  some models ($\tau = 10^6, V=100,200$\kms and $\tau =
+10^7, V=200,300$\kms) the line presents three peaks (blue-shifted,
+centred, red-shifted). However, we do not find any asymmetry in the line 
+produced by the off-center emission. As in the homogeneous / central
+model the line gets broader as the rotational velocity increases.
 
-For the Off-center emission Fig.\ref{fig:OCflux} the variations of 
-$\mu$ increase as the rotational velocity increase, for $V_{\rm max}=(50kms^{-1}$
- $\bigtriangleup\mu \leq 7\%$ , for $V_{\rm max}=(100kms^{-1}$
-$\bigtriangleup\mu\leq 12\%$ and finally for $V_{\rm max}=(200kms^{-1}$
-$\bigtriangleup\mu\leq 15\%$. This would imply that the amount of flux
-we measure would depend in the angle between our line of sight and 
-the rotation axis of the galaxy. 
-%%%%%%%
+The results for the off-centered spheres placed closed to the center
+at $C=\pm 0.25R$ do not display the features discussed above for the
+spheres at $C=\pm0.5R$. 
 
-The outgoing spectra for two different spheres located at $\pm 0.5R$ 
-are shown in Fig.\ref{fig:OC_profiles}, we have shown this positions because
-the resulting profiles show new interesting morphologies than are not
-found in the $\pm 0.25R$ case.
 
 \begin{figure}
-\includegraphics[scale=0.3]{mu_OC.png}
-\caption{Flux angular dependency for Off-center distribution, different line widths illustrate different
-off-center positions.
-   \label{fig:OCflux}} 
+\includegraphics[scale=0.35]{mu_OC.png} \caption{Flux angular 
+  dependency for off-center distribution. Different line widths
+  illustrate different rotational velocities.\label{fig:OCflux}} 
 \end{figure}
-
-
-
-The main effect we found in the off-center emission is that for 
-some models ($\tau = 10^6, V=100 km s^{-1}$ and $\tau = 10^7, V=200 km s^{-1}$)
-the line presents three peaks (blue-shifted, centred, red-shifted),
-to obtain clearest profiles concerning this results we run three models 
-with $\tau_{\gamma}=10^{6}$, This profiles are shown in 
-Fig.\ref{fig:OC_profiles_N6}, where we clearly observe the presence of 
-three peaks, and also we do not find any asymmetry in the line 
-produced by the off-center emission.
-
-For models with ($[\tau = 10^{5}, V=100 km s^{-1}]$ ,
-$[\tau = 10^6, V=200 km s^{-1}]$ and $ [\tau = 10^{7}, 
-V=300 km s^{-1}]$) the centred line is dominant but the presence of
-the redder and bluer peak in also present which is also a new result.
-Also as in the homogeneous / central model the line is broader at high 
-rotational velocities.
 
 
 \begin{figure*}
 \includegraphics[scale=0.3]{OC_profiles.png}
-\caption{$\mathrm{Ly}\alpha$ profiles for the off-center positions.
-dashed lines represents spheres locate at $-0,5R$ while solid lines 
-represents spheres at $0.5R$)
+\caption{\ly profiles for the off-center positions. Dashed/solide
+  lines represents spheres centered at $-0,5R/+0.5R$.
    \label{fig:OC_profiles}} 
-\end{figure*}
-
-\begin{figure*}
-\includegraphics[scale=0.3]{NewPanel_N6_atpm5.png}
-\caption{$\mathrm{Ly}\alpha$ profiles for the off-center positions.
-green lines represents spheres locate at $-0,5R$ while red lines 
-represents spheres at $0.5R$)
-   \label{fig:OC_profiles_N6}} 
 \end{figure*}
 
 
