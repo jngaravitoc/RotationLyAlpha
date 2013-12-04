@@ -87,6 +87,30 @@ arreglar ejes de off-center panel con 10**6 fotones --> Done
 Escribir sobr elas nuevas graficas --> Done
 
 
+semana del 3 al 7 de Dic
+===============================
+Check Fig.9 there is a degeneracy between Tau and Velocity because we dont have all the models to check!
+
+
+Cosas por revisar:
+==============================
+Revisar Nscat  the Laursen 2009 y tambien Xm derivado para el slab y la esphere de mark como se puede comparar el de la esfera rotando con estos?
+
+Ideas bobas:
+
+Se puede medir ly alpha del grupo local?
+y asi usar simulaciones tipo CLUES , ELVIS para testiar simulaciones del espectro de Ly alpha con lo observado?
+
+mirar como CLOUDY me podria ayudar!
+
+Study Analytical calculations
+
+Hydro:
+Tasitsiomi z~8 to see detectability
+Laursen 2006 --> Anticorrelation of Fesc and the mas of the galaxy
+Barnes et al 2011 --> 
+Yajima et al --> see Lyalpha propertios of galaxies with time
+
 
 
 
