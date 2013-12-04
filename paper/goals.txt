@@ -86,15 +86,12 @@ Semana del 27 del 2
 arreglar ejes de off-center panel con 10**6 fotones --> Done
 Escribir sobr elas nuevas graficas --> Done
 
-
-semana del 3 al 7 de Dic
-===============================
-Check Fig.9 there is a degeneracy between Tau and Velocity because we dont have all the models to check!
-
-
 Cosas por revisar:
 ==============================
 Revisar Nscat  the Laursen 2009 y tambien Xm derivado para el slab y la esphere de mark como se puede comparar el de la esfera rotando con estos?
+Miercoles, Nscatt section
+Jueves, Esc Fractions
+Viernes, Off-centre
 
 Ideas bobas:
 
@@ -104,6 +101,8 @@ y asi usar simulaciones tipo CLUES , ELVIS para testiar simulaciones del espectr
 mirar como CLOUDY me podria ayudar!
 
 Study Analytical calculations
+
+CLARA usa AMR?
 
 Hydro:
 Tasitsiomi z~8 to see detectability
