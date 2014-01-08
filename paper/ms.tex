@@ -474,7 +474,7 @@ outside the line center.
 
 \begin{figure}
   \includegraphics[width=0.45\textwidth]{escapefraction.png}
-   \caption{Escape fraction as a function of rotational velocity. The
+   \caption{Escape fraction as a function of rotational velocity, for these models we took $\tau_{a}=1$. The
      continuous (dashed) lines correspond to homogeneous (central)
      models.
      \label{fig:efvsv}}
@@ -532,9 +532,8 @@ increasing optical depth is also slower.
   \includegraphics[scale=0.35]{OF_spheres.png}
   \caption{The two solid circles show the two different spherical
     off-centered emitting  regions. The angular velocity vector is
-    defined to be along the $\hat{\i}$ direction and the observer is
-    along the $\hat{\j}$ direction (where the reader is) (THE ANGLE
-    THETA IS WRONG. IT IS THE ANGLE WITH THE OBSERVER, RIGHT?). 
+    defined to be along the $\hat{\i}$ direction (where the reader is) 
+    and the observer is along the $\hat{\j}$ direction. 
     \label{fig:OCspheres}} 
 \end{figure}
 
@@ -546,10 +545,10 @@ asymmetries in the line.
 
 Figure \ref{fig:OCspheres} shows the two spherical regions we
 define to test for this effect. Each has a radius of $0.5$R and can
-have to possible centers positions $C$ along the $\hat{\i}$ direction:
+have to possible centers positions $C$ along the $\hat{\j}$ direction:
 $\pm C\hat{\i}$. We also place an observer along the $\hat{\j}$
-direction, such that the emitting sphere centered on $+C\hat{\i}$ moves
-away from the observer and the sphere centered on $+C\hat{\i}$ moves
+direction, such that the emitting sphere centered on $+C\hat{\j}$ moves
+away from the observer and the sphere centered on $+C\hat{\j}$ moves
 towards the observer. We consider two values for $C=(0.25,0.50)R$. 
 
 We study first the angular deviations of the outgoing photons with respect
@@ -578,8 +577,8 @@ $\Delta\mu\leq 3\%$.
 
 Figure \ref{fig:OC_profiles} show the spectra for the two off-centred
 spheres located at $C=\pm0.5R$.  In this case we only use photons that
-have outgoing directions aligned with the observer. The most
-interesting effect is that emission is that in  some models ($\tau =
+have outgoing directions aligned with the observer ($\vert \mu \vert > 0.9$ $\&$ $\vert \mu \vert < 1.0]$). The most
+interesting effect is that emission in  some models ($\tau =
 10^6, V=100,200$\kms and $\tau = 10^7, V=200,300$\kms) the line
 presents three peaks (blue-shifted,centred, red-shifted). However, we
 do not find any asymmetry in the line produced by the off-center
@@ -601,11 +600,44 @@ three peak morphology with $\mathrm{V=300km s^{1}}$ and $\tau = 10^{7}$.
 
 \begin{figure*}
 \includegraphics[scale=0.3]{OC_profiles.png}
-\caption{\ly profiles for the off-center positions. Dashed/solide
+\caption{\ly profiles for the off-center positions. Dashed/solid
   lines represents spheres centered at $-0,5R/+0.5R$.
    \label{fig:OC_profiles}} 
 \end{figure*}
 
+\subsection{Three-Peak Profiles}
+
+\begin{figure*}
+\includegraphics[scale=0.3]{3peaks.png}
+\caption{Three-Peak profiles for the off-center positions. 
+   \label{fig:3p_profiles}} 
+\end{figure*}
+
+As mentioned in Sec 3.4 Off-centered emission shows signs of three peak 
+profiles, to analyse this in more detail we use the same method of the spheres
+explained in Sec 3.4. We select spheres at $C=\pm 0.25, 0.5, 0.75$ for all the 
+models, for those who present signs of three peak profiles such as $(V_{max}=50kms^{1} 
+\& \tau_{H}=10^{5}), (V_{max}=100kms^{1} \& \tau_{H}=10^{6}), (V_{max}=200kms^{1}
+\& \tau_{H}=10^{7})$ we made another run with $\tau_{\gamma}=10^{6}$ with the aim 
+of get a stronger profile. 
+
+Fig. \ref{fig:3p_profiles} shows our findings, in order to get such profiles 
+a relation between optical depth, rotational velocity and $C$ must be accomplish.
+In particular we found that for the outer spheres $C=\pm 0.75$ the three
+peak arise for all of our models with $\tau_{\gamma}=10^{6}$. The main effect of
+the rotational velocity is to give rise to the central peak. If the rotational velocity is 
+high also the optical depth have to be high in order to compensate the height of the wings 
+of the line with the central peak. 
+
+Finally we take into account the finite spectral resolution to see if three peaks 
+profiles produced by rotation could be observed. Fig.\ref{fig:3p_res} show that even
+with a low resolution a three-peak profile would be observed.	
+
+\begin{figure*}
+\includegraphics[scale=0.3]{3p_res.png}
+\caption{Three-Peak profiles for different resolutions. 
+   \label{fig:3p_res}} 
+\end{figure*}
 
 \section{Discussion}
 \label{sec:discussion}
@@ -721,6 +753,10 @@ range of this effects for simplified models.
 
 
 \section*{Acknowledgements}
+
+JNGC thanks the support of Universidad de los Andes given as TA
+Also ISAAC 2012 summer school which provide computer time where some of this 
+models where ran.
 
 \bibliographystyle{apj}
 \bibliography{references} 
