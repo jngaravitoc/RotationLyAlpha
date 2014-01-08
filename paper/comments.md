@@ -1,4 +1,3 @@
-
 * I think the introduction & motivation for the work are very good &
   strong. I would not change anything here.  
 
@@ -8,12 +7,12 @@ section 4, once in section 5, and one time in the abstract). The
 triple-peak solution is an extremely interesting result to the
 community (I believe), but the current Figure~10 in my opinion does
 not really show convincing cases, in the sense that someone might just
-think that these features in the spectrum are a result of noise. 
+think that these features in the spectrum are a result of noise.  [Done]
 
 * Of course, you show two spectra in each panel. It seems to me that
   it would be important to show one example of a more enhanced triple
   peaked emitter. Perhaps we get a more pronounced triple peak if the
-  spherical emission regions line along the same axis as the L.O.S? 
+  spherical emission regions line along the same axis as the L.O.S? [Done]
 
 Other comments:
 
@@ -69,7 +68,7 @@ tremendous, especially at large tau_a*(a*tau_0)^1/3?
   may be related to my questions above. 
 
 * It would be helpful to clarify the geometry in Figure~8. Somehow
-  show that the observer is along the +j axis.  
+  show that the observer is along the +j axis. [Done]  
 
 * What happens if the emission spheres were to be put at \pm 0.5 R on
   the j-axis? 
@@ -77,7 +76,7 @@ tremendous, especially at large tau_a*(a*tau_0)^1/3?
 * For the off-center emission it is mentioned that 'we only use
   photons whose ougoing directions are aligned with the observer'. So
   you do not use the `next-event estimator?' or `peeling algorithm? If
-  not, what is the range of angles that you include? 
+  not, what is the range of angles that you include? [Done]
 
 * Triple peak spectrum: I just got a referee report for a paper with
 C. Behrens in which the referee was concerned about predictions on the
@@ -85,7 +84,7 @@ spectrum if you take into account finite spectral resolution. One can
 imagine that a finite spectral resolution could easily wash the triple
 peaks away. It would be good to mention this. Also, if we can find one
 case where the triple peaks are separated more, then this would
-strengthen the main conclusions. 
+strengthen the main conclusions. [Done]
 
 
 * Also, if we assume the initial line profile prior to scattering to be
