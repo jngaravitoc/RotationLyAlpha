@@ -527,7 +527,7 @@ increasing optical depth is also slower.
 
 
 \subsection{Off-Centered emission}
-
+\label{sec:off-center}
 \begin{figure}
   \includegraphics[scale=0.35]{OF_spheres.png}
   \caption{The two solid circles show the two different spherical
@@ -545,11 +545,11 @@ asymmetries in the line.
 
 Figure \ref{fig:OCspheres} shows the two spherical regions we
 define to test for this effect. Each has a radius of $0.5$R and can
-have to possible centers positions $C$ along the $\hat{\j}$ direction:
+have two possible centers positions $C$ along the $\hat{\j}$ direction:
 $\pm C\hat{\i}$. We also place an observer along the $\hat{\j}$
 direction, such that the emitting sphere centered on $+C\hat{\j}$ moves
 away from the observer and the sphere centered on $+C\hat{\j}$ moves
-towards the observer. We consider two values for $C=(0.25,0.50)R$. 
+towards the observer. We consider $C=0.5 R$. 
 
 We study first the angular deviations of the outgoing photons with respect
 to an isotropic flux. We follow \cite{Zheng2013} to estimate the flux
@@ -559,14 +559,14 @@ a the observer. This is expressed by
 
 \begin{equation}
 F(\mu) = \frac{2\Delta N}{N\Delta \mu}, 
-\end{equation}
+\end{equation} 
 %
 where $\mu=\cos\Theta$, $N$ is the total number of outgoing photons,
 $\Delta N$ is the number of photons in a angular bin $\Delta
 \Theta$. This definition satisfies the condition
 $\int_{-1}^{1}F(\mu)d\mu/2=1$.  
 
-In the off-centre emission the variations in the $\mu$ distribution
+In the off-center emission the variations in the $\mu$ distribution
 $\mu$ increase with the rotational velocity. For $V_{\rm max}= 50$\kms
  $\Delta \mu \leq 7\%$; $V_{\rm max}=100$\kms, $\Delta \mu\leq 12\%$
 and $V_{\rm max}=200$\kms, $\Delta\mu\leq 15\%$ (NOTE: regardless of
@@ -577,19 +577,16 @@ $\Delta\mu\leq 3\%$.
 
 Figure \ref{fig:OC_profiles} show the spectra for the two off-centred
 spheres located at $C=\pm0.5R$.  In this case we only use photons that
-have outgoing directions aligned with the observer ($\vert \mu \vert > 0.9$ $\&$ $\vert \mu \vert < 1.0]$). The most
-interesting effect is that emission in  some models ($\tau =
-10^6, V=100,200$\kms and $\tau = 10^7, V=200,300$\kms) the line
-presents three peaks (blue-shifted,centred, red-shifted). However, we
-do not find any asymmetry in the line produced by the off-center
-emission. As in the homogeneous / central model the line gets broader
-as the rotational velocity increases. 
-
-The results for the off-centred spheres placed closer to the centre
-at $C=\pm 0.25R$ do not display such a stronger features discussed above for the
-spheres at $C=\pm0.5R$, there is only one model which slightly shows a 
-three peak morphology with $\mathrm{V=300km s^{1}}$ and $\tau = 10^{7}$. 
-
+have outgoing directions aligned with the observer ($\vert \mu \vert > 
+0.9$ $\&$ $\vert \mu \vert < 1.0]$).  We do not find any asymmetry in 
+the line produced by the off-center emission, The difference
+ between the profiles corresponding to the spheres located at $C=-0.5R$ 
+ and that ones located at $C=0.5R$ is negligible.  As in the homogeneous / 
+central model the line gets broader as the rotational velocity also 
+the central part of the line becomes predominant . 
+There is also a signature of possible three peaks profiles for  some models ($\tau = 10^6,
+V=100,200$\kms and $\tau = 10^7, V=200,300$\kms) which would be studied 
+in detail in the Sec.\ref{sec:3p}
 
 \begin{figure}
 \includegraphics[scale=0.35]{mu_OC.png} \caption{Flux angular 
@@ -606,32 +603,33 @@ three peak morphology with $\mathrm{V=300km s^{1}}$ and $\tau = 10^{7}$.
 \end{figure*}
 
 \subsection{Three-Peak Profiles}
-
+\label{sec:3p}
 \begin{figure*}
 \includegraphics[scale=0.3]{3peaks.png}
 \caption{Three-Peak profiles for the off-center positions. 
    \label{fig:3p_profiles}} 
 \end{figure*}
 
-As mentioned in Sec 3.4 Off-centered emission shows signs of three peak 
+As mentioned in Sec\ref{sec:off-center} Off-centered emission shows signs of three peak 
 profiles, to analyse this in more detail we use the same method of the spheres
-explained in Sec 3.4. We select spheres at $C=\pm 0.25, 0.5, 0.75$ for all the 
-models, for those who present signs of three peak profiles such as $(V_{max}=50kms^{1} 
-\& \tau_{H}=10^{5}), (V_{max}=100kms^{1} \& \tau_{H}=10^{6}), (V_{max}=200kms^{1}
-\& \tau_{H}=10^{7})$ we made another run with $\tau_{\gamma}=10^{6}$ with the aim 
-of get a stronger profile. 
+explained in that section. We select spheres at $C=\pm 0.25R, 0.5R, 0.75R$ with a radii of
+$0.25R$ for all the models, for those who present signs of three peak profiles such as 
+$(V_{max}=50kms^{1} \& \tau_{H}=10^{5}), (V_{max}=100kms^{1} \& \tau_{H}=10^{6}), 
+(V_{max}=200kms^{1} \& \tau_{H}=10^{7})$ we made another run with $\tau_{\gamma}=10^{6}$ 
+with the aim of get a stronger profile. 
 
 Fig. \ref{fig:3p_profiles} shows our findings, in order to get such profiles 
 a relation between optical depth, rotational velocity and $C$ must be accomplish.
 In particular we found that for the outer spheres $C=\pm 0.75$ the three
-peak arise for all of our models with $\tau_{\gamma}=10^{6}$. The main effect of
-the rotational velocity is to give rise to the central peak. If the rotational velocity is 
-high also the optical depth have to be high in order to compensate the height of the wings 
-of the line with the central peak. 
+peak arises for all of our models with $\tau_{\gamma}=10^{6}$ this is due to 
+the fact that the wings of the line move away from the central part as $C$ increase. 
+Another requirement is that a high optical must be balanced with a high velocity 
+in order to make the wings and the central peak similar in 
+height.
 
-Finally we take into account the finite spectral resolution to see if three peaks 
-profiles produced by rotation could be observed. Fig.\ref{fig:3p_res} show that even
-with a low resolution a three-peak profile would be observed.	
+Fig.\ref{fig:3p_res} show that even with a low resolution a three-peak profile 
+would be observed, this is important for observational porpoises due to the finite 
+spectral resolution.
 
 \begin{figure*}
 \includegraphics[scale=0.3]{3p_res.png}
