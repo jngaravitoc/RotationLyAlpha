@@ -31,14 +31,14 @@ Other comments:
   length, and thus f_esc. Of course, you show nicely that f_esc does
   not depend on v_max for the central case (see more
   questions/comments below), but this is not obvious a-priori. 
-
+---------------------------------------------------------------------
 * I do not quite get/reproduce the numerical values of several things
   associated with f_esc:
 
 - In Figure~7, which models are you plotting? Where are the models
   with tau_a=1; tau_0=1e7. These should give me tau_a(a*tau_0)^1/3 ~
-  15.  
-
+  15.  [Done]
+--------------------------------------------------------------------
 _ Figure~7, why are the prediction so much above Neufeld? I understand
 that there is a slab vs sphere geometry, but the difference seems
 tremendous, especially at large tau_a*(a*tau_0)^1/3? 
@@ -63,15 +63,16 @@ tremendous, especially at large tau_a*(a*tau_0)^1/3?
   (which is due to some other sort of hidden dependences in his
   equation)! 
 
+
 - For tau_0=1e7, central source, my f_esc=0.5% for v_max=0, and 1.0%
   for v_max=300 km/s. So I do find a weak dependence on v_max. This
   may be related to my questions above. 
-
+----------------------------------------------------------------------
 * It would be helpful to clarify the geometry in Figure~8. Somehow
   show that the observer is along the +j axis. [Done]  
 
 * What happens if the emission spheres were to be put at \pm 0.5 R on
-  the j-axis? 
+  the j-axis? [Done]
 
 * For the off-center emission it is mentioned that 'we only use
   photons whose ougoing directions are aligned with the observer'. So
@@ -109,7 +110,7 @@ I thought the summary was not as strong yet as the introduction.
 
 * For non-symmetric sources we find [list results, place emphasis on triple peak].
 
-* Some suggested textual changes:
+Some suggested textual changes:
 
 - Section 3.3. 'First of all, we note that the escape fraction does
   not increase...'. Figure~7 currently does seem to show this. I
@@ -119,12 +120,12 @@ I thought the summary was not as strong yet as the introduction.
   my work with Andy Chung. Perhaps we should try to clarify this a bit
   (maybe use the sentence above, transition from the opaque to
   extremely opaque medium, which affects how Lya photons escape from
-  the medium: single flight vs single excursion). 
+  the medium: single flight vs single excursion). [Done]
 
 - Section 3.2 'Figure~5 supports our hypothesis'. Maybe add 'The
   top-right panel of Figure~5'. The other three panels do not show
   many photons at all that scatter < 10 times. This had me confused
-  briefly.  
+  briefly.  [done]
 
 - Section 3.2 'In this case the physical picture is...' It was not
   clear what this meant initially to me. If you meant what I wrote
@@ -132,4 +133,4 @@ I thought the summary was not as strong yet as the introduction.
   re-phrase a bit --> The same applies for the sentence 'On average
   there are 40% less scatterings....' in the conclusions.  
 
-- Figure~6 caption: list in the caption that tau_a=1 in all cases. 
+- Figure~6 caption: list in the caption that tau_a=1 in all cases. [Done]
