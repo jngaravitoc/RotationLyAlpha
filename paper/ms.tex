@@ -456,7 +456,7 @@ results for the homogeneous (central) source distribution. The color
 scale is logarithmic in the number of photons at a certain value
 $x-N_{\rm scatt}$. 
 
-Figure \ref{fig:Nscatt2D} supports our hypothesis about
+The top right panel of Figure \ref{fig:Nscatt2D} supports our hypothesis about
 the photo-sphere in the homogeneous distribution. In that case most of
 the photons that left with $x\sim 0$ have escaped with less than $10$
 scatterings. This explains the origin of a single central
@@ -543,19 +543,19 @@ symmetry than the gas. We can select photons emitted in off-centered spheres
 with respect to the gas distribution and check whether this produces
 asymmetries in the line.
 
+
 Figure \ref{fig:OCspheres} shows the two spherical regions we
 define to test for this effect. Each has a radius of $0.5$R and can
 have two possible centers positions $C$ along the $\hat{\j}$ direction:
 $\pm C\hat{\i}$. We also place an observer along the $\hat{\j}$
 direction, such that the emitting sphere centered on $+C\hat{\j}$ moves
 away from the observer and the sphere centered on $+C\hat{\j}$ moves
-towards the observer. We consider $C=0.5 R$. 
+towards the observer. 
 
 We study first the angular deviations of the outgoing photons with respect
 to an isotropic flux. We follow \cite{Zheng2013} to estimate the flux
 as a function of the angle $\Theta$ formed by the outgoing photons and
-a the observer. This is expressed by 
-
+the observer. This is expressed by 
 
 \begin{equation}
 F(\mu) = \frac{2\Delta N}{N\Delta \mu}, 
@@ -566,14 +566,21 @@ $\Delta N$ is the number of photons in a angular bin $\Delta
 \Theta$. This definition satisfies the condition
 $\int_{-1}^{1}F(\mu)d\mu/2=1$.  
 
-In the off-center emission the variations in the $\mu$ distribution
-$\mu$ increase with the rotational velocity. For $V_{\rm max}= 50$\kms
- $\Delta \mu \leq 7\%$; $V_{\rm max}=100$\kms, $\Delta \mu\leq 12\%$
-and $V_{\rm max}=200$\kms, $\Delta\mu\leq 15\%$ (NOTE: regardless of
-$\tau$??). This implies a strong dependence of the observed flux on
-the relative position of an observer.  In contrast,the central and
-homogeneous source distributions only show a weak anisotropy at the level of
-$\Delta\mu\leq 3\%$.  
+\begin{figure}
+  \includegraphics[scale=0.35]{muhisto.png}
+  \caption{$\mu$ histogram showing the orientation effects for the different
+  distributions Central(Points line), Homogeneous(Dashed) and Off-Center(Solid line).  
+    \label{fig:muhisto}} 
+\end{figure}
+
+The variations in the $\mu$ distribution is shown in Fig.\ref{fig:muhisto},
+for the Off-Center model there is a strong dependence of the 
+observed flux on the relative position of an observer with $\Delta\mu\leq 25\%$.
+In contrast,the central and homogeneous source distributions only show a 
+weak anisotropy at the level of $\Delta\mu\leq 3\%$. On the other hand the variations
+in $\mu$ does not depend on the rotational velocity while increasing the optical depth $\tau_{H}$
+would also increase the variation of $\Delta\mu$ up to a $15\%$.
+
 
 Figure \ref{fig:OC_profiles} show the spectra for the two off-centred
 spheres located at $C=\pm0.5R$.  In this case we only use photons that
@@ -582,17 +589,11 @@ have outgoing directions aligned with the observer ($\vert \mu \vert >
 the line produced by the off-center emission, The difference
  between the profiles corresponding to the spheres located at $C=-0.5R$ 
  and that ones located at $C=0.5R$ is negligible.  As in the homogeneous / 
-central model the line gets broader as the rotational velocity also 
+central model the line gets broader as the rotational velocity increase also 
 the central part of the line becomes predominant . 
-There is also a signature of possible three peaks profiles for  some models ($\tau = 10^6,
+There is also a signature of possible three peaks profiles for some models ($\tau = 10^6,
 V=100,200$\kms and $\tau = 10^7, V=200,300$\kms) which would be studied 
 in detail in the Sec.\ref{sec:3p}
-
-\begin{figure}
-\includegraphics[scale=0.35]{mu_OC.png} \caption{Flux angular 
-  dependency for off-center distribution. Different line widths
-  illustrate different rotational velocities.\label{fig:OCflux}} 
-\end{figure}
 
 
 \begin{figure*}
@@ -604,6 +605,7 @@ in detail in the Sec.\ref{sec:3p}
 
 \subsection{Three-Peak Profiles}
 \label{sec:3p}
+
 \begin{figure*}
 \includegraphics[scale=0.3]{3peaks.png}
 \caption{Three-Peak profiles for the off-center positions. 
@@ -612,10 +614,10 @@ in detail in the Sec.\ref{sec:3p}
 
 As mentioned in Sec\ref{sec:off-center} Off-centered emission shows signs of three peak 
 profiles, to analyse this in more detail we use the same method of the spheres
-explained in that section. We select spheres at $C=\pm 0.25R, 0.5R, 0.75R$ with a radii of
+explained in that section. We select spheres at $C=(\pm 0.25R, \pm0.5R, \pm0.75R)$ with a radii of
 $0.25R$ for all the models, for those who present signs of three peak profiles such as 
-$(V_{max}=50kms^{1} \& \tau_{H}=10^{5}), (V_{max}=100kms^{1} \& \tau_{H}=10^{6}), 
-(V_{max}=200kms^{1} \& \tau_{H}=10^{7})$ we made another run with $\tau_{\gamma}=10^{6}$ 
+$(V_{max}=50kms^{1}$ \& $\tau_{H}=10^{5}), (V_{max}=100kms^{1}$ \& $\tau_{H}=10^{6}), 
+(V_{max}=200kms^{1}$ \& $\tau_{H}=10^{7})$ we made another run with $\tau_{\gamma}=10^{6}$ 
 with the aim of get a stronger profile. 
 
 Fig. \ref{fig:3p_profiles} shows our findings, in order to get such profiles 
@@ -623,7 +625,7 @@ a relation between optical depth, rotational velocity and $C$ must be accomplish
 In particular we found that for the outer spheres $C=\pm 0.75$ the three
 peak arises for all of our models with $\tau_{\gamma}=10^{6}$ this is due to 
 the fact that the wings of the line move away from the central part as $C$ increase. 
-Another requirement is that a high optical must be balanced with a high velocity 
+Another requirement is that a high optical depth must be balanced with a high velocity 
 in order to make the wings and the central peak similar in 
 height.
 
@@ -636,6 +638,7 @@ spectral resolution.
 \caption{Three-Peak profiles for different resolutions. 
    \label{fig:3p_res}} 
 \end{figure*}
+
 
 \section{Discussion}
 \label{sec:discussion}
