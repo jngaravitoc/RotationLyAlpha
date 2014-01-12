@@ -101,17 +101,17 @@ like expansion flow \citep{LoebRybicki}.
 A quantitative description of the \ly line has been reached through
 Monte Carlo simulations \citep{Auer68,Avery68,Adams72}. In the last
 two decades these studies have become popular due to the
-availability of computing power. Early into the 21st century the first
+availability of computing power. Early into the 21st century, the first
 studies focused on homogeneous and static media
-\citep{Ahn00,Ahn01,Zheng02}. Later on the effects of clumpy media
+\citep{Ahn00,Ahn01,Zheng02}; Later on, the effects of clumpy media
 \citep{Hansen06} and expanding/contracting shell/spherical geometries started to
 be studied \citep{Verhamme06,Dijkstra06}. Similar codes have applied
 these results to semi-analytic models of galaxy formation \citep{Orsi12} and
 results of large hydrodynamic simulations
-\citep{CLARA,Forero12,Behrens13}. Recently Monte Carlo codes have also
+\citep{CLARA,Forero12,Behrens13}. Recently, Monte Carlo codes have also
 been applied to the results of high resolution hydrodynamic
 simulations of individual
-galaxies\citep{Laursen09,Barnes11,Verhamme12,Yajima12}. While, recent
+galaxies\citep{Laursen09,Barnes11,Verhamme12,Yajima12}. Meanwhile, recent
 developments have been focused on the systematic study of clumpy
 outflows \citep{DijkstraKramer}and anisotropic velocity configurations
 \citep{Zheng2013}. 
@@ -135,14 +135,14 @@ rotating interstellar medium (ISM) must have some kind of impact in
 the \ly line morphology. 
 
 Performing that study is the main goal of this paper. We investigate for the
-first time the impact of rotation on the morphology of the \ly line. We focus on a simplified system, a spherical gas cloud
+first time the impact of rotation on the morphology of the \ly line. We focus on a simplified system: a spherical gas cloud
 with homogeneous density and solid body rotation, to study the line
-morphology and the escape  fraction in the presence of dust. We base
+morphology and the escape fraction in the presence of dust. We base
 our work on two independent Monte Carlo based radiative transfer codes
 CLARA \citep{CLARA} and XX \citep{DijkstraKramer} .   
   
  
-This paper is structured as follows. In \S
+This paper is structured as follows: In \S
 \ref{sec:implementation} we present the implementation of bulk
 rotation into the Monte Carlo codes, paying special attention to coordinate
 definitions. We also list the different physical parameters in
@@ -308,7 +308,7 @@ with static spheres.
     \includegraphics[width=0.45\textwidth]{NewWidthVvsVmax.png}
     \caption{Half-width for the non-dusty models as a function of
       rotational velocity $V_{\rm max}$. Continuous (dashed) lines
-      correspond to homogeneous (central) source
+      correspond to central (homogeneous) source
       distributions. \label{fig:widthvsvelocity}} 
 \end{figure}
 
@@ -317,7 +317,7 @@ with static spheres.
     \includegraphics[width=0.45\textwidth]{maximumVvsVmax.png}
 \caption{Position of the peak maxima as a function of rotational
   velocity $V_{\rm max}$. Continuous (dashed) lines correspond to
-  homogeneous (central) source distributions. A value of $x_{\rm
+  central (homogeneous) source distributions. A value of $x_{\rm
     max}=0$ indicates that line becomes single
   peaked. \label{fig:maximumsvsvelocity}}  
 \end{figure}
@@ -393,7 +393,7 @@ to what extent this is related to the emergence of single peaked emission.
     \includegraphics[width=0.45\textwidth]{NscattvsVmax.png}
 \caption{Logarithm of the average number of scatterings as function of
   rotational velocity velocity. Continuous (dashed) lines represent an
-  homogeneous (central) distribution of sources. \label{fig:Nscatt}}    
+  central (homogeneous) distribution of sources. \label{fig:Nscatt}}    
 \end{figure}
 
 
@@ -481,7 +481,7 @@ outside the line center.
 \begin{figure}
   \includegraphics[width=0.45\textwidth]{escapefraction.png}
    \caption{Escape fraction as a function of rotational velocity, for these models we took $\tau_{a}=1$. The
-     continuous (dashed) lines correspond to homogeneous (central)
+     continuous (dashed) lines correspond to central (homogeneous)
      models.
      \label{fig:efvsv}}
 \end{figure}
@@ -577,7 +577,7 @@ $\int_{-1}^{1}F(\mu)d\mu/2=1$.
 \begin{figure}
   \includegraphics[scale=0.35]{muhisto.png}
   \caption{$\mu$ histogram showing the orientation effects for the different
-  distributions Central(Points line), Homogeneous(Dashed) and Off-Center(Solid line).  
+  distributions central(Points line), homogeneous(Dashed) and off-Center(Solid line).  
     \label{fig:muhisto}} 
 \end{figure}
 
@@ -606,8 +606,8 @@ in detail in the next section.
 
 \begin{figure*}
 \includegraphics[scale=0.3]{OC_profiles.png}
-\caption{\ly profiles for the off-center positions. Dashed/solid
-  lines represents spheres centered at $-0,5R/+0.5R$.
+\caption{\ly profiles for the off-center positions for all of our models, Dashed/solid
+  lines represents spheres centered at $-0,5R/+0.5R$ respectively.
    \label{fig:OC_profiles}} 
 \end{figure*}
 
@@ -616,7 +616,7 @@ in detail in the next section.
 
 \begin{figure*}
 \includegraphics[scale=0.3]{3peaks.png}
-\caption{Three-Peak profiles for the off-center positions. 
+\caption{Three-Peak profiles for three different off-center positions $C=0.25R$ (doted line), $C=0.5R$ (dashed line) \& $C=0.75R$ (solid line) and for different rotational velocities. 
    \label{fig:3p_profiles}} 
 \end{figure*}
 
@@ -644,7 +644,7 @@ spectral resolution.
 
 \begin{figure*}
 \includegraphics[scale=0.3]{3p_res.png}
-\caption{Three-Peak profiles for different resolutions. 
+\caption{Three-Peak profiles for different resolutions:Low (Solid), medium(dashed), high(doted), 
    \label{fig:3p_res}} 
 \end{figure*}
 
