@@ -57,12 +57,14 @@ kinds of spatial distribution for the radiation sources with respect
 to the sphere: central and homogeneous. Our main finding is that the
 line width and the intensity at the line's center increase with
 rotational velocity. For homogeneously distributed sources the line
-becomes single peaked at large rotational velocities. Under the same
+becomes single peaked at rotational velocities larger than the line
+width in the static case. Under the same
 conditions the escape fraction increases $\sim 30\%$. For radiation
 sources located off-center, the line morphology presents a range of
 single, double and triple peaks. We show how these results are useful
 to interpret recent spectroscopic results of distant $z\sim 2-3$ star
 forming galaxies. 
+
 \end{abstract}
 
 \begin{keywords}
@@ -702,22 +704,41 @@ additional condition of an off-centered emission.
 \section{Conclusions}
 \label{sec:conclusions}
 
-This paper illustrates for the first time the main effects of rotation
-in the morphology of the \ly emission line in star forming galaxies. 
-The results are based on the study of an homogeneous sphere
-with solid body rotation. We explored a range of models by varying
+This paper quantifies for the first time in the literature the effects
+of rotation in the morphology of the \ly emission line in star forming
+galaxies.  The results are based on the study of an homogeneous sphere
+of gas with solid body rotation. We explore a range of models by varying
 the rotational speed, hydrogen optical depth, dust optical depth and
 initial distribution of \ly photons with respect to the gas
 density. As a cross-validation, we obtain our results from two
-independently developed Monte-Carlo radiative transfer codes.
+independently developed Monte-Carlo radiative transfer codes. 
 
-Our main result is that rotation clearly impact the \ly line
+Our main result is that rotation clearly impacts the \ly line
 morphology. Double peaked lines can make transitions into single
-peaked lines as the rotational velocity increases. Additional
-off-centered emission result into triple peaked lines for certain 
-values of optical depth and velocities. 
+peaked lines as the rotational velocity increases. In the case of
+off-centered emission result into triple peaked lines for certain
+values of optical depth and rotational velocities. 
+
+Quantitatively the main results of our study are summarized in the
+following items. 
 
 \begin{itemize}
+
+\item The line width increases with rotational velocity. The line with
+  approximately follows the functional form $W_{\rm 1/2}^2 = W_{\rm
+    1/2,0}^2 + (V_{\rm max}/\lambda)^2$ where $V_{\rm 1/2,0}$ indicates the line
+  width for the static case. $\lambda$ is a constat determined from
+  the radiative transfer results it is $\lambda_{\rm c}=XX$ and
+  $\lambda_{\rm h}=YY$ for the central and homogeneous source
+  distribution, respectively.
+
+
+\item A single peaked line emerges for high rotational velocities in
+  the case of homgeneously distributed sources. The cases of single
+  peaked lines occur when the rotational velocity is larger than the
+  line width measured in the static case.
+
+
 \item For central sources we find that the number of scatterings
 does not significantly decrease with rotation, this is due to the 
 fact that the vast majority of scatterings events are resonant, 
@@ -753,20 +774,6 @@ Also we do not find any considerable asymmetries in the line produced by off-cen
 emission.
 \end{itemize}
 
-%We have quantified the results in different aspects. 
-
-%These changes in the number of scatterings have a direct bearing on
-%the escape fraction in the presence of dust.  In Section
-%\ref{sec:escapefraction} we find that the escape fraction increases in
-%$20\%-30\%$ for the homogeneous source distribution. In the centrally
-%located emission, the rotational effects are negligible on the escape
-%fraction. 
-
-%We also studied the effect of rotation in the position of the peaks in
-%the line. We find that in the regions with central emission the peaks
-%do not shift as rotation increases. However, in the homogeneous models
-%the double peak merges into a single peak. 
-
 Comparing our results with recent observed LAEs we find that many 
 morphological features such as high central line flux, single peak
 profiles and multi-peaked profiles could be explained by gas bulk 
@@ -775,9 +782,19 @@ rotation present in these LAEs.
 
 \section*{Acknowledgements}
 
-JNGC thanks the support of Universidad de los Andes given as teaching assistant, 
-Also to the  ISAAC 2012 summer school held University of California San Diego which provide computer time
- where some of this models where ran.
+JNGC acknowledges financial support from Universidad de los
+Andes. 
+
+JEFR acknowledges financial support from Vicerrectoria de
+Investigaciones at Universidad de los Andes through a FAPA grant.
+
+We thank the International Summer School on AstroComputing
+2012 organized by the University of California High-Performance
+AstroComputing Center (UC-HiPACC) for providing computational
+resources where some of the calculations were done. 
+
+
+
 
 \bibliographystyle{apj}
 \bibliography{references} 
