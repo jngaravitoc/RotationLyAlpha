@@ -1,7 +1,7 @@
 LATEX = pdflatex
 MAIN  = ms
 
-main: 	$(MAIN).tex
+$(MAIN).pdf: 	$(MAIN).tex references.bib
 	$(LATEX) $(MAIN).tex 
 	bibtex $(MAIN)
 	$(LATEX) $(MAIN).tex 
@@ -14,7 +14,7 @@ clean:
 	rm -f $(MAIN).pdf
 	rm -f $(MAIN).blg
 	rm -f $(MAIN).log
-
+	rm -f *~
 view: 
 	open $(MAIN).pdf &
 
