@@ -243,7 +243,7 @@ variations of the input parameters. Table \ref{table:models}
 summarizes the models.
 
 Additionally, we have used two independently developed Monte Carlo
-codes \cite{CLARA,DijkstraKramer} to perform the calculations of the
+codes \citep{CLARA,DijkstraKramer} to perform the calculations of the
 non-dusty models. The results we report are robust in the sense
 that they are obtained by both codes. 
 
@@ -266,54 +266,14 @@ Photons Distributions & & Central, Homogeneous\\\hline\hline
 \end{center}
 \end{table}
 
-\subsection{Brief Description of the Radiative Transfer Codes}
-
-Here we briefly describe the relevant points for the two radiative
-transfer codes we have used. For a detailed description we refer the
-reader to the original papers \cite{CLARA,DijkstraKramer}.
-
-The codes follow the individual scatterings of \ly photons as it
-travels through a 3D distribution of neutral Hydrogen. At each
-scattering the frequency of the photon (in the laboratory frame) and
-its direction of propagation change. This change in frequency is due
-to the peculiar velocities of the Hydrogen atom that absorbed and
-reemitted the photon. If dust is present, the photon can interact
-either with a Hydrogen atom or dust grain. In the case of a dust
-interaction the photon can be either absorbed or scattered, this
-probability is encoded in the dust albedo, $A$, which we chose to be
-$1/2$. In order to obtain accurate values for the escape fraction of
-photons in the presence of dust, we do not use any accelerating
-mechanism in the radiative transfer.  Once the photons escape the gas
-distribution we store their direction at their direction of
-propagation and frequency at their last scattering.
-
-The photons are thus emitted in some region of the gas distribution
-and follow a random walk in space and frequency until they escape the
-gas distribution or are absorbed by a dust grain. The initialization
-process for the \ly photons has to specify its position, frequency and
-direction of propagation. In our case we select the initial frequency
-to be exactly the \ly restframe frequency ($x=0$) and the direction of
-propagation to be random following an flat probability distribution
-over the sphere. 
-
-
-The gas is completely defined by its geometry (i.e. sphere or slab),
-temperature $T$, Hydrogen optical depth $\tau_{\rm H}$, dust optical
-depth $\tau_{\rm a}$ and the bulk velocity field $\vec{v}$.  Here we
-treat the gas as homogeneous in density ($\tau_{\rm H}$, $\tau_{\rm
-  a}$) and temperature. 
-
-
-
-
 
 \section{Results}
 \label{sec:results}
 
 \begin{figure*}
 \begin{center}
-  \includegraphics[width=0.45\textwidth]{SpectraDifVelocitiesCentral.png}
-  \includegraphics[width=0.45\textwidth]{SpectraDifVelocitiesHOM.png}
+  \includegraphics[width=0.45\textwidth]{f1_1.eps}
+  \includegraphics[width=0.45\textwidth]{f1_2.eps}
 \end{center}
 \caption{Shape of the \ly line for
     different velocities rotational velocities for spherical
@@ -354,7 +314,7 @@ with static spheres.
 
 
 \begin{figure}
-    \includegraphics[width=0.45\textwidth]{maximumVvsVmax.png}
+    \includegraphics[width=0.45\textwidth]{f3.eps}
 \caption{Position of the peak maxima as a function of rotational
   velocity $V_{\rm max}$. Continuous (dashed) lines correspond to
   central (homogeneous) source distributions. A value of $x_{\rm
@@ -430,7 +390,7 @@ to what extent this is related to the emergence of single peaked emission.
 
 
 \begin{figure}
-    \includegraphics[width=0.45\textwidth]{NscattvsVmax.png}
+    \includegraphics[width=0.45\textwidth]{f4.eps}
 \caption{Logarithm of the average number of scatterings as function of
   rotational velocity velocity. Continuous (dashed) lines represent an
   central (homogeneous) distribution of sources. \label{fig:Nscatt}}    
@@ -439,10 +399,10 @@ to what extent this is related to the emergence of single peaked emission.
 
 \begin{figure*}
 \begin{center}
-  \includegraphics[width=0.45\textwidth]{2dHistogram0t5HOM.png}
-  \includegraphics[width=0.45\textwidth]{2dHistogram300t5HOM.png}\\
-  \includegraphics[width=0.45\textwidth]{2dHistogram0t5.png}
-  \includegraphics[width=0.45\textwidth]{2dHistogram300t5.png}    
+  \includegraphics[width=0.45\textwidth]{f5_1.eps}
+  \includegraphics[width=0.45\textwidth]{f5_2.eps}\\
+  \includegraphics[width=0.45\textwidth]{f5_3.eps}
+  \includegraphics[width=0.45\textwidth]{f5_4.eps}    
 \end{center}
     \caption{2D histogram of $N_{\rm scatt}$ vs $x$. The upper (lower) panels
       show the homogeneous (central) source distribution. Left
@@ -519,7 +479,7 @@ outside the line center.
 
 
 \begin{figure}
-  \includegraphics[width=0.45\textwidth]{escapefraction.png}
+  \includegraphics[width=0.45\textwidth]{f6.eps}
    \caption{Escape fraction as a function of rotational velocity, for these models we took $\tau_{a}=1$. The
      continuous (dashed) lines correspond to central (homogeneous)
      models.
@@ -528,7 +488,7 @@ outside the line center.
 
 
 \begin{figure}
-  \includegraphics[width=0.45\textwidth]{Neufeld.png}
+  \includegraphics[width=0.45\textwidth]{f7.eps}
  \caption{Escape fraction as a function of the
    product $(a\tau_{\rm H})^{1/3}\tau_{a}$. The analytic solution for
    the infinite slab is shown as a continuous line. Different dashed
@@ -577,7 +537,7 @@ increasing optical depth is also slower.
 \subsection{Off-Centered emission}
 \label{sec:off-center}
 \begin{figure}
-  \includegraphics[scale=0.3]{OF_spheres.png}
+  \includegraphics[scale=0.3]{f8.eps}
   \caption{The two solid circles show the two different spherical
     off-centered emitting  regions. The angular velocity vector is
     defined to be along the $\hat{\i}$ direction (where the reader is) 
@@ -615,7 +575,7 @@ $\Delta N$ is the number of photons in a angular bin $\Delta
 $\int_{-1}^{1}F(\mu)d\mu/2=1$.  
 
 \begin{figure}
-  \includegraphics[scale=0.35]{muhisto.png}
+  \includegraphics[scale=0.35]{f9.eps}
   \caption{$\mu$ histogram showing the orientation effects for the different
   distributions central(Points line), homogeneous(Dashed) and off-Center(Solid line).  
     \label{fig:muhisto}} 
@@ -645,7 +605,7 @@ in detail in the next section.
 
 
 \begin{figure*}
-\includegraphics[scale=0.3]{OC_profiles.png}
+\includegraphics[scale=0.3]{f10.eps}
 \caption{\ly profiles for the off-center positions for all of our models, Dashed/solid
   lines represents spheres centered at $-0,5R/+0.5R$ respectively.
    \label{fig:OC_profiles}} 
@@ -655,7 +615,7 @@ in detail in the next section.
 \label{sec:3p}
 
 \begin{figure*}
-\includegraphics[scale=0.3]{3peaks.png}
+\includegraphics[scale=0.3]{f11.eps}
 \caption{Three-Peak profiles for three different off-center positions $C=0.25R$ (doted line), $C=0.5R$ (dashed line) \& $C=0.75R$ (solid line) and for different rotational velocities. 
    \label{fig:3p_profiles}} 
 \end{figure*}
@@ -683,7 +643,7 @@ would be observed, this is important for observational porpoises due to the fini
 spectral resolution.
 
 \begin{figure*}
-\includegraphics[scale=0.3]{3p_res.png}
+\includegraphics[scale=0.3]{f12.eps}
 \caption{Three-Peak profiles for different resolutions:Low (Solid), medium(dashed), high(doted), 
    \label{fig:3p_res}} 
 \end{figure*}
