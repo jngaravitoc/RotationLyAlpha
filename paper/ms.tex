@@ -372,13 +372,13 @@ impresion that the double peaks are merger into one at high rotational
 velocities, a result that is evident for the homogeneously distributed
 sources as shown in right panel in Figure \ref{fig:differentvelocities}.
 
-We use the full width at half maximum (FWHM), $W_{1/2}$to quantify the line
-broadening. Figure \ref{fig:widthvsvelocity} shows how $W_{1/2}$ increases
+We use the full width at half maximum (FWHM), $W$, to quantify the line
+broadening. Figure \ref{fig:widthvsvelocity} shows how $W$ increases
 with rotational velocity. {\bf Here we need to check the numbers to
   say something more specific.}
 
-We parameterize the dependency of the linewidth as $W_{1/2}^2 =
-W_{1/2,0}^2 + V_{\rm max}^2/\lambda^2$, where $W_{1/2,0}$ is the
+We parameterize the dependency of the linewidth as $W^2 =
+W_{0}^2 + V_{\rm max}^2/\lambda^2$, where $W_{0}$ is the
 velocity width in the static case and $\lambda$ is a positive
 scalar to be determined as a fit to the data. With this test we want
 to know to what extent the new velocity witdth can be expressed as a
@@ -424,7 +424,7 @@ quantify the effect of rotation on the number of scatterings.
 \begin{figure}
     \includegraphics[width=0.45\textwidth]{f4.eps}
 \caption{Logarithm of the average number of scatterings as function of
-  rotational velocity velocity. Continuous (dashed) lines represent an
+  rotational velocity. Continuous (dashed) lines represent an
   central (homogeneous) distribution of sources. \label{fig:Nscatt}}    
 \end{figure}
 
@@ -438,19 +438,23 @@ quantify the effect of rotation on the number of scatterings.
 \end{center}
     \caption{2D histogram of $N_{\rm scatt}$ vs $x$. The upper (lower) panels
       show the homogeneous (central) source distribution. Left
-      corresponds to the static case and the right
-      $V_{max}=300km/s$. The color scale is logarithmic on the
+      corresponds to the static case and right
+      $V_{\rm max}=300km/s$. The color scale is logarithmic on the
       number of photons with given values of $N_{\rm scatt}$ and
       $x$. \label{fig:Nscatt2D}}   
 \end{figure*}
 
+The number of scatterings affects the escape frequency of a \ly photon.
+In static cases, a large value of the optical depth correlates with a
+high number of scatterings, increasing the probability of finding a
+\ly photon far from the line's center. The result is that he peak maxima
+shifts from the center as the amount of neutral hydrogen
+increases. This can be precisely quantifyied in for the static slab
+with central sources, in that case the maxima position are related to
+the optical depth and the temperature as $x_{m}=\pm 1.066(a\tau_{\rm
+  H})^{1/3}$ \citep{Harrington73}.
 
-The number of \ly photon scatterings affects its final frequency after
-escaping the galaxy. In static gas geometries, a large value of the
-optical depth correlates with a high number of scatterings, increasing
-the probability of finding a \ly photon far from the center of the
-line. In these cases the peak maxima shifts away from the line center as
-the amount of neutral hydrogen increases. 
+%%%% JEFR.
 
 
 In Figure \ref{fig:Nscatt} we show the average number of scatterings
@@ -757,8 +761,8 @@ following items.
 \begin{itemize}
 
 \item The line width increases with rotational velocity. The line with
-  approximately follows the functional form $W_{\rm 1/2}^2 = W_{\rm
-    1/2,0}^2 + (V_{\rm max}/\lambda)^2$ where $V_{\rm 1/2,0}$ indicates the line
+  approximately follows the functional form $W^2 = W_{
+    0}^2 + (V_{\rm max}/\lambda)^2$ where $W_{0}$ indicates the line
   width for the static case. $\lambda$ is a constat determined from
   the radiative transfer results it is $\lambda_{\rm c}=XX$ and
   $\lambda_{\rm h}=YY$ for the central and homogeneous source
