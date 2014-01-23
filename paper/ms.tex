@@ -229,6 +229,44 @@ respect to the $z$ axis. Following \cite{Zheng2013} we make the study
 of the anisotropic emission in terms of this angle..
 
 
+\subsection{Brief Description of the Radiative Transfer Codes}
+
+Here we briefly describe the relevant points for the two radiative
+transfer codes we have used. For a detailed description we refer the
+reader to the original papers \cite{CLARA,DijkstraKramer}.
+
+The codes follow the individual scatterings of \ly photons as it
+travels through a 3D distribution of neutral Hydrogen. At each
+scattering the frequency of the photon (in the laboratory frame) and
+its direction of propagation change. This change in frequency is due
+to the peculiar velocities of the Hydrogen atom that absorbed and
+reemitted the photon. If dust is present, the photon can interact
+either with a Hydrogen atom or dust grain. In the case of a dust
+interaction the photon can be either absorbed or scattered, this
+probability is encoded in the dust albedo, $A$, which we chose to be
+$1/2$. In order to obtain accurate values for the escape fraction of
+photons in the presence of dust, we do not use any accelerating
+mechanism in the radiative transfer. Once the photons escape the gas
+distribution we store their direction at their direction of
+propagation and frequency at their last scattering.
+
+The photons are thus emitted in some region of the gas distribution
+and follow a random walk in space and frequency until they escape the
+gas distribution or are absorbed by a dust grain. The initialization
+process for the \ly photons has to specify its position, frequency and
+direction of propagation. In our case we select the initial frequency
+to be exactly the \ly restframe frequency ($x=0$) and the direction of
+propagation to be random following an flat probability distribution
+over the sphere.
+
+
+The gas is completely defined by its geometry (i.e. sphere or slab),
+temperature $T$, Hydrogen optical depth $\tau_{\rm H}$, dust optical
+depth $\tau_{\rm a}$ and the bulk velocity field $\vec{v}$. Here we
+treat the gas as homogeneous in density ($\tau_{\rm H}$, $\tau_{\rm
+a}$) and temperature.
+
+
 
 \subsection{Grid of Simulated Galaxies}
 \label{sec:models}
