@@ -135,25 +135,25 @@ rotating interstellar medium (ISM) must have some kind of impact in
 the \ly line morphology. 
 
 Performing that study is the main goal of this paper. We investigate for the
-first time the impact of rotation on the morphology of the \ly line. We focus on a simplified system: a spherical gas cloud
-with homogeneous density and solid body rotation, to study the line
+first time the impact of rotation on the morphology of the \ly
+line. We focus on a simplified system: a spherical gas cloud with
+homogeneous density and solid body rotation, to study the line
 morphology and the escape fraction in the presence of dust. We base
 our work on two independent Monte Carlo based radiative transfer codes
 CLARA \citep{CLARA} and XX \citep{DijkstraKramer} .   
   
  
-This paper is structured as follows: In \S
-\ref{sec:implementation} we present the implementation of bulk
-rotation into the Monte Carlo codes, paying special attention to coordinate
-definitions. We also list the different physical parameters in
-the simulated grid of models. In the next \S \ref{sec:results} we present the
-results of the simulations, with special detail to quantities in the
-line that show a clear evolution as a function of the sphere
-rotational velocity. In \S \ref{sec:discussion} we discuss the
-implications of our results in the interpretation of LAEs
-observations and further refinements that can be implemented in the
-theoretical modeling of the \ly line. In the last section we present
-our conclusions. 
+This paper is structured as follows: In \S \ref{sec:implementation} we
+present the implementation of bulk rotation into the Monte Carlo
+codes, paying special attention to coordinate definitions. We also
+present a short review of how the \ly radiative transfer codes work
+and list the different physical parameters in the simulated grid of
+models. In the next \S \ref{sec:results} we present the results of the
+simulations, with special detail to quantities in the line that show a
+clear evolution as a function of the sphere rotational velocity. In \S
+\ref{sec:discussion} we discuss the implications of our results in the
+interpretation of LAEs observations. In the last section we present
+our conclusions.  
 
 In this paper we express a photon's frequency in terms of the
 dimensionless variable $x\equiv (\nu -\nu_a)/\Delta\nu_\alpha$, where
@@ -162,7 +162,11 @@ frequency,  $\Delta\nu_{\alpha} \equiv
 \nu_{\alpha}\sqrt{2kT/m_pc^2}\equiv \nu_av_{\rm th}/c $ is the Doppler
 broadening of the line which depends on the neutral gas temperature
 $T$ scattering the radiation or equivalently the thermal velocity
-$v_{\rm th}$ of the atoms. 
+$v_{\rm th}$ of the atoms.  For the temperature $T=10^4$K used in our
+radiative transfer calculations the thermal velocity is
+$v_{th}=12.8$\kms.  
+
+
 
 
 \section{Models of bulk gas rotation}
@@ -360,24 +364,27 @@ with static spheres.
   peaked. \label{fig:maximumsvsvelocity}}  
 \end{figure}
 
-The first quantitative conclusion of the effect of rotation in the
-\ly line is that double peaks broaden and reduce their intensity
-while the line center rises. This gives the impression that, as the
-rotational velocity increases, the double peaks are merged into a
-single broad emission peak. This is most evident at the highest
-rotational velocities for the homogeneously distributed sources
-(right panel in Figure \ref{fig:differentvelocities}). 
+There are three clear effects on the line's morphology as the
+rotational veloctiy increases. First, the line
+broadens; second, the double peaks reduce their intensity; and third,
+the intensity at the line center rises. The two last effects give the
+impresion that the double peaks are merger into one at high rotational
+velocities, a result that is evident for the homogeneously distributed
+sources as shown in right panel in Figure \ref{fig:differentvelocities}.
 
-To quantify the line broadening we use the width at half maximum
-(FWHM), $W_{1/2}$. Figure \ref{fig:widthvsvelocity} shows how $W_{1/2}$ increases
-with rotational velocity. Continuous (dashed) lines connect the
-results for homogeneous (central) source distribution. For the
-temperature $T=10^4$K used in our radiative transfer calculations the
-thermal velocity is $v_{th}=12.8$\kms. For a model with $\tau_{H}$ it
-means that the FWHM increase up to $350$\kms (at $V_{\rm
-  max}=300$\kms) compared to $150$\kms in the static case. 
- 
-% No entiendo bien esta ultima frase, la comparasion es entre que modelos? con que \tau_H?. Nicolas 
+We use the full width at half maximum (FWHM), $W_{1/2}$to quantify the line
+broadening. Figure \ref{fig:widthvsvelocity} shows how $W_{1/2}$ increases
+with rotational velocity. {\bf Here we need to check the numbers to
+  say something more specific.}
+
+
+We parameterize the dependency of the linewidth as $W_{1/2}^2 =
+W_{1/2,0}^2 + V_{\rm max}^2/\lambda^2$, where $W_{1/2,0}$ is the
+velocity width in the static case and $\lambda$ is a positive
+scalar to be determined as a fit to the data. With this test we want
+to know to what extent the new velocity witdth can be expressed as a
+quadratic sum of the two relevant velocities in the problem. We find
+that for the 
 
 Figure \ref{fig:maximumsvsvelocity} shows the position for the peak
 maxima as a function of the rotational velocity $V_{\rm max}$. This
