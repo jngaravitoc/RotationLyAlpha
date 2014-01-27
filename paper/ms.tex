@@ -272,6 +272,20 @@ a}$) and temperature.
 
 
 
+\begin{figure*}
+\begin{center}
+  \includegraphics[width=0.45\textwidth]{f1_1.eps}
+  \includegraphics[width=0.45\textwidth]{f1_2.eps}
+\end{center}
+\caption{Shape of the \ly line for
+    different velocities rotational velocities for spherical
+    distributions with $\tau_{H}=10^{7}$. The left (right) panel shows
+    the central (homogeneous) photon distribution. All photons were
+    taken into  account regardless of their final direction of propagation.
+    \label{fig:differentvelocities}}  
+\end{figure*}
+
+
 \subsection{Grid of Simulated Galaxies}
 \label{sec:models}
 
@@ -311,19 +325,6 @@ Photons Distributions & & Central, Homogeneous\\\hline\hline
 
 \section{Results}
 \label{sec:results}
-
-\begin{figure*}
-\begin{center}
-  \includegraphics[width=0.45\textwidth]{f1_1.eps}
-  \includegraphics[width=0.45\textwidth]{f1_2.eps}
-\end{center}
-\caption{Shape of the \ly line for
-    different velocities rotational velocities for spherical
-    distributions with $\tau_{H}=10^{7}$. The left (right) panel shows
-    the central (homogeneous) photon distribution. All photons were
-    taken into  account regardless of their final direction of propagation.
-    \label{fig:differentvelocities}}  
-\end{figure*}
 
 The central result of this paper is summarized in Figure
 \ref{fig:differentvelocities}. It shows the evident
@@ -579,41 +580,9 @@ vs. single excursion. {\bf Que quiere decir eso de single flight y
     $\hat{k}_{\rm out}$ represents the outgoing direction of an
     escaping \ly photon. {\bf Si el observador esta en j, entonces las
     dos esferas no deberian estar sobre el eje k? Lo mejor es ademas
-    hacer las dos circulos pequenos punteados}
+    hacer las dos circulos pequenos punteados.}
     \label{fig:OCspheres}} 
 \end{figure}
-
-Rotation breaks the spherical symmetry of the static model and
-introduces a prefered axis
-
-The raw data from the model with homogeneous radiation sources allows
-to study the effect of radiation sources distributed with a different
-symmetry than the gas. We can select photons emitted in off-centered spheres 
-with respect to the gas distribution and check whether this produces
-asymmetries in the line.
-
-
-Figure \ref{fig:OCspheres} shows the two spherical regions we
-define to test for this effect. Each has a radius of $0.5$R and can
-have two possible centers positions $C$ along the $\hat{\j}$ direction:
-$\pm C\hat{\i}$. We also place an observer along the $\hat{\j}$
-direction, such that the emitting sphere centered on $+C\hat{\j}$ moves
-away from the observer and the sphere centered on $-C\hat{\j}$ moves
-towards the observer. 
-
-We study first the angular deviations of the outgoing photons with respect
-to an isotropic flux. We follow \cite{Zheng2013} to estimate the flux
-as a function of the angle $\Theta$ formed by the outgoing photons and
-the observer. This is expressed by 
-
-\begin{equation}
-F(\mu) = \frac{2\Delta N}{N\Delta \mu}, 
-\end{equation} 
-%
-where $\mu=\cos\Theta$, $N$ is the total number of outgoing photons,
-$\Delta N$ is the number of photons in a angular bin $\Delta
-\Theta$. This definition satisfies the condition
-$\int_{-1}^{1}F(\mu)d\mu/2=1$.  
 
 \begin{figure}
   \includegraphics[scale=0.35]{f9.eps}
@@ -621,6 +590,55 @@ $\int_{-1}^{1}F(\mu)d\mu/2=1$.
   distributions central(Points line), homogeneous(Dashed) and off-Center(Solid line).  
     \label{fig:muhisto}} 
 \end{figure}
+
+Rotation breaks the spherical symmetry of the static model and
+introduces the rotation axis as a preferred direction. This motivates
+us to study the anisotropy of the outgoing photons. In order to study
+possible deviations with respect to an isotropic flux we follow
+\cite{Zheng2013} to estimate the flux as a function of the angle
+$\Theta$ formed by the outgoing photons and the observer. Figure
+\ref{fig:OCspheres} presents a geometric scheme to clarify the
+definition of all relevant directions in the problem.
+
+An estimator for the anysotropy is represented by
+%
+\begin{equation}
+F(\mu) = \frac{2\Delta N}{N\Delta \mu}, 
+\end{equation} 
+%
+where $\mu=\cos\Theta$, $N$ is the total number of outgoing photons,
+$\Delta N$ is the number of photons in a angular bin $\Delta
+\Theta$. This definition satisfies the condition
+$\int_{-1}^{1}F(\mu)d\mu/2=1$.  With this definitions, the isotropic
+emission is characterized by a flat $F(\mu)$ distribution. 
+
+
+Figure \ref{fig:OCspheres} presents the results for the $F(\mu)$
+distribution for an sphere with $\tau_{\rm H}=10^{7}$ and $V_{\rm
+  max}=200$\kms. The dashed and dotted lines represent the homogeneous
+and central source distribution, respectively. This shows that the
+level of anisotropy induced by rotation does not surpasses the $5\%$
+level. We performed the same test with all the models and we do not
+fina any significant anisotropic effect.
+
+
+We explore other kind of anisotropy by study the effect
+of radiation sources distributed with a different symmetry than the
+gas. To this end we select a subset of the photons in the homogeneous
+models such as they are emitted from off-centered spheres with respect
+to the gas distribution.
+
+Figure \ref{fig:OCspheres} shows the two spherical regions we
+define to test for this effect. Each has a radius of $0.5R$, where $R$
+is the radius of the gaseus sphere. Provided that there is an observer
+located along the $\hat{j}$ direction, we pick two possible positions
+to center the spheres along the $\hat{k}$ axis: $\pm C\hat{k}$. In
+this configuration the emitting sphere centered on $+C\hat{k}$ moves
+away from the observer and the sphere centered on $-C\hat{j}$ moves
+towards the observer. 
+
+%JEFR
+
 
 The variations in the $\mu$ distribution is shown in Figure \ref{fig:muhisto},
 for the Off-Center model there is a strong dependence of the 
@@ -683,11 +701,13 @@ Figure \ref{fig:3p_res} show that even with a low resolution a three-peak profil
 would be observed, this is important for observational porpoises due to the finite 
 spectral resolution.
 
-\begin{figure*}
+\begin{figure}
+\begin{center}
 \includegraphics[scale=0.3]{f12.eps}
+\end{center}
 \caption{Three-Peak profiles for different resolutions:Low (Solid), medium(dashed), high(doted), 
    \label{fig:3p_res}} 
-\end{figure*}
+\end{figure}
 
 
 \section{Discussion}
