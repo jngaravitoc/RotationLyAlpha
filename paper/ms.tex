@@ -603,8 +603,6 @@ vs. single excursion. {\bf Que quiere decir eso de single flight y
    \label{fig:OC_profiles}} 
 \end{figure*}
 
-\subsection{Three-Peak Profiles}
-\label{sec:3p}
 
 \begin{figure*}
 \includegraphics[scale=0.3]{f11.eps}
@@ -681,31 +679,63 @@ V=100$\kms and $\tau = 10^7, V=300$\kms) and could be the result of
 two competing effects: the rise in the line's center as the photons in
 the photosphere escape in a single excursion and the broadening in the
 two peaks as the photons closer from the center have to scatter to
-escape. 
+escape. We examine in greater detail these cases in the next
+sub-section. 
 
-%JEFR
 
-As mentioned above Off-centered emission shows signs of three peak 
-profiles, to analyse this in more detail we use the same method of the spheres
-explained in \S \ref{sec:off-center}. We select spheres at $C=(\pm 0.25R, \pm0.5R, \pm0.75R)$ with a radii of
-$0.25R$ for all the models, for those who present signs of three peak profiles such as 
-$(V_{max}=50km$ $s^{-1}$ \& $\tau_{H}=10^{5}), (V_{max}=100km$ $s^{-1}$ \& $\tau_{H}=10^{6}), 
-(V_{max}=200km$ $s^{-1}$ \& $\tau_{H}=10^{7})$ we made another run with $\tau_{\gamma}=10^{6}$ 
-with the aim of get stronger profiles. 
 
-Figure \ref{fig:3p_profiles} shows our findings, in order to get such profiles 
-a relation between optical depth, rotational velocity and $C$ must be accomplish.
-In particular we found that for the outer spheres $C=\pm 0.75$ the three
-peak arises for all of our models with $\tau_{\gamma}=10^{6}$ this is due to 
-the fact that the wings of the line move away from the central part as $C$ increase. 
-Another requirement is that a high optical depth must be balanced with a high velocity 
-in order to make the wings and the central peak similar in 
-height, for models in which the velocity is low spheres at $C = \pm 0.25$ produce 
-noise three peak profiles due to the high value of $\tau_{H, r}$.
+\subsection{Triple Peaked Profiles}
+\label{sec:3p}
 
-Figure \ref{fig:3p_res} show that even with a low resolution a three-peak profile 
+The off-centered cases with hints of triple peaked emision motivate us
+to explore this in more detail. The first condition is to increase the
+number of photons in the radiative transfer calculation. In the line
+profiles presented in the previous subsection, only $\sim 10^4$ photons
+have the geometric conditions to build the line profile. We run a few
+models with $N_{\gamma} = 10^6$ in order to improve the statistics and
+explore smaller radii for the off-centered spheres.
+
+We re-simulate four models that presented some signs of triple peaked
+profiles: $V_{\rm max}=50\kms$, $\tau_{\rm H}=10^{5}$; $V_{\rm
+  max}=100\kms$, $\tau_{H}=10^{6}$; $V_{\rm max}=150\kms$, $\tau_{\rm
+  H}=10^6$; and $V_{\rm max}=200\kms$, $\tau_{\rm H}=10^{7}$. We
+select the photons that were emitted within spheres of radius $0.25R$
+centered at $C=(0.25R, 0.5R, 0.75R)$, following the same
+geometry presented in Figure \ref{fig:OCspheres}.
+
+Figure \ref{fig:3p_profiles} summarizes the results for all these
+models. In all cases the stronger triple peaked signatures is
+presented by the emitting spheres close centered at $0.75R$ close to
+the surface. Emitting spheres closer to the center do not show clear
+signatures for a triple peaked emission.
+
+Furthermore, taking into account all the models that do not event present hints for
+a triple peaked emission it would seem that the rotational velocity
+and optical depth must balance each other in order to show this feature
+feature. Namely, if the rotational velocity is close to half the HFWM
+of the line, the triple peaks are more likely to occurr. This is the
+same threshold that in the case of centered emission marks the
+difference between double and single peaked lines.
+
+
+Are these features observable with current instrumental capabilities?
+As an order of magnitude estimate we can consider that the width of
+each one of the triple peaks is close to $1/3$ of the FWHM of the line
+at a given $V_{\rm max}$. For the cases we have studied in this
+subsection those values would be close to $50\kms$, $100\kms$ and
+$200\kms$ for optical depths of $10^5$, $10^6$, and $10^7$
+respectively. At a redshift of $z\sim 2-3$ each one of these widths
+is multiplied by factors of $z+1\sim 3-4$. Considering a nominal value
+for the resolution of $\Delta v=200\kms$ for a Near-IR spectrograph capable of observing
+those galaxies \citep{Kulas12}, we find that only the case of triple
+peaked emission for the most massive object $\tau_{\rm H}, 10^{7}$,
+$V_{\rm max}=200\kms$ would have a chance to be spectrally resolved. 
+
+
+{\bf Figure \ref{fig:3p_res} show that even with a low resolution a three-peak profile 
 would be observed, this is important for observational porpoises due to the finite 
-spectral resolution.
+spectral resolution. Seguro? Que es baja resolucion y que es alta
+resolucion en este contexto?}
 
 \begin{figure}
 \begin{center}
