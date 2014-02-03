@@ -93,23 +93,13 @@ Miercoles, Nscatt section
 Jueves, Esc Fractions
 Viernes, Off-centre
 
-Ideas bobas:
-
-Se puede medir ly alpha del grupo local?
-y asi usar simulaciones tipo CLUES , ELVIS para testiar simulaciones del espectro de Ly alpha con lo observado?
-
-mirar como CLOUDY me podria ayudar!
-
-Study Analytical calculations
-
-CLARA usa AMR?
-
-Hydro:
-Tasitsiomi z~8 to see detectability
-Laursen 2006 --> Anticorrelation of Fesc and the mas of the galaxy
-Barnes et al 2011 --> 
-Yajima et al --> see Lyalpha propertios of galaxies with time
-
+Semana del 3 al 7 d Ferero
+===================================
+1. Hacer fitting de la fig2
+2. Arreglar figura 8 --> (L)
+3. Areglar los tipos de latra de las figras a serif -->(Ma)
+4. Arreglar Velocity labes de la fig.10 --> (Ma) 
+5. Pegar paneles de la figura 11. -->(Ma)
 
 
 
