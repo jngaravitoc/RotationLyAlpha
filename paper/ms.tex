@@ -331,9 +331,10 @@ The panel focus on the results for all of our symmetric models
 influence of rotation is present both when the photons are either
 homogeneously or centrally initialized over the gas volume.  
 
-In the next subsections we characterize the line morphology by
-the full width at half maximum (FWHM) and the location of the peak maxima. In order to interpret the morphological changes in the line we also report the
-median number of scatter for each \ly photon in the
+In the next subsections we characterize the line morphology by the
+full width at half maximum (FWHM) and the location of the peak
+maxima. In order to interpret the morphological changes in the line we
+also report the median number of scatter for each \ly photon in the
 simulation. For the models where dust is included we measure the 
 escape fraction as a function of rotational velocity. Finally, we make
 an estimate of the anisotriopic emission of the models in comparison
@@ -345,16 +346,22 @@ with static spheres.
 
 
 \begin{figure*}
-    \includegraphics[width=1.0\textwidth]{f2.eps}
-    \caption{Half-width for the non-dusty models as a function of
-      rotational velocity $V_{\rm max}$. Continuous (dashed) lines
-      correspond to central (homogeneous) source
-      distributions. \label{fig:widthvsvelocity}} 
+\begin{center}
+  \includegraphics[width=0.9\textwidth]{f2.eps}
+\end{center}
+  \caption{FWHM for the non-dusty models as a function of
+    rotational velocity $V_{\rm max}$. The left panel shows the
+    results in velocity units while the right panel normalizes
+    the data by the FWHM in the static case. 
+    Continuous (dashed) lines  correspond to central (homogeneous)
+    source distributions. The straight lines represent the fit to
+    the data using the expresion in Eq. (\ref{eq:fwhm}).
+    \label{fig:widthvsvelocity}} 
 \end{figure*}
 
 
 \begin{figure}
-    \includegraphics[scale=0.4]{f3.eps}
+    \includegraphics[scale=0.35]{f3.eps}
 \caption{Position of the peak maxima as a function of rotational
   velocity $V_{\rm max}$. Continuous (dashed) lines correspond to
   central (homogeneous) source distributions. A value of $x_{\rm
@@ -370,20 +377,23 @@ impresion that the double peaks are merger into one at high rotational
 velocities, a result that is evident for the homogeneously distributed
 sources as shown in right panel in Figure \ref{fig:differentvelocities}.
 
-We use the full width at half maximum (FWHM), $W$, to quantify the line
-broadening. Figure \ref{fig:widthvsvelocity} shows how $W$ increases
-with rotational velocity. {\bf Here we need to check the numbers to
-  say something more specific.}
-
-We parameterize the dependency of the linewidth as $W^2 =
-W_{0}^2 + V_{\rm max}^2/\lambda^2$, where $W_{0}$ is the
-velocity width in the static case and $\lambda$ is a positive
-scalar to be determined as a fit to the data. With this test we want
-to know to what extent the new velocity width can be expressed as a
-quadratic sum of the two relevant velocities in the problem. By
-fitting simultaneously all the data points corresponding to central
-and homogeneous models we find $\lambda_{\rm c} = 3.9 \pm$ and
-$\lambda_{\rm h}= 1.9\pm $ respectively.  
+We use the full width at half maximum (FWHM) to quantify the line
+broadening. Figure \ref{fig:widthvsvelocity} shows how $FWHM$ increases
+with rotational velocity both for the central an homogeneous source
+distributions.  We parameterize the dependency of the linewidth as
+\begin{equation}
+ FWHM^2 = FWHM_{0}^2 + V_{\rm max}^2/\lambda^2,
+\label{eq:fwhm}
+\end{equation}
+%
+where $FWHM_{0}$ is the
+velocity width in the static case and $\lambda$ is a positive scalar
+to be determined as a fit to the data. With this test we want to know
+to what extent the new velocity width can be expressed as a quadratic
+sum of the two relevant velocities in the problem. We fit
+simultaneously all the points corresponding to central and homogeneous
+models to find $\lambda_{\rm c} = 3.9 \pm$ and $\lambda_{\rm h}=
+1.9\pm $ respectively.   
 
 In order to quantify the transition to a single peak we measure the
 position for the peak maxima as a function of the rotational
@@ -420,7 +430,7 @@ quantify the effect of rotation on the number of scatterings.
 
 
 \begin{figure}
-    \includegraphics[scale=0.4]{f4.eps}
+    \includegraphics[scale=0.35]{f4.eps}
 \caption{Logarithm of the average number of scatterings as function of
   rotational velocity. Continuous (dashed) lines represent an
   central (homogeneous) distribution of sources. \label{fig:Nscatt}}    
@@ -512,7 +522,7 @@ driving the photon outside the line center.
 \label{sec:escapefraction}
 
 \begin{figure}
-  \includegraphics[scale=0.4]{f6.eps}
+  \includegraphics[scale=0.35]{f6.eps}
   \caption{Escape fraction as a function of rotational velocity. All
     these models have $\tau_{a}=1$. The continuous (dashed) lines
     correspond to central (homogeneous) models.
@@ -521,7 +531,7 @@ driving the photon outside the line center.
 
 
 \begin{figure}
-  \includegraphics[scale=0.4]{f7.eps}
+  \includegraphics[scale=0.35]{f7.eps}
   \caption{Escape fraction as a function of the
     product $(a\tau_{\rm H})^{1/3}\tau_{a}$. The analytic solution for
     the infinite slab is shown as a continuous line. Different dashed
@@ -568,7 +578,7 @@ vs. single excursion. {\bf Que quiere decir eso de single flight y
 \label{sec:off-center}
 \begin{figure}
 \begin{center}
-  \includegraphics[scale=0.4]{f8.eps}
+  \includegraphics[scale=0.35]{f8.eps}
   \caption{The two small circles show the two different spherical
     off-centered emitting regions with respect to the larger spherical
     gas distribution. The angular velocity vector is
@@ -583,13 +593,11 @@ vs. single excursion. {\bf Que quiere decir eso de single flight y
 \end{figure}
 
 \begin{figure}
-  \includegraphics[scale=0.4]{f9.eps}
+  \includegraphics[scale=0.35]{f9.eps}
   \caption{$\mu$ histogram showing the orientation effects for the different
   distributions central(Points line), homogeneous(Dashed) and off-Center(Solid line).  
     \label{fig:muhisto}} 
 \end{figure}
-
-
 
 \begin{figure*}
 \begin{center}
@@ -602,7 +610,9 @@ vs. single excursion. {\bf Que quiere decir eso de single flight y
 
 
 \begin{figure*}
-\includegraphics[scale=0.4]{f11.eps}
+\begin{center}
+\includegraphics[scale=0.35]{f11.eps}
+\end{center}
 \caption{Triple peaked profiles for three different off-center positions
   $C=0.25R$ (doted line), $C=0.5R$ (dashed line) \& $C=0.75R$ (solid
   line) and for different rotational velocities.  
