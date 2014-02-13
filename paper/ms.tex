@@ -378,22 +378,22 @@ velocities, a result that is evident for the homogeneously distributed
 sources as shown in the dashed lines of Figure \ref{fig:differentvelocities}.
 
 We use the full width at half maximum (FWHM) to quantify the line
-broadening. Figure \ref{fig:widthvsvelocity} shows how $FWHM$ increases
+broadening. Figure \ref{fig:widthvsvelocity} shows how the FWHM increases
 with rotational velocity both for the central an homogeneous source
 distributions.  We parameterize the dependency of the linewidth as
 \begin{equation}
- FWHM^2 = FWHM_{0}^2 + V_{\rm max}^2/\lambda^2,
+ {\rm FWHM}^2 = {\rm FWHM}_{0}^2 + V_{\rm max}^2/\lambda^2,
 \label{eq:fwhm}
 \end{equation}
 %
-where $FWHM_{0}$ is the
+where FWHM$_{0}$ is the
 velocity width in the static case and $\lambda$ is a positive scalar
 to be determined as a fit to the data. With this test we want to know
 to what extent the new velocity width can be expressed as a quadratic
 sum of the two relevant velocities in the problem. We fit
 simultaneously all the points corresponding to central and homogeneous
 models to find $\lambda_{\rm c} = 3.9 \pm 3.17\times 10^{-17}$ and $\lambda_{\rm h}=
-1.9\pm 3.07\times 10^{-10}$ respectively.   
+1.9\pm 3.07\times 10^{-10}$ respectively.  {\bf EL ERROR ES de $10^{-17}???$}
 
 In order to quantify the transition to a single peak we measure the
 position for the peak maxima as a function of the rotational
@@ -523,20 +523,21 @@ driving the photon outside the line center.
 
 \begin{table}
 \begin{center}
-\begin{tabular}{c c}
+\begin{tabular}{c ccc ccc}
 \hline \hline
-Model, $\tau_{H}$ & $\ V_{max}(km\ s^{-1})$ $0, 50, 100, 200, 300$ \\
-\hline \hline
-Homogeneous $10^{5}$& $\ 0.2637\  0.2661\  0.3091\  0.3570\  0.3709$ \\
-Homogeneous $10^{6}$ & $\ 0.2894\  0.2891\  0.3096\  0.3607\  0.3937$ \\
-Homogeneous $10^{7}$ &$\ 0.2279\  0.2298\  0.2318\  0.2547\  0.2813 $\\
-Central $10^{5}$ & $\ 0.0966\  0.0966\  0.0965\  0.0965\  0.0965$ \\
-Central $10^{6}$ & $\ 0.0663\  0.0665\  0.0665\  0.0665\  0.0665$ \\
-Central $10^{7}$ & $\ 0.0149\  0.0158\  0.0158\  0.0158\  0.0158$ \\
+Sources & $\tau_{H}$ & & & $\ V_{\rm max}$& & \\
+& &  &  & (\kms) & & \\ 
+& & 0 & 50 & 100 &200 & 300\\ \hline 
+Homogeneous & $10^{5}$& 0.263 & 0.266 &  0.309 &  0.357 &  0.370  \\
+           & $10^{6}$ & 0.289 &  0.289 &   0.309 &  0.360 &  0.393 \\
+         &$10^{7}$ &  0.227 &  0.229 &  0.231 &  0.254 &  0.281 \\
+Central & $10^{5}$ &  0.096 & 0.097 & 0.096 &  0.096 & 0.096 \\
+  &$10^{6}$ & 0.066 & 0.066 &  0.066 &  0.066 &  0.066 \\
+ &$10^{7}$ & 0.015 &  0.016 & 0.016 & 0.016 & 0.015 \\
 \hline
 \end{tabular}
 \caption{
- Escape fraction values for all of the models. } 
+ Escape fraction values for all dusty models. } 
 \label{table:escape}
 \end{center}
 \end{table}
@@ -832,14 +833,13 @@ peaked lines as the rotational velocity increases. In the case of
 off-centered emission result into triple peaked lines for certain
 values of optical depth and rotational velocities. 
 
-Quantitatively the main results of our study are summarized in the
-following items. 
+Quantitatively the main results of our study are summarized as follows.
 
 \begin{itemize}
 
 \item The line width increases with rotational velocity. The line with
-  approximately follows the functional form $W^2 = W_{
-    0}^2 + (V_{\rm max}/\lambda)^2$ where $W_{0}$ indicates the line
+  approximately following the functional for  ${\rm FWHM}^2 = {\rm FWHM}_{
+    0}^2 + (V_{\rm max}/\lambda)^2$ where FWHM$_{0}$ indicates the line
   width for the static case. $\lambda$ is a constat determined from
   the radiative transfer results it is $\lambda_{\rm c}=3.9\pm$ and
   $\lambda_{\rm h}=1.9\pm$ for the central and homogeneous source
@@ -847,44 +847,37 @@ following items.
 
 
 \item A single peaked line emerges for high rotational velocities in
-  the case of homgeneously distributed sources. The cases of single
-  peaked lines occur when the rotational velocity is larger than the
-  line width measured in the static case.
-
+  the case of homgeneously distributed sources. These cases occur when
+  the rotational velocity is larger than hFWHM$_0$.  
 
 \item For central sources we find that the number of scatterings
-does not significantly decrease with rotation, this is due to the 
+does not significantly decrease with rotation. This is due to the 
 fact that the vast majority of scatterings events are resonant, 
 during which the mean free path is very short and the effect of gas
-bulk rotation is not enough to affect \ly photons.
-The escape fraction does not depend on the rotational velocity neither
-the position of the peaks, but there is an increase 
-in the flux on the central parts of the line for high rotational 
-velocities.
+bulk rotation is not enough to affect \ly photons. In consequence, 
+the escape fraction neither the position of the peaks depende on the
+rotational velocity. However, there is a flux increase with rotational
+velocity in the central parts of the line.
+
 
 \item For homogeneous sources we find that the changes in the
 line morphology are linked to the reduction in the average number of
 scatterings. In the second part of \S \ref{sec:widthpeak} we show
 that, as rotational velocity increases, a large fraction of photons
-escape with less than $10$ scatterings and on average 
-with $40\%$ less scatterings than in the static case. This makes highly improbable 
-that a photon's frequency can move away from the line's center. 
-In \S \ref{sec:widthpeak} For typical column densities of $N_{HI}=1e^{19}-1e^{20}$, 
-we find that rotational velocities of 100-300 \kms broaden the line profile up 
-to a factor of $2-3$ in comparison to the static case. Simultaneously, the
-flux in the line center also increases with rotational velocity. This
-increase induces the transition from a double peak to a single peak
-line in the models where the radiation sources are homogeneously
-distributed. Also the escape fraction increase by factors of $2-10$ with 
-respect to the slab with centrally sources.
+escape with less than $10$ scatterings. The avarage number of
+scatterings decreases a $40\%$ compared to the static case. 
+The reduction in the number of scattering decreases the probability
+for a photon to move away from the line's center. This is also
+translated into an increase of the escape fraction by a factor of
+$\sim 2$ with respect to the static situation.
 
-\item For non-symmetric sources we find that three peak profiles
-could emerge for models in which the rotational velocity is the necessary 
-to give rise to a central peak, but not that high to decrease the
-amount of photons in the wings. When initial off-center sources are 
-selected from the outer parts of the galaxy the wings of the line are stronger.
-Also we do not find any considerable asymmetries in the line produced by off-center 
-emission.
+\item The spatial anisotropies in the emission are always at a level
+  below the $10\%$ deviation from static models.
+
+\item For off-centered emission triple peaked profiles can emerge
+  under two conditions: the emission occurs close to th sphere's
+  surface and the rotational velocity is half the FWHM in the static
+  case.   
 \end{itemize}
 
 Comparing our results with recent observed LAEs we find that many 
