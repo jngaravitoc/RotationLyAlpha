@@ -41,7 +41,7 @@
 
 \altaffiltext{1}{Departamento de F\'{i}sica, Universidad de los Andes, Cra. 1
 No. 18A-10, Edificio Ip, Bogot\'a, Colombia}
-\altaffiltext{2}{Max Planck Institute for Astrophysics, Karl-Schwarzschild-Str. 1, 85741, Garching, Germany}
+\altaffiltext{2}{Institute of Theoretical Astrophysics, University of Oslo, Postboks 1029, 0858 Oslo, Norway}
 
 \begin{abstract}
 
@@ -87,7 +87,7 @@ notably include temperature, density and bulk velocity field of the neutral
 Hydrogen in the emitting galaxy and its surroundings.
 
 
-A basic understanding of the quantitative behaviour of the \ly line
+A basic understanding of the quantitative behavior of the \ly line
 has been reached through analytic studies in the case of a static
 configurations, such as uniform slabs
 \citep{Adams72,Harrington73,Neufeld90} and uniform spheres
@@ -443,8 +443,8 @@ quantify the effect of rotation on the number of scatterings.
   \includegraphics[width=0.45\textwidth]{f5_4.eps}    
 \end{center}
     \caption{2D histogram of $N_{\rm scatt}$ vs $x$. The upper (lower) panels
-      show the homogeneous (central) source distribution. Left
-      corresponds to the static case and right
+      show the homogeneous (central) source distribution. Left panels 
+      corresponds to the static case and right panels corresponds to
       $V_{\rm max}=300\kms$. The color scale is logarithmic on the
       number of photons with given values of $N_{\rm scatt}$ and
       $x$. \label{fig:Nscatt2D}}   
@@ -474,7 +474,7 @@ scatterings $\langle N_{\rm   scatt}\rangle$ changes less than $0.5\%$
 for different velocities. In this set-up the number of scatterings is
 proportional to the optical depth, with $\langle N_{\rm
   scatt}\rangle= (1.50, 1.00, 0.92)\tau_{\rm   H}$ for optical depth
-values of $\tau_{\rm H} = (10^{5}, 10^{6}, 10^{7})$, respectively and
+values of $\tau_{\rm H} = (10^{5}, 10^{6}, 10^{7})$ respectively and
 $V_{\mathrm{max}}=300$ \kms.
 
 
@@ -630,8 +630,8 @@ increase significantly from $\tau_{\rm H}=10^{5}$ to $\tau_{\rm H}=10^{6}$, This
 \end{center}
 \caption{Triple peaked profiles for three different off-center positions
   $C=0.25R$ (doted line), $C=0.5R$ (dashed line) \& $C=0.75R$ (solid
-  line) and for different rotational velocities. And $\theta$ represents the angle 
-  between the rotation axes $\hat{k}$ and the observer line of sight.
+  line) and for different rotational velocities. And $\theta$ represents the usual
+  polar angle.
    \label{fig:3p_profiles}} 
 \end{figure*}
 
@@ -659,10 +659,10 @@ emission is characterized by a flat $F(\mu)$ distribution.
 
 
 Figure \ref{fig:OCspheres} presents the results for the $F(\mu)$
-distribution for an sphere with $\tau_{\rm H}=10^{7}$ and $V_{\rm
+distribution for a sphere with $\tau_{\rm H}=10^{7}$ and $V_{\rm
   max}=200$\kms. The dashed and dotted lines represent the homogeneous
 and central source distribution, respectively. This shows that the
-the  anisotropy induced by rotation is at the $3\%$ level. We
+ anisotropy induced by rotation is at the $3\%$ level. We
 performed the same test with all the models and find that the
 variation in $\mu$ does not depend on the rotational velocity;
 however, high optical depth values can increase the variation of
@@ -732,10 +732,10 @@ presented by the emitting spheres close centered at $0.75R$ close to
 the surface. Emitting spheres closer to the center do not show clear
 signatures for a triple peaked emission.
 
-Furthermore, taking into account all the models that do not event present hints for
+Furthermore, taking into account all the models that do not present hints for
 a triple peaked emission it would seem that the rotational velocity
-and optical depth must balance each other in order to show this feature
-feature. Namely, if the rotational velocity is close to half the FWHM
+and optical depth must balance each other in order to show this feature.
+ Namely, if the rotational velocity is close to half the FWHM
 of the line, the triple peaks are more likely to occur. This is the
 same threshold that in the case of centered emission marks the
 difference between double and single peaked lines.
@@ -792,7 +792,7 @@ for 91 LAEs at $z=3.1$. They find that $\sim 33 \%$ of the galaxies present
 a single peak profile. Some of the peaks have a strong symmetry, while
 others do not. The symmetric single peaked profile can be explained by
 rotation effects, while the asymmetric cases naturally arise in
-outflow/inflow models \citep{Verhamme2008, Dijkstra06}. Among the 91
+outflow/inflow models \citep{Ahn2014,Verhamme2008, Dijkstra06}. Among the 91
 LAEs, 8 reveal triple peaked profiles with a central peak and two
 smaller peaks at the redder and bluer side, a feature that is present
 in our off-center emission models with rotation Figure \ref{fig:3p_profiles}. 
@@ -800,7 +800,7 @@ in our off-center emission models with rotation Figure \ref{fig:3p_profiles}.
 The presence of single peaked profiles has been associated to
 inflow/outflow dynamics \citep{Verhamme06,DijkstraKramer}. In this
 paper we show that gas bulk rotation can also be considered as a
-probable origin for that behaviour, provided that the observed single peak is highly
+probable origin for that behavior, provided that the observed single peak is highly
 symmetric. Similarly, in the case of double peaked lines with a high
 level of flux at the line center, rotation also deserves to be considered in
 the pool of possible bulk flows responsible for that feature,
@@ -859,7 +859,7 @@ scatterings. In the second part of \S \ref{sec:widthpeak} we show
 that, as rotational velocity increases, a large fraction of photons
 escape with less than $10$ scatterings. The average number of
 scatterings decreases a $40\%$ compared to the static case. 
-The reduction in the number of scattering decreases the probability
+The reduction in the number of scatterings decreases the probability
 for a photon to move away from the line's center. This is also
 translated into an increase of the escape fraction by a factor of
 $\sim 2$ with respect to the static situation.
@@ -892,6 +892,11 @@ We thank the International Summer School on AstroComputing
 AstroComputing Center (UC-HiPACC) for providing computational
 resources where some of the calculations were done. 
 
+The data and source code and instructions to
+replicate the results of this paper can be found
+here {\texttt{https://github.com/jngaravitoc/RotationLyAlpha}}.
+Thanks to the IPython community \citep{IPython} and to the matplotlib
+community \citep{matplotlib}.
 
 
 
