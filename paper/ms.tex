@@ -51,18 +51,16 @@ emission line in distant galaxies. We model a galaxy as a sphere with
 a homogeneous mixture of dust and hydrogen at a constant
 temperature. These spheres have a solid-body rotation with maximum
 velocities in the range $0-300$ \kms and neutral hydrogen optical
-depths in the range $\tau_{\rm H}=10^{5}-10^{7}$. We also consider two
-kinds of spatial distribution for the radiation sources with respect
-to the sphere: central and homogeneous. Our main finding is that the
-line width and the intensity at the line's center increase with
-rotational velocity. For homogeneously distributed sources the line
-becomes single peaked at rotational velocities larger than the line
-width in the static case. Under the same
-conditions the escape fraction increases $\sim 30\%$. For radiation
-sources located off-center, the line morphology presents a range of
-single, double and triple peaks. We show how these results are useful
-to interpret recent spectroscopic results of distant $z\sim 2-3$ star
-forming galaxies. 
+depths in the range $\tau_{\rm H}=10^{5}-10^{7}$. We consider cases 
+of a single central \lya source, and a uniform distribution of sources. 
+Our main finding are that the escape fraction of \lya photons, and
+the intensity at the line center increase with rotational velocity. 
+For homogeneously distributed sources the line becomes single peaked 
+at rotational velocities larger than the line width in the static case.
+For radiation sources located off-center, the line morphology presents 
+a range of single, double and triple peaks. We show how these results 
+are useful to interpret recent spectroscopic results of distant 
+$z\sim 2-3$ star forming galaxies. 
 
 \end{abstract}
 
@@ -77,7 +75,7 @@ forming galaxies.
 The detection of strong \ly emission lines has become an essential
 method in extra-galactic astronomy to find distant star-forming
 galaxies
-\citep{PartridgePeebles,Rhoads00,Gawiser2007,Koehler2007,Ouchi08,Yamada2012,Schenker2012}.
+\citep{PartridgePeebles,Rhoads00,Gawiser2007,Koehler2007,Ouchi08,Yamada2012,Schenker2012,Finkelstein2013}.
 The galaxies detected using this method receive the 
 name of \ly emitters (LAEs). A detailed examination of this galaxy
 population has diverse implications for galaxy formation, reionization
@@ -92,7 +90,7 @@ Hydrogen in the emitting galaxy and its surroundings.
 A basic understanding of the quantitative behaviour of the \ly line
 has been reached through analytic studies in the case of a static
 configurations, such as uniform slabs
-\citep{Harrington73,Neufeld90} and uniform spheres
+\citep{Adams72,Harrington73,Neufeld90} and uniform spheres
 \citep{Dijkstra06}. Analytic studies of configurations including
 some kind of bulk flow only include the case of a sphere with a Hubble
 like expansion flow \citep{LoebRybicki}. 
@@ -104,7 +102,7 @@ availability of computing power. Early into the 21st century, the first
 studies focused on homogeneous and static media
 \citep{Ahn00,Ahn01,Zheng02}; Later on, the effects of clumpy media
 \citep{Hansen06} and expanding/contracting shell/spherical geometries started to
-be studied \citep{Verhamme06,Dijkstra06}. Similar codes have applied
+be studied \citep{Verhamme06,Dijkstra06,Ahn2014}. Similar codes have applied
 these results to semi-analytic models of galaxy formation \citep{Orsi12} and
 results of large hydrodynamic simulations
 \citep{CLARA,Forero12,Behrens13}. Recently, Monte Carlo codes have also
@@ -139,7 +137,7 @@ line. We focus on a simplified system: a spherical gas cloud with
 homogeneous density and solid body rotation, to study the line
 morphology and the escape fraction in the presence of dust. We base
 our work on two independent Monte Carlo based radiative transfer codes
-CLARA \citep{CLARA} and XX \citep{DijkstraKramer} .   
+CLARA \citep{CLARA} and \citep{DijkstraKramer}.   
   
  
 This paper is structured as follows: In \S \ref{sec:implementation} we
@@ -229,7 +227,7 @@ of propagation $\hat{k}_{out}$ and the reduced frequency $x_{out}$. We
 define the angle $\Theta$ by $\cos\Theta = \hat{k}\cdot
 \hat{k}_{out}$, that is the polar angle of the outgoing photon with
 respect to the $z$ axis. Following \cite{Zheng2013} we make the study
-of the anisotropic emission in terms of this angle..
+of the anisotropic emission in terms of this angle.
 
 
 \subsection{Brief Description of the Radiative Transfer Codes}
@@ -310,11 +308,7 @@ Dust Optical Depth & $\tau_{a}$ & $0$,$1$\\
 Photons Distributions & & Central, Homogeneous\\\hline\hline
 \end{tabular}
 \caption{
-  List of the physical parameters that define the spherical models 
-  simulated in our Monte Carlo calculations. For each parameter we
-  vary the values in the range listed in the last column. Taking into
-  account all the possible combinations we end up with $60$ different
-  models.} 
+  Summary of Physical Parameters of our Monte Carlo Simulations.} 
 \label{table:models}
 \end{center}
 \end{table}
@@ -480,21 +474,26 @@ scatterings $\langle N_{\rm   scatt}\rangle$ changes less than $0.5\%$
 for different velocities. In this set-up the number of scatterings is
 proportional to the optical depth, with $\langle N_{\rm
   scatt}\rangle= (1.50, 1.00, 0.92)\tau_{\rm   H}$ for optical depth
-values of $\tau_{\rm H} = (10^{5}, 10^{6}, 10^{7})$, respectively
+values of $\tau_{\rm H} = (10^{5}, 10^{6}, 10^{7})$, respectively and
+$V_{\mathrm{max}}=300$ \kms.
 
 
-From Figure \ref{fig:Nscatt} is also clear that for the homogeneous
-distribution there is a clear decrease of $\langle N_{\rm
+From Figure \ref{fig:Nscatt} for the homogeneous
+distribution there is a decrease of $\langle N_{\rm
   scatt}\rangle$ as the $V_{\rm max}$ increases. For instance, for
 $\tau_{\rm H}=10^5$ the average number of scatterings decreases by
 $61\%$ at $V_{\rm max}=300\kms$ in comparison to the static case.  
 
-In this case we find that for a static sphere $\langle N_{\rm
+For the homogeneous static sphere we find that $\langle N_{\rm
   scatt}\rangle= (0.99, 0.59, 0.51)\tau_{\rm   H}$, this
 represents factors of $(0.66, 0.59, 0.55)$ lower than the centrally
-emitted photons. In contrast the analytic solution for the homogeneous
-slab gives $0.72$ times less scatterings in the homogeneous case than
-in the central one. 
+emitted photons. While for the homogeneous rotating sphere at 
+$V_{\rm{max}}=300\kms$ we find that $\langle N_{\rm
+  scatt}\rangle=(0.38, 0.34, 0.42)\tau_{\rm   H}$ which represents 
+  factors of $(0.26, 0.34, 0.46)$ lower than the corresponding central
+  case.  In contrast the analytic solution for the homogeneous
+slab gives	 $0.72$ times less scatterings in the homogeneous case than
+in the central one
 
 In order to gain a deeper understanding of these results and explain
 the results for the maxima in the line morphology we make 2D
@@ -584,9 +583,9 @@ $(a\tau_{\rm   H})^{1/3}\tau_{A}$ where $\tau_{A} = (1 - A)\tau_{a}$ , an approx
 that is valid only in the limit $a\tau_{\rm   H}\gg 1$. The dashed lines in
  the right panel of Figure \ref{fig:efvsv} show the results for the different rotational
 velocities for the homogeneous models. First of all we note that the escape fraction does not
-increase significantly from $\tau_{\rm H}=10^{5}$ to $\tau_{\rm H}=10^{6}$, a fact
-that is explained since there is a transition from an opaque to an extremely opaque medium
-which affects how the \ly photons escape from the medium.
+increase significantly from $\tau_{\rm H}=10^{5}$ to $\tau_{\rm H}=10^{6}$, This
+ counter-intuitive result is a consequence of the transition into the 'extremely' opaque regime,
+  which occurs roughly when $a\tau_{\rm{H}} > 10^{3}$ e.g. \citep{Neufeld90}.
 
 \subsection{Anisotropy and off-centered emission}
 \label{sec:off-center}
@@ -779,8 +778,9 @@ three peaks.
 
 The asymmetries in Groups I, II  and III cannot be explained by
 rotation. However, some galaxies in those groups have a high flux between
-the two peaks; an effect that can be induced by rotation. The same
-argument applies to galaxies in the group IV in which the flux
+the two peaks; this could indicate the presence of rotation 
+and \lya photons leaking though low column density holes, as in \citep{Behrens2014}.
+ The same argument applies to galaxies in the group IV in which the flux
 in between of the two peaks is high ($ \geq 70 \%$ of the intensity in
 the highest peak). Finally, the triple peaked lines in Galaxies in
 Group V can be easily reproduced by rotation with off-centered
