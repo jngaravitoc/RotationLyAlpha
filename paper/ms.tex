@@ -18,7 +18,7 @@
         {M_{\odot}}}}\else{$h^{-1}{\rm{M_{\odot}}}$}\fi}}   
 \newcommand{\Msun}{{\ifmmode{{\rm {M_{\odot}}}}\else{${\rm{M_{\odot}}}$}\fi}}  
 \newcommand{\msun}{{\ifmmode{{\rm {M_{\odot}}}}\else{${\rm{M_{\odot}}}$}\fi}}  
-\newcommand{\lya}{{Lyman$\alpha$~}}
+\newcommand{\lya}{{Lyman $\alpha$~}}
 \newcommand{\clara}{{\texttt{CLARA}}~}
 \newcommand{\rand}{{\ifmmode{{\mathcal{R}}}\else{${\mathcal{R}}$ }\fi}}  
 \newcommand{\hs}{{\hspace{1mm}}}  
@@ -56,9 +56,9 @@ velocities in the range $0-300$ \kms and neutral hydrogen optical
 depths in the range $\tau_{\rm H}=10^{5}-10^{7}$. We consider cases 
 of a single central \lya source, and a uniform distribution of sources. 
 Our main finding are that the escape fraction of \lya photons, and
-the intensity at the line center increase with rotational velocity. 
+the intensity at the line center increases with rotational velocity. 
 For homogeneously distributed sources the line becomes single peaked 
-at rotational velocities larger than the line width in the static case.
+at rotational velocities larger than half the line width in the static case.
 For radiation sources located off-center, the line morphology presents 
 a range of single, double and triple peaks. We show how these results 
 are useful to interpret recent spectroscopic results of distant 
@@ -136,20 +136,20 @@ line. We focus on a simplified system: a spherical gas cloud with
 homogeneous density and solid body rotation, to study the line
 morphology and the escape fraction in the presence of dust. We base
 our work on two independent Monte Carlo based radiative transfer codes
-CLARA \citep{CLARA} and \citep{DijkstraKramer}.   
+presented in \cite{CLARA} and \cite{DijkstraKramer}.   
   
- 
 This paper is structured as follows: In \S \ref{sec:implementation} we
 present the implementation of bulk rotation into the Monte Carlo
 codes, paying special attention to coordinate definitions. We also
 present a short review of how the \ly radiative transfer codes work
 and list the different physical parameters in the simulated grid of
-models. In the next \S \ref{sec:results} we present the results of the
-simulations, with special detail to quantities in the line that show a
+models. In \S \ref{sec:results} we present the results of the
+simulations, with special detail to quantities that show a
 clear evolution as a function of the sphere rotational velocity. In \S
 \ref{sec:discussion} we discuss the implications of our results in the
-interpretation of LAEs observations. In the last section we present
-our conclusions.  
+interpretation of LAEs observations with high resolution
+spectroscoy. In the last section we present our conclusions.    
+
 
 In this paper we express a photon's frequency in terms of the
 dimensionless variable $x\equiv (\nu -\nu_a)/\Delta\nu_\alpha$, where
@@ -171,19 +171,18 @@ $v_{th}=12.8$\kms.
 Describing the kinematics of gas rotation in all generality is a
 complex task, specially at high redshift where there is still missing
 a thorough observational account of rotation in galaxies beyond
-$z>1.0$. Event at low red-shifts there is a great
+$z>1.0$. Even at low redshifts there is a great
 variation in the shape of the rotation curve as observed in HI
 emission as a function of the distance to the galaxy center. However
 there are two recurrent features. First, in the
 central galactic region the velocity increases proportional to the radius,
 following a solid rotation behavior. Second, beyond a certain radius
-the rotation curve tends to flatten.  
-
-An ab-initio description of realistic rotation curves in simulations
-depends on having access to the dynamic evolution of all mass components
-in the galaxy: stars, gas and dark matter. Such level of realism is
-extremely complex to achieve, specially if one wants to get a
-systematic description based on statistics of simulated objects.
+the rotation curve tends to flatten.  An ab-initio description of
+such realistic rotation curves in simulations depends on having access to
+the dynamic evolution of all mass components in the galaxy: stars, gas
+and dark matter. Such level of realism is extremely complex to
+achieve, specially if one wants to get a systematic description based
+on statistics of simulated objects. 
 
 Following the tradition of studies of \ly emitting systems,
 we implement a model with simplified geometry. We assume that the gas
@@ -223,10 +222,11 @@ the sphere, direction of propagation $\hat{k}_{in}$ and reduced
 frequency $x_{in}$. The photon's propagation stops once they cross the
 surface of the sphere. At this point we store the position, the outgoing direction
 of propagation $\hat{k}_{out}$ and the reduced frequency $x_{out}$. We
-define the angle $\Theta$ by $\cos\Theta = \hat{k}\cdot
-\hat{k}_{out}$, that is the polar angle of the outgoing photon with
-respect to the $z$ axis. Following \cite{Zheng2013} we make the study
-of the anisotropic emission in terms of this angle.
+define the angle $\Theta$ by $\cos\Theta = \hat{k}_{\rm obs}\cdot
+\hat{k}_{\rm out}$, that is the angle of the outgoing photon with
+respect to the directions towards the observer. Following
+\cite{Zheng2013} we make the study of the anisotropic emission in
+terms of this angle. 
 
 
 \subsection{Brief Description of the Radiative Transfer Codes}
@@ -235,8 +235,8 @@ Here we briefly describe the relevant points for the two radiative
 transfer codes we have used. For a detailed description we refer the
 reader to the original papers \cite{CLARA,DijkstraKramer}.
 
-The codes follow the individual scatterings of \ly photons as it
-travels through a 3D distribution of neutral Hydrogen. At each
+The codes follow the individual scatterings of \ly photons as they
+travel through a 3D distribution of neutral Hydrogen. At each
 scattering the frequency of the photon (in the laboratory frame) and
 its direction of propagation change. This change in frequency is due
 to the peculiar velocities of the Hydrogen atom that absorbed and
@@ -262,9 +262,9 @@ over the sphere.
 
 The gas is completely defined by its geometry (i.e. sphere or slab),
 temperature $T$, Hydrogen optical depth $\tau_{\rm H}$, dust optical
-depth $\tau_{\rm a}$ and the bulk velocity field $\vec{v}$. Here we
+depth $\tau_{\rm a}$ and the bulk velocity field $\vec{v}$. Our codes
 treat the gas as homogeneous in density ($\tau_{\rm H}$, $\tau_{\rm
-a}$) and temperature.
+  a}$) and temperature.  
 
 
 
@@ -273,9 +273,8 @@ a}$) and temperature.
   \includegraphics[width=0.8\textwidth]{f1.eps}
 \end{center}
 \caption{Shape of the \ly line for
-    different velocities rotational velocities for spherical
-    distributions in all the models. The continuous (dashed) line represents the 
-    central (homogeneous) source distributions.
+    different maximum rotational velocities. The continuous (dashed)
+    line represents the central (homogeneous) source distributions. 
     \label{fig:differentvelocities}}  
 \end{figure*}
 
@@ -290,7 +289,7 @@ rotational velocity $V_{\rm max}$, the hydrogen optical depth $\tau_{H}$,
 the dust optical depth $\tau_{a}$ and the initial distribution of photons
 with respect to the gas. There are $60$ models initial combining all
 variations of the input parameters. Table \ref{table:models}
-summarizes the models.
+summarizes the different parameters.
 
 Additionally, we have used two independently developed Monte Carlo
 codes \citep{CLARA,DijkstraKramer} to perform the calculations of the
@@ -317,7 +316,7 @@ Photons Distributions & & Central, Homogeneous\\\hline\hline
 \label{sec:results}
 
 The central result of this paper is summarized in Figure
-\ref{fig:differentvelocities}. It shows the evident
+\ref{fig:differentvelocities}. It shows the clear
 impact of rotation on the morphology of the emergent \ly line.
 The panel focus on the results for all of our symmetric models
  $\tau_{H}=(10^{5}, 10^{6}, 10^{7}$), showing that the
@@ -330,8 +329,8 @@ maxima. In order to interpret the morphological changes in the line we
 also report the median number of scatter for each \ly photon in the
 simulation. For the models where dust is included we measure the 
 escape fraction as a function of rotational velocity. Finally, we make
-an estimate of the anisotropic emission of the models in comparison
-with static spheres.
+an estimate of the impact of anisotropic emission.
+
 
 
 \subsection{Line width and peak maxima}
@@ -367,7 +366,7 @@ with static spheres.
 There are three clear effects on the line's morphology as the
 rotational velocity increases. First, the line
 broadens; second, the double peaks reduce their intensity; and third,
-the intensity at the line center rises. The two last effects give the
+the intensity at the line center rises. The last two effects merge to give the
 impression that the double peaks are merger into one at high rotational
 velocities, a result that is evident for the homogeneously distributed
 sources as shown in the dashed lines of Figure \ref{fig:differentvelocities}.
@@ -375,7 +374,8 @@ sources as shown in the dashed lines of Figure \ref{fig:differentvelocities}.
 We use the full width at half maximum (FWHM) to quantify the line
 broadening. Figure \ref{fig:widthvsvelocity} shows how the FWHM increases
 with rotational velocity both for the central an homogeneous source
-distributions.  We parametrize the dependency of the line width as
+distributions.  We parametrize the dependency of the line width with
+$V_{\rm max}$ as
 \begin{equation}
  {\rm FWHM}^2 = {\rm FWHM}_{0}^2 + V_{\rm max}^2/\lambda^2,
 \label{eq:fwhm}
@@ -387,22 +387,24 @@ to be determined as a fit to the data. With this test we want to know
 to what extent the new velocity width can be expressed as a quadratic
 sum of the two relevant velocities in the problem. We fit
 simultaneously all the points corresponding to central and homogeneous
-models to find $\lambda_{\rm c} = 3.9 \pm 0.041$ and $\lambda_{\rm h}=
-1.9\pm 0.062$ respectively. 
+models to find $\lambda_{\rm c} = 3.89 \pm 0.04$ and $\lambda_{\rm h}=
+1.98\pm 0.06$ respectively. 
 
 In order to quantify the transition to a single peak we measure the
 position for the peak maxima as a function of the rotational
 velocity. Our results are presented in Figure
 \ref{fig:maximumsvsvelocity} where it is clear that for central
-sources there are always two peaks with fixed positions as the rotational
-velocity changes. However, in the case of homogeneously emitted
-sources the maxima position remain close to constant until some
-velocity threshold the line becomes single peaked with $x_{\rm m}=0$
-\kms. By inspection we find that in all cases the transition has
-occurred when the rotational velocity is larger than half width.
+sources there are two peaks with fixed positions as the rotational
+velocity changes, with the only exception of the model with $\tau_{\rm
+  H}=10^6$ and $V_{\rm max}=300$\kms. However, in the case of
+homogeneously emitted sources the maxima position remain fixed until
+some velocity threshold is reachd and the line becomes single peaked
+with $x_{\rm m}=0$. By inspection we find that in all cases the
+transition has occurred when the rotational velocity is larger than
+half the FWHM. 
 
 One possible explanation for the emergence of the single peak in the
-homogeneous source systems is that some photons close to the surface
+homogeneous systems is that some photons close to the surface
 (a sort of photosphere) can escape with a low number of scatterings,
 allowing them to stay close to the line's center. Increasing the
 rotational velocity $V_{\rm max}$ reduces the optical depth making the
@@ -410,9 +412,9 @@ photosphere region effectively larger, increasing the number of
 photons escaping close to the line's center. 
 
 However, for the central emission the transition to a single peak is
-never completed in the range of explored parameters. The absence
+almost never completed in the range of explored parameters. The absence
 of a single peak phase could be partially explained by the absence of a
-photosphere, in this case the average number of scatterings to escape
+photosphere. In this case the average number of scatterings to escape
 should remain close to constant as the rotational velocity
 increases. The rise in intensity at the line's center could instead
 mean that the scattering in a medium with bulk motion are inefficient
@@ -443,7 +445,7 @@ quantify the effect of rotation on the number of scatterings.
 \end{center}
     \caption{2D histogram of $N_{\rm scatt}$ vs $x$. The upper (lower) panels
       show the homogeneous (central) source distribution. Left panels 
-      corresponds to the static case and right panels corresponds to
+      corresponds to the static case and right panels correspond to
       $V_{\rm max}=300\kms$. The color scale is logarithmic on the
       number of photons with given values of $N_{\rm scatt}$ and
       $x$. \label{fig:Nscatt2D}}   
@@ -473,13 +475,13 @@ scatterings $\langle N_{\rm   scatt}\rangle$ changes less than $0.5\%$
 for different velocities. In this set-up the number of scatterings is
 proportional to the optical depth, with $\langle N_{\rm
   scatt}\rangle= (1.50, 1.00, 0.92)\tau_{\rm   H}$ for optical depth
-values of $\tau_{\rm H} = (10^{5}, 10^{6}, 10^{7})$ respectively and
-$V_{\mathrm{max}}=300$ \kms.
+values of $\tau_{\rm H} = (10^{5}, 10^{6}, 10^{7})$ respectively.
 
 
-From Figure \ref{fig:Nscatt} for the homogeneous
-distribution there is a decrease of $\langle N_{\rm
-  scatt}\rangle$ as the $V_{\rm max}$ increases. For instance, for
+
+In Figure \ref{fig:Nscatt} we can see the decrease of $\langle N_{\rm
+  scatt}\rangle$ as $V_{\rm max}$ increases in the homogeneous
+source distribution. For instance, for
 $\tau_{\rm H}=10^5$ the average number of scatterings decreases by
 $61\%$ at $V_{\rm max}=300\kms$ in comparison to the static case.  
 
@@ -490,9 +492,7 @@ emitted photons. While for the homogeneous rotating sphere at
 $V_{\rm{max}}=300\kms$ we find that $\langle N_{\rm
   scatt}\rangle=(0.38, 0.34, 0.42)\tau_{\rm   H}$ which represents 
   factors of $(0.26, 0.34, 0.46)$ lower than the corresponding central
-  case.  In contrast the analytic solution for the homogeneous
-slab gives	 $0.72$ times less scatterings in the homogeneous case than
-in the central one
+  case.  
 
 In order to gain a deeper understanding of these results and explain
 the results for the maxima in the line morphology we make 2D
@@ -502,7 +502,7 @@ such histograms in the case $\tau_{\rm H}=10^5$ for the
 static case and $V_{\rm max}=300$\kms. The upper (lower) panels show the
 results for the homogeneous (central) source distribution. The color
 scale is logarithmic in the number of photons at a certain value
-$xN_{\rm scatt}$. 
+$x-N_{\rm scatt}$. 
 
 The top right panel of Figure \ref{fig:Nscatt2D} (homogeneous sources,
 high rotational velocity) supports our hypothesis about
@@ -550,13 +550,14 @@ Central & $10^{5}$ &  0.096 & 0.097 & 0.096 &  0.096 & 0.096 \\
   \includegraphics[width=0.40\textwidth]{f7.eps}
 \end{center}
   \caption{Effects of rotation on the escape fraction. Left
-    panel. Escape fraction as a function of rotational velocity. All
+    panel, escape fraction as a function of rotational velocity. All
     these models have $\tau_{a}=1$. The continuous (dashed) lines
-    correspond to central (homogeneous) models. Right panel. Escape
+    correspond to central (homogeneous) models. Right panel, escape
     fraction as a    function of the product $(a\tau_{\rm
       H})^{1/3}\tau_{A}$. The    analytic solution for the infinite
-    slab is shown as a continuous    line. Different lines corresponds
-    to different rotational velocities for the homogeneous models.     \label{fig:efvsv}} 
+    slab is shown as a continuous    line. Different lines correspond
+    to different rotational velocities for the homogeneous models.     
+    \label{fig:efvsv}} 
 \end{figure*}
 
 In the case of dusty clouds, all changes in the average number
@@ -629,8 +630,8 @@ increase significantly from $\tau_{\rm H}=10^{5}$ to $\tau_{\rm H}=10^{6}$, This
 \end{center}
 \caption{Triple peaked profiles for three different off-center positions
   $C=0.25R$ (doted line), $C=0.5R$ (dashed line) \& $C=0.75R$ (solid
-  line) and for different rotational velocities. And $\theta$ represents the usual
-  polar angle.
+  line) and for different rotational velocities. $\theta$ represents
+  the position of the observer as mesured with the polar angle.
    \label{fig:3p_profiles}} 
 \end{figure*}
 
@@ -673,18 +674,16 @@ the gas distribution. Figure \ref{fig:OCspheres} shows the two
 spherical regions we define to test for this effect. Each has a radius
 of $0.5R$, where $R$ is the radius of the gaseous sphere. With an
 observer located along the $\hat{j}$ direction, we pick two possible
-positions to center the spheres along the $\hat{k}$ axis: $\pm C\hat{k}$. In
-this configuration the emitting sphere centered on $+C\hat{k}$ moves
-away from the observer and the sphere centered on $-C\hat{j}$ moves
-towards the observer. 
+positions to center the spheres along the $\hat{i}$ axis: $\pm C\hat{i}$. In
+this configuration the emitting sphere centered on $+C\hat{i}$ moves
+towards the observer and the sphere centered on $-C\hat{j}$ moves
+away from the observer. 
 
 
-In this case the $\mu$ distribution is not homogeneous as shown in
+In this case the $\mu$ distribution is not homogeneous as it is shown in
 Figure \ref{fig:muhisto}. The off-center emission shows a variation of flux at
 the levels of $10\% - 28\%$ in intensity with the angle $\Theta$. In general 
 models with a larger $\tau_{H}$ present a higher variation in the flux.
-This variation implies that that the line is more intense in
-the plane perpendicular to the rotation axis. 
 
 
 We also explore the effects of the off-centered emission in the line
@@ -692,17 +691,17 @@ morphology. Figure \ref{fig:OC_profiles} show the spectra for the two
 off-centered emitting spheres located at $C=\pm0.5R$.  In this case we
 only use photons that have outgoing directions aligned with the
 observer i.e. $0.9 <\vert \mu \vert < 1.0$. We do not find any strong
-asymmetry in the line morphology.  
+asymmetry in the line morphology within the range of explored velocities.
 
 
 However, we find some cases where there is a possible signature of
-three peaks. This is only present in some models ($\tau_{\rm H} = 10^6,
-V=100$\kms and $\tau_{\rm H} = 10^7, V=300$\kms) and could be the result of
-two competing effects: the rise in the line's center as the photons in
-the photosphere escape in a single excursion and the broadening in the
-two peaks as the photons closer from the center have to scatter to
-escape. We examine in greater detail these cases in the next
-sub-section. 
+triple peaked emission. This is only present in some models
+($\tau_{\rm H} = 10^6, V=100$\kms and $\tau_{\rm H} = 10^7,
+V=300$\kms) and could be the result of two competing effects: the rise
+in the line's center as the photons in the photosphere escape in a
+single excursion and the broadening in the two peaks as the photons
+closer from the center have to scatter to escape. We examine in
+greater detail these cases in the next sub-section. 
 
 
 
@@ -778,11 +777,10 @@ three peaks.
 The asymmetries in Groups I, II  and III cannot be explained by
 rotation. However, some galaxies in those groups have a high flux between
 the two peaks; this could indicate the presence of rotation 
-and \lya photons leaking though low column density holes, as in \citep{Behrens2014}.
- The same argument applies to galaxies in the group IV in which the flux
+and \ly photons leaking though low column density holes, as in \cite{Behrens2014}. The same argument applies to galaxies in the group IV in which the flux
 in between of the two peaks is high ($ \geq 70 \%$ of the intensity in
 the highest peak). Finally, the triple peaked lines in Galaxies in
-Group V can be easily reproduced by rotation with off-centered
+Group V can be reproduced by rotation with off-centered
 emission given the right amount of asymmetry between the emitting
 region and neutral hydrogen distribution. 
 
@@ -822,25 +820,25 @@ independently developed Monte-Carlo radiative transfer codes.
 Our main result is that rotation clearly impacts the \ly line
 morphology. Double peaked lines can make transitions into single
 peaked lines as the rotational velocity increases. In the case of
-off-centered emission result into triple peaked lines for certain
+off-centered emission we obtain triple peaked lines for certain
 values of optical depth and rotational velocities. 
 
 Quantitatively the main results of our study are summarized as follows.
 
 \begin{itemize}
 
-\item The line width increases with rotational velocity. The line with
-  approximately following the functional for  ${\rm FWHM}^2 = {\rm FWHM}_{
+\item The line width increases with rotational velocity. The line width
+  approximately follows the functional for  ${\rm FWHM}^2 = {\rm FWHM}_{
     0}^2 + (V_{\rm max}/\lambda)^2$ where FWHM$_{0}$ indicates the line
-  width for the static case. $\lambda$ is a constant determined from
-  the radiative transfer results it is $\lambda_{\rm c}=3.9\pm0.041$ and
-  $\lambda_{\rm h}=1.9\pm0.062$ for the central and homogeneous source
+  width for the static case and $\lambda$ is a constant determined from
+  the radiative transfer results it is $\lambda_{\rm c}=3.89\pm0.04$ and
+  $\lambda_{\rm h}=1.98\pm0.06$ for the central and homogeneous source
   distribution, respectively.
 
 
 \item A single peaked line emerges for high rotational velocities in
   the case of homogeneously distributed sources. These cases occur when
-  the rotational velocity is larger than FWHM$_0$.  
+  the rotational velocity is larger than half FWHM$_0$.  
 
 \item For central sources we find that the number of scatterings
 does not significantly decrease with rotation. This is due to the 
@@ -858,24 +856,26 @@ scatterings. In the second part of \S \ref{sec:widthpeak} we show
 that, as rotational velocity increases, a large fraction of photons
 escape with less than $10$ scatterings. The average number of
 scatterings decreases a $40\%$ compared to the static case. 
-The reduction in the number of scatterings decreases the probability
+This reduction in the number of scatterings decreases the probability
 for a photon to move away from the line's center. This is also
 translated into an increase of the escape fraction by a factor of
 $\sim 2$ with respect to the static situation.
 
-\item The spatial anisotropy in the emission is always below the
-  $10\%$ level deviation from static models.
+\item The spatial anisotropy induced by rotation in the emission is
+  usually below the $10\%$ level.
 
 \item For off-centered emission triple peaked profiles can emerge
-  under two conditions: the emission occurs close to the sphere's
-  surface and the rotational velocity is half the FWHM in the static
-  case.   
+  under two joint conditions: the emission occurs close to the sphere's
+  surface and the rotational velocity is close to half the FWHM in the
+  static case.   
 \end{itemize}
 
 Comparing our results with recent observed LAEs we find that many 
 morphological features such as high central line flux, single peak
 profiles and multiple-peaked profiles could be explained by gas bulk 
-rotation present in these LAEs.
+rotation present in these LAEs. We defer the study of triple peaked
+emission in the context of gas bulk rotation to a future publication
+(Remolina-Gutierrez et al., in preparation).
 
 
 \section*{Acknowledgments}
@@ -891,11 +891,12 @@ We thank the International Summer School on AstroComputing
 AstroComputing Center (UC-HiPACC) for providing computational
 resources where some of the calculations were done. 
 
-The data and source code and instructions to
+The data, source code and instructions to
 replicate the results of this paper can be found
 here {\texttt{https://github.com/jngaravitoc/RotationLyAlpha}}.
-Thanks to the IPython community \citep{IPython} and to the matplotlib
-community \citep{matplotlib}.
+Most of our code benefits from the work of the IPython and Matplotlib
+communities \citep{IPython,matplotlib}.
+
 
 
 
