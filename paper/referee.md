@@ -9,7 +9,7 @@ range of investigated parameters and for spherical distributions of sources.
 
 Global comments:
 
-*Variation with viewing angle
+* Variation with viewing angle
 The problematic of anisotropy is only studied from Sect3.4, the former sections consider global quantities
 (spectral shapes, escape fractions, etc...). This is ok only if there is NO anisotropy induced by rotation,
 which is not obvious, a priori. You should make it clear from the beginning, telling that you will
