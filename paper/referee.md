@@ -9,7 +9,7 @@ range of investigated parameters and for spherical distributions of sources.
 
 #Global comments:
 
-* ##Variation with viewing angle
+##Variation with viewing angle
 
 The problematic of anisotropy is only studied from Sect3.4, the former sections consider global quantities
 (spectral shapes, escape fractions, etc...). This is ok only if there is NO anisotropy induced by rotation,
@@ -36,7 +36,7 @@ paper.
 
 ######(JNGC)
 
-* ##Intrinsic spectrum:
+##Intrinsic spectrum:
 
 You discuss the line broadening of the profile by rotation, on Fig2, and the transition from double-peaked
 to single-peaked profiles on Fig3 when Vmax 1/2 FWHM. Do you have an idea of the influence of the
@@ -60,38 +60,40 @@ galaxies, seem to be asymetric towards the red wavelengths, interpreted as a sig
 systems, often corroborated by others observables. Did you investigate how the rotation would modify
 the spectra emerging from expanding clouds?
 
-######No we didnt do this, comments in the text (JNGC)
+###### We agree that outflows are an important aspect to explain
+       observed spectra. However we did not investigate outflows and
+       rotation. Actually, this is subject of ongoing investigation (JNGC) 
 
 
 
 * #Details:
 
-* ##Introduction
+##Introduction
 With Orsi et al 2012, please cite also Garel et al 2012.
 With Zheng&Wallace 2013, please cite also Behrens et al 2014.
 
 ######(Done)
 
-* ##Fig1
+##Fig1
 I guess that the spectra presented in Fig1 are integrated over all directions, right ? You should describe
 explicitly how you build them. You could skip the x notation in absciss, as it is not used in the discussion,
 whereas the velocity is used to compare to FWHM, on Fig2.
 
 #######(Done)
 
-* ##Fig2
+##Fig2
 Can you explain how you measure the FWHM of a double-peaked profile ?
 Do you fit it with a gaussian ?
 
 ######(JNGC)
 
-* ##Fig3
+##Fig3
 Do you have an idea why the (central source, intermediate optical depth) case with Vmax=300 has a
 single plateau instead of 2 peaks ? Do you find this with the two codes ?
 
 ######(JEFR)
 
-* ##Fig4 and 6
+##Fig4 and 6
 This is a surprising result that the number of scatterings (escape fraction) stays constant as the rotation
 velocity increases, for a central source, whereas the global spectral shape is altered. Did you try with
 higher/extreme values of Vmax (=1000 km/s, even if not physically motivated) ? Do you believe that the
@@ -99,7 +101,8 @@ number of scatterings decreases with very high values, or that it is independant
 ? Is the escape fraction from a dusty rotating cloud with central source independant of the rotation
 velocity ?
 
-* ##Fig5
+
+##Fig5
 This is a very nice figure ! Looking at the top right panel, with its “photosphere”, I’m surprised that
 the distribution of Nscatt is bipolar, I would have expected a smooth transition between the 2 regimes.
 Do you have a physical explanation why photons escape after either (less than 10) or (more than 1000)
@@ -111,7 +114,7 @@ of photons from the outer shell, and the uppper spot from photons emitted inside
 
 ######(JNGC)/(JEFR)
 
-* ##End of paragraph 3.3
+##End of paragraph 3.3
 One sentence is not clear : we see that the escape fraction does not increase significantly from τ = 105 to
 τ = 106. This counter-intuitiv result.... It sounds like you were expecting a strong increase... A decrease
 is expected from τ = 105 to τ = 106, not an increase, but indeed on the graphe we can see an unexpected
@@ -119,7 +122,7 @@ is expected from τ = 105 to τ = 106, not an increase, but indeed on the graphe
 
 ######(JNGC)/(JEFR)
 
-* ##Fig8
+##Fig8
 Referred to as Figure 7 in the text (paragraph 3.4).
 To my mind, this figure illustrates the main result of your study, it has to be more demonstrative.
 On this figure, the numerical noise seems very big compare to the small number of bins, bigger than
@@ -141,7 +144,7 @@ the lya spectral shape ?
 
 ######(JNGC)/(JEFR)
 
-* ##Paragraph 3.4
+##Paragraph 3.4
 You discuss in the same paragraph two very different things. You should not mix a very interesting study
 of the (an-)isotropy of emerging radiation after transfer through an axi-symetrical configuration, with a
 fortuitous discovery of peculiar spectral shapes emerging after transfer through the same configuration,
@@ -150,39 +153,63 @@ paragraphs, one related to Fig8, modified as proposed above, the other one relat
 
 ######(JNGC)
 
-* ##Fig 7, Fig9 and Fig10
-In general, the last part of the paper, about triple peaks and a comparison of these with observations, is
-less convincing.
-What is the physical motivation for the peculiar geometry described on Fig7, by 2 off-centered spheres
-emitting Lya photons ?
-######(JEFR)
+##Fig 7, Fig9 and Fig10
+In general, the last part of the paper, about triple peaks and a
+comparison of these with observations, is less convincing. What is the
+physical motivation for the peculiar geometry described on Fig7, by 2
+off-centered spheres emitting Lya photons? 
+
+######(The main motivation for this study was to explore a different
+      source of anisotropy in the lya emission. We decided to report
+      on the triple peaked emission as it is also a consequence of
+      rotation.)
+
+
 In order to test if the assymetry created by non-spherical distribution of sources is higher than the
 anisotropy created by rotation, could you check F(μ) for this configuration in the static case (Vmax =
 0), with F(μ) when Vmax increases. So, could you do the same as Fig8, for this strange configuration
 of sources ?
+
 ######(JNGC)
+
 Could you also show that the spectral shape of this configuration with (Vmax=0, τH = 105 , C=
 +0.75) is not triple-peaked ?
 ######(JNGC)
+
 You could skip the x notation in absciss, as it is not used in the discussion, whereas the peaks
 separation, in velocity, is used to compare to instrumental resolution.
+
+
 About the detectability of triple peaks, some instruments have much higher spectral resolution than
 the one you mentionned (VLT-XSHOOTER, HST-COS for example). You should clearly say in this part
 that you want to compare your spectra with peculiar lya spectra reported recently from Kulas+2012,
 Yamada+2012, which are mid-resolution spectra. It is very easy to convolve your spectra with a gaussian
 to mimic instrumental effect. You can then test directly if the triple peaks would be recovered, or what
 is the spectral resolution needed to recover the peaks separation.
+
+######(We have veryfied that a spectral resolution of 200km/s is
+	  enough to resolve the triple peaks only in the case of our
+	  most massive object (tau=10^7) and high rotational
+	  velocities (200km/s).
+
+	  
 But you should also consider the higher resolution Chonis+2013 spectra. They claim that they
 may observe a triple peaked spectrum. However the peaks separtion is so big (> 1000 km/s) that it
 may belong to different interacting objects. In general, the maximum separation of the peaks in your
 configuration is < 300 km/s (read on Fig 10), which is much less than the peaks separation reported
 by Kulas+2012 (for their single triple peaked object,> 500 km/s, read from their Fig5). This may also
 come from the optical depth of your medium which not high enough ?
-######(JNGC)
+
+######(We now mention Chonis+2013 in this Section. Concerning
+      Kulas+2012 their spectra in Fig5 are redshifted by a factor of
+      4.0, so in reality the separation of their peaks is on the order
+      of 150km/s, a shift that can be expected from our models.) 
+
 
 * #Conclusions
 Again, after a careful checking of the influence of optical depth on the anisotropy induced by rotation,
 I would put this result first : The spatial anisotropy induced by rotation in the emission in usually
 below 10%. Because it justifies why you can consider/discuss angle-average effects of rotation on the lya
 properties of your spherical clouds.
-######(JEFR)
+
+######(Done)
