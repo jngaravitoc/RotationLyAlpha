@@ -9,21 +9,25 @@ range of investigated parameters and for spherical distributions of sources.
 
 #Global comments:
 
-* ##Variation with viewing angle:
+* ##Variation with viewing angle
+
 The problematic of anisotropy is only studied from Sect3.4, the former sections consider global quantities
 (spectral shapes, escape fractions, etc...). This is ok only if there is NO anisotropy induced by rotation,
 which is not obvious, a priori. You should make it clear from the beginning, telling that you will
 investigate anisotropy at the end of the paper only, because you checked that lya properties are isotropic,
 at least in the range of parameters that you investigated so far.
+
 As explained in sect 3.4, rotation kills the spherical symmetry of your problem, and the rotation axis
 defines a preferential direction. We could expect some variation of the emerging flux, the lyman-alpha
 escape fraction, and the spectral shape, with viewing angle. From Fig8, it seems that the flux is the same
 in all directions for spherical distributions of sources. This important result is not enough emphasized.
+
 Do you see any difference in the spectral shape with viewing angle ? To illustrate this point, it would
 be interesting to build a 2D plot as you did on Fig 5, but replace Nb scat in ordinates by the viewing
 angle μ. We could immediatly see if there is an evolution of the shape with viewing angle or not. If you
 find NO evolution of the Lya shape with viewing angle, I think that it is an interesting counter-intuitiv
 result, that you should advertise more.
+
 What about the variation of lya escape fraction with viewing angle ?
 I propose that in the beginning of Sect.3 Results, you first emphasize that, maybe counter-intuitively,
 you did not find any variation of the Lya properties with viewing angle, so you will present first angleaverage
@@ -33,6 +37,7 @@ paper.
 ######(JNGC)
 
 * ##Intrinsic spectrum:
+
 You discuss the line broadening of the profile by rotation, on Fig2, and the transition from double-peaked
 to single-peaked profiles on Fig3 when Vmax 1/2 FWHM. Do you have an idea of the influence of the
 FWHM of the intrinsic lya line on your results ? You use monochromatic intrinsic spectrum. How would
@@ -65,7 +70,7 @@ the spectra emerging from expanding clouds?
 With Orsi et al 2012, please cite also Garel et al 2012.
 With Zheng&Wallace 2013, please cite also Behrens et al 2014.
 
-######(Donde)
+######(Done)
 
 * ##Fig1
 I guess that the spectra presented in Fig1 are integrated over all directions, right ? You should describe
