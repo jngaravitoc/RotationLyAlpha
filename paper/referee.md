@@ -120,7 +120,7 @@ One sentence is not clear : we see that the escape fraction does not increase si
 is expected from τ = 105 to τ = 106, not an increase, but indeed on the graphe we can see an unexpected
 (small) increase. I do not understand the explanation for this behaviour.
 
-######(JNGC)/(JEFR)
+######(Mark)
 
 ##Fig8
 Referred to as Figure 7 in the text (paragraph 3.4).
