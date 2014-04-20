@@ -101,20 +101,25 @@ def widths(filename, angle, bins): #there is a bug in this function
             print abs(x[i]*2.0)
 
 def maxima(filename, angle, bins):
-    hist, x = interpolate(filename, angle, bins) #implement the interpolation
-    index1 = np.where(x>0)
-    hist1 = hist[index1]
-    x1 = x[index1]
-    index11 = np.where(hist1 == np.amax(hist1))
-    maximo1 = np.amax(hist1)
-    x2 = x1[index11]
-    index2 = np.where(x<0)
-    hist2 = hist[index2]
-    x3 = x[index2]
-    index31 = np.where(hist2 == np.amax(hist2))
-    x4 = x3[index31]
-    maximo2 = np.amax(hist2)
-    print float(x2), float(x4)
+    hist, x = interpolate(filename, angle, bins) 
+    maxima = np.where(hist==np.amax(hist))
+    x_m = x[maxima]
+    if abs(x_m) < 0.2*np.amax(x):
+	print float(x_m)
+    else:
+    	index1 = np.where(x>0)
+    	hist1 = hist[index1]
+    	x1 = x[index1]
+    	index11 = np.where(hist1 == np.amax(hist1))
+    	maximo1 = np.amax(hist1)
+    	x2 = x1[index11]
+    	index2 = np.where(x<0)
+    	hist2 = hist[index2]
+    	x3 = x[index2]
+    	index31 = np.where(hist2 == np.amax(hist2))
+    	x4 = x3[index31]
+    	maximo2 = np.amax(hist2)
+    	print float(x2), float(x4)
 
 filename = sys.argv[1]
 angle = float(sys.argv[2])
