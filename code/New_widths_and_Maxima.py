@@ -4,8 +4,12 @@ from scipy.interpolate import interp1d
 
 def reading_data(filename):
     data = np.loadtxt("../data/Homogeneous/"+filename)
+    initpos=data[:,0]	    
+    index_clean = np.where(~np.isnan(initpos))
+    data = data[index_clean[0],:]
     kz = data[:,5]
     x = data[:,6]
+
     return kz, x
 
 def viewing_angle(filename, angle, nbins):
