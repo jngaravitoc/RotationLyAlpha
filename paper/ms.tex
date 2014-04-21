@@ -112,7 +112,7 @@ results of large hydrodynamic simulations
 \citep{CLARA,Forero12,Behrens13}. Recently, Monte Carlo codes have also
 been applied to the results of high resolution hydrodynamic
 simulations of individual
-galaxies\citep{Laursen09,Barnes11,Verhamme12,Yajima12}. Meanwhile, recent
+galaxies \citep{Laursen09,Barnes11,Verhamme12,Yajima12}. Meanwhile, recent
 developments have been focused on the systematic study of clumpy
 outflows \citep{DijkstraKramer}and anisotropic velocity configurations
 \citep{Zheng2013}. 
@@ -227,11 +227,11 @@ the sphere, direction of propagation $\hat{k}_{in}$ and reduced
 frequency $x_{in}$. The photon's propagation stops once they cross the
 surface of the sphere. At this point we store the position, the outgoing direction
 of propagation $\hat{k}_{out}$ and the reduced frequency $x_{out}$. We
-define the angle $\Theta$ by $\cos\Theta = \hat{k}_{\rm obs}\cdot
-\hat{k}_{\rm out}$, that is the angle of the outgoing photon with
-respect to the directions towards the observer. Following
-\cite{Zheng2013} we make the study of the anisotropic emission in
-terms of this angle. 
+define the angle $\theta$ by $\cos\theta = \hat{k}_{\rm obs}\cdot
+\hat{k}_{\rm \hat{k}}$, that is the angle of the line of sight with
+respect to the direction of the angular velocity. Following the notation
+implemented in \cite{Zheng2013}. %we make the study of the anisotropic emission in
+%terms of this angle. 
 
 
 \subsection{Brief Description of the Radiative Transfer Codes}
@@ -275,6 +275,22 @@ treat the gas as homogeneous in density ($\tau_{\rm H}$, $\tau_{\rm
 
 \begin{figure*}
 \begin{center}
+  \includegraphics[width=0.8\textwidth]{spectraCentral.eps}
+\end{center}
+\caption{Central.
+    \label{fig:CentralSpec}}  
+\end{figure*}
+
+\begin{figure*}
+\begin{center}
+  \includegraphics[width=0.8\textwidth]{spectraHOM.eps}
+\end{center}
+\caption{Homogeneous
+    \label{fig:HOMSpec}}  
+\end{figure*}
+
+\begin{figure*}
+\begin{center}
   \includegraphics[width=0.8\textwidth]{f1.eps}
 \end{center}
 \caption{Shape of the \ly line for
@@ -286,31 +302,6 @@ treat the gas as homogeneous in density ($\tau_{\rm H}$, $\tau_{\rm
     \label{fig:differentvelocities}}  
 \end{figure*}
 
-\begin{figure*}
-\begin{center}
-  \includegraphics[width=0.8\textwidth]{spectraCentral.eps}
-\end{center}
-\caption{Shape of the \ly line for
-    different maximum rotational velocities. The continuous (dashed)
-    line represents the central (homogeneous) source distributions. 
-    These profiles were obtained integrating the flux of photons 
-	over all directions, this means we made histograms of the 
-	numbers of photons escaping the galaxy with a given frequency.
-    \label{fig:CentralSpec}}  
-\end{figure*}
-
-\begin{figure*}
-\begin{center}
-  \includegraphics[width=0.8\textwidth]{spectraHOM.eps}
-\end{center}
-\caption{Shape of the \ly line for
-    different maximum rotational velocities. The continuous (dashed)
-    line represents the central (homogeneous) source distributions. 
-    These profiles were obtained integrating the flux of photons 
-	over all directions, this means we made histograms of the 
-	numbers of photons escaping the galaxy with a given frequency.
-    \label{fig:HOMSpec}}  
-\end{figure*}
 
 \subsection{Grid of Simulated Galaxies}
 \label{sec:models}
@@ -348,11 +339,17 @@ Photons Distributions & & Central, Homogeneous\\\hline\hline
 \section{Results}
 \label{sec:results}
 
-The central result of this paper is summarized in Figure
-\ref{fig:differentvelocities}. It shows the clear
+The central results of this paper is summarized in Figures
+\ref{fig:CentralSpec} and \ref{fig:HOMSpec}. These figures shows
+that rotation fix a preferred axis for both photons distributions, 
+this implies that our systems doesn't have spherical symmetry and
+we have to take into account the viewing angle $\theta$ for all
+of our posterior analysis.  
+
+Figure \ref{fig:differentvelocities} shows the clear
 impact of rotation on the morphology of the emergent \ly line,
 This profiles were obtained integrating the flux of photons 
- over all directions, this means we made histograms of the 
+ over the angle $\theta = \pi/2$, this means we made histograms of the 
  numbers of photons escaping the galaxy with a given frequency
 The panel focus on the results for all of our symmetric models
  $\tau_{H}=(10^{5}, 10^{6}, 10^{7}$), showing that the
@@ -375,7 +372,7 @@ an estimate of the impact of anisotropic emission.
 
 \begin{figure*}
 \begin{center}
-  \includegraphics[width=0.8\textwidth]{f2.eps}
+  \includegraphics[width=0.8\textwidth]{widths.eps}
 \end{center}
   \caption{FWHM for the non-dusty models as a function of
     rotational velocity $V_{\rm max}$. The left panel shows the
@@ -388,16 +385,16 @@ an estimate of the impact of anisotropic emission.
 \end{figure*}
 
 
-\begin{figure}
+\begin{figure*}
 \begin{center}
-  \includegraphics[width=0.40\textwidth]{f3.eps}
+  \includegraphics[width=0.8\textwidth]{maxima.eps}
 \end{center}
 \caption{Position of the peak maxima as a function of rotational
   velocity $V_{\rm max}$. Continuous (dashed) lines correspond to
   central (homogeneous) source distributions. A value of $x_{\rm
     max}=0$ indicates that line becomes single
   peaked. \label{fig:maximumsvsvelocity}}  
-\end{figure}
+\end{figure*}
 
 There are three clear effects on the line's morphology as the
 rotational velocity increases. First, the line
