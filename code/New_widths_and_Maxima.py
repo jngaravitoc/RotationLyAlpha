@@ -88,7 +88,7 @@ def interpolate(filename, angle, nbins, distribution):
     return f2(xnew), xnew
 
 
-def widths(filename, angle, bins): #there is a bug in this function
+def widths(filename, angle, bins, distribution): #there is a bug in this function
     hist, x = interpolate(filename, angle, bins, distribution) #implement de interpolation
     width = (abs(np.amin(x)) + abs(np.amax(x))) / 2.0
     index = np.where(abs(x) > width/2.0)
@@ -131,8 +131,8 @@ mode = float(sys.argv[4])
 distribution = float(sys.argv[5])
 
 if mode == 0:
-	widths(filename, angle, bins)
+	widths(filename, angle, bins, distribution)
 if mode == 1:
-	maxima(filename, angle, bins)
+	maxima(filename, angle, bins, distribution)
 
 
