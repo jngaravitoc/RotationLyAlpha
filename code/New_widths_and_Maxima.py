@@ -2,8 +2,11 @@ import numpy as np
 import sys
 from scipy.interpolate import interp1d
 
-def reading_data(filename):
-    data = np.loadtxt("../data/Homogeneous/"+filename)
+def reading_data(filename, distribution):
+    if distribution == 0:
+	data = np.loadtxt("../data/Homogeneous/"+filename)
+    elif distribution ==1:
+        data = np.loadtxt("../data/Central/"+filename)
     initpos=data[:,0]	    
     index_clean = np.where(~np.isnan(initpos))
     data = data[index_clean[0],:]
@@ -12,8 +15,8 @@ def reading_data(filename):
 
     return kz, x
 
-def viewing_angle(filename, angle, nbins):
-    kz, x = reading_data(filename)
+def viewing_angle(filename, angle, nbins, distribution):
+    kz, x = reading_data(filename, distribution)
     index01 = np.where((abs(kz)<0.1))
     index02 = np.where((abs(kz)<0.2) & (abs(kz)>0.1))
     index03 = np.where((abs(kz)<0.3) & (abs(kz)>0.2))
@@ -78,15 +81,15 @@ def viewing_angle(filename, angle, nbins):
         return hist10, bins10
 
 
-def interpolate(filename, angle, nbins):
-    hist, bins = viewing_angle(filename, angle, nbins)
+def interpolate(filename, angle, nbins, distribution):
+    hist, bins = viewing_angle(filename, angle, nbins, distribution)
     f2 = interp1d(bins[:-1], hist[:], kind='cubic')
     xnew = np.linspace(bins[0], bins[-2], 2000)
     return f2(xnew), xnew
 
 
 def widths(filename, angle, bins): #there is a bug in this function
-    hist, x = interpolate(filename, angle, bins) #implement de interpolation
+    hist, x = interpolate(filename, angle, bins, distribution) #implement de interpolation
     width = (abs(np.amin(x)) + abs(np.amax(x))) / 2.0
     index = np.where(abs(x) > width/2.0)
     half_max = max(hist) / 2.
@@ -100,8 +103,8 @@ def widths(filename, angle, bins): #there is a bug in this function
         if Y[i] == np.amin(Y):
             print abs(x[i]*2.0)
 
-def maxima(filename, angle, bins):
-    hist, x = interpolate(filename, angle, bins) 
+def maxima(filename, angle, bins, distribution):
+    hist, x = interpolate(filename, angle, bins, distribution) 
     maxima = np.where(hist==np.amax(hist))
     x_m = x[maxima]
     if abs(x_m) < 0.2*np.amax(x):
@@ -125,6 +128,7 @@ filename = sys.argv[1]
 angle = float(sys.argv[2])
 bins = float(sys.argv[3])
 mode = float(sys.argv[4])
+distribution = float(sys.argv[5])
 
 if mode == 0:
 	widths(filename, angle, bins)
