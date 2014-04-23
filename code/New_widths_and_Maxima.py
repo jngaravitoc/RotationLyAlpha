@@ -1,5 +1,6 @@
 import numpy as np
 import sys
+import matplotlib.pyplot as plt
 from scipy.interpolate import interp1d
 
 def reading_data(filename, distribution):
@@ -107,8 +108,11 @@ def maxima(filename, angle, bins, distribution):
     hist, x = interpolate(filename, angle, bins, distribution) 
     maxima = np.where(hist==np.amax(hist))
     x_m = x[maxima]
+    plt.scatter(x, hist)
+    #plt.show()
     if abs(x_m) < 0.2*np.amax(x):
-	print float(x_m)
+	print float(abs(x_m))
+	plt.axvline(x_m)
     else:
     	index1 = np.where(x>0)
     	hist1 = hist[index1]
@@ -122,8 +126,11 @@ def maxima(filename, angle, bins, distribution):
     	index31 = np.where(hist2 == np.amax(hist2))
     	x4 = x3[index31]
     	maximo2 = np.amax(hist2)
-    	print float(x2), float(x4)
-
+	X = 0.5* (abs(x2) + abs(x4) )
+    	print float(X), abs(x2), abs(x4)
+    	plt.axvline(x2)
+	plt.axvline(x4)
+    plt.show()
 filename = sys.argv[1]
 angle = float(sys.argv[2])
 bins = float(sys.argv[3])
