@@ -108,13 +108,13 @@ def maxima(filename, angle, bins, distribution):
     hist, x = interpolate(filename, angle, bins, distribution) 
     maxima = np.where(hist==np.amax(hist))
     x_m = x[maxima]
-    #plt.scatter(x, hist)
+    plt.scatter(x, hist)
     index = np.where(hist == np.amax(hist))
     maximo1 = np.amax(hist)
     x2 = x[index]
-    print abs(x2)
-    #plt.axvline(x2)
-    #plt.show()
+    print float(abs(x2))
+    plt.axvline(x2)
+    plt.show()
 
 filename = sys.argv[1]
 angle = float(sys.argv[2])

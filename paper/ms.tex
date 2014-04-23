@@ -399,17 +399,22 @@ an estimate of the impact of anisotropic emission.
 There are three clear effects on the line's morphology as the
 rotational velocity increases. First, the line
 broadens; second, the double peaks reduce their intensity; and third,
-the intensity at the line center rises. The last two effects merge to give the
+the intensity at the line center rises, this effects are present for 
+all the viewing angles. The last two effects merge to give the
 impression that the double peaks are merger into one at high rotational
 velocities, a result that is evident for the homogeneously distributed
 sources as shown in the dashed lines of Figure \ref{fig:differentvelocities}.
 
 We use the full width at half maximum (FWHM) to quantify the line
-broadening. For this we measure the width by finding
-the closest points to the half maximum in our histogram numerically. 
+broadening. For this we measure the width by interpolating dots in 
+our spectra this would produce a continuous spectra which makes easier
+to find the half maximum in our histogram numerically, just finding the 
+values of the width at the half maximum. 
+
  Figure \ref{fig:widthvsvelocity} shows how the FWHM increases
-with rotational velocity both for the central an homogeneous source
-distributions.  We parametrize the dependency of the line width with
+with rotational velocity both for the central (continuous lines) an 
+homogeneous (dashed lines) sources, for $\theta=\pi/2$.
+ We parametrize the dependency of the line width with
 $V_{\rm max}$ as
 \begin{equation}
  {\rm FWHM}^2 = {\rm FWHM}_{0}^2 + V_{\rm max}^2/\lambda^2,
