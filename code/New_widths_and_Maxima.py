@@ -108,29 +108,14 @@ def maxima(filename, angle, bins, distribution):
     hist, x = interpolate(filename, angle, bins, distribution) 
     maxima = np.where(hist==np.amax(hist))
     x_m = x[maxima]
-    plt.scatter(x, hist)
+    #plt.scatter(x, hist)
+    index = np.where(hist == np.amax(hist))
+    maximo1 = np.amax(hist)
+    x2 = x[index]
+    print abs(x2)
+    #plt.axvline(x2)
     #plt.show()
-    if abs(x_m) < 0.2*np.amax(x):
-	print float(abs(x_m))
-	plt.axvline(x_m)
-    else:
-    	index1 = np.where(x>0)
-    	hist1 = hist[index1]
-    	x1 = x[index1]
-    	index11 = np.where(hist1 == np.amax(hist1))
-    	maximo1 = np.amax(hist1)
-    	x2 = x1[index11]
-    	index2 = np.where(x<0)
-    	hist2 = hist[index2]
-    	x3 = x[index2]
-    	index31 = np.where(hist2 == np.amax(hist2))
-    	x4 = x3[index31]
-    	maximo2 = np.amax(hist2)
-	X = 0.5* (abs(x2) + abs(x4) )
-    	print float(X), abs(x2), abs(x4)
-    	plt.axvline(x2)
-	plt.axvline(x4)
-    plt.show()
+
 filename = sys.argv[1]
 angle = float(sys.argv[2])
 bins = float(sys.argv[3])
