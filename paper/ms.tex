@@ -250,6 +250,7 @@ shows the geometry of the problem and the important variables.
 \end{figure}
 
 
+
 \subsection{Brief Description of the Radiative Transfer Codes}
 
 Here we briefly describe the relevant points for the two radiative
@@ -290,42 +291,6 @@ depth $\tau_{\rm a}$ and the bulk velocity field $\vec{v}$. Our codes
 treat the gas as homogeneous in density ($\tau_{\rm H}$, $\tau_{\rm
   a}$) and temperature.  
 
-\begin{figure*}
-\begin{center}
-  \includegraphics[width=0.95\textwidth]{spectraCentral.eps}
-\end{center}
-\caption{
-2D histogram showing the number of photons that escape with frecuency
-$x$ forming an angle $\theta$ (parameterized as $\cos\theta$) with the
-rotationa axis. The rotational velocity ($0,100,200,300$\kms)
-increases from left to right and the optical depth ($10^5$, $10^6$,
-$10^7$) from top to bottom. The \ly photons are initialized at the
-center of the sphere.
-\label{fig:CentralSpec} }   
-\end{figure*}
-
-\begin{figure*}
-\begin{center}
-  \includegraphics[width=0.95\textwidth]{spectraHOM.eps}
-\end{center}
-\caption{Same as Figure \ref{fig:CentralSpec} for \ly photons
-  initialized homogeneously throughout the sphere.
-    \label{fig:HomSpec}}  
-\end{figure*}
-
-\begin{figure*}
-\begin{center}
-  \includegraphics[width=0.8\textwidth]{f1.eps}
-\end{center}
-\caption{Shape of the \ly line for
-    different maximum rotational velocities. The continuous (dashed)
-    line represents the central (homogeneous) source distributions. 
-    These profiles were obtained integrating the flux of photons 
-	over all directions, this means we made histograms of the 
-	numbers of photons escaping the galaxy with a given frequency.
-    \label{fig:differentvelocities}}  
-\end{figure*}
-
 
 \subsection{Grid of Simulated Galaxies}
 \label{sec:models}
@@ -360,48 +325,107 @@ Photons Distributions & & Central, Homogeneous\\\hline\hline
 \end{table}
 
 
+
+\begin{figure*}
+\begin{center}
+  \includegraphics[width=0.95\textwidth]{spectraCentral.eps}
+\end{center}
+\caption{
+2D histogram showing the number of photons that escape with frecuency
+$x$ forming an angle $\theta$ (parameterized as $\cos\theta$) with the
+rotationa axis. The rotational velocity ($0,100,200,300$\kms)
+increases from left to right and the optical depth ($10^5$, $10^6$,
+$10^7$) from top to bottom. The \ly photons are initialized at the
+center of the sphere.
+\label{fig:CentralSpec} }   
+\end{figure*}
+
+
+\begin{figure*}
+\begin{center}
+  \includegraphics[width=0.95\textwidth]{spectraHOM.eps}
+\end{center}
+\caption{Same as Figure \ref{fig:CentralSpec} for \ly photons
+  initialized homogeneously throughout the sphere.
+    \label{fig:HomSpec}}  
+\end{figure*}
+
+\begin{figure*}
+\begin{center}
+  \includegraphics[width=0.95\textwidth]{f1.eps}
+\end{center}
+\caption{Shape of the \ly line for different maximum rotational
+  velocities for a viewing angle perpendicular to the rotation axis
+  ($|\mu|\sim 0$). The continuous (dashed) line represents the central
+  (homogeneous) source distributions.  The panels follow the same
+  correspondence as Figures \ref{fig:CentralSpec} and \ref{fig:HomSpec}.
+    \label{fig:differentvelocities}}  
+\end{figure*}
+
+
 \section{Results}
 \label{sec:results}
 
-The central results of this paper are summarized in Figures
+The central results of this paper are evident in Figures
 \ref{fig:CentralSpec} and \ref{fig:HomSpec}. They show 2D histograms
-of escape frequency $x$ and escape angle parameterized by
-$\cos\theta$.
+of escape frequency $x$ and escape angle $\theta$ parameterized by
+$|\mu|$ after verifying that the solutions are symmetric with respect to
+$\mu=0$.  Making a selection around a given value of $\mu$ gives us the
+line detected by an observer located at an angle $\theta$ with respect
+to the rotation axis.
 
-that rotation fix a preferred axis for both photons distributions, 
-this implies that our systems doesn't have spherical symmetry and
-we have to take into account the viewing angle $\theta$ for all
-of our posterior analysis.  
 
-Figure \ref{fig:differentvelocities} shows the clear
-impact of rotation on the morphology of the emergent \ly line.
-This profiles were obtained integrating the flux of photons 
- over the angle $\theta = \pi/2$, this means we have made histograms of the 
- numbers of photons escaping the galaxy with a given frequency
-The panel focus on the results for all of our symmetric models
- $\tau_{H}=(10^{5}, 10^{6}, 10^{7}$), showing that the
-influence of rotation is present both when the photons are either
-homogeneously or centrally initialized over the gas volume.  
+From these Figures we can see that the line properties change with
+rotational velocity and depend on the viewing angle $\theta$.  In the
+next subsections we describe in  detail the changes of the morphology
+with velocity, optical depth and viewing angle. We characterize the
+line morphology by its total intensity, the full width at half maximum
+(FWHM) and the location of the peak maxima. In order to interpret the
+morphological changes in the line we also report the median number of
+scatter for each \ly photon in the simulation. For the models where
+dust is included we measure the escape fraction as a function of
+rotational velocity.  
 
-In the next subsections we characterize the line morphology by the
-full width at half maximum (FWHM) and the location of the peak
-maxima. In order to interpret the morphological changes in the line we
-also report the median number of scatter for each \ly photon in the
-simulation. For the models where dust is included we measure the 
-escape fraction as a function of rotational velocity. 
+\subsection{Line Morphology}
+\label{sec:angles}
 
-\subsection{Rotation and the spherical symmetry}
+The first column in both Figures \ref{fig:CentralSpec} and
+\ref{fig:HomSpec} shows that for the static sphere the line properties
+are independent of $|\mu|$, as it is expected due
+to the spherical symmetry. However, for increasing rotational
+velocities, at a fixed optical depth, there are clear signs that this
+symmetry is broken. 
 
-As a first approach we study the symmetry of the out-coming spectra
-taking into account the line of view ($\theta$) of an observer. Figures 
-\ref{fig:CentralSpec} and \ref{fig:HOMSpec} shows our findings, for 
-both distributions the morphology of the line change as the line 
-of sight of and observer changes. This is mainly due to the fact
-that photons propagating at $\theta = \pi/2.0$ feels ... while photons in other direction feel
-a less contribution.
+If the viewing angle is aligned witht the rotation axis, $|\mu|\sim
+1$, the \ly line keeps a double peak with some changes as a function
+of the rotational velocity that are easier to spot in models where the
+\ly photons are homogeneously distributen than in the case of central
+emission. 
 
-We also consider possible variations in the flux with respect to $\theta$.
- We define the flux by:
+However, for a line of sight perpendicular to the rotation
+axis, $|\mu|\sim 0$, the impact of rotation is larger.  This is clear
+in  Figure \ref{fig:differentvelocities} where we present the
+different line morphologies for $|\mu|\sim 0$ for both the homogeneous
+and central configurations. The panels have the same distribution as
+Figures \ref{fig:CentralSpec} and \ref{fig:HomSpec}.  
+
+There are three clear effects on the line's morphology as the
+rotational velocity increases. First, the line broadens; second, the
+double peaks reduce their intensity; and third, the intensity at the
+line center rises. The last two effects merge to give the
+impression that the double peaks are merger into one at high rotational
+velocities, a result that is evident for the homogeneously distributed
+sources as shown in the dashed lines of Figure
+\ref{fig:differentvelocities}. 
+
+In
+
+\subsection{Integrated Line Intensity}
+
+We consider possible variations in the integrated flux with respect to
+$\theta$.
+
+We define the flux by:
 \begin{equation}
 F(\mu) = \frac{2\Delta N}{N\Delta \mu}, 
 \end{equation} 
@@ -414,24 +438,24 @@ emission is characterized by a flat $F(\mu)$ distribution as
 is shown in \ref{fig:muhisto}, this means that the amount of flux
 is the same for all of the angles. 
 
+We 
+
 \begin{figure}
 \begin{center}
   \includegraphics[width=0.4\textwidth]{muhisto.eps}
 \end{center}
-\caption{Position of the peak maxima as a function of rotational
-  velocity $V_{\rm max}$. Continuous (dashed) lines correspond to
-  central (homogeneous) source distributions. A value of $x_{\rm
-    max}=0$ indicates that line becomes single
-  peaked. \label{fig:muhisto}}  
+\caption{Integrated flux distribution, $F(\mu)$, as a function of the
+  viewing angle as parameterized by $\mu$. We show the results for the
+  homogeneous source distribution in models with rotational velocities
+  $0,100,200,300$\kms and  optical depths $10^5$, $10^6$, $10^7$. We
+  see that the distribution is flat, meaning that the flux for all
+  viewing angles is the same. The results for the central sources are
+  similar. 
+\label{fig:muhisto}}
 \end{figure}
-
-Taking into account these results we perform the subsequent analysis
-for a fixed observer at $\theta = \pi/2.0$, the effect in the morphology
-of the \lya	line for different velocities is clearly shown in Figure
- \ref{fig:differentvelocities}
 	
 
-\subsection{Line width and peak maxima}
+\subsection{Full Width at Half Maximum}
 \label{sec:widthpeak}
 
 
@@ -473,14 +497,6 @@ of the \lya	line for different velocities is clearly shown in Figure
 \end{figure*}
 
 
-There are three clear effects on the line's morphology as the
-rotational velocity increases. First, the line
-broadens; second, the double peaks reduce their intensity; and third,
-the intensity at the line center rises, this effects are present for 
-all the viewing angles. The last two effects merge to give the
-impression that the double peaks are merger into one at high rotational
-velocities, a result that is evident for the homogeneously distributed
-sources as shown in the dashed lines of Figure \ref{fig:differentvelocities}.
 
 We use the full width at half maximum (FWHM) to quantify the line
 broadening. For this we measure the width by interpolating dots in 
@@ -512,6 +528,9 @@ sum of the two relevant velocities in the problem. We fit
 simultaneously all the points corresponding to central and homogeneous
 models to find $\lambda_{\rm c} = 3.89 \pm 0.04$ and $\lambda_{\rm h}=
 1.98\pm 0.06$ respectively. 
+
+\subsection{Peaks Positions}
+\label{sec:peaks}
 
 In order to quantify the transition to a single peak we measure the
 position for the peak maxima as a function of the rotational
@@ -546,7 +565,80 @@ in driving photons outside that frequency region.
 In order to explore our interpretation for these two scenarios we now 
 quantify the effect of rotation on the number of scatterings.
 
+
+
+
+\subsection{Dusty Clouds: Escape Fraction}
+\label{sec:escapefraction}
+
+\begin{table}
+\begin{center}
+\begin{tabular}{c ccc ccc}
+\hline \hline
+Source & $\tau_{H}$ & & & $\ V_{\rm max}$& & \\
+Distribution& &  &  & (\kms) & & \\ 
+& & 0 & 50 & 100 &200 & 300\\ \hline 
+Homogeneous & $10^{5}$& 0.263 & 0.266 &  0.309 &  0.357 &  0.370  \\
+           & $10^{6}$ & 0.289 &  0.289 &   0.309 &  0.360 &  0.393 \\
+         &$10^{7}$ &  0.227 &  0.229 &  0.231 &  0.254 &  0.281 \\
+Central & $10^{5}$ &  0.096 & 0.097 & 0.096 &  0.096 & 0.096 \\
+  &$10^{6}$ & 0.066 & 0.066 &  0.066 &  0.066 &  0.066 \\
+ &$10^{7}$ & 0.015 &  0.016 & 0.016 & 0.016 & 0.015 \\
+\hline
+\end{tabular}
+\caption{
+ Escape fraction values for all dusty models. } 
+\label{table:escape}
+\end{center}
+\end{table}
+
+\begin{figure*}
+\begin{center}
+  \includegraphics[width=0.40\textwidth]{f6.eps}
+  \includegraphics[width=0.40\textwidth]{f7.eps}
+\end{center}
+  \caption{Effects of rotation on the escape fraction. Left
+    panel, escape fraction as a function of rotational velocity. All
+    these models have $\tau_{a}=1$. The continuous (dashed) lines
+    correspond to central (homogeneous) models. Right panel, escape
+    fraction as a    function of the product $(a\tau_{\rm
+      H})^{1/3}\tau_{A}$. The    analytic solution for the infinite
+    slab is shown as a continuous    line. Different lines correspond
+    to different rotational velocities for the homogeneous models.     
+    \label{fig:efvsv}} 
+\end{figure*}
+
+In the case of dusty clouds, all changes in the average number
+of scatterings presented in the previous subsection have a direct
+bearing on the escape fraction. From the results we have just obtained
+we can predict that for central source distributions the escape
+fraction will barely change, while larger effects should be expected
+for homogeneously distributed sources. 
+
+Left panel of Figure \ref{fig:efvsv} confirm these expectations. It shows the escape
+fraction as a function of the rotational velocity. The curves for the
+central source distribution stay flat, while for the homogeneous case
+there is a clear rise with rotational velocity.  Rotation has a higher relative impact in
+the models with low optical depth. For instance, in models with
+$\tau_{\rm H}=10^5$, the static escape fraction is $0.26$ and increases
+to $0.37$ for $V_{\rm max}=300$ \kms. Table \ref{table:escape} lists
+all the values for the escape fraction. 
+
+In the right panel of Figure \ref{fig:efvsv} we put these results in the context of
+the analytic solution for the infinite slab \citep{Neufeld90}. In
+Neufeld's set-up the analytic solution depends uniquely on the product
+$(a\tau_{\rm   H})^{1/3}\tau_{A}$ where $\tau_{A} = (1 - A)\tau_{a}$ , an approximation 
+that is valid only in the limit $a\tau_{\rm   H}\gg 1$. The dashed lines in
+ the right panel of Figure \ref{fig:efvsv} show the results for the different rotational
+velocities for the homogeneous models. First of all we note that the escape fraction does not
+increase significantly from $\tau_{\rm H}=10^{5}$ to $\tau_{\rm H}=10^{6}$, This
+ counter-intuitive result is a consequence of the transition into the 'extremely' opaque regime,
+  which occurs roughly when $a\tau_{\rm{H}} > 10^{3}$
+  e.g. \citep{Neufeld90}.
+
+
 \subsection{Average Number of Scatterings}
+\label{sec:scatterings}
 
 \begin{figure}
 \begin{center}
@@ -651,286 +743,12 @@ driving the photon outside the line center.
 
 
 
-\subsection{Dusty Clouds: Escape Fraction}
-\label{sec:escapefraction}
-
-\begin{table}
-\begin{center}
-\begin{tabular}{c ccc ccc}
-\hline \hline
-Source & $\tau_{H}$ & & & $\ V_{\rm max}$& & \\
-Distribution& &  &  & (\kms) & & \\ 
-& & 0 & 50 & 100 &200 & 300\\ \hline 
-Homogeneous & $10^{5}$& 0.263 & 0.266 &  0.309 &  0.357 &  0.370  \\
-           & $10^{6}$ & 0.289 &  0.289 &   0.309 &  0.360 &  0.393 \\
-         &$10^{7}$ &  0.227 &  0.229 &  0.231 &  0.254 &  0.281 \\
-Central & $10^{5}$ &  0.096 & 0.097 & 0.096 &  0.096 & 0.096 \\
-  &$10^{6}$ & 0.066 & 0.066 &  0.066 &  0.066 &  0.066 \\
- &$10^{7}$ & 0.015 &  0.016 & 0.016 & 0.016 & 0.015 \\
-\hline
-\end{tabular}
-\caption{
- Escape fraction values for all dusty models. } 
-\label{table:escape}
-\end{center}
-\end{table}
-
-\begin{figure*}
-\begin{center}
-  \includegraphics[width=0.40\textwidth]{f6.eps}
-  \includegraphics[width=0.40\textwidth]{f7.eps}
-\end{center}
-  \caption{Effects of rotation on the escape fraction. Left
-    panel, escape fraction as a function of rotational velocity. All
-    these models have $\tau_{a}=1$. The continuous (dashed) lines
-    correspond to central (homogeneous) models. Right panel, escape
-    fraction as a    function of the product $(a\tau_{\rm
-      H})^{1/3}\tau_{A}$. The    analytic solution for the infinite
-    slab is shown as a continuous    line. Different lines correspond
-    to different rotational velocities for the homogeneous models.     
-    \label{fig:efvsv}} 
-\end{figure*}
-
-In the case of dusty clouds, all changes in the average number
-of scatterings presented in the previous subsection have a direct
-bearing on the escape fraction. From the results we have just obtained
-we can predict that for central source distributions the escape
-fraction will barely change, while larger effects should be expected
-for homogeneously distributed sources. 
-
-Left panel of Figure \ref{fig:efvsv} confirm these expectations. It shows the escape
-fraction as a function of the rotational velocity. The curves for the
-central source distribution stay flat, while for the homogeneous case
-there is a clear rise with rotational velocity.  Rotation has a higher relative impact in
-the models with low optical depth. For instance, in models with
-$\tau_{\rm H}=10^5$, the static escape fraction is $0.26$ and increases
-to $0.37$ for $V_{\rm max}=300$ \kms. Table \ref{table:escape} lists
-all the values for the escape fraction. 
-
-In the right panel of Figure \ref{fig:efvsv} we put these results in the context of
-the analytic solution for the infinite slab \citep{Neufeld90}. In
-Neufeld's set-up the analytic solution depends uniquely on the product
-$(a\tau_{\rm   H})^{1/3}\tau_{A}$ where $\tau_{A} = (1 - A)\tau_{a}$ , an approximation 
-that is valid only in the limit $a\tau_{\rm   H}\gg 1$. The dashed lines in
- the right panel of Figure \ref{fig:efvsv} show the results for the different rotational
-velocities for the homogeneous models. First of all we note that the escape fraction does not
-increase significantly from $\tau_{\rm H}=10^{5}$ to $\tau_{\rm H}=10^{6}$, This
- counter-intuitive result is a consequence of the transition into the 'extremely' opaque regime,
-  which occurs roughly when $a\tau_{\rm{H}} > 10^{3}$ e.g. \citep{Neufeld90}.
-
-\iffalse
-\subsection{Anisotropy and off-centered emission}
-\label{sec:off-center}
-
-\begin{figure}
-\begin{center}
-  \includegraphics[width=0.40\textwidth]{f8.eps}
-\end{center}
-\caption{Schematic representation of the geometry for the off-center
-  emission. The large circle represents the gas distribution and the
-    two smaller circles the off-centered \ly emitting regions. The angular
-    velocity vector lies along $\hat{k}$ direction
-    towards the reader. The vector $\hat{k}_{\rm out}$ represents the
-    outgoing direction of an escaping \ly photon and the observer is
-    placed along the $\hat{j}$ direction. The distribution of $\Theta$
-    angles is used to study potential emission anisotropy. 
-    \label{fig:OCspheres}}
-\end{figure}
-
-\begin{figure}
-  \includegraphics[width=0.42\textwidth]{f9.eps}
-  \caption{Histogram of $\mu\equiv\cos\Theta$ for the 
-    central (dotted), homogeneous (dashed) and off-center (solid
-    line) distributions. Deviations from a flat distribution signal the presence of
-    spatial emission anisotropy. 
-    \label{fig:muhisto}} 
-\end{figure}
-
-\begin{figure*}
-\begin{center}
-\includegraphics[width=0.90\textwidth]{f10.eps}
-\end{center}
-\caption{\ly profiles for the off-centered emission. Dashed/solid
-  lines represents spheres centered at $-0,5R/+0.5R$ respectively.
-   \label{fig:OC_profiles}} 
-\end{figure*}
-
-
-\begin{figure*}
-\begin{center}
-\includegraphics[width=0.90\textwidth]{f11.eps}
-\end{center}
-\caption{Triple peaked profiles for three different off-center positions
-  $C=0.25R$ (doted line), $C=0.5R$ (dashed line) \& $C=0.75R$ (solid
-  line) and for different rotational velocities. $\theta$ represents
-  the position of the observer as mesured with the polar angle.
-   \label{fig:3p_profiles}} 
-\end{figure*}
-
-
-Rotation breaks the spherical symmetry of the static model and
-introduces the rotation axis as a preferred direction. This motivates
-us to study the anisotropy of the outgoing photons. In order to study
-possible deviations with respect to an isotropic flux we follow
-\cite{Zheng2013} to estimate the flux as a function of the angle
-$\Theta$ formed by the outgoing photons and the observer. Figure
-\ref{fig:OCspheres} presents a geometric scheme to clarify the
-definition of all relevant directions in the problem.
-
-An estimator for the anisotropy is represented by
-%
-\begin{equation}
-F(\mu) = \frac{2\Delta N}{N\Delta \mu}, 
-\end{equation} 
-%
-where $\mu=\cos\Theta$, $N$ is the total number of outgoing photons,
-$\Delta N$ is the number of photons in a angular bin $\Delta
-\Theta$. This definition satisfies the condition
-$\int_{-1}^{1}F(\mu)d\mu/2=1$.  With this definitions, the isotropic
-emission is characterized by a flat $F(\mu)$ distribution. 
-
-
-Figure \ref{fig:OCspheres} presents the results for the $F(\mu)$
-distribution for a sphere with $\tau_{\rm H}=10^{7}$ and $V_{\rm
-  max}=200$\kms. The dashed and dotted lines represent the homogeneous
-and central source distribution, respectively. This shows that the
- anisotropy induced by rotation is at the $3\%$ level. We
-performed the same test with all the models and find that the
-variation in $\mu$ does not depend on the rotational velocity;
-however, high optical depth values can increase the variation of
-$\mu$ up to a $15\%$. 
-
-We also explore a different source of anisotropy by studying the effect
-of radiation sources located in off-centered spheres with respect to
-the gas distribution. Figure \ref{fig:OCspheres} shows the two
-spherical regions we define to test for this effect. Each has a radius
-of $0.5R$, where $R$ is the radius of the gaseous sphere. With an
-observer located along the $\hat{j}$ direction, we pick two possible
-positions to center the spheres along the $\hat{i}$ axis: $\pm C\hat{i}$. In
-this configuration the emitting sphere centered on $+C\hat{i}$ moves
-towards the observer and the sphere centered on $-C\hat{j}$ moves
-away from the observer. 
-
-
-In this case the $\mu$ distribution is not homogeneous as it is shown in
-Figure \ref{fig:muhisto}. The off-center emission shows a variation of flux at
-the levels of $10\% - 28\%$ in intensity with the angle $\Theta$. In general 
-models with a larger $\tau_{H}$ present a higher variation in the flux.
-
-
-We also explore the effects of the off-centered emission in the line
-morphology. Figure \ref{fig:OC_profiles} show the spectra for the two
-off-centered emitting spheres located at $C=\pm0.5R$.  In this case we
-only use photons that have outgoing directions aligned with the
-observer i.e. $0.9 <\vert \mu \vert < 1.0$. We do not find any strong
-asymmetry in the line morphology within the range of explored velocities.
-
-
-However, we find some cases where there is a possible signature of
-triple peaked emission. This is only present in some models
-($\tau_{\rm H} = 10^6, V=100$\kms and $\tau_{\rm H} = 10^7,
-V=300$\kms) and could be the result of two competing effects: the rise
-in the line's center as the photons in the photosphere escape in a
-single excursion and the broadening in the two peaks as the photons
-closer from the center have to scatter to escape. We examine in
-greater detail these cases in the next sub-section. 
-
-
-
-\subsection{Triple Peaked Profiles}
-\label{sec:3p}
-
-The off-centered cases with hints of triple peaked emission motivate us
-to explore this in more detail. The first condition is to increase the
-number of photons in the radiative transfer calculation. In the line
-profiles presented in the previous subsection, only $\sim 10^4$ photons
-have the geometric conditions to build the line profile. We run a few
-models with $N_{\gamma} = 10^6$ in order to improve the statistics and
-explore smaller radii for the off-centered spheres.
-
-We re-simulate four models that presented some signs of triple peaked
-profiles: $V_{\rm max}=50\kms$, $\tau_{\rm H}=10^{5}$; $V_{\rm
-  max}=100\kms$, $\tau_{H}=10^{6}$; $V_{\rm max}=150\kms$, $\tau_{\rm
-  H}=10^6$; and $V_{\rm max}=200\kms$, $\tau_{\rm H}=10^{7}$. We
-select the photons that were emitted within spheres of radius $0.25R$
-centered at $C=(0.25R, 0.5R, 0.75R)$, following the same
-geometry presented in Figure \ref{fig:OCspheres}.
-
-Figure \ref{fig:3p_profiles} summarizes the results for all these
-models. In all cases the stronger triple peaked signatures is
-presented by the emitting spheres close centered at $0.75R$ close to
-the surface. Emitting spheres closer to the center do not show clear
-signatures for a triple peaked emission.
-
-Furthermore, taking into account all the models that do not present hints for
-a triple peaked emission it would seem that the rotational velocity
-and optical depth must balance each other in order to show this feature.
- Namely, if the rotational velocity is close to half the FWHM
-of the line, the triple peaks are more likely to occur. This is the
-same threshold that in the case of centered emission marks the
-difference between double and single peaked lines.
-
-
-Are these features observable with current instrumental capabilities?
-As an order of magnitude estimate we can consider that the width of
-each one of the triple peaks is close to $1/3$ of the FWHM of the line
-at a given $V_{\rm max}$. For the cases we have studied in this
-subsection those values would be close to $50\kms$, $100\kms$ and
-$200\kms$ for optical depths of $10^5$, $10^6$, and $10^7$
-respectively. At a redshift of $z\sim 2-3$ each one of these widths
-is multiplied by factors of $z+1\sim 3-4$. Considering a nominal value
-for the resolution of $\Delta v=200\kms$ for a Near-IR spectrograph capable of observing
-those galaxies \citep{Kulas12}, we find that only the case of triple
-peaked emission for the most massive object $\tau_{\rm H}=10^{7}$,
-$V_{\rm max}=200\kms$ would have a chance to be spectrally
-resolved. We note that observations of triple peaked systems with
-higher resolution spectrographs have been reported  by
-\cite{Chonis2013}, however the large velocity off-sets ($\sim
-1000$\kms) from the systemic redshift favor the hypothesis of an
-interacting system, including emission from shocked and fluorecing
-gas, as the origin of the triple peaked emission.
-\fi
-
 \section{Discussion}
 \label{sec:discussion}
 
 Gas bulk rotation has a noticeable effect on the morphology of the
  \ly line. In this section we discuss the implications of these
- findings for the interpretation of available observational data. Our
- discussion focuses on the qualitative aspects of diverse
- morphological features observed by \cite{Kulas12} and \cite{Yamada2012}
-
-
-We follow a classification of \ly profiles made by
-\cite{Kulas12}. They presented observational results for star forming
-galaxies at $z=2$-$3$ with multiple peaks in their \ly emission.
-They classified the observed lines into five groups. In Group I the
-red peak is stronger than the blue, while in Group II the blue peak is
-stronger, in both cases the peaks are symmetrically located around the
-line center. In Group III the blue peak also dominates but there is an
-overall redward shift of the zero point. Group IV presents two similar
-peaks symmetrically located around the zero point and Group V galaxies show
-three peaks. 
-
-The asymmetries in Groups I, II  and III cannot be explained by
-rotation. However, some galaxies in those groups have a high flux between
-the two peaks; this could indicate the presence of rotation 
-and \ly photons leaking though low column density holes, as in \cite{Behrens2014}. The same argument applies to galaxies in the group IV in which the flux
-in between of the two peaks is high ($ \geq 70 \%$ of the intensity in
-the highest peak). Finally, the triple peaked lines in Galaxies in
-Group V can be reproduced by rotation with off-centered
-emission given the right amount of asymmetry between the emitting
-region and neutral hydrogen distribution. 
-
-Another relevant sample of observations was presented by \cite{Yamada2012} 
-for 91 LAEs at $z=3.1$. They find that $\sim 33 \%$ of the galaxies present 
-a single peak profile. Some of the peaks have a strong symmetry, while
-others do not. The symmetric single peaked profile can be explained by
-rotation effects, while the asymmetric cases naturally arise in
-outflow/inflow models \citep{Ahn2014,Verhamme2008, Dijkstra06}. Among the 91
-LAEs, 8 reveal triple peaked profiles with a central peak and two
-smaller peaks at the redder and bluer side, a feature that is present
-in our off-center emission models with rotation Figure \ref{fig:3p_profiles}. 
+ findings for the interpretation of available observational data.
 
 The presence of single peaked profiles has been associated to
 inflow/outflow dynamics \citep{Verhamme06,DijkstraKramer}. In this
@@ -991,7 +809,6 @@ the escape fraction neither the position of the peaks depends on the
 rotational velocity. However, there is a flux increase with rotational
 velocity in the central parts of the line.
 
-
 \item For homogeneous sources we find that the changes in the
 line morphology are linked to the reduction in the average number of
 scatterings. In the second part of \S \ref{sec:widthpeak} we show
@@ -1003,21 +820,12 @@ for a photon to move away from the line's center. This is also
 translated into an increase of the escape fraction by a factor of
 $\sim 2$ with respect to the static situation.
 
-
-
-\item For off-centered emission triple peaked profiles can emerge
-  under two joint conditions: the emission occurs close to the sphere's
-  surface and the rotational velocity is close to half the FWHM in the
-  static case.   
 \end{itemize}
 
 Comparing our results with recent observed LAEs we find that many 
 morphological features such as high central line flux, single peak
-profiles and multiple-peaked profiles could be explained by gas bulk 
-rotation present in these LAEs. We defer the study of triple peaked
-emission in the context of gas bulk rotation to a future publication
-(Remolina-Gutierrez et al., in preparation).
-
+profiles  could be explained by gas bulk  rotation present in these
+LAEs.  
 
 \section*{Acknowledgments}
 
