@@ -220,7 +220,7 @@ velocity at the sphere's surface. The minus/plus sign in the
 $x$/$y$-component of the velocity indicates the direction of
 rotation. In this case we take the angular velocity in the same
 direction as the $\hat{k}$ unit vector. With these definitions we can
-write the angular velocity as $\omega=V_{\rm max}/R$.  
+write the norm of the angular velocity as $\omega=V_{\rm max}/R$.  
 
 For each photon in the simulation we have its initial position inside
 the sphere, direction of propagation $\hat{k}_{in}$ and reduced
@@ -270,8 +270,11 @@ process for the \ly photons has to specify its position, frequency and
 direction of propagation. In our case we select the initial frequency
 to be exactly the \ly rest-frame frequency ($x=0$) and the direction of
 propagation to be random following an flat probability distribution
-over the sphere.
-
+over the sphere. A different initization that uses a Gaussian with a
+velocity with equal to the thermal velocity, $12.8$\kms in our case,
+should not introduce noticeable change given that our rotational
+velocities span the range $100$-$300$\kms and the lines have velocity
+widths on the order of $100$-$500$\kms.
 
 The gas is completely defined by its geometry (i.e. sphere or slab),
 temperature $T$, Hydrogen optical depth $\tau_{\rm H}$, dust optical
@@ -279,14 +282,17 @@ depth $\tau_{\rm a}$ and the bulk velocity field $\vec{v}$. Our codes
 treat the gas as homogeneous in density ($\tau_{\rm H}$, $\tau_{\rm
   a}$) and temperature.  
 
-
-
 \begin{figure*}
 \begin{center}
-  \includegraphics[width=0.8\textwidth]{spectraCentral.eps}
+  \includegraphics[width=0.95\textwidth]{spectraCentral.eps}
 \end{center}
-\caption{Central.
-    \label{fig:CentralSpec}}  
+\caption{
+2D histogram showing the number of photons that escape with frecuency
+$x$ forming an angle $\theta$ (parameterized as $\cos\theta$) with the
+rotationa axis. The rotational velocity ($0,100,200,300$\kms)
+increases from left to right and the optical depth ($10^5$, $10^6$,
+$10^7$) from top to bottom. 
+\label{fig:CentralSpec} }   
 \end{figure*}
 
 \begin{figure*}
