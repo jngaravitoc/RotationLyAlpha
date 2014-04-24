@@ -35,7 +35,7 @@
 \title{The impact of gas bulk rotation on the Lyman $\alpha$ line} 
 \shorttitle{Rotation effects on the Lyman $\alpha$ line}
 
-\shortauthors{Garavito-Camargo, Forero-Romero \& Dijstra}
+\shortauthors{Garavito-Camargo, Forero-Romero \& Dijkstra}
 
 \author{ Juan N. Garavito-Camargo, Jaime E. Forero-Romero}
 \affil{Departamento de F\'{i}sica, Universidad de los Andes, Cra. 1
@@ -347,9 +347,9 @@ we have to take into account the viewing angle $\theta$ for all
 of our posterior analysis.  
 
 Figure \ref{fig:differentvelocities} shows the clear
-impact of rotation on the morphology of the emergent \ly line,
+impact of rotation on the morphology of the emergent \ly line.
 This profiles were obtained integrating the flux of photons 
- over the angle $\theta = \pi/2$, this means we made histograms of the 
+ over the angle $\theta = \pi/2$, this means we have made histograms of the 
  numbers of photons escaping the galaxy with a given frequency
 The panel focus on the results for all of our symmetric models
  $\tau_{H}=(10^{5}, 10^{6}, 10^{7}$), showing that the
@@ -361,10 +361,49 @@ full width at half maximum (FWHM) and the location of the peak
 maxima. In order to interpret the morphological changes in the line we
 also report the median number of scatter for each \ly photon in the
 simulation. For the models where dust is included we measure the 
-escape fraction as a function of rotational velocity. Finally, we make
-an estimate of the impact of anisotropic emission.
+escape fraction as a function of rotational velocity. 
 
+\subsection{Rotation and the spherical symmetry}
 
+As a first approach we study the symmetry of the out-coming spectra
+taking into account the line of view ($\theta$) of an observer. Figures 
+\ref{fig:CentralSpec} and \ref{fig:HOMSpec} shows our findings, for 
+both distributions the morphology of the line change as the line 
+of sight of and observer changes. This is mainly due to the fact
+that photons propagating at $\theta = pi/2.0$ feel an stronger 
+angular momentum showing ... while photons in other direction feel
+a less contribution.
+
+We also consider possible variations in the flux with respect to $\theta$.
+ We define the flux by:
+\begin{equation}
+F(\mu) = \frac{2\Delta N}{N\Delta \mu}, 
+\end{equation} 
+
+Where $\mu=\cos\Theta$, $N$ is the total number of outgoing photons,
+$\Delta N$ is the number of photons in an angular bin $\Delta
+\Theta$. This definition satisfies the condition
+$\int_{-1}^{1}F(\mu)d\mu/2=1$.  With this definitions, the 
+emission is characterized by a flat $F(\mu)$ distribution as 
+is shown in \ref{fig:muhisto}, this means that the amount of flux
+is the same for all of the angles. 
+
+\begin{figure}
+\begin{center}
+  \includegraphics[width=0.4\textwidth]{muhisto.eps}
+\end{center}
+\caption{Position of the peak maxima as a function of rotational
+  velocity $V_{\rm max}$. Continuous (dashed) lines correspond to
+  central (homogeneous) source distributions. A value of $x_{\rm
+    max}=0$ indicates that line becomes single
+  peaked. \label{fig:muhisto}}  
+\end{figure}
+
+Taking into account these results we perform the subsequent analysis
+for a fixed observer at $\theta = \pi/2.0$, the effect in the morphology
+of the \lya	line for different velocities is clearly shown in Figure
+ \ref{fig:differentvelocities}
+	
 
 \subsection{Line width and peak maxima}
 \label{sec:widthpeak}
@@ -381,7 +420,7 @@ an estimate of the impact of anisotropic emission.
     Continuous (dashed) lines  correspond to central (homogeneous)
     source distributions. The straight lines represent the fit to
     the data using the expression in Eq. (\ref{eq:fwhm}).
-    \label{fig:widthvsvelocity}} 
+    \label{fig:widthvsmu}} 
 \end{figure*}
 
 
@@ -396,6 +435,7 @@ an estimate of the impact of anisotropic emission.
   peaked. \label{fig:maximumsvsvelocity}}  
 \end{figure*}
 
+
 There are three clear effects on the line's morphology as the
 rotational velocity increases. First, the line
 broadens; second, the double peaks reduce their intensity; and third,
@@ -409,7 +449,23 @@ We use the full width at half maximum (FWHM) to quantify the line
 broadening. For this we measure the width by interpolating dots in 
 our spectra this would produce a continuous spectra which makes easier
 to find the half maximum in our histogram numerically, just finding the 
-values of the width at the half maximum. 
+values of the width at the half maximum. In Figure \ref{fig:widthvsmu}
+the effect of the viewing angle is shown, the main effects here are that 
+as $\mu$ increase the FWHM decrease this is also explained by the same argument
+of section XX. The second effect is that clearly as $\rm{V_{max}}$ increase 
+the FWHM also increase.
+
+\begin{figure*}
+\begin{center}
+  \includegraphics[width=0.8\textwidth]{f2.eps}
+\end{center}
+\caption{Position of the peak maxima as a function of rotational
+  velocity $V_{\rm max}$. Continuous (dashed) lines correspond to
+  central (homogeneous) source distributions. A value of $x_{\rm
+    max}=0$ indicates that line becomes single
+  peaked. \label{fig:widthsvsvelocity}}  
+\end{figure*}
+
 
  Figure \ref{fig:widthvsvelocity} shows how the FWHM increases
 with rotational velocity both for the central (continuous lines) an 
@@ -421,9 +477,9 @@ $V_{\rm max}$ as
 \label{eq:fwhm}
 \end{equation}
 %
-where FWHM$_{0}$ is the
-velocity width in the static case and $\lambda$ is a positive scalar
-to be determined as a fit to the data. With this test we want to know
+where FWHM$_{0}$ is the velocity width in the static case and $\lambda$ 
+is a positive scalar to be determined as a fit to the data. 
+With this test we want to know
 to what extent the new velocity width can be expressed as a quadratic
 sum of the two relevant velocities in the problem. We fit
 simultaneously all the points corresponding to central and homogeneous
