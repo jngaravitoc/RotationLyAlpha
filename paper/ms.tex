@@ -223,22 +223,30 @@ direction as the $\hat{k}$ unit vector. With these definitions we can
 write the norm of the angular velocity as $\omega=V_{\rm max}/R$.  
 
 For each photon in the simulation we have its initial position inside
-the sphere, direction of propagation $\hat{k}_{in}$ and reduced
-frequency $x_{in}$. The photon's propagation stops once they cross the
+the sphere, direction of propagation $\hat{k}_{\rm in}$ and reduced
+frequency $x_{\rm in}$. The photon's propagation stops once they cross the
 surface of the sphere. At this point we store the position, the outgoing direction
-of propagation $\hat{k}_{out}$ and the reduced frequency $x_{out}$. We
-define the angle $\theta$ by $\cos\theta = \hat{k}_{\rm obs}\cdot
-\hat{k}$, that is the angle of the line of sight with
-respect to the direction of the angular velocity. Following the notation
-implemented in \cite{Zheng2013}. %we make the study of the anisotropic emission in
-%terms of this angle. 
+of propagation $\hat{k}_{\rm out}$ and the reduced frequency $x_{\rm
+  out}$. We now define the angle $\theta$ by $\cos\theta = \hat{k}_{\rm out}\cdot
+\hat{k}\equiv \mu$, it is the angle of the outgoing photons with 
+respect to the direction of the angular velocity. We use the variable $\mu$ to
+study the anisotropy induced by rotation. Figure \ref{fig:geometry}
+shows the geometry of the problem and the important variables.
+
+
+
 
 \begin{figure}
 \begin{center}
   \includegraphics[width=0.4\textwidth]{f8.eps}
 \end{center}
-\caption{Geometry
-    \label{fig:CentralSpec}}  
+\caption{Geometry of the gas distribution. The angular velocity vector
+  is parallel to the unit vector $\hat{k}$. In order to describe the
+  departures from spherical symmetry we use the polar angle $\theta$
+  formed by the direction of the outgoing photons with respecto to the
+  $z$-axis. We define define the variable $\mu\equiv\cos\theta$ to
+  report to present our results.
+    \label{fig:geometry}}  
 \end{figure}
 
 
@@ -291,16 +299,18 @@ treat the gas as homogeneous in density ($\tau_{\rm H}$, $\tau_{\rm
 $x$ forming an angle $\theta$ (parameterized as $\cos\theta$) with the
 rotationa axis. The rotational velocity ($0,100,200,300$\kms)
 increases from left to right and the optical depth ($10^5$, $10^6$,
-$10^7$) from top to bottom. 
+$10^7$) from top to bottom. The \ly photons are initialized at the
+center of the sphere.
 \label{fig:CentralSpec} }   
 \end{figure*}
 
 \begin{figure*}
 \begin{center}
-  \includegraphics[width=0.8\textwidth]{spectraHOM.eps}
+  \includegraphics[width=0.95\textwidth]{spectraHOM.eps}
 \end{center}
-\caption{Homogeneous
-    \label{fig:HOMSpec}}  
+\caption{Same as Figure \ref{fig:CentralSpec} for \ly photons
+  initialized homogeneously throughout the sphere.
+    \label{fig:HomSpec}}  
 \end{figure*}
 
 \begin{figure*}
@@ -330,9 +340,9 @@ variations of the input parameters. Table \ref{table:models}
 summarizes the different parameters.
 
 Additionally, we have used two independently developed Monte Carlo
-codes \citep{CLARA,DijkstraKramer} to perform the calculations of the
-non-dusty models. The results we report are robust in the sense
-that they are obtained by both codes. 
+codes \citep{CLARA,DijkstraKramer} to perform the calculations. The
+results we report are robust in the sense that they are obtained by
+both codes.  
 
 \begin{table}
 \begin{center}
@@ -353,8 +363,11 @@ Photons Distributions & & Central, Homogeneous\\\hline\hline
 \section{Results}
 \label{sec:results}
 
-The central results of this paper is summarized in Figures
-\ref{fig:CentralSpec} and \ref{fig:HOMSpec}. These figures shows
+The central results of this paper are summarized in Figures
+\ref{fig:CentralSpec} and \ref{fig:HomSpec}. They show 2D histograms
+of escape frequency $x$ and escape angle parameterized by
+$\cos\theta$.
+
 that rotation fix a preferred axis for both photons distributions, 
 this implies that our systems doesn't have spherical symmetry and
 we have to take into account the viewing angle $\theta$ for all
