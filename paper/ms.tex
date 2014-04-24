@@ -228,10 +228,18 @@ frequency $x_{in}$. The photon's propagation stops once they cross the
 surface of the sphere. At this point we store the position, the outgoing direction
 of propagation $\hat{k}_{out}$ and the reduced frequency $x_{out}$. We
 define the angle $\theta$ by $\cos\theta = \hat{k}_{\rm obs}\cdot
-\hat{k}_{\rm \hat{k}}$, that is the angle of the line of sight with
+\hat{k}$, that is the angle of the line of sight with
 respect to the direction of the angular velocity. Following the notation
 implemented in \cite{Zheng2013}. %we make the study of the anisotropic emission in
 %terms of this angle. 
+
+\begin{figure}
+\begin{center}
+  \includegraphics[width=0.4\textwidth]{f8.eps}
+\end{center}
+\caption{Geometry
+    \label{fig:CentralSpec}}  
+\end{figure}
 
 
 \subsection{Brief Description of the Radiative Transfer Codes}
@@ -370,8 +378,7 @@ taking into account the line of view ($\theta$) of an observer. Figures
 \ref{fig:CentralSpec} and \ref{fig:HOMSpec} shows our findings, for 
 both distributions the morphology of the line change as the line 
 of sight of and observer changes. This is mainly due to the fact
-that photons propagating at $\theta = pi/2.0$ feel an stronger 
-angular momentum showing ... while photons in other direction feel
+that photons propagating at $\theta = \pi/2.0$ feels ... while photons in other direction feel
 a less contribution.
 
 We also consider possible variations in the flux with respect to $\theta$.
@@ -423,6 +430,17 @@ of the \lya	line for different velocities is clearly shown in Figure
     \label{fig:widthvsmu}} 
 \end{figure*}
 
+\begin{figure*}
+\begin{center}
+  \includegraphics[width=0.8\textwidth]{f2.eps}
+\end{center}
+\caption{Position of the peak maxima as a function of rotational
+  velocity $V_{\rm max}$. Continuous (dashed) lines correspond to
+  central (homogeneous) source distributions. A value of $x_{\rm
+    max}=0$ indicates that line becomes single
+  peaked. \label{fig:widthsvsvelocity}}  
+\end{figure*}
+
 
 \begin{figure*}
 \begin{center}
@@ -455,16 +473,6 @@ as $\mu$ increase the FWHM decrease this is also explained by the same argument
 of section XX. The second effect is that clearly as $\rm{V_{max}}$ increase 
 the FWHM also increase.
 
-\begin{figure*}
-\begin{center}
-  \includegraphics[width=0.8\textwidth]{f2.eps}
-\end{center}
-\caption{Position of the peak maxima as a function of rotational
-  velocity $V_{\rm max}$. Continuous (dashed) lines correspond to
-  central (homogeneous) source distributions. A value of $x_{\rm
-    max}=0$ indicates that line becomes single
-  peaked. \label{fig:widthsvsvelocity}}  
-\end{figure*}
 
 
  Figure \ref{fig:widthvsvelocity} shows how the FWHM increases
@@ -521,6 +529,14 @@ quantify the effect of rotation on the number of scatterings.
 
 \subsection{Average Number of Scatterings}
 
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.40\textwidth]{nscattvsmu.eps}
+\end{center}
+\caption{Logarithm of the average number of scatterings as function of
+  $\mu$. This is the general behavior for all models in particular this model
+  is for $\tau=10^{5}$ and $V_{max}=300 km/s^{-1}$. \label{fig:Nscattvsmu}}    
+\end{figure}
 
 \begin{figure}
 \begin{center}
