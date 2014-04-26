@@ -366,14 +366,13 @@ center of the sphere.
 \section{Results}
 \label{sec:results}
 
-The central results of this paper are evident in Figures
+The central results of this paper are summarized in Figures
 \ref{fig:CentralSpec} and \ref{fig:HomSpec}. They show 2D histograms
-of escape frequency $x$ and escape angle $\theta$ parameterized by
-$|\mu|$ after verifying that the solutions are symmetric with respect to
-$\mu=0$.  Making a selection around a given value of $\mu$ gives us the
-line detected by an observer located at an angle $\theta$ with respect
-to the rotation axis.
-
+of the escape frequency $x$ and outgoing angle $\theta$ parameterized by
+$|\mu|$. Constructing the emission line with photons around a value
+of $\mu$ would gives us the emission detected by an observer located at an
+angle $\theta$ with respect to the rotation axis. We have veryfied
+that the solutions are indeed symmetric with respect to $\mu=0$.  
 
 From these Figures we can see that the line properties change with
 rotational velocity and depend on the viewing angle $\theta$.  In the
@@ -409,36 +408,17 @@ different line morphologies for $|\mu|\sim 0$ for both the homogeneous
 and central configurations. The panels have the same distribution as
 Figures \ref{fig:CentralSpec} and \ref{fig:HomSpec}.  
 
-There are three clear effects on the line's morphology as the
-rotational velocity increases. First, the line broadens; second, the
-double peaks reduce their intensity; and third, the intensity at the
-line center rises. The last two effects merge to give the
-impression that the double peaks are merger into one at high rotational
-velocities, a result that is evident for the homogeneously distributed
-sources as shown in the dashed lines of Figure
-\ref{fig:differentvelocities}. 
+For this case of $|\mu|\sim 0$, there are three clear effects on the
+line's morphology as the rotational velocity increases. First, the
+line broadens; second, the double peaks reduce their intensity; and
+third, the intensity at the line center rises. The last two effects
+merge to give the impression that the double peaks are merged into one
+at high rotational velocities, a result that is evident for the
+homogeneously distributed sources as shown in the dashed lines of
+Figure \ref{fig:differentvelocities}. 
 
-In
 
 \subsection{Integrated Line Intensity}
-
-We consider possible variations in the integrated flux with respect to
-$\theta$.
-
-We define the flux by:
-\begin{equation}
-F(\mu) = \frac{2\Delta N}{N\Delta \mu}, 
-\end{equation} 
-
-Where $\mu=\cos\Theta$, $N$ is the total number of outgoing photons,
-$\Delta N$ is the number of photons in an angular bin $\Delta
-\Theta$. This definition satisfies the condition
-$\int_{-1}^{1}F(\mu)d\mu/2=1$.  With this definitions, the 
-emission is characterized by a flat $F(\mu)$ distribution as 
-is shown in \ref{fig:muhisto}, this means that the amount of flux
-is the same for all of the angles. 
-
-We 
 
 \begin{figure}
 \begin{center}
@@ -453,6 +433,21 @@ We
   similar. 
 \label{fig:muhisto}}
 \end{figure}
+
+We consider possible variations in the integrated flux with respect to
+$\theta$. We define the normalized flux seen by an observer at an
+angle $\mu$ by: \begin{equation}
+F(\mu) = \frac{2\Delta N}{N\Delta \mu}, 
+\end{equation} 
+%
+where $\mu=\cos\Theta$, $N$ is the total number of outgoing photons,
+$\Delta N$ is the number of photons in an angular bin $\Delta
+\Theta$. This definition satisfies the condition
+$\int_{-1}^{1}F(\mu)d\mu/2=1$. 
+
+Figure \ref{fig:muhisto} shows a flat $F(\mu)$ for all models. It
+means that in spite of the different morphologies, the integrated flux
+is the same for all sight angles.  
 	
 
 \subsection{Full Width at Half Maximum}
@@ -463,58 +458,42 @@ We
 \begin{center}
   \includegraphics[width=0.95\textwidth]{widths.eps}
 \end{center}
-  \caption{FWHM for the non-dusty models as a function of
-    rotational velocity $V_{\rm max}$. The left panel shows the
-    results in velocity units while the right panel normalizes
-    the data by the FWHM in the static case. 
-    Continuous (dashed) lines  correspond to central (homogeneous)
-    source distributions. The straight lines represent the fit to
-    the data using the expression in Eq. (\ref{eq:fwhm}).
-    \label{fig:widthvsmu}} 
+  \caption{FWHM for the non-dusty models as a function of the viewing
+  angle parameterized by $\mu\equiv\cos\theta$. 
+  Continuous (dashed) lines  correspond to central (homogeneous)
+  source distributions. The general trend is of an decreasing FWHM as
+  the line of sight becomes parallel to the rotation axis. 
+  \label{fig:widthvsmu}} 
 \end{figure*}
 
 \begin{figure*}
 \begin{center}
   \includegraphics[width=0.95\textwidth]{f2.eps}
 \end{center}
-\caption{Position of the peak maxima as a function of rotational
-  velocity $V_{\rm max}$. Continuous (dashed) lines correspond to
-  central (homogeneous) source distributions. A value of $x_{\rm
-    max}=0$ indicates that line becomes single
-  peaked. \label{fig:widthsvsvelocity}}  
+\caption{FWHM for the non-dusty models as a function of
+  rotational velocity $V_{\rm max}$. The left panel shows the
+  results in velocity units while the right panel normalizes
+  the data by the FWHM in the static case. 
+  Continuous (dashed) lines  correspond to central (homogeneous)
+  source distributions. The straight lines represent the fit to
+  the data using the expression in Eq. (\ref{eq:fwhm}).
+  \label{fig:widthsvsvelocity}}
 \end{figure*}
-
-
-\begin{figure*}
-\begin{center}
-  \includegraphics[width=0.95\textwidth]{maxima.eps}
-\end{center}
-\caption{Position of the peak maxima as a function of rotational
-  velocity $V_{\rm max}$. Continuous (dashed) lines correspond to
-  central (homogeneous) source distributions. A value of $x_{\rm
-    max}=0$ indicates that line becomes single
-  peaked. \label{fig:maximumsvsvelocity}}  
-\end{figure*}
-
 
 
 We use the full width at half maximum (FWHM) to quantify the line
-broadening. For this we measure the width by interpolating dots in 
-our spectra this would produce a continuous spectra which makes easier
-to find the half maximum in our histogram numerically, just finding the 
-values of the width at the half maximum. In Figure \ref{fig:widthvsmu}
-the effect of the viewing angle is shown, the main effects here are that 
-as $\mu$ increase the FWHM decrease this is also explained by the same argument
-of section XX. The second effect is that clearly as $\rm{V_{max}}$ increase 
-the FWHM also increase.
+broadening. We measure this width from the velocity histogram by
+finding the values of the velocities at half maximum. We use linear
+interpolation between histogram points to get a more precise value for
+this width.
 
+Figure \ref{fig:widthvsmu} shows the FWHM for all models as a function
+of the viewing angle. The FWHM increases for decreasing values of
+$\mu$ increases and increasing values of $V_{\rm max}$. In Figure
+\ref{fig:widthvsvelocity} we fix $|\mu|<0.1$ and show the FWHM as a
+function of rotational velocity. For this case we parametrize the
+dependency of the line width with  $V_{\rm max}$ as
 
-
- Figure \ref{fig:widthvsvelocity} shows how the FWHM increases
-with rotational velocity both for the central (continuous lines) an 
-homogeneous (dashed lines) sources, for $\theta=\pi/2$.
- We parametrize the dependency of the line width with
-$V_{\rm max}$ as
 \begin{equation}
  {\rm FWHM}^2 = {\rm FWHM}_{0}^2 + V_{\rm max}^2/\lambda^2,
 \label{eq:fwhm}
@@ -522,15 +501,30 @@ $V_{\rm max}$ as
 %
 where FWHM$_{0}$ is the velocity width in the static case and $\lambda$ 
 is a positive scalar to be determined as a fit to the data. 
-With this test we want to know
-to what extent the new velocity width can be expressed as a quadratic
-sum of the two relevant velocities in the problem. We fit
-simultaneously all the points corresponding to central and homogeneous
-models to find $\lambda_{\rm c} = 3.89 \pm 0.04$ and $\lambda_{\rm h}=
-1.98\pm 0.06$ respectively. 
 
-\subsection{Peaks Positions}
+With this test we want to know to what extent the new velocity width
+can be expressed as a quadratic sum of the two relevant velocities in
+the problem. We fit simultaneously all the points corresponding to
+central and homogeneous models to find $\lambda_{\rm c} = XX \pm
+XX$ and $\lambda_{\rm h}= XX\pm XX$ respectively. 
+
+
+\subsection{Line Maxima}
 \label{sec:peaks}
+
+
+
+\begin{figure*}
+\begin{center}
+  \includegraphics[width=0.95\textwidth]{maxima.eps}
+\end{center}
+\caption{Position of the line maxima as a function of rotational
+  velocity $V_{\rm max}$. Continuous (dashed) lines correspond to
+  central (homogeneous) source distributions. A value of $x_{\rm
+    max}=0$ indicates that line becomes single
+  peaked. \label{fig:maximumsvsvelocity}}  
+\end{figure*}
+
 
 In order to quantify the transition to a single peak we measure the
 position for the peak maxima as a function of the rotational
