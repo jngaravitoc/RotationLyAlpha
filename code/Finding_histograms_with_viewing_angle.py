@@ -40,16 +40,16 @@ def viewing_angle(filename, angle, nbins, distribution):
     x09 = x[index09]
     x10 = x[index10]
 
-    hist, bins = np.histogram(x, bins=nbins)
-    hist01, bins01 = np.histogram(x01, bins=nbins)
-    hist02, bins02 = np.histogram(x02, bins=nbins)
-    hist03, bins03 = np.histogram(x03, bins=nbins)
-    hist04, bins04 = np.histogram(x04, bins=nbins)
-    hist05, bins05 = np.histogram(x05, bins=nbins)
-    hist06, bins06 = np.histogram(x06, bins=nbins)
-    hist07, bins07 = np.histogram(x07, bins=nbins)
-    hist08, bins08 = np.histogram(x08, bins=nbins)
-    hist09, bins09 = np.histogram(x09, bins=nbins)
+    hist, bins = np.histogram(x, bins=nbins, normed=True)
+    hist01, bins01 = np.histogram(x01, bins=nbins, normed=True)
+    hist02, bins02 = np.histogram(x02, bins=nbins, normed=True)
+    hist03, bins03 = np.histogram(x03, bins=nbins, normed=True)
+    hist04, bins04 = np.histogram(x04, bins=nbins, normed=True)
+    hist05, bins05 = np.histogram(x05, bins=nbins, normed=True)
+    hist06, bins06 = np.histogram(x06, bins=nbins, normed=True)
+    hist07, bins07 = np.histogram(x07, bins=nbins, normed=True)
+    hist08, bins08 = np.histogram(x08, bins=nbins, normed=True)
+    hist09, bins09 = np.histogram(x09, bins=nbins, normed=True)
 
     if angle == 1:
         for i in range(len(hist)):
