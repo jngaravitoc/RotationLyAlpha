@@ -123,4 +123,4 @@ def viewing_angle(filename, angle, distribution):
 
 filename = sys.argv[1]
 angle = float(sys.argv[2])
-distribution = float(sys.argv[5])
+distribution = float(sys.argv[3])
