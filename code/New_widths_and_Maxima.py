@@ -126,5 +126,7 @@ if mode == 0:
 	widths(filename, angle, bins, distribution)
 if mode == 1:
 	maxima(filename, angle, bins, distribution)
+if mode == 2:
+	viewing_angle(filename, angle, bins, distribution)
 
 
