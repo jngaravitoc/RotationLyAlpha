@@ -12,7 +12,7 @@ def reading_data(filename, distribution):
     index_clean = np.where(~np.isnan(initpos))
     data = data[index_clean[0],:]
     kz = data[:,5]
-    nscatt = data[:,6]
+    nscatt = data[:,7]
 
     return kz, nscatt
 
@@ -35,64 +35,62 @@ def viewing_angle(filename, angle, distribution):
     x2 = float(len(nscatt01[index]))
     ef01 = x2/x1 
 
-    nscatt02 = x[index02]
+    nscatt02 = nscatt[index02]
     x1 = float(len(nscatt02))
     index = np.where(nscatt02==0)
     x2 = float(len(nscatt02[index]))
     ef02 = x2/x1
 
-    nscatt03 = x[index03]
+    nscatt03 = nscatt[index03]
     x1 = float(len(nscatt03))
     index = np.where(nscatt03==0)
     x2 = float(len(nscatt03[index]))
     ef03 = x2/x1
 
-    nscatt04 = x[index04]
+    nscatt04 = nscatt[index04]
     x1 = float(len(nscatt04))
     index = np.where(nscatt04==0)
     x2 = float(len(nscatt04[index]))
     ef04 = x2/x1
 
-    nscatt05 = x[index05]
+    nscatt05 = nscatt[index05]
     x1 = float(len(nscatt05))
     index = np.where(nscatt05==0)
     x2 = float(len(nscatt05[index]))
     ef05 = x2/x1
 
-    nscatt06 = x[index06]
+    nscatt06 = nscatt[index06]
     x1 = float(len(nscatt06))
     index = np.where(nscatt06==0)
     x2 = float(len(nscatt06[index]))
     ef06 = x2/x1
     
-    nscatt07 = x[index07]
+    nscatt07 = nscatt[index07]
     x1 = float(len(nscatt07))
     index = np.where(nscatt07==0)
     x2 = float(len(nscatt07[index]))
     ef07 = x2/x1
 
-    nscatt08 = x[index08]
+    nscatt08 = nscatt[index08]
     x1 = float(len(nscatt08))
     index = np.where(nscatt08==0)
     x2 = float(len(nscatt08[index]))
     ef08 = x2/x1
 
-    nscatt09 = x[index09]
+    nscatt09 = nscatt[index09]
     x1 = float(len(nscatt09))
     index = np.where(nscatt09==0)
     x2 = float(len(nscatt09[index]))
     ef09 = x2/x1
 
-    nscatt10 = x[index10]
+    nscatt10 = nscatt[index10]
     x1 = float(len(nscatt10))
     index = np.where(nscatt10==0)
     x2 = float(len(nscatt10[index]))
     ef10 = x2/x1
-   
     
     if angle == 1:
-        print ef01   
-    
+        print ef01    
     if angle == 2:
         print ef02
     
@@ -124,3 +122,4 @@ def viewing_angle(filename, angle, distribution):
 filename = sys.argv[1]
 angle = float(sys.argv[2])
 distribution = float(sys.argv[3])
+viewing_angle(filename, angle, distribution)
