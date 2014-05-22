@@ -250,6 +250,43 @@ shows the geometry of the problem and the important variables.
 
 
 
+\begin{figure*}
+\begin{center}
+  \includegraphics[width=0.95\textwidth]{f2.pdf}
+\end{center}
+\caption{
+2D histogram showing the number of photons that escape with frecuency
+$x$ forming an angle $\theta$ (parameterized as $\cos\theta$) with the
+rotationa axis. The rotational velocity ($0,100,200,300$\kms)
+increases from left to right and the optical depth ($10^5$, $10^6$,
+$10^7$) from top to bottom. The \ly photons are initialized at the
+center of the sphere.
+\label{fig:CentralSpec} }   
+\end{figure*}
+
+
+\begin{figure*}
+\begin{center}
+  \includegraphics[width=0.95\textwidth]{f3.pdf}
+\end{center}
+\caption{Same as Figure \ref{fig:CentralSpec} for \ly photons
+  initialized homogeneously throughout the sphere.
+    \label{fig:HomSpec}}  
+\end{figure*}
+
+\begin{figure*}
+\begin{center}
+  \includegraphics[width=0.95\textwidth]{f4.pdf}
+\end{center}
+\caption{Shape of the \ly line for different maximum rotational
+  velocities for a viewing angle perpendicular to the rotation axis
+  ($|\mu|\sim 0$). The continuous (dashed) line represents the central
+  (homogeneous) source distributions.  The panels follow the same
+  correspondence as Figures \ref{fig:CentralSpec} and \ref{fig:HomSpec}.
+    \label{fig:differentvelocities}}  
+\end{figure*}
+
+
 \subsection{Brief Description of the Radiative Transfer Codes}
 
 Here we briefly describe the relevant points for the two radiative
@@ -324,42 +361,6 @@ Photons Distributions & & Central, Homogeneous\\\hline\hline
 \end{table}
 
 
-
-\begin{figure*}
-\begin{center}
-  \includegraphics[width=0.95\textwidth]{f2.pdf}
-\end{center}
-\caption{
-2D histogram showing the number of photons that escape with frecuency
-$x$ forming an angle $\theta$ (parameterized as $\cos\theta$) with the
-rotationa axis. The rotational velocity ($0,100,200,300$\kms)
-increases from left to right and the optical depth ($10^5$, $10^6$,
-$10^7$) from top to bottom. The \ly photons are initialized at the
-center of the sphere.
-\label{fig:CentralSpec} }   
-\end{figure*}
-
-
-\begin{figure*}
-\begin{center}
-  \includegraphics[width=0.95\textwidth]{f3.pdf}
-\end{center}
-\caption{Same as Figure \ref{fig:CentralSpec} for \ly photons
-  initialized homogeneously throughout the sphere.
-    \label{fig:HomSpec}}  
-\end{figure*}
-
-\begin{figure*}
-\begin{center}
-  \includegraphics[width=0.95\textwidth]{f4.pdf}
-\end{center}
-\caption{Shape of the \ly line for different maximum rotational
-  velocities for a viewing angle perpendicular to the rotation axis
-  ($|\mu|\sim 0$). The continuous (dashed) line represents the central
-  (homogeneous) source distributions.  The panels follow the same
-  correspondence as Figures \ref{fig:CentralSpec} and \ref{fig:HomSpec}.
-    \label{fig:differentvelocities}}  
-\end{figure*}
 
 
 \section{Results}
@@ -751,7 +752,7 @@ Gas bulk rotation has a noticeable effect on the morphology of the
  in the interpretation of observational data.
 
 
-\cite{Verhamme12} studied \lya using two high resolution simulations
+\cite{Verhamme12} studied \ly using two high resolution simulations
 of individual galaxies. The main purpose of the study was to asses the
 impact of two different InterStellar Medium (ISM) prescriptions. However, each simulated
 galaxy had a disc structure with a clear rotation pattern in the ISM
@@ -760,9 +761,10 @@ had an axial symmetry and they reported a strong dependence of the
 escape fraction and the total line intensity as a function of the
 $\theta$ angle. In our results, none of these two quantities has a
 dependence either on the inclination angle or the rotational
-velocity. Therefore, the effect reported by \cite{Verhamme} is
-consistent to the different hydrogen optical depth for different
-viewing angles and not as an effect of the bulk rotation. 
+velocity. Therefore, the effect reported by \cite{Verhamme12} is
+consistent with being a consequence of the different hydrogen optical
+depth for different viewing angles and not as an effect of the bulk
+rotation.  
 
 The presence of single peaked profiles has been associated to
 inflow/outflow dynamics \citep{Verhamme06,DijkstraKramer}. In this
@@ -771,15 +773,17 @@ probable origin for that behavior, provided that the observed single peak is hig
 symmetric. Similarly, in the case of double peaked lines with a high
 level of flux at the line center, rotation also deserves to be considered in
 the pool of possible bulk flows responsible for that feature,
-specially if the two peaks have similar intensities. The case of
-triple peaked lines is another clear feature of gas rotation under the
-additional condition of an off-centered emission. 
+specially if the two peaks have similar intensities. This highlights
+that in order to interpret the observations of \ly emitting galaxies
+it is necessary to consider the possible effect of different
+inclination angles along the line of sight.
+
 
 \section{Conclusions}
 \label{sec:conclusions}
 
 This paper quantifies for the first time in the literature the effects
-of rotation in the morphology of the \ly emission line in star forming
+of gas rotation in the morphology of the \ly emission line in star forming
 galaxies.  The results are based on the study of an homogeneous sphere
 of gas with solid body rotation. We explore a range of models by varying
 the rotational speed, hydrogen optical depth, dust optical depth and
@@ -787,66 +791,75 @@ initial distribution of \ly photons with respect to the gas
 density. As a cross-validation, we obtain our results from two
 independently developed Monte-Carlo radiative transfer codes. 
 
-Our main result is that rotation clearly impacts the \ly line
-morphology. The morphology of the observed spectra for observers at different
-viewing angle $\theta$ changes while the flux remains constant for all $\theta$,
-for $\mu \sim 1$ double peaked lines can make transitions into single
-peaked lines as the rotational velocity increases. 
+Our main result is two-fold. First,rotation clearly impacts the \ly line
+morphology. Second, rotation introduces an anisotropy for different
+viewing angles. For viewing angles close to the poles the line is
+double peaked and it makes a transition to a single peaked line for
+high rotational velocities and viewing angles along the equator. This
+trend is stronger for spheres with homogeneusly distributed radiation
+sources.  In contrast, the total flux in the line remains independent
+of the viewing angle.  
 
-Quantitatively the main results of our study are summarized as follows.
+
+The escape fraction remains constant for diffenret viewing angles only
+in the case of centrally distributed sources. In contrast, for an homogeneous
+distribution the escape fraction decreases with high rotation 
+fraction remain constant for different viewing angles. We showed that
+these results can be interpreted in terms of the average number of
+scatterings for the photons, a quantity that also remains constant
+independent of the viewing angle and the rotational velocity for
+centrally distributed sources and decreases for homogenously
+distributed source.
+
+
+Quantitatively the main results of our study are summarized as
+follows. 
 
 \begin{itemize}
 
-\item Rotation induce a considerable asymmetry in the morphology 
+\item Rotation induces a considerable asymmetry in the morphology 
  of the spectra when the viewing angle $\theta$. This occurs for
- all of our models, in particular models with $\mu\sim 1$ i.e for 
- observes aligned with the axis of rotation the rotation does not 
- produce a significance effect while for $\mu\sim 0$ the effect in 
- the FWHM, and Maxima is significant and the number of scatterings.
-
-%\item In spite of the asymmetry induced by rotation the spatial
-%  anisotropy in the emission is usually below the
-%  $10\%$ level. This justifies our consideration of angle-averaged
-%  effects to quantify the emission line of rotating clouds. 
+ all of our models. The asymmetry is such that observeds with
+ $\cos\theta\equiv \mu\sim 1$, i.e. observes aligned with the rotation
+ axis, the line is double peaked while for $\mu\sim 0$ and high
+ rotation veolcities the linebecomes double peaked.
 
 \item For $\mu \sim 0$ The line width increases with rotational velocity. The line width
   approximately follows the functional for  ${\rm FWHM}^2 = {\rm FWHM}_{
     0}^2 + (V_{\rm max}/\lambda)^2$ where FWHM$_{0}$ indicates the line
   width for the static case and $\lambda$ is a constant determined from
   the radiative transfer results it is $\lambda_{\rm c}=0.84 \pm 0.06$ and
-  $\lambda_{\rm h}=0.54\pm 0.1$ for the central and homogeneous source
+  $\lambda_{\rm h}=0.54\pm 0.10$ for the central and homogeneous source
   distribution, respectively.
 
 \item A single peaked line emerges for high rotational velocities in
   the case of homogeneously distributed sources. These cases occur when
-  the rotational velocity is larger than half FWHM$_0$ and $\mu\sim 0$.  
+  the rotational velocity is larger than half FWHM$_0$ and $\mu\sim 1$.  
 
-\item For central sources we find that the number of scatterings
-does not significantly decrease with rotation. This is due to the 
-fact that the vast majority of scatterings events are resonant, 
-during which the mean free path is very short and the effect of gas
-bulk rotation is not enough to affect \ly photons. In consequence, 
-the escape fraction neither the position of the peaks depends on the
-rotational velocity. However, there is a flux increase with rotational
-velocity in the central parts of the line.
+\item 
+For central sources we find that the escape fraction does not change
+with rotational velocity nor with the viewing angle. We interpret this
+in terms of the average number of scatterings which does not
+significantly changes with rotation. This is due to the  
+  fact that the vast majority of scatterings events are resonant, 
+  during which the mean free path is very short and the effect of gas
+  bulk rotation is not enough to affect \ly photons. 
+  
+\item For homogeneous sources we find that the  as rotational velocity
+  increases, the escape fraction rises by a factor of $\sim 2$ with
+  respect to the static situation. We also interpret this change in
+  terms of the average number of scatterings. In the second part of \S
+  \ref{sec:widthpeak} we show that the average number of scatterings
+  decreases a $40\%$ compared to the static case, while a large
+  fraction of photons escape with less than $10$ scatterings.  
 
-\item For homogeneous sources we find that the changes in the
-line morphology are linked to the reduction in the average number of
-scatterings. In the second part of \S \ref{sec:widthpeak} we show
-that, as rotational velocity increases, a large fraction of photons
-escape with less than $10$ scatterings. The average number of
-scatterings decreases a $40\%$ compared to the static case. 
-This reduction in the number of scatterings decreases the probability
-for a photon to move away from the line's center. This is also
-translated into an increase of the escape fraction by a factor of
-$\sim 2$ with respect to the static situation.
 
 \end{itemize}
 
-%Comparing our results with recent observed LAEs we find that many 
-%morphological features such as high central line flux, single peak
-%profiles  could be explained by gas bulk  rotation present in these
-%LAEs.  
+Comparing our results with recent observed LAEs we find that many 
+morphological features such as high central line flux, single peak
+profiles  could be explained by gas bulk  rotation present in these
+LAEs.  
 
 \section*{Acknowledgments}
 
