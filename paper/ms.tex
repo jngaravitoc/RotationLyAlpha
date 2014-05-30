@@ -99,7 +99,7 @@ configurations, such as uniform slabs
 some kind of bulk flow only include the case of a sphere with a Hubble
 like expansion flow \citep{LoebRybicki}. 
 
-A quantitative description of the \ly line has been reached through
+A more detailed quantitative description of the \ly line has been reached through
 Monte Carlo simulations \citep{Auer68,Avery68,Adams72}. In the last
 two decades these studies have become popular due to the
 availability of computing power. Early into the 21st century, the first
@@ -151,9 +151,8 @@ and list the different physical parameters in the simulated grid of
 models. In \S \ref{sec:results} we present the results of the
 simulations, with special detail to quantities that show a
 clear evolution as a function of the sphere rotational velocity. In \S
-\ref{sec:discussion} we discuss the implications of our results in the
-interpretation of LAEs observations with high resolution
-spectroscopy. In the last section we present our conclusions.    
+\ref{sec:discussion} we discuss the implications of our results. In
+the last section we present our conclusions.
 
 
 In this paper we express a photon's frequency in terms of the
@@ -489,30 +488,36 @@ constant for all viewing angles and all the possible models.
 
 We use the full width at half maximum (FWHM) to quantify the line
 broadening. We measure this width from the velocity histogram by
-finding the values of the velocities at half maximum. We use lineal
-interpolation between histogram points to get a more precise value for
-this width.
+finding the values of the velocities at half maximum intensity. We use
+lineal interpolation between histogram points to get a value more precise
+than the bin size used to construct the line intensity.
 
 Figure \ref{fig:widthvsmu} shows the FWHM for all models as a function
 of the viewing angle. The FWHM increases for decreasing values of
-$\mu$ increases and increasing values of $V_{\rm max}$. In Figure
-\ref{fig:widthvsvelocity} we fix $|\mu|<0.1$ and show the FWHM as a
-function of rotational velocity. For this case we parametrize the
-dependency of the line width with  $V_{\rm max}$ as
+$\mu$ and increasing values of $V_{\rm max}$. In Figure
+\ref{fig:widthvsvelocity} we fix $|\mu|<0.1$, i.e. viewing angle
+perpendicular to the rotation axis, and plot the FWHM as a
+function of rotational velocity. 
 
+
+we parametrize the dependency of the line width with  $V_{\rm max}$ as
+%
 \begin{equation}
  {\rm FWHM}^2 = {\rm FWHM}_{0}^2 + V_{\rm max}^2/\lambda^2,
 \label{eq:fwhm}
 \end{equation}
 %
 where FWHM$_{0}$ is the velocity width in the static case and $\lambda$ 
-is a positive scalar to be determined as a fit to the data. 
+is a positive scalar to be determined as a fit to the data.  With this
+test we want to know to what extent the new velocity width can be
+expressed as a quadratic sum of the two relevant velocities in the
+problem. That all the models fall into two families of straight lines,
+for central and homogeneously emitted sources, justifies this choice
+of parameterization. 
 
-With this test we want to know to what extent the new velocity width
-can be expressed as a quadratic sum of the two relevant velocities in
-the problem. We fit simultaneously all the points corresponding to
-central and homogeneous models to find $\lambda_{\rm c} = 0.84 \pm
-0.06$ and $\lambda_{\rm h}= 0.54\pm 0.1$ respectively. 
+We fit simultaneously all the points corresponding to each one of this
+families to find $\lambda_{\rm c} = 0.84 \pm 0.06$ and $\lambda_{\rm
+  h}= 0.54\pm 0.10$ respectively.   
 
 
 \subsection{Line Maxima}
@@ -530,16 +535,16 @@ central and homogeneous models to find $\lambda_{\rm c} = 0.84 \pm
 \end{figure*}
 
 We measure the peak maxima position to quantify the transition from
-double into single peak. We do this as a function of the viewing angle
-$\theta$ and the maximum rotational velocity. The results are
+double into single peak profiles. We do this as a function of the viewing angle
+$\theta$ for different rotational velocities. The results are
 summarized in Figure  \ref{fig:maximumsvsvelocity}. There are two
 interesting features that deserve attention. First, for a viewing angle
 parallel to the rotational axis ($\mu\sim 1.0$) the maxima of all
 models are similar regardless of the rotational velocity. Second, at a
-viewing angle perpendicular to the rotation axis ($\mu\sim 0.0$) there
-is a good fraction of models that become single peaked, a feature that
-appears more frequently for homogeneously distributed sources when all
-the other parameters are equal.
+viewing angle perpendicular to the rotation axis ($\mu\sim 0.0$) a
+good fraction of models become single peaked. This feature appears
+more frequently for homogeneously distributed sources if all the
+other parameters are equal.
 
 \subsection{Dusty Clouds: Escape Fraction}
 \label{sec:escapefraction}
@@ -576,20 +581,21 @@ Central & $10^{5}$ &  0.096 & 0.097 & 0.096 &  0.096 & 0.096 \\
     correspond to central (homogeneous) models. Right panel, escape
     fraction as a    function of the product $(a\tau_{\rm
       H})^{1/3}\tau_{A}$. The    analytic solution for the infinite
-    slab is shown as a continuous    line. Different lines correspond
+    slab is shown as a continuous line. Different lines correspond
     to different rotational velocities for the homogeneous models.     
     \label{fig:escape_fraction}} 
 \end{figure*}
 
-We now estimate the escape fraction $f_{\rm esc}$ for the dusty models. Our main
-result is that we do not find any dependence with the viewing angle
-but there is a strong dependence with the rotational velocity for the
-homogeneous models.
+We now estimate the escape fraction $f_{\rm esc}$ for the dusty
+models. The main  result is that we do not find any dependence
+with the viewing angle but there is a strong dependence with the
+rotational velocity for the homogeneous models.
 
-The left panel in Figure \ref{fig:escape_fraction} summarizes our
-results. The left panel shows the escape fraction as a function of the
-rotational velocity. To construct this Figure we take into account all
-the photons regardless of its outgoing direction. We observe that the
+The left panel in Figure \ref{fig:escape_fraction} summarizes the
+findings about the dependence with the rotational velocity. The left
+panel shows the escape fraction as a function of the rotational
+velocity. To construct this Figure we take into account all the
+photons regardless of its outgoing direction. We observe that the 
 curves for the central source distribution stay flat, while for the
 homogeneous case there is a clear rise with rotational velocity.
 Rotation has a higher relative impact in the models with low optical
@@ -661,7 +667,7 @@ fraction.
 
 A possible explanation for these two results is that some photons
 close to the surface can escape with a low number of scatterings. This
-has a two-fold consequence: the escaping photons do not have time to
+has a two consequences: the escaping photons do not have time to
 scatter away from the line's center and also have less chances to find
 an absorbing dust grain.
 
@@ -671,11 +677,11 @@ outgoing angle $|\cos\theta|$ and the rotational velocity
 $V_{\rm max}$. From the right panel observe that the number of
 scatterings and the outgoing angle are independent. This plot
 corresponds to the specific case of the central model with $\tau=10^5$ and
-$V_{\rm max}=300$\kms; but we have veryfied that this holds for all
-models. This allows us to focus to use all the photons in the
-simulations regardless of their value of $\cos\theta$. 
+$V_{\rm max}=300$\kms, but we have veryfied that this holds for all
+models. This allows us to construct statistics using all the outgoing
+photons regardless of their value of $\cos\theta$.  
 
-In the right panel of Figure \ref{fig:Nscatt} we observe how the
+The right panel of Figure \ref{fig:Nscatt} shows how the
 average number of scatterings decreases for larger rotational
 velocities in the case of homogeneous source distributions. For instance, for
 $\tau_{\rm H}=10^5$ the average number of scatterings decreases by
@@ -683,18 +689,46 @@ $61\%$ at $V_{\rm max}=300\kms$ in comparison to the static case. For
 the central source distribution the average number of scatterings
 $\langle N_{\rm   scatt}\rangle$ changes less than $0.5\%$. 
 
+In order to gain a deeper understanding of these results  we make 2D
+histograms for the number of scatterings as a function of the outgoing
+dimensionless frequency $x$. In Figure \ref{fig:Nscatt2D} we show these 
+results in the case $\tau_{\rm H}=10^5$ for the
+static case and $V_{\rm max}=300$\kms. The upper (lower) panels show the
+results for the homogeneous (central) source distribution. The color
+scale is logarithmic in the number of photons at a certain value
+$x-N_{\rm scatt}$. 
 
-In static cases, a large value of the optical depth correlates with a
-high number of scatterings.  This can be precisely quantified in the
-static slab. In this model for centrally emitted sources the average
-number of scatterings depends only on the optical depth $\langle
-N_{\rm  scatt}\rangle=1.612\tau_{\rm   H}$
-\citep{Adams72,Harrington73}, in the case of homogeneously distributed
-sources $\langle N_{\rm   scatt}\rangle=1.16\tau_{\rm   H}$
-\citep{Harrington73}.     
+The top right panel of Figure \ref{fig:Nscatt2D} (homogeneous sources,
+high rotational velocity) supports our hypothesis about
+the photo-sphere in the homogeneous distribution. In this case most of
+the photons that left with $x\sim 0$ have escaped with less than $10$
+scatterings. This also explains the decrease in the average number of
+scatterings observed in Figure \ref{fig:Nscatt}. We have also veryfied
+that these photons are indeed emitted closer to the surface than to
+the center of the sphere.
+
+However, for a central distribution the situation is quite different
+(lower panels in Figure \ref{fig:Nscatt2D}). In this case the number
+of scatterings remains high, in the order of the optical depth, but
+the two peaks do get closer to each other. The most probable
+physical picture is that each scattering, due to the bulk velocity of
+the gas, is inefficient in driving the photon outside the line
+center. 
+
+
+We now proceed with a more detailed quantification of the number of
+scatterings in our simulations. We guide the measurement by the fact
+that in static cases, a large value of the optical depth correlates
+with a high number of scatterings.  This has been precisely quantified
+in the case of static infinite slab. In this model for centrally
+emitted sources the average number of scatterings depends only on the
+optical depth $\langle N_{\rm  scatt}\rangle=1.612\tau_{\rm   H}$
+\citep{Adams72,Harrington73}, for homogeneously distributed sources
+$\langle N_{\rm   scatt}\rangle=1.16\tau_{\rm   H}$
+\citep{Harrington73}.
 
 We perform a similar quantification of in our speherical setup for the
-scatic spheres. We find that for the central model the number of
+static spheres. We find that for the central model the number of
 scatterings is proportional to the optical depth, with $\langle N_{\rm
   scatt}\rangle= (1.50, 1.00, 0.92)\tau_{\rm   H}$ for optical depth
 values of $\tau_{\rm H} = (10^{5}, 10^{6}, 10^{7})$ respectively.
@@ -707,28 +741,6 @@ that $\langle N_{\rm   scatt}\rangle=(0.38, 0.34, 0.42)\tau_{\rm   H}$
 which represents   factors of $(0.26, 0.34, 0.46)$ lower than the
 corresponding central case.  
 
-In order to gain a deeper understanding of these results  we make 2D
-histograms for the number of scatterings as a function of the outgoing
-dimensionless frequency $x$. In Figure \ref{fig:Nscatt2D} we these 
-results in the case $\tau_{\rm H}=10^5$ for the
-static case and $V_{\rm max}=300$\kms. The upper (lower) panels show the
-results for the homogeneous (central) source distribution. The color
-scale is logarithmic in the number of photons at a certain value
-$x-N_{\rm scatt}$. 
-
-The top right panel of Figure \ref{fig:Nscatt2D} (homogeneous sources,
-high rotational velocity) supports our hypothesis about
-the photo-sphere in the homogeneous distribution. In this case most of
-the photons that left with $x\sim 0$ have escaped with less than $10$
-scatterings. This also explains the decrease in the average number of
-scatterings observed in Figure \ref{fig:Nscatt}.
-
-However, for a central distribution the situation is quite different
-(lower panels). In this case the number of scatterings remains high,
-in the order of the optical depth, but the two peaks do get closer to each
-other. Here the most probable physical picture is that each
-scattering, due to the bulk velocity of the gas, is inefficient in
-driving the photon outside the line center.
 
 
 \section{Discussion}
