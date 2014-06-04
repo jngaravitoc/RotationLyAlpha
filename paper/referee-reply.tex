@@ -106,7 +106,9 @@ document. We do not show this plot in the paper and only mention the
 result at the beginning of Section 3.5.
 
 \begin{figure}
+\begin{center}
 \includegraphics[scale=0.5]{escapefractionvstheta.png}
+\end{center}
 \caption{Escape Fraction as a function of $\mu$
 \label{escape_fraction}}
 \end{figure}
@@ -114,59 +116,81 @@ result at the beginning of Section 3.5.
 
 \section*{Outflow + Rotation}
 
-We want to study the pure effect of rotation on the spectra, off course it would
-be interesting to study the effect of rotation on systems with
-outflows, this paper is under preparation by M.C Remolina-Gutierrez et
-al.   
+{\bf So far, the model only includes rotation. However, most observed
+  Lya spectra from LAEs, or even local galaxies, seem to be asymetric
+  towards the red wavelengths, interpreted as a sign for outflows in
+  these systems, often corroborated by others observables. Did you
+  investigate how the rotation would modify the spectra emerging from
+  expanding clouds?} 
+
+
+We agree with the referee that this is an important point to study. 
+We have not fully investigated it yet.  This is actually research
+under development.   
 
 \section*{Details}
 
 \subsection*{Introduction}
 
-{\bf With Orsi et al 2012, please cite also Garel et al 2012. With Zheng \& Wallace 2013, please cite also Behrens et al 2014.}
+{\bf With Orsi et al 2012, please cite also Garel et al 2012. With
+  Zheng \& Wallace 2013, please cite also Behrens et al 2014.} 
 
-Added.
+Done.
 
 \subsection*{Fig.1}
 
-{\bf I guess that the spectra presented in Fig1 are integrated over all directions, right ? You should describe explicitly how you build them. You could skip the x notation in absciss, as it is not used in the discussion, whereas the velocity is used to compare to FWHM, on Fig2.}
+{\bf I guess that the spectra presented in Fig1 are integrated over
+  all directions, right ? You should describe explicitly how you build
+  them. You could skip the x notation in absciss, as it is not used in
+  the discussion, whereas the velocity is used to compare to FWHM, on
+  Fig2.} 
 
-Now this figure is the Fig.4 in the paper. what we did was to fix a viewing angle in this case $\theta= \pi/2$ and make the histogram of the photons frequency
-
-\begin{itemize}
-\item Description about how we build Fig.1 (Done)
-\item Fig 1. remove x notation (Done)
-\end{itemize}
-
-
-{\bf Description about how we build Fig.1}
-
- (Done)
-{\bf Fig 1. remove x notation} 
-
-(Done)
+Now this figure is the Fig.4 in the paper. Given the depence on the
+viewing angle we decided to construct the plots for a line-of-sight
+perpendicular to the rotation axis ($\theta=\pi/2$). This is
+explicitly describe in the figure and the caption. We have also
+changed the $x$ notation to velocities.
 
 \subsection*{Fig.2}
 
-{\bf Fig.2 Can you explain how you measure the FWHM of a double-peaked profile ? Do you fit it with a gaussian ?}
+{\bf Fig.2 Can you explain how you measure the FWHM of a double-peaked
+  profile ? Do you fit it with a gaussian ?} 
 
 
-We e interpolate points to the line profile and then  we measure the
-width by  the closest points to the half maximum in our histogram. 
-
+We do not make a gaussian fit. We build first a histogram for the
+outgoing frequencies. Then we interpolate between the points of the
+histogram to find the half maxima intensity values and their
+corresponding frequencies.
 
 \subsection*{Fig.3}
 
-{\bf Do you have an idea why the (central source, intermediate optical depth) case with Vmax=300 has a single plateau instead of 2 peaks ? Do you find this with the two codes ?}
+{\bf Do you have an idea why the (central source, intermediate optical
+  depth) case with Vmax=300 has a single plateau instead of 2 peaks ?
+  Do you find this with the two codes ?} 
 
-After close inspection in this figure the line was composed by two
-peaks, that looked like a plateau with the resolution used to
-construct the figure.
+After close inspection if this figure the line was composed by two 
+peaks that looked like a plateau with the resolution used to
+construct the figure. 
+
+However, this plateau is not present in Fig. 4 anymore because we do
+not build the line from all the outgoing photons, but instead take
+into account the line of sight for the observation.
 
 
 \subsection*{Fig4 and 6}
 
-{\bf This is a surprising result that the number of scatterings (escape fraction) stays constant as the rotation velocity increases, for a central source, whereas the global spectral shape is altered. Did you try with higher/extreme values of Vmax (=1000 km/s, even if not physically motivated) ? Do you believe that the number of scatterings decreases with very high values, or that it is independant of the rotation velocity ? Is the escape fraction from a dusty rotating cloud with central source independant of the rotation velocity ?}
+{\bf This is a surprising result that the number of scatterings
+  (escape fraction) stays constant as the rotation velocity increases,
+  for a central source, whereas the global spectral shape is
+  altered. Did you try with higher/extreme values of Vmax (=1000 km/s,
+  even if not physically motivated) ? Do you believe that the number
+  of scatterings decreases with very high values, or that it is
+  independant of the rotation velocity ? Is the escape fraction from a
+  dusty rotating cloud with central source independant of the rotation
+  velocity ?} 
+
+
+(MARK) 
 
 
 
@@ -185,17 +209,39 @@ construct the figure.
   panel is made of photons from the outer shell, and the uppper spot
   from photons emitted inside the cloud.} 
 
+We followed the suggestion by the referee to construct a new
+plot. For the model with homogeneously distributed sources we now the
+initial and final states for every photon. With this information we
+prepare the plot in Figure \ref{nscatt} of this document. It is a 2D
+histogram of the number of scatterings and the initial radius showing
+the starting radius. Indeed, most of the photons that escaped after
+less than 10 scatterings were emitted in the external part of the
+sphere $R>0.8R_{max}$. However, there is a minority of photons that
+have a similar emission radius but only managed to escape after $10^4$
+scatterings. 
+
 \begin{figure}
-  \includegraphics[scale=0.4]{Histogram2dNscattVSRadius.png}
+\begin{center}
+  \includegraphics[scale=0.6]{Histogram2dNscattVSRadius.png}
+\end{center}
+\caption{\label{nscatt} 2D histogram of the number of scatterings and
+  the number. The color scale is linear in the number of photons in
+  each bin.}
 \end{figure}
 
 
 \subsection*{End of paragraph 3.3}
 
-{\bf One sentence is not clear : we see that the escape fraction does not increase significantly from $\tau$ = 105 to $\tau = 10^{6}$. This counter-intuitive result.... It sounds like you were expecting a strong increase... A decrease is expected from $\tau$ = 105 to $\tau$ = 106, not an increase, but indeed on the graphe we can see an unexpected (small) increase. I do not understand the explanation for this behaviour.}
+{\bf One sentence is not clear : we see that the escape fraction does
+  not increase significantly from $\tau$ = 105 to $\tau =
+  10^{6}$. This counter-intuitive result.... It sounds like you were
+  expecting a strong increase... A decrease is expected from $\tau$ =
+  105 to $\tau$ = 106, not an increase, but indeed on the graphe we
+  can see an unexpected (small) increase. I do not understand the
+  explanation for this behaviour.} 
 
 
-(Mark)
+(MARK)
 
 \subsection*{Fig8}
 
@@ -226,6 +272,15 @@ construct the figure.
   lead to anisotropic escape, could you check the effet of anisotropy
   on the lya spectral shape?} 
 
+
+We have prepared Figure 5 that shows the $F(\mu)$ distribution for
+different velocities and optical depths. Indeed, the distributions are
+consistent with flat (within the noise levels) for all the models
+studied in our paper. 
+
+We did not try many more models with higher optical depths. We expect
+to do that in the near future to complete a study that could be
+immediatly comparable against observations.
 
 
 
