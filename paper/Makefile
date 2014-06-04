@@ -1,4 +1,4 @@
-LATEX = latex
+LATEX = pdflatex
 MAIN  = ms
 
 $(MAIN).pdf: 	$(MAIN).tex references.bib
@@ -6,8 +6,7 @@ $(MAIN).pdf: 	$(MAIN).tex references.bib
 	bibtex $(MAIN)
 	$(LATEX) $(MAIN).tex 
 	$(LATEX) $(MAIN).tex 
-	dvips	$(MAIN).dvi -o $(MAIN).ps
-	ps2pdf $(MAIN).ps 	
+
 
 clean:
 	rm -f $(MAIN).aux
@@ -17,6 +16,10 @@ clean:
 	rm -f $(MAIN).blg
 	rm -f $(MAIN).log
 	rm -f *~
+
+zip:	
+	zip paper.zip $(MAIN).tex *.bib f*.pdf Makefile apj.bst emulateapj.cls
+
 view: 
 	open $(MAIN).pdf &
 
