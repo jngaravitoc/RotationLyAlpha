@@ -922,6 +922,7 @@ end, we defer a discussion of observed lines features in the context of gas
 bulk rotation to a future publication (Remolina-Gutierrez et al., in
 prep.).   
 
+
 \section*{Acknowledgments}
 
 JNGC acknowledges financial support from Universidad de los
@@ -943,6 +944,91 @@ communities \citep{IPython,matplotlib}.
 
 We thank the referee for the suggestions that allowed us to greatly
 improve and better frame the interpretation of our simulations. 
+
+
+\appendix
+\section{Analytic Expression for Ly$\alpha$ Spectrum
+  emerging from Rotating Cloud}  
+
+Ly$\alpha$ scattering through a an optically thick gas cloud that is
+undergoing solid-body rotation (i.e. the angular speed around the
+rotation axis is identical for each hydrogen atom) proceeds identical
+as in a static cloud. While scattering events off atoms within the
+rotating cloud impart Doppler boosts on the Ly$\alpha$ photon, these
+Doppler boost are only there in the lab-frame. In the frame of the
+rotating gas cloud, all atoms are stationary w.r.t each other, and the
+scattering process proceeds identical as in the static
+case\footnote{An alternative - more quantitative way - to view this is
+  to consider the path of an individual photon: say the photon travels
+  a distance corresponding to $\tau=1$, scatters by 90 degrees, then
+  travels another distance corresponding to $\tau=1$. It is easy to
+  show that the point where the photon ends up is independent of the
+  assumed rotation velocity of the cloud.}. This explains why the
+escape fraction of Ly$\alpha$ photon is independent of the rotation
+velocity off the cloud, irrespective of the rotation speed. 
+
+The spectrum emerging of photons emerging from a rotating gas cloud is
+also identical as for the static case in a frame that is co-rotating
+with the cloud. However, the surface of cloud now moves in the
+lab-frame. Each surface-element on the rotating cloud now has a bulk
+velocity w.r.t a distant observer. In order to compute the spectrum
+emerging from this rotation cloud, we have to sum over all surface
+elements (weighted by their intensity).  
+
+To provide an analytic description of this emerging spectrum, we adopt
+the geometry shown in Fig~1 (note this differs slightly from the main
+body of the paper. My `observer'  sits along the x-axis. I think yours
+sits along the z-axis. We have to makes sure this is done consistently
+throughout the paper).  
+\begin{figure*}[h]
+\centerline{\includegraphics[width=85mm]{scheme1.pdf}
+\includegraphics[width=85mm]{scheme2.pdf}}
+\caption[]{Adopted geometry for evaluating the analytic spectrum.}
+\label{fig:scheme}
+\end{figure*} 
+The sightline to the observer \& rotation define the $x-z$ plane. The observer sits along the axis. The {\it left panel} in Fig~1 shows the view from the $y-axis$. The rotation axis makes an angle $i$ with respect to the z-axis. We sum up spectra from individual patches by integrating over the impact parameter $b$, and angle $\phi$. Each $(b,\phi)$ corresponds to a point on the sphere. This point has a velocity vector ${\bf v}(b,\phi,i)$, which we denote with ${\bf v}$ for brevity.
+
+\begin{displaymath}
+J(x,i)=2\pi \int_0^Rdb \hs b \int_0^{2\pi}d\phi \hs
+S(b,\phi)J(x,b,\phi,i) \approx 2\pi \int_0^Rdb \hs b
+\int_0^{2\pi}d\phi \hs J(x,b,\phi,i)\\ \nonumber
+\end{displaymath}
+
+\begin{displaymath}
+J(x,b,\phi,i)=\frac{\sqrt{\pi}}{\sqrt{24}a\tau_0}\Bigg{(}\frac{(x-x_{\rm b})^2}{1+{\rm cosh}\Big{[}\sqrt{\frac{2\pi^3}{27}}\frac{|(x -x_{\rm b})^3|}{a\tau_0}\Big{]}}\Bigg{)} 
+\end{displaymath}
+
+The velocity $v_b$ is the component of ${\bf v}$ projected onto the line-of-sight. This component is given by
+\begin{equation}
+v_{\rm b}(b,\phi,i)=v_{\rm rot}\sqrt{1-(b/R)^2\cos^2 \phi}\hs \cos i
+\hs \sin \beta 
+\end{equation}
+
+\begin{equation}
+\tan \beta= \frac{ b\sin \phi}{\sqrt{R^2 -b^2}}.
+\end{equation}
+%
+The quantity $S(b,\phi)$ denotes the surface brightness of the sphere at $(b,\phi)$. We have assumed in our analytic calculations that $S(b,\phi)$ is constant. The assumption $S(b,\phi)=$ constant corresponds to $I(\mu) \propto \mu$ at the surface, where $\mu$ denotes the cosine of the angle of the propagation direction of the outgoing photon and the normal to the spheres surface: a fixed $db$ corresponds to a physical length $ds = db/\mu$ on the sphere. If $I(\mu)$ were constant, this would imply that the sphere should appear brighter per unit $b$. A constant surface brightness profile requires the directional dependence for $I(\mu) \propto \mu$ to correct for this. Indeed, this is what is expected for the escape of Ly$\alpha$ photons from static, extremely opaque media (see Ahn, Lee \& Lee, 2001; their Fig~4 and accompanying discussion).
+
+It is worth stressing that the analytic calculation is clearly not a complete analytic calculation, and we do not expect perfect agreement: we {\it assumed} a functional form for the surface brightness profile [or for $I(\mu)$]. It is important to realise that $I(\mu)$ itself may depend on the spectrum. I.e., analytic solutions exist for $J(x) = \int_0^1 I(x,\mu) d\mu$ at the boundary, and {\it approximate} expressions for $I(\mu) =\int dx I(x,\mu)$, but none for $I(x,\mu)$ itself.  \\
+
+%\begin{figure*}[h]
+%\centerline{\includegraphics[width=85mm,angle=270]{spec.eps}}
+%\caption[]{Comparison between analytic ({\it red solid lines}) \& Monte-Carlo ({\it blac%k histograms}) calculations of spectra. Left panel shows spectrum when the observer looks down the rotation axis. The right panel shows the spectra when the angle between the line-of-sight and rotation axis is ~45 degrees. Note that here $\mu \equiv \cos i$.}
+%\label{fig:scheme}
+%\end{figure*} 
+
+Fig~2 shows some examples of analytic vs. full MC spectra. The area under all spectra are normalised to $1$. The MC simulations used $10^5$ photons. The two methods clearly give good agreement, though not perfect. In particular, Fig~3 shows that the MC gives rise to a spectrum that is slightly more concentrated to the centre. It is easy to get better agreement my modifying the surface brightness profile (e.g. if $S(b)=2-b$, then the analytic calculation agrees better) In any case, the analytic calculation closely captures the results obtained from the full calculations from the MC simulations. As such, they are extremely useful \& provide us with a quick tool to verify our calculations at the first order level.
+
+%\begin{figure*}[h]
+%\centerline{\includegraphics[width=85mm,angle=270]{spec2.eps}}
+%\caption[]{Same as Fig~2. Right panel is now when $\cos i > 0.98$.}
+%\label{fig:scheme}
+%\end{figure*} 
+%\end{document}  
+
+
+
 
 
 \bibliographystyle{apj}
