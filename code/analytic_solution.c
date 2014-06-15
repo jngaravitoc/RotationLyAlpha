@@ -35,6 +35,7 @@ int main(int argc, char **argv){
 
   if(argc!=4){
     fprintf(stderr, "USAGE: %s\n", USAGE);
+    exit(1);
   }
 
   tau = atof(argv[1]);
