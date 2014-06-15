@@ -1012,24 +1012,21 @@ The quantity $S(b,\phi)$ denotes the surface brightness of the sphere at $(b,\ph
 
 It is worth stressing that the analytic calculation is clearly not a complete analytic calculation, and we do not expect perfect agreement: we {\it assumed} a functional form for the surface brightness profile [or for $I(\mu)$]. It is important to realise that $I(\mu)$ itself may depend on the spectrum. I.e., analytic solutions exist for $J(x) = \int_0^1 I(x,\mu) d\mu$ at the boundary, and {\it approximate} expressions for $I(\mu) =\int dx I(x,\mu)$, but none for $I(x,\mu)$ itself.  \\
 
-%\begin{figure*}[h]
-%\centerline{\includegraphics[width=85mm,angle=270]{spec.eps}}
-%\caption[]{Comparison between analytic ({\it red solid lines}) \& Monte-Carlo ({\it blac%k histograms}) calculations of spectra. Left panel shows spectrum when the observer looks down the rotation axis. The right panel shows the spectra when the angle between the line-of-sight and rotation axis is ~45 degrees. Note that here $\mu \equiv \cos i$.}
-%\label{fig:scheme}
-%\end{figure*} 
+
 
 Fig~2 shows some examples of analytic vs. full MC spectra. The area under all spectra are normalised to $1$. The MC simulations used $10^5$ photons. The two methods clearly give good agreement, though not perfect. In particular, Fig~3 shows that the MC gives rise to a spectrum that is slightly more concentrated to the centre. It is easy to get better agreement my modifying the surface brightness profile (e.g. if $S(b)=2-b$, then the analytic calculation agrees better) In any case, the analytic calculation closely captures the results obtained from the full calculations from the MC simulations. As such, they are extremely useful \& provide us with a quick tool to verify our calculations at the first order level.
 
-%\begin{figure*}[h]
-%\centerline{\includegraphics[width=85mm,angle=270]{spec2.eps}}
-%\caption[]{Same as Fig~2. Right panel is now when $\cos i > 0.98$.}
-%\label{fig:scheme}
-%\end{figure*} 
-%\end{document}  
 
 
-
-
+\begin{figure*}
+\begin{center}
+  \includegraphics[width=0.48\textwidth]{vary_vel.pdf}
+  \includegraphics[width=0.48\textwidth]{vary_angle.pdf}
+\end{center}
+\caption{
+Comparison of the Monte Carlo results agains the analytic solution.
+\label{fig:comparison} }   
+\end{figure*}
 
 \bibliographystyle{apj}
 \bibliography{references} 
