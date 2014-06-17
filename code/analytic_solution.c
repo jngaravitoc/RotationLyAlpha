@@ -83,7 +83,7 @@ double J_surface(double x, double b, double phi, double i_angle, double tau0, do
   v_thermal = 12.85*sqrt(TEMP/10000.0);
   a = 4.7E-4*(12.85/v_thermal);
   
-  beta = atan(b*sin(phi)/sqrt(R*R - b*b));
+   beta = atan(b*sin(phi)/sqrt(R*R - b*b));
   
   x_b = (v_rot/v_thermal) * sqrt(1.0- (b/R)*(b/R)*(cos(phi)*cos(phi))) * 
     cos(i_angle) * sin(beta);
