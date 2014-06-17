@@ -59,8 +59,8 @@ hydrogen at a constant temperature.
 These spheres have a solid-body rotation with maximum velocities in
 the range $0-300$ \kms and neutral hydrogen optical depths in the
 range $\tau_{\rm H}=10^{5}-10^{7}$. 
-We consider cases of a single central \lya source, and a uniform
-distribution of sources.  
+We consider two types of source distributions: single central and a
+homogeneoulsy distributed in the sphere. 
 Our main result is that rotation introduces a dependence of the
 line morphology with  viewing angle. 
 Observations with a line of sight parallel to the rotation axis yield
@@ -71,8 +71,9 @@ Along the same sight, the line becomes single peaked  at rotational
 velocities close to half the line width in the static case. 
 Notably, we find that rotation does not induce any significant spatial
 anisotropy in the integrated line flux nor in the escape fraction. 
-We provide an analytical expression for the outgoing line intensity
-that accounts for the velocity and viewing angle trends reported here.
+We provide an analytical expression for the outgoing \lya spectrum of
+a rotating cloud which accounts for the velocity and viewing angle
+trends observed in the simulations.
 \end{abstract}
 
 
@@ -84,41 +85,46 @@ method in extra-galactic astronomy to find distant star-forming
 galaxies
 \citep{PartridgePeebles,Rhoads00,Gawiser2007,Koehler2007,Ouchi08,Yamada2012,Schenker2012,Finkelstein2013}.
 The galaxies detected using this method receive the 
-name of \ly emitters (LAEs). A detailed examination of this galaxy
-population has diverse implications for galaxy formation, reionization
-and the large scale structure of the Universe. Attempts to fully
-exploit the physical information included in the \ly line require an
-understanding of all the physical factors involved in shaping the
-line. Due to the resonant nature of this line, these physical factors
-notably include temperature, density and bulk velocity field of the neutral
-Hydrogen in the emitting galaxy and its surroundings.
+name of \ly emitters (LAEs). 
+A detailed examination of this galaxy population has diverse
+implications for galaxy formation, reionization and the large scale
+structure of the Universe.  
+Attempts to fully exploit the physical information included in the \ly
+line require an understanding of all the physical factors involved in
+shaping the  line. 
+Due to the resonant nature of this line, these physical factors
+notably include temperature, density and bulk velocity field of the
+neutral Hydrogen in the emitting galaxy and its surroundings.
 
 
 A basic understanding of the quantitative behavior of the \ly line
 has been reached through analytic studies in the case of a static
 configurations, such as uniform slabs
 \citep{Adams72,Harrington73,Neufeld90} and uniform spheres
-\citep{Dijkstra06}. Analytic studies of configurations including
-some kind of bulk flow only include the case of a sphere with a Hubble
-like expansion flow \citep{LoebRybicki}. 
+\citep{Dijkstra06}. 
+Analytic studies of configurations including some kind of bulk flow
+only include the case of a sphere with a Hubble like expansion flow
+\citep{LoebRybicki}.  
 
-A more detailed quantitative description of the \ly line has been reached through
-Monte Carlo simulations \citep{Auer68,Avery68,Adams72}. In the last
-two decades these studies have become popular due to the
-availability of computing power. Early into the 21st century, the first
+A more detailed quantitative description of the \ly line has been
+reached through Monte Carlo simulations \citep{Auer68,Avery68,Adams72}. 
+In the last two decades these studies have become popular due to the
+availability of computing power. 
+Early into the 21st century, the first
 studies focused on homogeneous and static media
-\citep{Ahn00,Ahn01,Zheng02}. Later on, the effects of clumpy media
-\citep{Hansen06} and expanding/contracting shell/spherical geometries started to
-be studied \citep{Verhamme06,Dijkstra06,Ahn2014}. Similar codes have applied
-these results to semi-analytic models of galaxy formation \citep{Orsi12, Garel2012} and
-results of large hydrodynamic simulations
-\citep{CLARA,Forero12,Behrens13}. Recently, Monte Carlo codes have also
-been applied to the results of high resolution hydrodynamic
-simulations of individual
-galaxies \citep{Laursen09,Barnes11,Verhamme12,Yajima12}. Meanwhile, recent
-developments have been focused on the systematic study of clumpy
-outflows \citep{DijkstraKramer}and anisotropic velocity configurations
-\citep{Zheng2013}. 
+\citep{Ahn00,Ahn01,Zheng02}. 
+Later on, the effects of clumpy media \citep{Hansen06} and
+expanding/contracting shell/spherical geometries started to be studied
+\citep{Ahn03,Verhamme06,Dijkstra06}.  
+Similar codes have applied these results to semi-analytic models of
+galaxy formation \citep{Orsi12, Garel2012} and results of large
+hydrodynamic simulations \citep{CLARA,Forero12,Behrens13}. 
+Recently, Monte Carlo codes have also been applied to the results of
+high resolution hydrodynamic simulations of individual galaxies
+\citep{Laursen09,Barnes11,Verhamme12,Yajima12}. 
+Meanwhile, recent  developments have been focused on the systematic
+study of clumpy outflows \citep{DijkstraKramer} and anisotropic
+velocity configurations \citep{Zheng2013}. 
 
 The recent studies of galaxies in hydrodynamic simulations
 \citep{Laursen09,Barnes11,Verhamme12,Yajima12} have all shown
@@ -155,7 +161,9 @@ models. In \S \ref{sec:results} we present the results of the
 simulations, with special detail to quantities that show a
 clear evolution as a function of the sphere rotational velocity. In \S
 \ref{sec:discussion} we discuss the implications of our results. In
-the last section we present our conclusions.
+the last section we present our conclusions. The Appendix presents the
+derivation of an analytic expression that can be helpful to interpret
+to first order the main trends observed in the Monte Carlo simulations.
 
 
 In this paper we express a photon's frequency in terms of the
@@ -317,7 +325,7 @@ propagation and frequency at their last scattering.
 The initialization process for the \ly photons especifies its
 position, frequency and direction of propagation. 
 We select the initial frequency to be exactly the \ly rest-frame
-frequency in the restframe of the gas and the direction of propagation
+frequency in the gas reference frame and the direction of propagation
 to be random following an flat probability distribution over the sphere.  
 It means that for photons emitted from the center of the sphere
 $x_{\rm in}=0$, while photons emitted at some radii with a peculiar
@@ -390,23 +398,26 @@ Photons Distributions & & Central, Homogeneous\\\hline\hline
 \label{sec:results}
 
 The central result of this paper are summarized in Figures
-\ref{fig:CentralSpec} and \ref{fig:HomSpec}. They show 2D histograms
-of the escape frequency $x$ and outgoing angle $\theta$ parameterized by
-$|\mu|$. Constructing the emission line with photons around a value
-of $\mu$ would gives us the emission detected by an observer located at an
-angle $\theta$ with respect to the rotation axis. We have veryfied
-that the solutions are indeed symmetric with respect to $\mu=0$.  
+\ref{fig:CentralSpec} and \ref{fig:HomSpec}. 
+They show 2D histograms of the escape frequency $x$ and outgoing angle
+$\theta$ parameterized by $|\mu|$. 
+Taking into account only photons photons around a value
+of $|\mu|$ gives us the emission detected by an observer located at an
+angle $\theta$ with respect to the rotation axis. 
+We have veryfied that the solutions are indeed symmetric with respect
+to $\mu=0$.   
 
 From these Figures we can see that the line properties change with
-rotational velocity and depend on the viewing angle $\theta$.  In the
-next subsections we describe in  detail the changes of the morphology
-with velocity, optical depth and viewing angle. We characterize the
-line morphology by its total intensity, the full width at half maximum
-(FWHM) and the location of the peak maxima. In order to interpret the
+rotational velocity and depend on the viewing angle $\theta$.  
+In the next subsections we quantify the morphology changes with with
+velocity, optical depth and viewing angle.  
+We characterize the line morphology by its total intensity, the full
+width at half maximu, (FWHM) and the location of the peak maxima. 
+In order to interpret the
 morphological changes in the line we also report the median number of
-scatter for each \ly photon in the simulation. For the models where
-dust is included we measure the escape fraction as a function of
-rotational velocity.  
+scatter for each \ly photon in the simulation. 
+For the models where dust is included we measure the escape fraction
+as a function of rotational velocity.   
 
 \subsection{Line Morphology}
 \label{sec:angles}
@@ -414,28 +425,29 @@ rotational velocity.
 The first column in both Figures \ref{fig:CentralSpec} and
 \ref{fig:HomSpec} shows that for the static sphere the line properties
 are independent of $|\mu|$, as it is expected due
-to the spherical symmetry. However, for increasing rotational
-velocities, at a fixed optical depth, there are clear signs that this
-symmetry is broken. 
+to the spherical symmetry. 
+However, for increasing rotational velocities, at a fixed optical
+depth, there are clear signs that this symmetry is broken. 
 
 If the viewing angle is aligned witht the rotation axis, $|\mu|\sim
-1$, the \ly line keeps a double peak with minor changes with
-increasing rotational velocity. However, for a line of sight
-perpendicular to the rotation axis, $|\mu|\sim 0$, the impact of
-rotation is larger. This is clear in  Figure
-\ref{fig:differentvelocities} where we present the different line
-morphologies for $|\mu|\sim 0$ for both the homogeneous and central
-configurations. The panels have the same distribution as Figures
-\ref{fig:CentralSpec} and \ref{fig:HomSpec}.   
+1$, the \ly line keeps in most of the cases a double peak with minor
+changes as the rotational velocity starts to increase. 
+However, for a line of sight perpendicular to the rotation axis,
+$|\mu|\sim 0$, the impact of  rotation is larger.  
+The double peak readily transforms into a single peak.
 
-In the case of $|\mu|\sim 0$ there are three clear effects on the
-line morphology as the rotational velocity increases. First, the
-line broadens; second, the double peaks reduce their intensity; and
-third, the intensity at the line center rises. The last two effects
-merge to give the impression that the double peaks are merged into one
-at high rotational velocities, a result that is evident for the
-homogeneously distributed sources as shown in the dashed lines of
-Figure \ref{fig:differentvelocities}. 
+This is clear in  Figure \ref{fig:differentvelocities} where we
+present the different line morphologies for $|\mu|\sim 0$ in the
+homogeneous and central configurations.  
+The panels have the same distribution as Figures \ref{fig:CentralSpec}
+and \ref{fig:HomSpec}.    
+There are three clear effects on the line morphology as the rotational
+velocity increases.  
+First, the line broadens; second, the double peaks reduce their intensity; and
+third, the intensity at the line centre rises. 
+The last two effects are combined to give the impression that the double
+peaks are merged into a single one at high rotational velocities. 
+
 
 
 \subsection{Integrated Line Intensity}
@@ -450,35 +462,38 @@ Figure \ref{fig:differentvelocities}.
   The models correspond to an optical depth of $\tau_{\rm
     H}=10^5$ and rotational velocities of $100$\kms, $200$\kms and
   $300$\kms. The distributions are flat in the range of models probed
-  in this paper, meaning that the integrated flux for all viewing angles is the same.
+  in this paper, meaning that the integrated flux for all viewing
+  angles is the same.
 \label{fig:muhisto}} 
 \end{figure}
 
-Besides the change in morphology, we now consider possible variations
-in the integrated flux with respect to the viewing angle $\theta$. We
-define the normalized flux seen by an observer at an angle $\mu$ by: 
+We now consider possible variations in the integrated flux with
+respect to the viewing angle $\theta$. 
+To this end we  define the normalized flux seen by an observer at an
+angle $\mu$ by:  
 
 
 \begin{equation}
 F(\mu) = \frac{2\Delta N}{N\Delta \mu}, 
 \end{equation} 
 %
-where $\mu=\cos\Theta$, $N$ is the total number of outgoing photons,
+where $\mu=\cos\theta$, $N$ is the total number of outgoing photons,
 $\Delta N$ is the number of photons in an angular bin $\Delta
 \Theta$. This definition satisfies the condition
 $\int_{-1}^{1}F(\mu)d\mu/2=1$.  In the case of perfect spherical
-simmetry one expects a flat distribution of $F(\mu)=1$.
+simmetry one expects a flat distribution with $F(\mu)=1$.
 
 Figure \ref{fig:muhisto} shows the results for a selection of models
-with $\tau_{\rm H}=10^{5}$, different rotational velocities and both
-for the central and homogeneous source distributions. The
-distributions do not show any trend, beyond some fluctuations below
-the $2\%$ level. 
+with $\tau_{\rm H}=10^{5}$, ifferent rotational velocities and the two
+types of source distributions.
+This Figure shows that $F(\mu)$ is consistent with being flat, apart
+from some statistical fluctuations on the order of \%2. 
 
-This is a remarkable result. In spite of that the rotation axis
-defines preferential direction, the integrated flux is the same for
-all viewing angles, at least for the range of parameters explored in
-this paper.
+
+This is a remarkable result. 
+In spite of that the rotation axis defines preferential direction, the
+integrated flux is the same for all viewing angles, at least for the
+range of parameters explored in this paper. 
 
 	
 
@@ -502,31 +517,36 @@ this paper.
   \includegraphics[width=0.95\textwidth]{f7.pdf}
 \end{center}
 \caption{FWHM for the non-dusty models as a function of
-  rotational velocity $V_{\rm max}$. The left panel shows the
-  results in velocity units while the right panel normalizes
-  the data by the FWHM in the static case. 
+  rotational velocity $V_{\rm max}$ for observers located
+  perpendicular to the rotation axis. 
+  The left panel shows the results in velocity units while the right
+  panel normalizes the data by the FWHM in the static case. 
   Continuous (dashed) lines  correspond to central (homogeneous)
-  source distributions. The straight lines represent the fit to
-  the data using the expression in Eq. (\ref{eq:fwhm}).
+  source distributions. 
+  The straight lines represent the fit to the data using the
+  expression in Eq. (\ref{eq:fwhm}). 
   \label{fig:widthsvsvelocity}}
 \end{figure*}
 
 
 We use the full width at half maximum (FWHM) to quantify the line
-broadening. We measure this width from the velocity histogram by
-finding the values of the velocities at half maximum intensity. We use
-lineal interpolation between histogram points to get a value more precise
-than the bin size used to construct the line intensity.
+broadening. 
+We measure this width from the line intensity histogram by finding the
+values of the velocities at half maximum intensity.
+We use lineal interpolation between histogram points to get a value
+more precise than the bin size used to construct the histogram. 
 
 Figure \ref{fig:widthvsmu} shows the FWHM for all models as a function
-of the viewing angle. The FWHM increases for decreasing values of
-$\mu$ and increasing values of $V_{\rm max}$. In Figure
-\ref{fig:widthvsvelocity} we fix $|\mu|<0.1$, i.e. viewing angle
-perpendicular to the rotation axis, and plot the FWHM as a
-function of rotational velocity. 
+of the viewing angle. 
+The FWHM increases for decreasing values of $\mu$ (movement from the
+poles to the equator) and increasing values of $V_{\rm max}$. 
+In Figure
+\ref{fig:widthsvsvelocity} we fix $|\mu|<0.1$, i.e. viewing angle
+perpendicular to the rotation axis, to plot the FWHM as a function of
+rotational velocity.  
 
 
-we parametrize the dependency of the line width with  $V_{\rm max}$ as
+Ee parametrize the dependency of the line width with  $V_{\rm max}$ as
 %
 \begin{equation}
  {\rm FWHM}^2 = {\rm FWHM}_{0}^2 + V_{\rm max}^2/\lambda^2,
@@ -534,16 +554,18 @@ we parametrize the dependency of the line width with  $V_{\rm max}$ as
 \end{equation}
 %
 where FWHM$_{0}$ is the velocity width in the static case and $\lambda$ 
-is a positive scalar to be determined as a fit to the data.  With this
-test we want to know to what extent the new velocity width can be
+is a positive scalar to be determined as a fit to the data.  
+With this test we want to know to what extent the new velocity width can be
 expressed as a quadratic sum of the two relevant velocities in the
-problem. That all the models fall into two families of straight lines,
-for central and homogeneously emitted sources, justifies this choice
-of parameterization. 
+problem. 
 
-We fit simultaneously all the points corresponding to each one of this
-families to find $\lambda_{\rm c} = 0.84 \pm 0.06$ and $\lambda_{\rm
-  h}= 0.54\pm 0.10$ respectively.   
+All the models fall into a single familiy of lines in the plane shown
+in the right panel of Figure \ref{fig:widthsvsvelocity}, justifying
+the choice of our parameterization.
+We fit simultaneously all the points in two separate groups, central
+and homogeneous sources.
+We find that these values are $\lambda_{\rm c} = 0.83 \pm 0.06$ and
+$\lambda_{\rm    h}= 0.82\pm 0.05$ respectively.    
 
 
 \subsection{Line Maxima}
@@ -945,27 +967,28 @@ improve and better frame the interpretation of our simulations.
 
 
 \appendix
-\section{Analytic Expression for Ly$\alpha$ Spectrum
+\section{Analytic Expression for the Ly$\alpha$ Spectrum
   emerging from Rotating Cloud}  
 
 Ly$\alpha$ scattering through a an optically thick gas cloud that is
 undergoing solid-body rotation (i.e. the angular speed around the
 rotation axis is identical for each hydrogen atom) proceeds identical
-as in a static cloud. While scattering events off atoms within the
-rotating cloud impart Doppler boosts on the Ly$\alpha$ photon, these
-Doppler boost are only there in the lab-frame. In the frame of the
-rotating gas cloud, all atoms are stationary w.r.t each other, and the
-scattering process proceeds identical as in the static
+as in a static cloud. 
+While scattering events off atoms within the rotating cloud impart
+Doppler boosts on the Ly$\alpha$ photon, these Doppler boost are only
+there in the lab-frame. 
+In the frame of the rotating gas cloud, all atoms are stationary w.r.t
+each other, an the scattering process proceeds identical as in the static
 case\footnote{An alternative - more quantitative way - to view this is
   to consider the path of an individual photon: say the photon travels
-  a distance corresponding to $\tau=1$, scatters by 90 degrees, then
+  a distance corresponding to $\tau=1$, scatters by $90$ degrees, then
   travels another distance corresponding to $\tau=1$. It is easy to
   show that the point where the photon ends up is independent of the
-  assumed rotation velocity of the cloud.}. This explains why the
-escape fraction of Ly$\alpha$ photon is independent of the rotation
-velocity off the cloud, irrespective of the rotation speed. 
+  assumed rotation velocity of the cloud.}. 
+This explains why the escape fraction of Ly$\alpha$ photon is
+independent of the rotation velocity off the cloud.
 
-The spectrum emerging of photons emerging from a rotating gas cloud is
+The spectrum of \lya photons emerging from a rotating gas cloud is
 also identical as for the static case in a frame that is co-rotating
 with the cloud. However, the surface of cloud now moves in the
 lab-frame. Each surface-element on the rotating cloud now has a bulk
@@ -974,47 +997,105 @@ emerging from this rotation cloud, we have to sum over all surface
 elements (weighted by their intensity).  
 
 To provide an analytic description of this emerging spectrum, we adopt
-the geometry shown in Fig~1 (note this differs slightly from the main
-body of the paper. My `observer'  sits along the x-axis. I think yours
-sits along the z-axis. We have to makes sure this is done consistently
-throughout the paper).  
+the geometry shown in Fig~\ref{fig:scheme}. 
+Note that this differs from the scheme in Fig~1 from the main body of
+the paper. 
+
 \begin{figure*}[h]
 \centerline{\includegraphics[width=85mm]{scheme1.pdf}
 \includegraphics[width=85mm]{scheme2.pdf}}
 \caption[]{Adopted geometry for evaluating the analytic spectrum.}
 \label{fig:scheme}
 \end{figure*} 
-The sightline to the observer \& rotation define the $x-z$ plane. The observer sits along the axis. The {\it left panel} in Fig~1 shows the view from the $y-axis$. The rotation axis makes an angle $i$ with respect to the z-axis. We sum up spectra from individual patches by integrating over the impact parameter $b$, and angle $\phi$. Each $(b,\phi)$ corresponds to a point on the sphere. This point has a velocity vector ${\bf v}(b,\phi,i)$, which we denote with ${\bf v}$ for brevity.
+
+The sightline to the observer \& rotation define the $x-z$ plane. 
+The {\it left panel} in Fig~\ref{fig:scheme} shows the view from the $y$-axis. 
+The observer sits along the $x$ axis. 
+The rotation axis makes an angle $i$ with respect to the $z$-axis. 
+We sum up spectra from individual patches by integrating over the
+impact parameter $b$, and angle $\phi$. 
+Each $(b,\phi)$ corresponds to a point on the sphere. 
+This point has a velocity vector ${\bf v}(b,\phi,i)$, which we denote
+with ${\bf v}$ for brevity. 
+
+
+The intensity at the surface point $(b,\phi)$ is 
+
+\begin{displaymath}
+J(x,b,\phi,i)=\frac{\sqrt{\pi}}{\sqrt{24}a\tau_0}\Bigg{(}\frac{(x-x_{\rm
+    b})^2}{1+{\rm cosh}\Big{[}\sqrt{\frac{2\pi^3}{27}}\frac{|(x
+      -x_{\rm b})^3|}{a\tau_0}\Big{]}}\Bigg{)},
+\end{displaymath} 
+%
+where $x_b\equiv v_{b}/v_{\rm th}$, and $v_b$ is the component of ${\bf v}$ projected onto the line-of-sight. This component is given by
+\begin{equation}
+v_{\rm b}(b,\phi,i)=V_{\rm max}\sqrt{1-(b/R)^2\cos^2 \phi}\hs \cos i
+\hs \sin a,
+\end{equation}
+%
+where
+
+\begin{equation}
+\tan a = \frac{ b\sin \phi}{\sqrt{R^2 -b^2}}.
+\end{equation}
+
+In order to compute to total intensity we integrate over $b$ and
+$\phi$ with a weight wigen by the surface brightness of the
+sphere at $(b,\phi)$, $S(b,\phi)$.
 
 \begin{displaymath}
 J(x,i)=2\pi \int_0^Rdb \hs b \int_0^{2\pi}d\phi \hs
 S(b,\phi)J(x,b,\phi,i) \approx 2\pi \int_0^Rdb \hs b
-\int_0^{2\pi}d\phi \hs J(x,b,\phi,i)\\ \nonumber
+\int_0^{2\pi}d\phi \hs J(x,b,\phi,i)\\ \nonumber.
 \end{displaymath}
-
-\begin{displaymath}
-J(x,b,\phi,i)=\frac{\sqrt{\pi}}{\sqrt{24}a\tau_0}\Bigg{(}\frac{(x-x_{\rm b})^2}{1+{\rm cosh}\Big{[}\sqrt{\frac{2\pi^3}{27}}\frac{|(x -x_{\rm b})^3|}{a\tau_0}\Big{]}}\Bigg{)} 
-\end{displaymath}
-
-The velocity $v_b$ is the component of ${\bf v}$ projected onto the line-of-sight. This component is given by
-\begin{equation}
-v_{\rm b}(b,\phi,i)=v_{\rm rot}\sqrt{1-(b/R)^2\cos^2 \phi}\hs \cos i
-\hs \sin \beta 
-\end{equation}
-
-\begin{equation}
-\tan \beta= \frac{ b\sin \phi}{\sqrt{R^2 -b^2}}.
-\end{equation}
 %
-The quantity $S(b,\phi)$ denotes the surface brightness of the sphere at $(b,\phi)$. We have assumed in our analytic calculations that $S(b,\phi)$ is constant. The assumption $S(b,\phi)=$ constant corresponds to $I(\mu) \propto \mu$ at the surface, where $\mu$ denotes the cosine of the angle of the propagation direction of the outgoing photon and the normal to the spheres surface: a fixed $db$ corresponds to a physical length $ds = db/\mu$ on the sphere. If $I(\mu)$ were constant, this would imply that the sphere should appear brighter per unit $b$. A constant surface brightness profile requires the directional dependence for $I(\mu) \propto \mu$ to correct for this. Indeed, this is what is expected for the escape of Ly$\alpha$ photons from static, extremely opaque media (see Ahn, Lee \& Lee, 2001; their Fig~4 and accompanying discussion).
+In the last expression we assume that $S(b,\phi)$ is constant. 
+This corresponds to $I(\mu) \propto \mu$ at the surface, where $\mu$
+denotes the cosine of the angle of the propagation direction of the
+outgoing photon and the normal to the spheres surface: a fixed $db$
+corresponds to a physical length $ds = db/\mu$ on the sphere.  
+If $I(\mu)$ were constant, this would imply that the sphere should
+appear brighter per unit $b$. 
+A constant surface brightness profile requires the directional
+dependence for $I(\mu) \propto \mu$ to correct for this. 
+Indeed, this is what is expected for the escape of Ly$\alpha$ photons
+from static, extremely opaque media (see \cite{Ahn01}; their
+Fig~4 and accompanying discussion). 
 
-It is worth stressing that the analytic calculation is clearly not a complete analytic calculation, and we do not expect perfect agreement: we {\it assumed} a functional form for the surface brightness profile [or for $I(\mu)$]. It is important to realise that $I(\mu)$ itself may depend on the spectrum. I.e., analytic solutions exist for $J(x) = \int_0^1 I(x,\mu) d\mu$ at the boundary, and {\it approximate} expressions for $I(\mu) =\int dx I(x,\mu)$, but none for $I(x,\mu)$ itself.  \\
+It is worth stressing that the analytic calculation is clearly not a
+complete analytic calculation, and we do not expect perfect agreement:
+we {\it assumed} a functional form for the surface brightness profile
+[or for $I(\mu)$]. 
+
+It is important to realise that $I(\mu)$ itself may
+depend on the spectrum. I.e., analytic solutions exist for $J(x) =
+\int_0^1 I(x,\mu) d\mu$ at the boundary, and {\it approximate}
+expressions for $I(\mu) =\int dx I(x,\mu)$, but none for $I(x,\mu)$
+itself. 
 
 
 
-Fig~2 shows some examples of analytic vs. full MC spectra. The area under all spectra are normalised to $1$. The MC simulations used $10^5$ photons. The two methods clearly give good agreement, though not perfect. In particular, Fig~3 shows that the MC gives rise to a spectrum that is slightly more concentrated to the centre. It is easy to get better agreement my modifying the surface brightness profile (e.g. if $S(b)=2-b$, then the analytic calculation agrees better) In any case, the analytic calculation closely captures the results obtained from the full calculations from the MC simulations. As such, they are extremely useful \& provide us with a quick tool to verify our calculations at the first order level.
+Fig~\ref{fig:comparison}shows some examples of analytic vs. full MC
+spectra.
+The area under the spectra is the same in all cases. 
+The left panel shows the results for different rotational velocitiies
+in the case of $\tau_{H}=10^7$ and an observer located perpendicular
+to the axis of rotation ($\mu=0$ in the notation of the main body of
+the paper, $i=0$ in the scheme of Fig~\ref{fig:scheme}). 
+The right panel shows the results for different viewing angles in the
+case of $\tau_{H}=10^7$ and a rotational velocity of $V_{\rm
+  max}=300$\kms. 
 
-
+The two methods clearly give good agreement, though not perfect. In
+particular, the left panel shows that the MC gives rise to a spectrum that is
+slightly more concentrated towards the line centre. 
+It is easy to get better agreement my modifying the surface brightness
+profile (e.g. if $S(b)=2-b$, then the analytic calculation agrees
+better).
+In any case, the analytic calculation closely captures the results
+obtained from the full calculations from the MC simulations.  
+As such, they are extremely useful and provide us with a quick tool to
+verify our calculations at the first order level. 
 
 \begin{figure*}
 \begin{center}
@@ -1022,7 +1103,11 @@ Fig~2 shows some examples of analytic vs. full MC spectra. The area under all sp
   \includegraphics[width=0.48\textwidth]{vary_angle.pdf}
 \end{center}
 \caption{
-Comparison of the Monte Carlo results agains the analytic solution.
+Comparison of the Monte Carlo results agains the analytic
+solution. The left panel explores the results of different velocities.
+The right panel presents the results for two different observers:
+paralel and perpendicular to the rotationa axsi, $\mu=1$ and $\mu=0$
+respectively.
 \label{fig:comparison} }   
 \end{figure*}
 
