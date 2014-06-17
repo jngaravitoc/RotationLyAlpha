@@ -53,24 +53,26 @@ No. 18A-10, Edificio Ip, Bogot\'a, Colombia}
 
 We present results of radiative transfer calculations to measure the
 impact of gas bulk rotation on the morphology of the Lyman $\alpha$ 
-emission line in distant galaxies. We model a galaxy as a sphere with
-an homogeneous mixture of dust and hydrogen at a constant
-temperature. These spheres have a solid-body rotation with maximum
-velocities in the range $0-300$ \kms and neutral hydrogen optical
-depths in the range $\tau_{\rm H}=10^{5}-10^{7}$. We consider cases 
-of a single central \lya source, and a uniform distribution of sources. 
+emission line in distant galaxies. 
+We model a galaxy as a sphere with an homogeneous mixture of dust and
+hydrogen at a constant temperature. 
+These spheres have a solid-body rotation with maximum velocities in
+the range $0-300$ \kms and neutral hydrogen optical depths in the
+range $\tau_{\rm H}=10^{5}-10^{7}$. 
+We consider cases of a single central \lya source, and a uniform
+distribution of sources.  
 Our main result is that rotation introduces a dependence of the
-line morphology with  viewing angle. Observations with a line of sight
-parallel to the rotation axis yield line morphologies similar to the
-static case. The greatest difference is observed for lines of sight
-perpendicular to the rotation axis. In this case the intensity at the line
-center increases and the line width increase with rotational velocity.  For
-homogeneously distributed sources the line becomes single peaked  at
-rotational velocities larger than half the line width in the static
-case. Notably, we find that rotation does not not induce any
-significant spatial anisotropy in the integrated line flux nor in the escape
-fraction.  However, we do find in the homogeneous models a clear
-increase of the escape fraction with increasing rotational velocity.
+line morphology with  viewing angle. 
+Observations with a line of sight parallel to the rotation axis yield
+line morphologies similar to the static case. 
+For lines of sight perpendicular to the rotation axis the intensity at the line
+center and the line width increase with rotational velocity.   
+Along the same sight, the line becomes single peaked  at rotational
+velocities close to half the line width in the static case. 
+Notably, we find that rotation does not induce any significant spatial
+anisotropy in the integrated line flux nor in the escape fraction. 
+We provide an analytical expression for the outgoing line intensity
+that accounts for the velocity and viewing angle trends reported here.
 \end{abstract}
 
 
@@ -224,7 +226,8 @@ write the norm of the angular velocity as $\omega=V_{\rm max}/R$.
 
 For each photon in the simulation we have its initial position inside
 the sphere, direction of propagation $\hat{k}_{\rm in}$ and reduced
-frequency $x_{\rm in}$. The photon's propagation stops once they cross the
+frequency $x_{\rm in}$. 
+The photon's propagation stops once they cross the
 surface of the sphere. At this point we store the position, the outgoing direction
 of propagation $\hat{k}_{\rm out}$ and the reduced frequency $x_{\rm
   out}$. We now define the angle $\theta$ by $\cos\theta = \hat{k}_{\rm out}\cdot
@@ -260,10 +263,15 @@ shows the geometry of the problem and the important variables.
 \caption{
 2D histogram showing the number of photons that escape with frecuency
 $x$ forming an angle $\theta$ (parameterized as $|\cos\theta|$) with the
-rotation axis. The rotational velocity ($0,100,200,300$\kms)
-increases from left to right and the optical depth ($10^5$, $10^6$,
-$10^7$) from top to bottom. The \ly photons are initialized at the
-center of the sphere.
+rotation axis. 
+The rotational velocity ($0,100,200,300$\kms) increases from left to
+right and the optical depth ($10^5$, $10^6$, $10^7$) from top to
+bottom. 
+The \ly photons are initialized at the center of the sphere. 
+Two main results can be read from this figure.
+First, the line morphology depends on the viewing angle. 
+Second, the line can become single peaked for high rotational
+velocities.
 \label{fig:CentralSpec} }   
 \end{figure*}
 
@@ -292,67 +300,79 @@ center of the sphere.
 
 \subsection{Brief Description of the Radiative Transfer Codes}
 
-Here we briefly describe the relevant points for the two radiative
-transfer codes we have used. For a detailed description we refer the
-reader to the original papers \cite{CLARA,DijkstraKramer}.
+Here we briefly describe the relevant characteristics of the two
+radiative transfer codes we have used.  
+For a detailed description we refer the reader to the original papers
+\cite{CLARA,DijkstraKramer}. 
 
 The codes follow the individual scatterings of \ly photons as they
-travel through a 3D distribution of neutral Hydrogen. At each
-scattering the frequency of the photon (in the laboratory frame) and
-its direction of propagation change. This change in frequency is due
-to the peculiar velocities of the Hydrogen atom that absorbed and
-re-emitted the photon. If dust is present, the photon can interact
-either with a Hydrogen atom or dust grain. In the case of a dust
-interaction the photon can be either absorbed or scattered, this
-probability is encoded in the dust albedo, $A$, which we chose to be
-$1/2$. In order to obtain accurate values for the escape fraction of
-photons in the presence of dust, we do not use any accelerating
-mechanism in the radiative transfer. Once the photons escape the gas
-distribution we store their direction at their direction of
+travel through a 3D distribution of neutral Hydrogen. 
+The frequency of the photon (in the laboratory frame) and
+its direction of propagation change at every scattering. 
+This change in frequency is due to the peculiar velocities of the
+Hydrogen absorbing and re-emitting the photon. 
+Once the photons escape the gas distribution we store their direction of
 propagation and frequency at their last scattering.
 
-The photons are thus emitted in some region of the gas distribution
-and follow a random walk in space and frequency until they escape the
-gas distribution or are absorbed by a dust grain. The initialization
-process for the \ly photons has to specify its position, frequency and
-direction of propagation. In our case we select the initial frequency
-to be exactly the \ly rest-frame frequency ($x=0$) and the direction of
-propagation to be random following an flat probability distribution
-over the sphere. A different initization that uses a Gaussian with a
-velocity with equal to the thermal velocity, $12.8$\kms in our case,
-should not introduce noticeable change given that our rotational
-velocities span the range $100$-$300$\kms and the lines have velocity
-widths on the order of $100$-$500$\kms.
+The initialization process for the \ly photons especifies its
+position, frequency and direction of propagation. 
+We select the initial frequency to be exactly the \ly rest-frame
+frequency in the restframe of the gas and the direction of propagation
+to be random following an flat probability distribution over the sphere.  
+It means that for photons emitted from the center of the sphere
+$x_{\rm in}=0$, while photons emitted at some radii with a peculiar
+velocity $\vec{v}$ have initial values $x_{in}$ depending on its direction of
+propagation: $x_{\rm   in}=\vec{v}\cdot\hat{k}_{\rm in}/v_{\rm th}$.
+We do not include the effect of turbulent velocities in the
+initialization.
+We neglect this given that the induced perturbation should be on the
+close to the thermal velocity, $12.8$\kms, which is one order of
+magnitude smaller than the velocity widths ($100$-$500$\kms) in the
+static case. 
 
-The gas is completely defined by its geometry (i.e. sphere or slab),
-temperature $T$, Hydrogen optical depth $\tau_{\rm H}$, dust optical
-depth $\tau_{\rm a}$ and the bulk velocity field $\vec{v}$. Our codes
-treat the gas as homogeneous in density ($\tau_{\rm H}$, $\tau_{\rm
-  a}$) and temperature.  
+
+If dust is present, the photon can interact either with a Hydrogen
+atom or dust grain.
+In the case of a dust interaction the photon can be either absorbed or
+scattered.
+This probability is encoded in the dust albedo, $A$, which we chose
+to be $1/2$. 
+In order to obtain accurate values for the escape fraction of
+photons in the presence of dust, we do not use any accelerating
+mechanism in the radiative transfer. 
+
+
+The codes treat the gas as homogeneous in density and temperature.  
+This implies that the cas is completely defined by its geometry
+(i.e. sphere or slab), temperature $T$, Hydrogen optical depth
+$\tau_{\rm H}$, dust optical depth $\tau_{\rm a}$ and the bulk
+velocity field $\vec{v}$.  
+
 
 
 \subsection{Grid of Simulated Galaxies}
 \label{sec:models}
 
 In the Monte Carlo calculations we follow the propagation of $N_{\gamma}=10^5$
-numerical photons through different spherical galaxies. For each galaxy
-we vary at least one of the following parameters: the maximum
+numerical photons through different spherical galaxies. 
+For each galaxy we vary at least one of the following parameters: the maximum
 rotational velocity $V_{\rm max}$, the hydrogen optical depth $\tau_{H}$,
 the dust optical depth $\tau_{a}$ and the initial distribution of photons
-with respect to the gas. There are $60$ models initial combining all
-variations of the input parameters. Table \ref{table:models}
-summarizes the different parameters.
+with respect to the gas. 
+In total there are $48$ different models combining all the possible
+different variations in the input parameters.
+Table \ref{table:models} lists the different parameters we used to
+generate the models.
 
 Additionally, we have used two independently developed Monte Carlo
-codes \citep{CLARA,DijkstraKramer} to perform the calculations. The
-results we report are robust in the sense that they are obtained by
-both codes.  
+codes \citep{CLARA,DijkstraKramer} to perform the calculations. 
+The results and trends we report are observed in both codes.  
 
 \begin{table}
 \begin{center}
 \begin{tabular}{llc}\hline\hline
 Physical Parameter (units) & Symbol & Values\\\hline
-Velocity (\kms) & $V_{\rm max}$&$0,\ 50,\ 100,\ 200,\ 300$\\
+Velocity (\kms) & $V_{\rm max}$&$0,\ \ 100,\ 200,\ 300$\\
 Hydrogen Optical Depth & $\tau_{H} $ & $10^{5},\ 10^{6},\ 10^{7}$\\
 Dust Optical Depth & $\tau_{a}$ & $0$,$1$\\
 Photons Distributions & & Central, Homogeneous\\\hline\hline
@@ -576,21 +596,21 @@ Central & $10^{5}$ &  0.096 & 0.097 & 0.096 &  0.096 & 0.096 \\
 \end{center}
 \end{table}
 
-\begin{figure*}
-\begin{center}
-  \includegraphics[width=0.40\textwidth]{f10.pdf}
-  \includegraphics[width=0.40\textwidth]{f11.pdf}
-\end{center}
-  \caption{Effects of rotation on the escape fraction. Left
-    panel, escape fraction as a function of rotational velocity. All
-    these models have $\tau_{a}=1$. The continuous (dashed) lines
-    correspond to central (homogeneous) models. Right panel, escape
-    fraction as a    function of the product $(a\tau_{\rm
-      H})^{1/3}\tau_{A}$. The    analytic solution for the infinite
-    slab is shown as a continuous line. Different lines correspond
-    to different rotational velocities for the homogeneous models.     
-    \label{fig:escape_fraction}} 
-\end{figure*}
+%\begin{figure*}
+%\begin{center}
+%  \includegraphics[width=0.40\textwidth]{f10.pdf}
+%  \includegraphics[width=0.40\textwidth]{f11.pdf}
+%\end{center}
+%  \caption{Effects of rotation on the escape fraction. Left
+%    panel, escape fraction as a function of rotational velocity. All
+%    these models have $\tau_{a}=1$. The continuous (dashed) lines
+%    correspond to central (homogeneous) models. Right panel, escape
+%    fraction as a    function of the product $(a\tau_{\rm
+%      H})^{1/3}\tau_{A}$. The    analytic solution for the infinite
+%    slab is shown as a continuous line. Different lines correspond
+%    to different rotational velocities for the homogeneous models.     
+%    \label{fig:escape_fraction}} 
+%\end{figure*}
 
 We now estimate the escape fraction $f_{\rm esc}$ for the dusty
 models. The main  result is that we do not find any dependence
@@ -652,25 +672,6 @@ values of $\tau_{\rm H}$.
 
 \begin{figure*}
 \begin{center}
-    \includegraphics[width=0.45\textwidth]{f12.pdf}
-    \includegraphics[width=0.45\textwidth]{f13.pdf}
-\end{center}
-\caption{Logarithm of the average number of scatterings as function of
-  $\mu$ (left panel) and the maximum rotational velocity $V_{\rm
-    max}$. The left panel shows the behaviour for $\tau=10^{5}$ and
-  $V_{max}=300$\kms as a function of $|\cos\theta|$; the independence of
-  $N_{\rm scatt}$ with $\mu$ is present in all models. 
-  In the right panel the continuous (dashed) lines represent an
-  central (homogeneous) distribution of sources; there is a clear
-  decrease in the number of scatterings for the homogenously
-  distributed sources. 
-\label{fig:Nscatt} }    
-\end{figure*}
-
-
-
-\begin{figure*}
-\begin{center}
   \includegraphics[width=0.48\textwidth]{f14_1.pdf}
   \includegraphics[width=0.48\textwidth]{f14_2.pdf}
   \includegraphics[width=0.48\textwidth]{f14_3.pdf}
@@ -681,10 +682,7 @@ values of $\tau_{\rm H}$.
       corresponds to the static case and right panels correspond to
       $V_{\rm max}=300\kms$. The color scale is logarithmic on the
       number of photons with given values of $N_{\rm scatt}$ and
-      $x$. \label{fig:Nscatt2D}. A results that stands out is in the upper
-      right panel, showing that in homogeneously distributed sources a
-      large number of photons can escape escape after a few
-      scatterings, $N_{\rm scatt}<10$.}   
+      $x$. \label{fig:Nscatt2D}. }
 \end{figure*}
 
 The number of scatterings affects the escape frequency of a \ly
