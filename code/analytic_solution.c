@@ -78,16 +78,18 @@ int main(int argc, char **argv){
 
 double J_surface(double x, double b, double phi, double i_angle, double tau0, double v_rot){
   double final, v_thermal, a;
-  double beta, x_b, arg_in;
+  double beta, x_b, arg_in, s;
 
   v_thermal = 12.85*sqrt(TEMP/10000.0);
   a = 4.7E-4*(12.85/v_thermal);
   
-   beta = atan(b*sin(phi)/sqrt(R*R - b*b));
-  
-  x_b = (v_rot/v_thermal) * sqrt(1.0- (b/R)*(b/R)*(cos(phi)*cos(phi))) * 
-    cos(i_angle) * sin(beta);
-  
+  beta = PI/2.0 - atan(b*sin(phi)/sqrt(R*R - b*b));
+
+  s = abs((-sin(i_angle) * sqrt(R*R - b*b)) + (b * cos(phi) * cos(i_angle)));  
+
+  x_b = (v_rot/v_thermal) * sqrt(1.0- (s/R)*(s/R)) * cos(i_angle) * cos(beta);  
+
+
   arg_in = pow(fabs(x-x_b),3.0)/(a*tau0);
   arg_in = arg_in * sqrt((2.0*PI*PI*PI)/27.0);
   final = pow((x-x_b),2)/(1.0+cosh(arg_in)) * (sqrt(PI)/(sqrt(24.0)*a*tau0));
