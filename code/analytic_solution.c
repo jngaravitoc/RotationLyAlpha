@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
-#define NPOINTS 500
+#define NPOINTS 1000
+#define NPOINTSX 100
 #define TEMP 10000.0
 #define R 1.0
 #define PI 3.141592653589793238462643383279502884197169
@@ -27,7 +28,7 @@ int main(int argc, char **argv){
   double *j_int;
   double min_x=-50.0;
   double max_x= 50.0;
-  double delta_x = (max_x-min_x)/NPOINTS;
+  double delta_x = (max_x-min_x)/NPOINTSX;
   double delta_phi = 2.0*PI/NPOINTS;
   double delta_b = 0.9999/NPOINTS;
   double tau, v_rot, i_angle;
@@ -45,7 +46,7 @@ int main(int argc, char **argv){
   
   fprintf(stderr, "%f %f %f\n", tau, v_rot, i_angle);
 
-  if(!(x=malloc(sizeof(double)*NPOINTS))){
+  if(!(x=malloc(sizeof(double)*NPOINTSX))){
     fprintf(stderr, "Problem with memory allocation");
     exit(1);
   }
@@ -55,7 +56,7 @@ int main(int argc, char **argv){
     exit(1);
   }
 
-  for(i=0;i<NPOINTS;i++){
+  for(i=0;i<NPOINTSX;i++){
     x[i] = min_x + delta_x*i;    
 
     j_int[i] = 0.0;
@@ -68,7 +69,7 @@ int main(int argc, char **argv){
     }
   }
 
-  for(i=0;i<NPOINTS;i++){
+  for(i=0;i<NPOINTSX;i++){
     fprintf(stdout, "%f %f\n", x[i], j_int[i]);
   }
   
