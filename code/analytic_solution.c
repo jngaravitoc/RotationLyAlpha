@@ -64,7 +64,8 @@ int main(int argc, char **argv){
       for(k=0;k<NPOINTS;k++){
 	phi = delta_phi*j;
 	b = delta_b*k;
-	j_int[i] += J_surface(x[i], b, phi, i_angle, tau, v_rot) * b * delta_phi * delta_b;
+	j_int[i] += 
+	  J_surface(x[i], b, phi, i_angle, tau, v_rot) * b * delta_phi * delta_b;
       }
     }
   }
@@ -80,15 +81,15 @@ int main(int argc, char **argv){
 double J_surface(double x, double b, double phi, double i_angle, double tau0, double v_rot){
   double final, v_thermal, a;
   double beta, x_b, arg_in, s;
-
+  
   v_thermal = 12.85*sqrt(TEMP/10000.0);
   a = 4.7E-4*(12.85/v_thermal);
   
-  beta = PI/2.0 - atan(b*sin(phi)/sqrt(R*R - b*b));
+  beta = atan(b*sin(phi)/sqrt(R*R - b*b));
 
-  s = abs((-sin(i_angle) * sqrt(R*R - b*b)) + (b * cos(phi) * cos(i_angle)));  
+  s = -(sin(i_angle) * sqrt(R*R - b*b)) + (b * cos(phi) * cos(i_angle));  
 
-  x_b = (v_rot/v_thermal) * sqrt(1.0- (s/R)*(s/R)) * cos(i_angle) * cos(beta);  
+  x_b = (v_rot/v_thermal) * sqrt(1.0- (s/R)*(s/R)) * cos(i_angle) * sin(beta);  
 
 
   arg_in = pow(fabs(x-x_b),3.0)/(a*tau0);
