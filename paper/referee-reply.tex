@@ -13,28 +13,21 @@
 
 
 \maketitle
-We thank the referee for a detailed report. Indeed, the report
-motivated us to explore a very important aspect of our results that we
-had overlooked.  
+We thank the referee for a detailed report. It prompted us to explore
+a very important aspect of our results that we had overlooked. Namely,
+the dependence of the line morphology as a function of viewing
+angle. In the revision process we have also corrected a mistake in the
+initialization procedure for the MC calculations. This also allowed us
+to derive an analytical solution that reproduced the main features of
+the MC results.  
+  
+The improvement in these three aspects (line anisotropy, photon initialization,
+analytical solution) has led us to rewrite the Results and Discussion
+section. We have also completeley dropped sections (e.g. the asymetrical emission
+part) that obfuscate the new main results of the paper.
 
-We made a plot suggested by the referee that showed a clear
-dependence of the line morphology with the viewing angle an effect
-that we had deemed as negligeable after measuring a proxy statistic for
-it (the integrated flux).
-
-The correct interpretation is that, as the referee expected, there is
-a strong effect on the morphology. 
-
-This completely changed the focus of our paper. We have now completely
-rewritten the Results and Discussion section in order to highlight
-that result. We have also completeley dropped sections (e.g. the
-asymetrical emission part) that obfuscate this main result.
-
-In this document we address one by one the questions in the
-report. However, we kindly ask the referee to revise directly the new
-version of the paper, given the substantial changes from the first
-version.
-
+Given the substantial changes from the first version, 
+we kindly ask the referee to revise again in detail the new manuscript. 
 
 In what follows the comments by the referee are boldfaced.
 
@@ -59,11 +52,8 @@ isotropic, at least in the range of parameters that you investigated
 so far.}
 
 As we mentioned in the introduction to this letter, there is indeed
-an anisotropy in the line morphology. The paper was re-structured
-accordingly.
-
-However, the properties that we had measured as isotropic (integrated
-flux and escape fracrion) remain anisotropic.
+an anisotropy in the line morphology. The paper is now re-structured
+to highlight this result.
 
 
 {\bf As explained in sect 3.4, rotation kills the spherical symmetry
@@ -73,7 +63,6 @@ flux and escape fracrion) remain anisotropic.
   angle. From Fig8, it seems that the flux is the same in all
   directions for spherical distributions of sources. This important
   result is not enough emphasized.} 
-
 
 We now emphasize in the abstract, section 3.2 and the conclusions the
 result on the non-variation of the total flux with viewing angle.
@@ -101,17 +90,9 @@ emphasize it.
   to the anisotropy problematic only at the end on the paper.} 
 
 We do not find any significant dependence of the escape fraction with
-the viewing angle. This is shown in Figure \ref{escape_fraction} of this
-document. We do not show this plot in the paper and only mention the
-result at the beginning of Section 3.5.
+the viewing angle. This is now shown in Figure 9 of the paper. 
 
-\begin{figure}
-\begin{center}
-\includegraphics[scale=0.5]{escapefractionvstheta.png}
-\end{center}
-\caption{Escape Fraction as a function of $\mu$
-\label{escape_fraction}}
-\end{figure}
+
 
 
 \section*{Outflow + Rotation}
@@ -160,7 +141,7 @@ changed the $x$ notation to velocities.
 We do not make a gaussian fit. We build first a histogram for the
 outgoing frequencies. Then we interpolate between the points of the
 histogram to find the half maxima intensity values and their
-corresponding frequencies.
+corresponding frequencies. This is now clear in the text.
 
 \subsection*{Fig.3}
 
@@ -176,6 +157,8 @@ However, this plateau is not present in Fig. 4 anymore because we do
 not build the line from all the outgoing photons, but instead take
 into account the line of sight for the observation.
 
+The result is found in both codes.
+
 
 \subsection*{Fig4 and 6}
 
@@ -189,7 +172,14 @@ into account the line of sight for the observation.
   dusty rotating cloud with central source independant of the rotation
   velocity ?} 
 
-(MARK) 
+This results is not surprising if one considers that the scatterings
+proceed as in the static case. In the co-rotating frame everything
+happens exactly as in the estatic case.
+
+We have also veryfied that for high rotational velocities of 1000 km/s
+the results for the escape fraction, number of scatterings and integrated total
+flux remain constant.
+
 
 \subsection*{Fig5}
 
@@ -206,26 +196,14 @@ into account the line of sight for the observation.
   panel is made of photons from the outer shell, and the uppper spot
   from photons emitted inside the cloud.} 
 
-We followed the suggestion by the referee to construct a new
-plot. For the model with homogeneously distributed sources we now the
-initial and final states for every photon. With this information we
-prepare the plot in Figure \ref{nscatt} of this document. It is a 2D
-histogram of the number of scatterings and the initial radius showing
-the starting radius. Indeed, most of the photons that escaped after
-less than 10 scatterings were emitted in the external part of the
-sphere $R>0.8R_{max}$. However, there is a minority of photons that
-have a similar emission radius but only managed to escape after $10^4$
-scatterings. 
+Actully this plot is incorrect due to the wrong initialization of the
+photons in the homogeneous case. In that situation the frequency of
+the photons must be changed according to the dot product between the
+bulk velocity and propagation direction. This is mentioned in section
+2.2.
 
-\begin{figure}
-\begin{center}
-  \includegraphics[scale=0.6]{Histogram2dNscattVSRadius.png}
-\end{center}
-\caption{\label{nscatt} 2D histogram of the number of scatterings and
-  the number. The color scale is linear in the number of photons in
-  each bin.}
-\end{figure}
-
+With this changes we find that the total number of scatterings does
+not change with rotational velocity.
 
 \subsection*{End of paragraph 3.3}
 
@@ -238,7 +216,38 @@ scatterings.
   explanation for this behaviour.} 
 
 
-(MARK)
+We have included the following paragraphs in the paper:
+
+\begin{quote}
+The naive interpretation of the analytic solution does not seem to
+hold for photons emitted far from the sphere's center. 
+We suggest that increasing $\tau_{\rm H}$ from $10^{5}$ to $10^{6}$ causes a
+transition from the 'optically thick' to  the 'extremely optically
+thick' regime for a noticeable fraction of the photons in the
+homogeneous source distribution.
+
+In the optically thick regime, lya  photons can escape in
+'single flight' which corresponds to a scenario in which the
+photon resonantly scatters $10^4-10^5$ times until it is scattered
+into the wing of the line ($x\sim 3-4$). 
+At these frequencies the medium is optically thin, and the photons can
+escape efficiently in a single flight. 
+In contrast, in an extremely optically thick medium lya
+  photons escape in a `single excursion' (Adams 72). 
+Here, photons that are scattered into the wing of the line escape from
+the medium in a sequence of wing scattering events. 
+In both cases, lya photons resonantly scatter $10^4$-$10^5$ times. 
+Because we keep our clouds the same size, the mean free path of Lya
+photons that scatter resonantly is 10 times larger for the case
+$\tau_{\rm H}=10^5$ than for $\tau_{\rm H}=10^6$. 
+If we compute the average distance $D$ travelled by lya
+photons through a medium of size $R$ as a function of line center
+optical depth $\tau_{\rm H}$, then we find that during the transition
+from optically thick to extremely optically thick the mean traversed
+distance $D$ actually decreases slightly.  
+This decrease is unique to this transition region, and $D$ generally
+increases with $\tau_{\rm H}$ at other values of $\tau_{\rm H}$.   
+\end{quote}
 
 \subsection*{Fig8}
 
@@ -275,8 +284,10 @@ different velocities and optical depths. Indeed, the distributions are
 consistent with flat (within the noise levels) for all the models
 studied in our paper. 
 
-We did not try many more models with higher optical depths. We expect
-to do that in the near future to complete a study that could be
-immediatly comparable against observations.
+We did not try models with higher optical depths due to the
+limitation in available computing time to perform the
+calculations. However, the analytical solution provides sufficient
+information to quantify the anisotropy level.
+
 
 \end{document}
