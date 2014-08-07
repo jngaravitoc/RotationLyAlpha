@@ -25,16 +25,65 @@ The Authors\\
 
 \subsection*{Variations with viewing angle... again}
 
-{\bf Figs 2 and 3 are very nice. They illustrate clearly the evolution of spectral shape with viewing angle. Note that the x label is wrong, it is not Vmax. It also needs a color bar to explicit the scale between a red pixel and a green/blue pixel. Because... to my eyes, there is an obvious third result illustrated on these Figs, which is that much less photons seem to escape at the equator than along the poles: the red pixels are concentrated towards the pole, whereas there seems to be less light emerging from equatorial directions. But if the dynamical range between red and blue is very small, maybe it’s ok, given that the equatorial spectrum is broader...
-How did you select photons when you did this Fig 2 ? Did you select them on $\cos\theta|$? You should select only one side, one hemisphere, otherwise you count twice more photons anywhere else than along the equator. Did you select a peculiar $\varphi$ ? Or did you sum over the azimuthal direction ? In order to avoid this impression that less photons escape at equator, you should indeed sum over $\varphi$. However, these selection biases would also affect the static case, whereas the first column looks ok to me, it seems that the same “intensity” is escaping from all directions for this column, and not for the others.
+{\bf Figs 2 and 3 are very nice. They illustrate clearly the evolution
+  of spectral shape with viewing angle. Note that the x label is
+  wrong, it is not Vmax. It also needs a color bar to explicit the
+  scale between a red pixel and a green/blue pixel. Because... to my
+  eyes, there is an obvious third result illustrated on these Figs,
+  which is that much less photons seem to escape at the equator than
+  along the poles: the red pixels are concentrated towards the pole,
+  whereas there seems to be less light emerging from equatorial
+  directions. But if the dynamical range between red and blue is very
+  small, maybe it’s ok, given that the equatorial spectrum is
+  broader}
+
+We have correctd the xlabel. Indeed the
+concentration of photons in a narrow range of velocities along the
+poles (i.e. red values) is compensated by a broader distribution
+around the equator. The total number of photons is the same regardless
+of the $\cos\theta$ value. This is the result of the test shown in
+Figure 5. 
+
+
+
+
+{\bf How did you select photons when you did this Fig 2 ? Did you
+  select them on $|\cos\theta|$? You should select only one side, one
+  hemisphere, otherwise you count twice more photons anywhere else
+  than along the equator. Did you select a peculiar $\varphi$ ? Or did
+  you sum over the azimuthal direction ? In order to avoid this
+  impression that less photons escape at equator, you should indeed
+  sum over $\varphi$. }
+
+The 2D distribution is symmetric on $\cos\theta$. We mention this in
+the first paragraph of the results section. Using this symmetry we select
+by $|\cos\theta|$ in order to have less noise in the 2D histograms. We
+also sum over $\varphi$.
+
+
+{\bf However, these selection biases would also affect the static case, whereas the first column looks ok to me, it seems that the same “intensity” is escaping from all directions for this column, and not for the others.
 It is in strong contradiction with your Fig 5. How do you explain this ?
 Furthermore, I would have expected the contrary, with more photons escaping at the equator, where the velocity field is stronger, than through the poles, where everything is static... However, Ly$\alpha$ radiation transfer effects can often be far from intuitiv.}
+
+The colors in the Figures 2 and 3 correspond to number densities
+inside a velocity-$|\cos\theta|$ pixel. The total flux is thus an
+integrated quantity over the velocity and should not be estimated from
+the pixel intensity. It is difficult to visualize
+the result from Figures 2 and 3. That's why we prepare Figure 5 to
+show that the integrated flux is independent of the angle. 
 
 
 \subsection*{intrinsic spectrum on Fig 4}
 
 {\bf From your Figs 6 and 7, it seems that the results for central and homogeneous cases are very comparable. I would like to see the shape and FWHM of the intrinsic spectra (I mean before transfer) in the case of homogeneous sources, for the static case, as the fiducial case, and when Vmax=100,200,300 km/s, along the equatorial direction. I would like to infer how much of the broadening of the line is really due to transfer effects. Could you make a figure where you compare the intrinsic and emerging spectra along
-the equatorial plane ?}
+the equatorial plane ?} 
+
+
+The Figure is here:\\
+
+
+\includegraphics[width=1.0\textwidth]{../code/intrinsic_spectrum.png}
+
 
 \subsection*{Sect 4.1 : Rotation = Static ?}
 
