@@ -4,7 +4,7 @@
 \usepackage{amsmath}
 \usepackage{graphicx}
 
-\title{Response to the first report on the article draft \emph{The
+\title{Response to the second report on the article draft \emph{The
     Impact of Gas Bulk Rotation on the Lyman-$\alpha$ line.}} 
 \author{Juan N. Garavito-Camargo, Jaime E. Forero-Romero, Mark Disjkstra}
 \date{\today}
@@ -13,20 +13,6 @@
 
 
 \maketitle
-We thank the referee for a detailed report. It prompted us to explore
-a very important aspect of our results that we had overlooked. Namely,
-the dependence of the line morphology as a function of viewing
-angle. In the revision process we have also corrected a mistake in the
-initialization procedure for the MC calculations. This also allowed us
-to derive an analytical solution that reproduced the main features of
-the MC results.  
-  
-The improvement in these three aspects (line anisotropy, photon initialization,
-analytical solution) has led us to rewrite the Results and Discussion
-section. We have also completeley dropped sections (e.g. the asymetrical emission part) that obfuscated the main results of the paper.
-
-Given the substantial changes from the first version, 
-we kindly ask the referee to revise again in detail the new manuscript. 
 
 In what follows the comments by the referee are boldfaced.
 
@@ -35,258 +21,49 @@ Best regards, \\
 The Authors\\
 
 
+\section*{Global Comments}
+
+\subsection*{Variations with viewing angle... again}
+
+{\bf Figs 2 and 3 are very nice. They illustrate clearly the evolution of spectral shape with viewing angle. Note that the x label is wrong, it is not Vmax. It also needs a color bar to explicit the scale between a red pixel and a green/blue pixel. Because... to my eyes, there is an obvious third result illustrated on these Figs, which is that much less photons seem to escape at the equator than along the poles: the red pixels are concentrated towards the pole, whereas there seems to be less light emerging from equatorial directions. But if the dynamical range between red and blue is very small, maybe it’s ok, given that the equatorial spectrum is broader...
+How did you select photons when you did this Fig 2 ? Did you select them on $\cos\theta|$? You should select only one side, one hemisphere, otherwise you count twice more photons anywhere else than along the equator. Did you select a peculiar $\varphi$ ? Or did you sum over the azimuthal direction ? In order to avoid this impression that less photons escape at equator, you should indeed sum over $\varphi$. However, these selection biases would also affect the static case, whereas the first column looks ok to me, it seems that the same “intensity” is escaping from all directions for this column, and not for the others.
+It is in strong contradiction with your Fig 5. How do you explain this ?
+Furthermore, I would have expected the contrary, with more photons escaping at the equator, where the velocity field is stronger, than through the poles, where everything is static... However, Ly$\alpha$ radiation transfer effects can often be far from intuitiv.}
 
 
-\section{Global Comments}
+\subsection*{intrinsic spectrum on Fig 4}
 
-\subsection{Variation with the viewing angle}
+{\bf From your Figs 6 and 7, it seems that the results for central and homogeneous cases are very comparable. I would like to see the shape and FWHM of the intrinsic spectra (I mean before transfer) in the case of homogeneous sources, for the static case, as the fiducial case, and when Vmax=100,200,300 km/s, along the equatorial direction. I would like to infer how much of the broadening of the line is really due to transfer effects. Could you make a figure where you compare the intrinsic and emerging spectra along
+the equatorial plane ?}
 
-{\bf The problematic of anisotropy is only studied from Sect3.4, the former
-sections consider global quantities (spectral shapes, escape
-fractions, etc...). This is ok only if there is NO anisotropy induced
-by rotation, which is not obvious, a priori. You should make it clear
-from the beginning, telling that you will investigate anisotropy at
-the end of the paper only, because you checked that lya properties are
-isotropic, at least in the range of parameters that you investigated
-so far.}
+\subsection*{Sect 4.1 : Rotation = Static ?}
 
-As we mentioned in the introduction to this letter, there is indeed
-an anisotropy in the line morphology. The paper is now re-structured
-to highlight this result.
+{\bf I don’t understand the reasonning that rotation would act on the Ly$\alpha$ transfer as a static medium, since Ly$\alpha$ photons are “co-rotating”. You mention this argument once in the “answer to referee” document, and once in the text Sect. 4.1, with a sentence which reads absurd : a rotating sphere is identical from a static one. At least, it is not well formulated.
+It seems to me that your argument should be right for any kind of motion. Why would it be specific to rotation ? In other words, you could exchange the word “rotation” with the word “outflow” or “inflow” in your reasonning, right ? “While scattering events off atoms within the outflowing cloud impart Doppler boosts on the Ly$\alpha$ photon, these Doppler boost are only there in the lab-frame. Therefore, in the frame of the outflowing gas cloud all atoms are stationnary with respect to each other and the scattering process proceeds identical as in the static case.”. However, all atoms in a rotating/outflowing/infalling cloud are not stationary with respect to each other, otherwise the cloud would be static! Your reasonning is true at the scale of each cell, but not at global scale.
+I did not understand the alternative -more quantitative- explanation better.
+Can you develop this point ? Maybe, to convince me, you could look at the redistribution of frequencies after one single diffusion ( 1/ in all directions, 2/ along the rotation axis, 3/ in the equator plane), emitting your photons at a radius r = 0.9 R, and comapre them with the same redistributions in the static case. If they are identical, you are right, rotation does not have any effect... if they are different, multiple scatterings will have a cumulative effect on the spectral shape, but also on the probalility to escape more easily in some directions than others... I understand that this implies new simulations and more time, but I would really appreciate to see these plots. } 
 
+\subsection*{Angular variation of the distribution of escaping directions}
 
-{\bf As explained in sect 3.4, rotation kills the spherical symmetry
-  of your problem, and the rotation axis defines a preferential
-  direction. We could expect some variation of the emerging flux, the
-  lyman-alpha escape fraction, and the spectral shape, with viewing
-  angle. From Fig8, it seems that the flux is the same in all
-  directions for spherical distributions of sources. This important
-  result is not enough emphasized.} 
+{\bf It seems to me that Ly$\alpha$ photons escape a medium through the path of minimum optical depth. So, in a rotating cloud, where the velocity field is tangential, they might “rotate” or spiral from the center to the edge. To test this idea, you could look at the distribution of escaping directions from photons emerging at the pole or at the equator. But for this, you need to keep track of the location of escape, and not only of the direction of escape. Did you collect this information ?
+I would expect that photons at the equator escape more tangentially to the sphere than at the poles... But again, Ly$\alpha$ transfer is not exactly intuitiv.}
 
-We now emphasize in the abstract, section 3.2 and the conclusions the
-result on the non-variation of the total flux with viewing angle.
-
-{\bf Do you see any difference in the spectral shape with viewing
-  angle? To illustrate this point, it would be interesting to build a
-  2D plot as you did on Fig 5, but replace Nb scat in ordinates by the
-  viewing angle $\mu$. We could immediatly see if there is an
-  evolution of the shape with viewing angle or not. If you find NO
-  evolution of the Lya shape with viewing angle, I think that it is an
-  interesting counter-intuitive result, that you should advertise
-  more.} 
-
-As we metioned in the introduction to this reply, we prepared the
-suggested plot and found strong variations of the spectral shape with
-viewing angle. This result motivated us to re-structure the paper to
-emphasize it.
-
-
-{\bf What about the variation of lya escape fraction with viewing
-  angle ? I propose that in the beginning of Sect.3 Results, you first
-  emphasize that, maybe counter-intuitively, you did not find any
-  variation of the Lya properties with viewing angle, so you will
-  present first angle average lya properties, and you will come back
-  to the anisotropy problematic only at the end on the paper.} 
-
-We do not find any significant dependence of the escape fraction with
-the viewing angle. This is now shown in Figure 9 of the paper. 
-
-
-
-
-\section*{Outflow + Rotation}
-
-{\bf So far, the model only includes rotation. However, most observed
-  Lya spectra from LAEs, or even local galaxies, seem to be asymetric
-  towards the red wavelengths, interpreted as a sign for outflows in
-  these systems, often corroborated by others observables. Did you
-  investigate how the rotation would modify the spectra emerging from
-  expanding clouds?} 
-
-
-We agree with the referee that this is an important point to study. 
-We have not fully investigated it yet.  This is actually research
-under development.   
 
 \section*{Details}
 
-\subsection*{Introduction}
+\subsection*{Sect. 3.1}
 
-{\bf With Orsi et al 2012, please cite also Garel et al 2012. With
-  Zheng \& Wallace 2013, please cite also Behrens et al 2014.} 
+{\bf You say that “If the viewing angle is aligned with the rotation axis, $|\mu| \approx 1$, the Ly$\alpha$ line keeps in most of the cases a double peak”, isn’t it in all cases ?}
 
-Done.
+\subsection*{Sect. 3.5}
+{\bf The parameter a is not defined when you discuss Neufeld.} 
 
-\subsection*{Fig.1}
+\subsection*{Fig9}
 
-{\bf I guess that the spectra presented in Fig1 are integrated over
-  all directions, right ? You should describe explicitly how you build
-  them. You could skip the x notation in absciss, as it is not used in
-  the discussion, whereas the velocity is used to compare to FWHM, on
-  Fig2.} 
+{\bf Is Fig 9, left panel, for a central source ? Can you show the homogeneous case also ? You discuss in the referee repport that the distribution is not bimodal anymore. But it has to be different than in central case, spanning the whole range of nb scatt, because photons are emitted at every radii in the cloud, so at every optical depth.
+On the right panel, solid and dashed lines are not defined.} 
 
-Now this figure is the Fig.4 in the paper. Given the depence on the
-viewing angle we decided to construct the plots for a line-of-sight
-perpendicular to the rotation axis ($\theta=\pi/2$). This is
-explicitly describe in the figure and the caption. We have also
-changed the $x$ notation to velocities.
-
-\subsection*{Fig.2}
-
-{\bf Fig.2 Can you explain how you measure the FWHM of a double-peaked
-  profile ? Do you fit it with a gaussian ?} 
-
-
-We do not make a gaussian fit. We build first a histogram for the
-outgoing frequencies. Then we interpolate between the points of the
-histogram to find the half maxima intensity values and their
-corresponding frequencies. This is now clear in the text.
-
-\subsection*{Fig.3}
-
-{\bf Do you have an idea why the (central source, intermediate optical
-  depth) case with Vmax=300 has a single plateau instead of 2 peaks ?
-  Do you find this with the two codes ?} 
-
-After close inspection if this figure the line was composed by two 
-peaks that looked like a plateau with the resolution used to
-construct the figure. 
-
-However, this plateau is not present in Fig. 4 anymore because we do
-not build the line from all the outgoing photons, but instead take
-into account the line of sight for the observation.
-
-The result is found in both codes.
-
-
-\subsection*{Fig4 and 6}
-
-{\bf This is a surprising result that the number of scatterings
-  (escape fraction) stays constant as the rotation velocity increases,
-  for a central source, whereas the global spectral shape is
-  altered. Did you try with higher/extreme values of Vmax (=1000 km/s,
-  even if not physically motivated) ? Do you believe that the number
-  of scatterings decreases with very high values, or that it is
-  independant of the rotation velocity ? Is the escape fraction from a
-  dusty rotating cloud with central source independant of the rotation
-  velocity ?} 
-
-This results is not surprising if one considers that the scatterings
-proceed as in the static case. In the co-rotating frame everything
-happens exactly as in the estatic case.
-
-We have also veryfied that for high rotational velocities of 1000 km/s
-the results for the escape fraction, number of scatterings and integrated total
-flux remain constant.
-
-
-\subsection*{Fig5}
-
-{\bf This is a very nice figure ! Looking at the top right panel, with
-  its “photosphere”, I’m surprised that the distribution of Nscatt is
-  bipolar, I would have expected a smooth transition between the 2
-  regimes. Do you have a physical explanation why photons escape after
-  either (less than 10) or (more than 1000) scatterings, and none
-  escape with 100 scatt ? To test the ’photosphere’ assumption, you
-  could also do the radiation transfer in a cloud with the
-  distribution of sources only in an inner sphere, and another
-  experienment with sources only in an outer shell. If I understood
-  corectly, you would expect thant the bottom spot on the top right
-  panel is made of photons from the outer shell, and the uppper spot
-  from photons emitted inside the cloud.} 
-
-Actully this plot is incorrect due to the wrong initialization of the
-photons in the homogeneous case. In that situation the frequency of
-the photons must be changed according to the dot product between the
-bulk velocity and propagation direction. This is mentioned in section
-2.2.
-
-With this changes we find that the total number of scatterings does
-not change with rotational velocity.
-
-\subsection*{End of paragraph 3.3}
-
-{\bf One sentence is not clear : we see that the escape fraction does
-  not increase significantly from $\tau$ = 105 to $\tau =
-  10^{6}$. This counter-intuitive result.... It sounds like you were
-  expecting a strong increase... A decrease is expected from $\tau$ =
-  105 to $\tau$ = 106, not an increase, but indeed on the graphe we
-  can see an unexpected (small) increase. I do not understand the
-  explanation for this behaviour.} 
-
-
-We have included the following paragraphs in the paper:
-
-\begin{quote}
-The naive interpretation of the analytic solution does not seem to
-hold for photons emitted far from the sphere's center. 
-We suggest that increasing $\tau_{\rm H}$ from $10^{5}$ to $10^{6}$ causes a
-transition from the 'optically thick' to  the 'extremely optically
-thick' regime for a noticeable fraction of the photons in the
-homogeneous source distribution.
-
-In the optically thick regime, lya  photons can escape in
-'single flight' which corresponds to a scenario in which the
-photon resonantly scatters $10^4-10^5$ times until it is scattered
-into the wing of the line ($x\sim 3-4$). 
-At these frequencies the medium is optically thin, and the photons can
-escape efficiently in a single flight. 
-In contrast, in an extremely optically thick medium lya
-  photons escape in a `single excursion' (Adams 72). 
-Here, photons that are scattered into the wing of the line escape from
-the medium in a sequence of wing scattering events. 
-In both cases, lya photons resonantly scatter $10^4$-$10^5$ times. 
-Because we keep our clouds the same size, the mean free path of Lya
-photons that scatter resonantly is 10 times larger for the case
-$\tau_{\rm H}=10^5$ than for $\tau_{\rm H}=10^6$. 
-If we compute the average distance $D$ travelled by lya
-photons through a medium of size $R$ as a function of line center
-optical depth $\tau_{\rm H}$, then we find that during the transition
-from optically thick to extremely optically thick the mean traversed
-distance $D$ actually decreases slightly.  
-This decrease is unique to this transition region, and $D$ generally
-increases with $\tau_{\rm H}$ at other values of $\tau_{\rm H}$.   
-\end{quote}
-
-\subsection*{Fig8}
-
-
-{\bf Referred to as Figure 7 in the text (paragraph 3.4). To my mind,
-  this figure illustrates the main result of your study, it has to be
-  more demonstrative. On this figure, the numerical noise seems very
-  big compare to the small number of bins, bigger than on the spectra
-  from Fig1, how is it possible ? Could you re-do this figure with
-  more photons, maybe with more bins ? Could you plot an histogram
-  instead of broken lines, to ease the reading ? In the text, you
-  write anisotropy induced by rotation is at the 3$\%$ level, how do
-  to estimate this number? I think that the noise is at $3\%$ level,
-  and the distribution is compatible with ’flat’. In the corresponding
-  text, you first say that $F(\mu)$ does not depend on Vmax. Again, if
-  real, this is an important result, that you must advertise
-  more. Please show it on this Fig, by comparing F($\mu$) without rotation
-  (in red, for example) to the other distributions that you get with
-  different values of Vmax. Then, you mention that for high optical
-  depth values, $F(\mu)$ (not the variations of $\mu$) can vary up to
-  $15\%$. First, what do you call high optical depth ? your highest
-  setup is $\tau$= $10^7$, not extremely high for lyman alpha ”standards’,
-  corresponding to NHI $\sim$10$^{20}$ cm$^{-2}$. So, if you see a trend with
-  optical depth, I encourage you to check higher optical depth
-  regimes, corresponding better to galaxy scales. If you can probe
-  that anisotropy induced by rotation is rising with optical depth,
-  this would be an interesting result. If higher optical depth regimes
-  lead to anisotropic escape, could you check the effet of anisotropy
-  on the lya spectral shape?} 
-
-
-We have prepared Figure 5 that shows the $F(\mu)$ distribution for
-different velocities and optical depths. Indeed, the distributions are
-consistent with flat (within the noise levels) for all the models
-studied in our paper. 
-
-We did not try models with higher optical depths due to the
-limitation in available computing time to perform the
-calculations. However, the analytical solution provides sufficient
-information to quantify the anisotropy level.
-
+\subsection*{Vmax = 1000 km/s}
+{\bf If you did this test and checked that the nb of scatterings and the escape fraction is still angle invariant for such a high velocity, then it is worth mentionning it. Because in principle, media with very high velocities should start to become transparent for Ly$\alpha$.} 
 
 \end{document}
