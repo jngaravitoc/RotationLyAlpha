@@ -63,7 +63,10 @@ also sum over $\varphi$.
 
 {\bf However, these selection biases would also affect the static case, whereas the first column looks ok to me, it seems that the same “intensity” is escaping from all directions for this column, and not for the others.
 It is in strong contradiction with your Fig 5. How do you explain this ?
-Furthermore, I would have expected the contrary, with more photons escaping at the equator, where the velocity field is stronger, than through the poles, where everything is static... However, Ly$\alpha$ radiation transfer effects can often be far from intuitiv.}
+Furthermore, I would have expected the contrary, with more photons
+escaping at the equator, where the velocity field is stronger, than
+through the poles, where everything is static... However, Ly$\alpha$
+radiation transfer effects can often be far from intuitiv.}  
 
 The colors in the Figures 2 and 3 correspond to number densities
 inside a velocity-$|\cos\theta|$ pixel. The total flux is thus an
@@ -75,8 +78,15 @@ show that the integrated flux is independent of the angle.
 
 \subsection*{intrinsic spectrum on Fig 4}
 
-{\bf From your Figs 6 and 7, it seems that the results for central and homogeneous cases are very comparable. I would like to see the shape and FWHM of the intrinsic spectra (I mean before transfer) in the case of homogeneous sources, for the static case, as the fiducial case, and when Vmax=100,200,300 km/s, along the equatorial direction. I would like to infer how much of the broadening of the line is really due to transfer effects. Could you make a figure where you compare the intrinsic and emerging spectra along
-the equatorial plane ?} 
+{\bf From your Figs 6 and 7, it seems that the results for central and
+  homogeneous cases are very comparable. I would like to see the shape
+  and FWHM of the intrinsic spectra (I mean before transfer) in the
+  case of homogeneous sources, for the static case, as the fiducial
+  case, and when Vmax=100,200,300 km/s, along the equatorial
+  direction. I would like to infer how much of the broadening of the
+  line is really due to transfer effects. Could you make a figure
+  where you compare the intrinsic and emerging spectra along the
+  equatorial plane ?}  
 
 
 The Figure is here:\\
@@ -84,35 +94,144 @@ The Figure is here:\\
 
 \includegraphics[width=1.0\textwidth]{../code/intrinsic_spectrum.png}
 
+Each column corresponds to $100$, $200$ and $300$km/s. The intrinsic
+spectrum for the static case is a delta function around $x=0$.
 
 \subsection*{Sect 4.1 : Rotation = Static ?}
 
-{\bf I don’t understand the reasonning that rotation would act on the Ly$\alpha$ transfer as a static medium, since Ly$\alpha$ photons are “co-rotating”. You mention this argument once in the “answer to referee” document, and once in the text Sect. 4.1, with a sentence which reads absurd : a rotating sphere is identical from a static one. At least, it is not well formulated.
-It seems to me that your argument should be right for any kind of motion. Why would it be specific to rotation ? In other words, you could exchange the word “rotation” with the word “outflow” or “inflow” in your reasonning, right ? “While scattering events off atoms within the outflowing cloud impart Doppler boosts on the Ly$\alpha$ photon, these Doppler boost are only there in the lab-frame. Therefore, in the frame of the outflowing gas cloud all atoms are stationnary with respect to each other and the scattering process proceeds identical as in the static case.”. However, all atoms in a rotating/outflowing/infalling cloud are not stationary with respect to each other, otherwise the cloud would be static! Your reasonning is true at the scale of each cell, but not at global scale.
+{\bf I don’t understand the reasonning that rotation would act on the
+  Ly$\alpha$ transfer as a static medium, since Ly$\alpha$ photons are
+  “co-rotating”. You mention this argument once in the “answer to
+  referee” document, and once in the text Sect. 4.1, with a sentence
+  which reads absurd : a rotating sphere is identical from a static
+  one. At least, it is not well formulated.
+
+It seems to me that your argument should be right for any kind of
+motion. Why would it be specific to rotation ? In other words, you
+could exchange the word “rotation” with the word “outflow” or “inflow”
+in your reasonning, right ? “While scattering events off atoms within
+the outflowing cloud impart Doppler boosts on the Ly$\alpha$ photon,
+these Doppler boost are only there in the lab-frame. Therefore, in the
+frame of the outflowing gas cloud all atoms are stationnary with
+respect to each other and the scattering process proceeds identical as
+in the static case.”. However, all atoms in a
+rotating/outflowing/infalling cloud are not stationary with respect to
+each other, otherwise the cloud would be static! Your reasonning is
+true at the scale of each cell, but not at global scale. 
+
 I did not understand the alternative -more quantitative- explanation better.
-Can you develop this point ? Maybe, to convince me, you could look at the redistribution of frequencies after one single diffusion ( 1/ in all directions, 2/ along the rotation axis, 3/ in the equator plane), emitting your photons at a radius r = 0.9 R, and comapre them with the same redistributions in the static case. If they are identical, you are right, rotation does not have any effect... if they are different, multiple scatterings will have a cumulative effect on the spectral shape, but also on the probalility to escape more easily in some directions than others... I understand that this implies new simulations and more time, but I would really appreciate to see these plots. } 
+Can you develop this point ? Maybe, to convince me, you could look at
+the redistribution of frequencies after one single diffusion ( 1/ in
+all directions, 2/ along the rotation axis, 3/ in the equator plane),
+emitting your photons at a radius r = 0.9 R, and comapre them with the
+same redistributions in the static case. If they are identical, you
+are right, rotation does not have any effect... if they are different,
+multiple scatterings will have a cumulative effect on the spectral
+shape, but also on the probalility to escape more easily in some
+directions than others... I understand that this implies new
+simulations and more time, but I would really appreciate to see these
+plots. } \\ 
+
+These are good points. The argument that you can replace the word
+'rotating' with 'outflowing' was interesting, and briefly confused
+us. However, there is a clear difference between the two cases. For a
+cloud undergoing solid body rotation, we can draw a line between any
+two atoms within it, and their relative velocity along this line is
+zero (apart from the relative velocity as a result of Thermal motion),
+irrespective of the rotation velocity of the cloud. This relative
+velocity is what is relevant for the RT. In contrast, if one repeats
+the same exercise for the outflowing/inflowing case, then will be a
+relative velocity between two atoms which depends on the
+outflow/inflow velocity.\\ 
+
+We can further illustrate this point by having one photon be emitted
+in the center of the rotating cloud into the plane of the equator, and
+another in the direction of the pole. Let both photons travel $\tau=1$
+(at line center), and then scatter by 90 degrees, preserve its
+frequency in the frame of the atom, and then again travel $tau=1$. In
+both cases, the photon travels the same distance. In the LAB-frame,
+both photons will have different frequencies, but not in the frame of
+the gas.\\ 
+
+The situation described above is clearly unique to solid-body
+rotation. It does not apply to non-solid body rotation, which we
+intend to study in upcoming work. We think our own + the referees
+confusion only emphasizes that even this `simplified' problem of
+solid-body rotation is highly non-trivial. We have attempted to
+clarify this further in \S 3.X 
 
 \subsection*{Angular variation of the distribution of escaping directions}
 
-{\bf It seems to me that Ly$\alpha$ photons escape a medium through the path of minimum optical depth. So, in a rotating cloud, where the velocity field is tangential, they might “rotate” or spiral from the center to the edge. To test this idea, you could look at the distribution of escaping directions from photons emerging at the pole or at the equator. But for this, you need to keep track of the location of escape, and not only of the direction of escape. Did you collect this information ?
-I would expect that photons at the equator escape more tangentially to the sphere than at the poles... But again, Ly$\alpha$ transfer is not exactly intuitiv.}
+{\bf It seems to me that Ly$\alpha$ photons escape a medium through
+  the path of minimum optical depth. So, in a rotating cloud, where
+  the velocity field is tangential, they might “rotate” or spiral from
+  the center to the edge. To test this idea, you could look at the
+  distribution of escaping directions from photons emerging at the
+  pole or at the equator. But for this, you need to keep track of the
+  location of escape, and not only of the direction of escape. Did you
+  collect this information ? 
 
+I would expect that photons at the equator escape more tangentially to
+the sphere than at the poles... But again, Ly$\alpha$ transfer is not
+exactly intuitiv.} 
+
+We have looked into this. We selected two different sets of
+photons. The first one escapes through the north pole and the second
+around the equator in a region with $0<\varphi<90$. For each set we
+compute the dot product $\mu\equiv\hat{k}_{out}\cdot\hat{r}_{out}$,
+where $\hat{r}_{out}$ is the unit vector in the radial direction for
+each photon. We plot the distributions for $\mu$ for two different
+$\tau_H$. In each plot we find that the two distributions (equator and
+pole) are virtually the same: 
+ 
+\begin{center}
+\includegraphics[width=0.6\textwidth]{../code/surface_mu_tau5_diff_pos.png}
+\includegraphics[width=0.6\textwidth]{../code/surface_mu_tau7_diff_pos.png}
+\end{center}
+
+The distribution is also insensitive to the rotational velocity:
+
+\begin{center}
+\includegraphics[width=0.6\textwidth]{../code/surface_mu_t5_diff_v.png}
+\end{center}
+
+
+The only trend can be found for different optical depths:
+
+\begin{center}
+\includegraphics[width=0.6\textwidth]{../code/surface_mu_diff_tau.png}
+\end{center}
 
 \section*{Details}
 
 \subsection*{Sect. 3.1}
 
-{\bf You say that “If the viewing angle is aligned with the rotation axis, $|\mu| \approx 1$, the Ly$\alpha$ line keeps in most of the cases a double peak”, isn’t it in all cases ?}
+{\bf You say that “If the viewing angle is aligned with the rotation
+  axis, $|\mu| \approx 1$, the Ly$\alpha$ line keeps in most of the
+  cases a double peak”, isn’t it in all cases ?} 
 
 \subsection*{Sect. 3.5}
 {\bf The parameter a is not defined when you discuss Neufeld.} 
 
 \subsection*{Fig9}
 
-{\bf Is Fig 9, left panel, for a central source ? Can you show the homogeneous case also ? You discuss in the referee repport that the distribution is not bimodal anymore. But it has to be different than in central case, spanning the whole range of nb scatt, because photons are emitted at every radii in the cloud, so at every optical depth.
-On the right panel, solid and dashed lines are not defined.} 
+{\bf Is Fig 9, left panel, for a central source ? Can you show the
+  homogeneous case also ? You discuss in the referee repport that the
+  distribution is not bimodal anymore. But it has to be different than
+  in central case, spanning the whole range of nb scatt, because
+  photons are emitted at every radii in the cloud, so at every optical
+  depth. On the right panel, solid and dashed lines are not defined.} 
 
 \subsection*{Vmax = 1000 km/s}
-{\bf If you did this test and checked that the nb of scatterings and the escape fraction is still angle invariant for such a high velocity, then it is worth mentionning it. Because in principle, media with very high velocities should start to become transparent for Ly$\alpha$.} 
+{\bf If you did this test and checked that the nb of scatterings and
+  the escape fraction is still angle invariant for such a high
+  velocity, then it is worth mentionning it. Because in principle,
+  media with very high velocities should start to become transparent
+  for Ly$\alpha$.}  
+
+For solid body rotation, the results should not depend on $v_{\rm
+  max}$ at all. We have even done calculations with $v_{\rm max}=10^6$
+km/s, and confirmed this result. 
+
 
 \end{document}
