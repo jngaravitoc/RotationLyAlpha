@@ -99,11 +99,10 @@ Due to the resonant nature of this line, these physical factors
 notably include temperature, density and bulk velocity field of the
 neutral Hydrogen in the emitting galaxy and its surroundings.
 
-
 A basic understanding of the quantitative behavior of the \ly line
 has been reached through analytic studies in the case of a static
 configurations, such as uniform slabs
-\citep{Adams72,Harrington73,Neufeld90} and uniform spheres
+\citep[][]{Adams72,Harrington73,Neufeld90} and uniform spheres
 \citep{Dijkstra06}. 
 Analytic studies of configurations including some kind of bulk flow
 only include the case of a sphere with a Hubble like expansion flow
@@ -118,7 +117,7 @@ studies focused on homogeneous and static media
 \citep{Ahn00,Ahn01,Zheng02}. 
 Later on, the effects of clumpy media \citep{Hansen06} and
 expanding/contracting shell/spherical geometries started to be studied
-\citep{Ahn03,Verhamme06,Dijkstra06}.  
+\citep{Ahn03,Verhamme06,Dijkstra06}.  For a recent review, we refer the interested reader to \citet{review}.
 Similar codes have applied these results to semi-analytic models of
 galaxy formation \citep{Orsi12, Garel2012} and results of large
 hydrodynamic simulations \citep{CLARA,Forero12,Behrens13}. 
@@ -451,6 +450,7 @@ peaks are merged into a single one at high rotational velocities.
 
 
 \subsection{Integrated Line Intensity}
+\label{sec:intlineint}
 
 \begin{figure}
 \begin{center}
@@ -485,18 +485,13 @@ symmetry one expects a flat distribution with $F(\mu)=1$.
 
 Fig. \ref{fig:muhisto} shows the results for a selection of models
 with $\tau_{\rm H}=10^{5}$, different rotational velocities and the two
-types of source distributions.
-This shows that $F(\mu)$ is consistent with being flat, apart
-from some statistical fluctuations on the order of \%2. 
+types of source distributions. This shows that $F(\mu)$ is consistent with being flat, apart
+from some statistical fluctuations on the order of 2\%. 
 
-
-This is a remarkable result. 
-In spite of that the rotation axis defines preferential direction, the
-integrated flux is the same for all viewing angles in the
-range of parameters explored in this paper. 
-
+This is a remarkable result: while the rotation axis defines preferential direction, the
+integrated flux is the same for all viewing angles in the range of parameters explored in this paper. {\bf This can be understood from the fact that
+{\it radiative transfer inside a sphere that undergoes solid-body rotation proceeds identical as inside a static sphere}: we can draw a line between any two atoms within the rotating cloud, and their relative velocity along this line is zero (apart from the relative velocity as a result of random thermal motion), irrespective of the rotation velocity of the cloud. This relative velocity is what is relevant for the radiative transfer\footnote{This point can be further illustrated by considering the path of individual photons: let a photon be emitted at line center ($x=0$), in some random direction ${\bf k}$, propagate a distance that corresponds to $\tau_0=1$, scatter fully coherently (i.e. $x=0$ after scattering in the gas frame) by 90$^{\circ}$, and again propagate a distance that corresponds to $\tau_0=1$. The position where the photon scatters next does {\it not} depend on the rotation of the cloud, nor on ${\bf k}$.}.}
 	
-
 \subsection{Full Width at Half Maximum}
 \label{sec:widthpeak}
 
@@ -621,10 +616,8 @@ Central & $10^{5}$ &  0.096 & 0.096 &  0.096 & 0.096 \\
 \end{table}
 
 We now estimate the escape fraction $f_{\rm esc}$ for the dusty
-models. 
-The main  result is that we do not find any significant dependence
-with either the viewing angle nor the rotational velocity.  
-For completeness we list in Table \ref{table:escape} the scape
+models. The main result is that we do not find any significant dependence
+with either the viewing angle nor the rotational velocity. This is consistent with our finding in \S~\ref{sec:intlineint}, that radiative transfer inside the cloud does not depend on its rotational velocity. For completeness we list in Table \ref{table:escape} the escape
 fraction for all models.
 
 We now put these results in the context of the analytic solution for
@@ -684,12 +677,8 @@ max}$ (right). The left panel shows the behaviour for $\tau=10^{5}$ and
 \end{figure*}
 
 The number of scatterings affects the escape frequency of a \ly
-photon. 
-Studying this quantity can help us in clarifying the independence of
-the integrated flux and the escape fraction with respect to the
-rotational velocity.
-
-
+photon. Studying this quantity further illustrates the independence of
+the integrated flux and the escape fraction on rotational velocity.
 
 In Fig. \ref{fig:Nscatt} we show the average number of scatterings
 $\langle N_{\rm scatt}\rangle$ as a function of the cosinus of the
@@ -700,7 +689,6 @@ outgoing angle are independent.
 This plot corresponds to the specific case of the central model with
 $\tau=10^5$ and $V_{\rm max}=300$\kms, but we have verified that this
 holds for all models. 
-
 
 The right panel of Fig. \ref{fig:Nscatt} shows how the average
 number of scatterings is also independent from the rotational
@@ -769,30 +757,20 @@ It is the independence of the following three quantities with the rotational
 velocity and the viewing angle: integrated flux, average number of
 scatterings and escape fraction.
 
-
-One way to understand this is that a rotating sphere
-is identical from a static one. 
-While scattering events off atoms within the rotating cloud impart
+As we explained in \S~\ref{sec:intlineint}, the best way to understand this is that radiative transfer inside a sphere that undergoes solid-body rotation
+proceeds identical to that inside a non-rotating sphere. While scattering events off atoms within the rotating cloud impart
 Doppler boosts on the Ly$\alpha$ photon, these Doppler boost are only
-there in the lab-frame.  
-Therefore, in the frame of the rotating gas cloud all atoms are
+there in the lab-frame. Therefore, in the frame of the rotating gas cloud all atoms are
 stationary with respect to each other and the scattering process
-proceeds identical as in the static case.  
+proceeds identical as in the static case (also see \S~\ref{sec:intlineint} for an additional more quantitative explanation).  
 
-An alternative - more quantitative way - to view this is   to consider
-the path of an individual photon: say the photon travels  a distance
-corresponding to $\tau=1$, scatters by $90$ degrees, then travels
-another distance corresponding to $\tau=1$. 
-The point where the photon ends up is independent of the assumed
-rotation velocity of the cloud. 
+%An alternative - more quantitative way - to view this is   to consider the path of an individual photon: say the photon travels  a distance corresponding to $\tau=1$, scatters by $90$ degrees, then travels another distance corresponding to $\tau=1$. The point where the photon ends up is independent of the assumed rotation velocity of the cloud. 
 
-The spectrum of \lya photons emerging from a rotating gas cloud is
-also identical as for the static case in a frame that is co-rotating
-with the cloud. 
-However, the surface of cloud now moves in the lab-frame. 
+This result allows us to analytically estimate the spectrum emerging from a rotating cloud:
+The spectrum of \lya photons emerging from a rotating gas cloud is identical as for the static case in a frame that is co-rotating
+with the cloud. However, the surface of cloud now moves in the lab-frame. 
 Each surface-element on the rotating cloud now has a bulk
-velocity with respect to a distant observer. 
-In order to compute the
+velocity with respect to a distant observer. In order to compute the
 spectrum one can integrate over all the surface elements in the
 sphere with their corresponding shift in velocity and an additional
 weight by the surface intensity.
@@ -802,16 +780,12 @@ spectra using this approach (the implementation details are in the Appendix).
 The left panel shows the results for different rotational velocities
 in the case of $\tau_{H}=10^7$ and an observer located perpendicular
 to the axis of rotation ($i=0$ in the scheme of Fig~\ref{fig:scheme}
-in the Appendix). 
-The right panel shows the results for different viewing angles in the
+in the Appendix). The right panel shows the results for different viewing angles in the
 case of $\tau_{H}=10^7$ and a rotational velocity of $V_{\rm
   max}=300$\kms. 
 
-The two methods clearly give good agreement, though not perfect. 
-In particular, the left panel shows that the MC gives rise to a spectrum that is
-slightly more concentrated towards the line centre. 
-It is possible to get better agreement my modifying the surface brightness
-profile.
+The two methods clearly give good agreement, though not perfect.  In particular, the left panel shows that the MC gives rise to a spectrum that is
+slightly more concentrated towards the line centre. As we explain in Appendix~\ref{sec:app}, we do not expect perfect agreement, because this requires an analytic solution for the spectrum of Ly$\alpha$ photons emerging from a static, optically extremely thick cloud {\it as a function of the angle at which they escape from the sphere}. This solution does not exist in the literature. It is possible to get better agreement my modifying the surface brightness profile.
 In any case, the analytic calculation closely captures the results
 obtained from the full calculations from the MC simulations.  
 As such, they are extremely useful and provide us with a quick tool to
@@ -836,7 +810,6 @@ respectively.
 \subsection{Impact on the interpretation of simulated and
   observational data}
 
-
 We now compare our findings to other computational results and discuss
 its possible implications  for the interpretation of observational data.
 
@@ -844,7 +817,7 @@ its possible implications  for the interpretation of observational data.
 enhances the flux density at line center (see Fig.     \ref{fig:differentvelocities}). It has
 recently been proposed that galaxies with Lya spectral lines that
 contain flux at line center may be `leaking' ionizing (LyC) photons
-\citep{2014arXiv1404.2958V,Behrens2014}. The main reason for this possible
+\citep{Behrens2014,2014arXiv1404.2958V}. The main reason for this possible
 connection is that the escape of ionizing (LyC) photons requires
 $N_{\rm HI} < 10^{17} $cm$^{-2}$. The same low column densities facilitate the escape of
 \ly photons at (or close to) line center. Our work suggests that
@@ -1004,7 +977,7 @@ improve and better frame the interpretation of our simulations.
 \appendix
 \section{Analytic Expression for the Ly$\alpha$ Spectrum
   emerging from Rotating Cloud}  
-
+\label{sec:app}
 
 Ly$\alpha$ scattering through an optically thick gas cloud that is
 undergoing solid-body rotation (i.e. in which the angular speed around the
