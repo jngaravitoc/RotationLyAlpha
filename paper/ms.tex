@@ -29,6 +29,7 @@
 % definition to produce a "greater than or similar to" symbol
 \def\gsim{~\rlap{$>$}{\lower 1.0ex\hbox{$\sim$}}}
 
+%@arxiver{fig3.pdf,fig11a.pdf, fig11b.pdf} 
 \begin{document}
 
 \title{The impact of gas bulk rotation on the Lyman $\alpha$ line} 
@@ -169,15 +170,17 @@ the main trends observed in the Monte Carlo simulations.
 
 
 In this paper we express a photon's frequency in terms of the
-dimensionless variable $x\equiv (\nu -\nu_a)/\Delta\nu_\alpha$, where
-$\nu_{\alpha}=2.46\times 10^{15}$ Hz is the Ly$\alpha$ resonance
-frequency,  $\Delta\nu_{\alpha} \equiv
+dimensionless variable $x\equiv (\nu -\nu_a)/\Delta\nu_{\rm D}$, where
+$\nu_{\rm \alpha}=2.46\times 10^{15}$ Hz is the Ly$\alpha$ resonance
+frequency,  $\Delta\nu_{\rm D} \equiv
 \nu_{\alpha}\sqrt{2kT/m_pc^2}\equiv \nu_av_{\rm th}/c $ is the Doppler
 broadening of the line which depends on the neutral gas temperature
-$T$ scattering the radiation or equivalently the thermal velocity
-$v_{\rm th}$ of the atoms.  For the temperature $T=10^4$K used in our
-radiative transfer calculations the thermal velocity is
-$v_{\rm th}=12.8$\kms.  
+$T$ or equivalently the thermal velocity
+$v_{\rm th}$ of the atoms. We also use the parameter $a$ to define the
+relative line width as $a=\Delta\nu_{\alpha}/2\Delta\nu_{\rm D}$,
+where $\Delta\nu_{\alpha}$ is the intrinsic linewidth. For the
+temperature $T=10^4$K used in our radiative transfer calculations the
+thermal velocity is $v_{\rm th}=12.8$\kms.   
 
 
 
@@ -284,6 +287,7 @@ Second, the line can become single peaked for high rotational
 velocities.
 \label{fig:CentralSpec} }   
 \end{figure*}
+
 
 
 \begin{figure*}
@@ -429,8 +433,8 @@ However, for increasing rotational velocities, at a fixed optical
 depth, there are clear signs that this symmetry is broken. 
 
 If the viewing angle is aligned with the rotation axis, $|\mu|\sim
-1$, the \ly line keeps in most of the cases a double peak with minor
-changes as the rotational velocity starts to increase. 
+1$, the \ly line keeps a double peak with minor
+changes in the morphology as the rotational velocity increases. 
 However, for a line of sight perpendicular to the rotation axis,
 $|\mu|\sim 0$, the impact of  rotation is larger.  
 The double peak readily transforms into a single peak.
@@ -489,8 +493,22 @@ types of source distributions. This shows that $F(\mu)$ is consistent with being
 from some statistical fluctuations on the order of 2\%. 
 
 This is a remarkable result: while the rotation axis defines preferential direction, the
-integrated flux is the same for all viewing angles in the range of parameters explored in this paper. {\bf This can be understood from the fact that
-{\it radiative transfer inside a sphere that undergoes solid-body rotation proceeds identical as inside a static sphere}: we can draw a line between any two atoms within the rotating cloud, and their relative velocity along this line is zero (apart from the relative velocity as a result of random thermal motion), irrespective of the rotation velocity of the cloud. This relative velocity is what is relevant for the radiative transfer\footnote{This point can be further illustrated by considering the path of individual photons: let a photon be emitted at line center ($x=0$), in some random direction ${\bf k}$, propagate a distance that corresponds to $\tau_0=1$, scatter fully coherently (i.e. $x=0$ after scattering in the gas frame) by 90$^{\circ}$, and again propagate a distance that corresponds to $\tau_0=1$. The position where the photon scatters next does {\it not} depend on the rotation of the cloud, nor on ${\bf k}$.}.}
+integrated flux is the same for all viewing angles in the range of parameters explored in this paper. This can be understood from the fact that
+{\it radiative transfer inside a sphere that undergoes solid-body
+  rotation proceeds identical as inside a static sphere}: we can draw
+a line between any two atoms within the rotating cloud, and their
+relative velocity along this line is zero (apart from the relative
+velocity as a result of random thermal motion), irrespective of the
+rotation velocity of the cloud. This relative velocity is what is
+relevant for the radiative transfer\footnote{This point can be further
+  illustrated by considering the path of individual photons: let a
+  photon be emitted at line center ($x=0$), in some random direction
+  ${\bf k}$, propagate a distance that corresponds to $\tau_0=1$,
+  scatter fully coherently (i.e. $x=0$ after scattering in the gas
+  frame) by 90$^{\circ}$, and again propagate a distance that
+  corresponds to $\tau_0=1$. The position where the photon scatters
+  next does {\it not} depend on the rotation of the cloud, nor on
+  ${\bf k}$.}
 	
 \subsection{Full Width at Half Maximum}
 \label{sec:widthpeak}
@@ -672,7 +690,10 @@ increases with $\tau_{\rm H}$ at other values of $\tau_{\rm H}$.
 \caption{Logarithm of the average number of scatterings as function of
   $\mu$ (left) and the maximum rotational velocity $V_{\rm
 max}$ (right). The left panel shows the behaviour for $\tau=10^{5}$ and
-  $V_{max}=300$\kms as a function of $\left|\cos\theta\right|$; the independence of $N_{\rm scatt}$ with $\mu$ and $V_{\rm max}$ is present in all models.
+  $V_{max}=300$\kms as a function of $\left|\cos\theta\right|$. In the
+  right panel the continous (dashed) lines represent the results for
+  the central (homogeneous) model. The independence of $N_{\rm scatt}$ with $\mu$ and $V_{\rm max}$ is
+  present in all models.  
 \label{fig:Nscatt} }
 \end{figure*}
 
@@ -697,32 +718,6 @@ The lower number of average scatterings in the homogeneous source
 distribution is due to a purely geometrical effect.
 Photons emitted close to the surface go through less scatterings
 before escaping.
-
-%In order to gain a deeper understanding of these results  we make 2D
-%histograms for the number of scatterings as a function of the outgoing
-%dimensionless frequency $x$. In Fig. \ref{fig:Nscatt2D} we show these 
-%results in the case $\tau_{\rm H}=10^5$ for the
-%static case and $V_{\rm max}=300$\kms. The upper (lower) panels show the
-%results for the homogeneous (central) source distribution. The color
-%scale is logarithmic in the number of photons at a certain value
-%$x-N_{\rm scatt}$. 
-
-%The top right panel of Fig. \ref{fig:Nscatt2D} (homogeneous sources,
-%high rotational velocity) supports our hypothesis about
-%the photo-sphere in the homogeneous distribution. In this case most of
-%the photons that left with $x\sim 0$ have escaped with less than $10$
-%scatterings. This also explains the decrease in the average number of
-%scatterings observed in Fig. \ref{fig:Nscatt}. We have also veryfied
-%that these photons are indeed emitted closer to the surface than to
-%the center of the sphere.
-
-%However, for a central distribution the situation is quite different
-%(lower panels in Fig. \ref{fig:Nscatt2D}). In this case the number
-%of scatterings remains high, in the order of the optical depth, but
-%the two peaks do get closer to each other. The most probable
-%physical picture is that each scattering, due to the bulk velocity of
-%the gas, is inefficient in driving the photon outside the line
-%center. 
 
 
 In static configurations it is expected that the optical depth correlates number of
@@ -764,7 +759,6 @@ there in the lab-frame. Therefore, in the frame of the rotating gas cloud all at
 stationary with respect to each other and the scattering process
 proceeds identical as in the static case (also see \S~\ref{sec:intlineint} for an additional more quantitative explanation).  
 
-%An alternative - more quantitative way - to view this is   to consider the path of an individual photon: say the photon travels  a distance corresponding to $\tau=1$, scatters by $90$ degrees, then travels another distance corresponding to $\tau=1$. The point where the photon ends up is independent of the assumed rotation velocity of the cloud. 
 
 This result allows us to analytically estimate the spectrum emerging from a rotating cloud:
 The spectrum of \lya photons emerging from a rotating gas cloud is identical as for the static case in a frame that is co-rotating
