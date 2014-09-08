@@ -977,8 +977,8 @@ Note that this geometry differs from the scheme shown in Fig~1 in the main body 
 the paper. 
 %
 \begin{figure*}[h]
-\centerline{\includegraphics[width=85mm]{fig11a.pdf}
-\includegraphics[width=85mm]{fig11b.pdf}}
+\centerline{\includegraphics[width=80mm]{fig11a.pdf}
+\includegraphics[width=80mm]{fig11b.pdf}}
 \caption[]{Adopted geometry for evaluating the analytic spectrum.}
 \label{fig:scheme}
 \end{figure*} 
@@ -1043,6 +1043,33 @@ we {\it assumed} a functional form for the surface brightness profile
 \int_0^1 I(x,\mu) d\mu$ at the boundary of the sphere, and {\it approximate}
 expressions for $I(\mu) =\int dx I(x,\mu)$, but {\it not} for $I(x,\mu)$
 itself. The spectra we obtained from the Monte-Carlo calculations naturally include the proper $I(x,\mu)$, and are therefore expected to be more accurate.
+
+To further test the assumption of scattering in a rotating medium proceeding
+as in a static medium we compute the distribution of the outgoing
+angles $\mu$. The results are shown in Figure \ref{fig:surface}; it
+shows that the distribution for $\mu$ is independent of the rotational
+velocity and the location over the sphere. The only dependence comes
+with $\tau_{H}$. For higher values of the optical depth the
+distribution gets closer to $I(\mu)\propto \mu$ as expected for a
+static medium \citep{Ahn01}.
+
+%
+\begin{figure*}[h]
+\centerline{
+\includegraphics[width=0.30\textwidth]{fig12a.pdf}
+\includegraphics[width=0.30\textwidth]{fig12b.pdf}
+\includegraphics[width=0.30\textwidth]{fig12c.pdf}}
+\caption[]{Distribution of the cosine of the angle between the
+  propagation direction and the sphere's surface. The distributions
+  have been normalized to unity. Left panel: different rotational
+  velocities; middle panel: different viewing angles; right panel:
+  different optical depths. Only the optical depth has an effect on
+  the outogoing directions. This is consistent with the assumption
+  that \lya scattering in a medium with solid body rotation proceeds as in
+  a static medium.}
+\label{fig:surface}
+\end{figure*} 
+%
 
 
 \bibliographystyle{apj}
