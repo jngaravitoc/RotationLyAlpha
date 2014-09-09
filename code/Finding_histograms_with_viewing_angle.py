@@ -50,13 +50,13 @@ def viewing_angle(filename, angle, nbins, distribution):
     hist07, bins07 = np.histogram(x07, bins=nbins, normed=True)
     hist08, bins08 = np.histogram(x08, bins=nbins, normed=True)
     hist09, bins09 = np.histogram(x09, bins=nbins, normed=True)
+    hist10, bins10 = np.histogram(x10, bins=nbins, normed=True)
 
     if angle == 1:
-        for i in range(len(hist)):
-		print hist01[i], bins01[i]
+        return hist01, bins01 
 
     if angle == 2:
-        return hist02, bins02
+         return hist02, bins02
 
     if angle == 3:
         return hist03, bins03
@@ -81,6 +81,22 @@ def viewing_angle(filename, angle, nbins, distribution):
 
     if angle == 10:
         return hist10, bins10
+    """ 
+    plt.plot(bins01[:-1], hist01, c='k', linewidth=2.5) 
+    plt.plot(bins02[:-1], hist02, c='k', linewidth=2.5)
+    plt.plot(bins03[:-1], hist03, c='k', linewidth=2.5)
+    plt.plot(bins04[:-1], hist04, c='k', linewidth=2.5)
+    plt.plot(bins05[:-1], hist05, c='k', linewidth=2.5)
+    plt.plot(bins06[:-1], hist06, c='k', linewidth=2.5)
+    plt.plot(bins07[:-1], hist07, c='k', linewidth=2.5)
+    plt.plot(bins08[:-1], hist08, c='k', linewidth=2.5)
+    plt.plot(bins09[:-1], hist09, c='k', linewidth=2.5)
+    """
+    #lt.plot(bins03[:-1], hist03, c='k', linewidth=2.5)
+    
+    #plt.xlabel("$x$", fontsize=30)    
+    #plt.savefig(filename+str(angle)+".png")
+ 
 
 filename = sys.argv[1]
 angle = float(sys.argv[2])
@@ -88,8 +104,16 @@ bins = float(sys.argv[3])
 mode = float(sys.argv[4])
 distribution = float(sys.argv[5])
 
-viewing_angle(filename, angle, bins, distribution)
+hist, bins = viewing_angle(filename, angle, bins, distribution)
 
+for i in range(len(hist)):
+	print hist[i], bins[i]
 
-
+##
+#lt.plot(bins[:-1], hist, c='k', linewidth=2.5) 
+#lt.xlabel("$x$", fontsize=30)
+#lt.xlim([-25, 25])
+#lt.ylim([0, 0.3])
+#lt.savefig(filename+str(angle)+".png")
+#lt.show()
 
